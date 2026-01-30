@@ -1,0 +1,13 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ical.marudot.com//iCal Event Maker
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+DTSTAMP:20251023T173309Z
+UID:1761240665733-77987@ical.marudot.com
+DTSTART;VALUE=DATE:20260316
+DTEND;VALUE=DATE:20260317
+SUMMARY:Partnerships & S Corporations
+DESCRIPTION:Reminder from your friends at Digits — S Corp & Partnership returns are due!\n\n• Deadline to file Form 1120-S (S Corporation) and Form 1065 (Partnership) with the IRS\n• Deadline to furnish Schedule K-1s to shareholders and partners\n• Deadline to request an extension (Form 7004) if you need more time
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,49 @@
+﻿{
+  "name": "Digits",
+  "short_name": "Digits",
+  "description": "Incredible, real-time analysis for businesses. Just a few clicks to set up.",
+  "dir": "auto",
+  "lang": "en-US",
+  "display": "standalone",
+  "orientation": "any",
+  "start_url": "https://digits.com",
+  "background_color": "#6ecddd",
+  "theme_color": "#6ecddd",
+  "icons": [
+    {
+      "src": "/favicon/favicon-32.png",
+      "type": "image/png",
+      "sizes": "32x32"
+    },
+    {
+      "src": "/favicon/favicon-64.png",
+      "type": "image/png",
+      "sizes": "64x64"
+    },
+    {
+      "src": "/favicon/favicon-128.png",
+      "type": "image/png",
+      "sizes": "128x128"
+    },
+    {
+      "src": "/favicon/favicon-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/favicon/favicon-256.png",
+      "type": "image/png",
+      "sizes": "256x256"
+    },
+    {
+      "src": "/favicon/favicon-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    },
+    {
+      "src": "/favicon/favicon-1024.png",
+      "type": "image/png",
+      "sizes": "1024x1024"
+    }
+  ]
+}

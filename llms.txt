@@ -1,0 +1,61 @@
+# digits.com llms.txt
+
+> Digits is the world's first Agentic General Ledger (AGL), AI-powered accounting software that does the work for you by auto-booking 95%+ of transactions in real time, delivering always up-to-date financials, and automating bookkeeping, financial management, and the month-end close for small businesses, startups, and accounting firms.
+
+- [Digits Accountant Partner Program](https://digits.com/accountants): The Digits Accountant Partner Program gives firms exclusive access to AGL-powered tools, Firm Models, partner-only plans and pricing, dedicated support, and enablement that help accountants deliver verified financials faster, increase capacity, and build more modern advisory services.
+
+- [Digits Integrations](https://digits.com/integrations): Digits connects securely to banks, payroll providers, payment processors, and financial platforms so the AGL can continuously ingest data, auto-book transactions with high accuracy, and keep financials current in real time.
+
+- [AI-Powered Month-End Close](https://digits.com/accountants/month-end-close): Digits powers the month-end-close for accountants with AI, automating reconciliations, classifications, and review workflows so firms can move toward a fully automated close with verified financials available as soon as the month ends.
+
+- [Digits AI Accounting](https://digits.com/agl): The Digits Agentic General Ledger (AGL) is a suite of custom-trained models and agents, trained on over $875 billion in real SMB transactions, that auto-book 95%+ of activity as it happens to deliver real-time, high-fidelity financials for businesses and accounting firms.
+
+- [Ask Digits AI Accounting](https://digits.com/product/ask-digits): Ask Digits is an AI accounting assistant that lets business owners and accountants ask natural-language questions about their finances, get instant answers and insights, and receive automated bookkeeping support driven by always up-to-date ledgers.
+
+- [Digits Security and AI Accounting](https://digits.com/security): Digits applies enterprise-grade security, encryption, and privacy controls to all financial data flowing into the AGL, ensuring AI-native accounting automation is delivered with bank-level protection and compliance in mind.
+
+- [Tax Filing Deadlines](https://digits.com/a-ics/digits-c-corporation-sole-proprietors-deadlines-04152026.ics): This downloadable calendar file provides key federal tax filing and payment deadlines for C Corporations and Sole Proprietors to support timely compliance and planning.
+
+- [AI Bill Pay Solution](https://digits.com/product/bill-pay): Digits Bill Pay uses AI to ingest and understand invoices, route them for approval, schedule payments, and sync everything back to the Agentic General Ledger so accounts payable is automated, accurate, and always reconciled.
+
+- [Customer Success Stories](https://digits.com/customers): A showcase of how startups, SMBs, and accounting firms use Digits and agentic automation to reduce manual bookkeeping, speed up closes, gain real-time visibility, and make better financial decisions.
+
+- [Tax Filing Deadline Reminder](https://digits.com/a-ics/digits-partnership-s-corporation-deadline-03162026.ics): This downloadable calendar file provides important federal tax filing deadlines and extension dates for partnerships and S corporations.
+
+- [AI Financial Dashboards](https://digits.com/product/dashboards): Digits Dashboards provide real-time, customizable views of revenue, expenses, cash, and other key metrics so founders and finance teams always see the latest financial picture without manual updates.
+
+- [AI Bookkeeping Software](https://digits.com/product/bookkeeping): Digits Bookkeeping is fully automated AI-native accounting software, providing real-time categorization, automated reconciliations, live connected financial data, dimensional reporting, cash flow and runway tracking, trend insights, and collaborative tools to keep your books accurate and always up to date—without manual bookkeeping.
+
+- [Digits Accountant Partner Program - Firm Models](https://digits.com/blog/firm-models-are-here-exclusive-to-the-digits-accounting-partner-program): Firm Models are exclusive, partner-only AI models trained for accounting firm workflows, enabling partners to standardize processes, scale client work, and differentiate their services using Digits' AGL-powered automation.
+
+- [Digits Blog](https://digits.com/blog): The Digits Blog shares product news, feature announcements, and perspectives on AI-native accounting, automation, and the evolution from traditional ledgers to the Agentic General Ledger.
+
+- [Between Two Founders Podcast](https://digits.com/between-two-founders): Between Two Founders is a podcast where startup founders share candid stories, tactical lessons, and insight into building and scaling companies, curated for other founders and finance-minded operators.
+
+- [Announcing Ask Digits](https://digits.com/blog/announcing-ask-digits): The Ask Digits launch announcement explains how an AI assistant built on the AGL can answer financial questions in real time, surface insights automatically, and help automate routine bookkeeping and analysis.
+
+- [Digits Demo Booking](https://digits.com/demo): The Digits demo experience connects businesses and accounting firms with a live walkthrough of the AGL, showing how real-time financials, agentic automation, and close workflows work together in practice.
+
+- [Digits Pricing Plans](https://digits.com/pricing): Detailed pricing for several plans that cater to startups, SMBs and accounting firms depending on feature needs and company size.
+
+- [AI Bank Reconciliations](https://digits.com/blog/ai-bank-reconciliations): Digits uses AI and agentic workflows to automatically reconcile bank transactions to the ledger, resolving most matches without human input and dramatically reducing the time and effort required to close the books.
+
+- [AI in Accounting 2030](https://digits.com/ai-native-accounting/006): This resource explores how AI and agentic systems like the AGL will reshape accounting by 2030, including changing expectations for CPAs, new service models, and the shift from manual entry to continuous verification.
+
+- [W-2 & 1099 Filing Deadline](https://digits.com/a-ics/digits-w2-1099-filing-deadline-02022026.ics): This downloadable calendar file contains key deadlines for W-2 and 1099 filings to support smooth year-end and compliance workflows.
+
+- [AI-Powered Month-End Close](https://digits.com/product/month-end-close): Digits' month-end close product orchestrates reconciliations, variance detection, and review workflows on top of the AGL so finance teams and firms can move from reactive, manual close processes to proactive, automated close operations.
+
+- [AI Financial Reporting](https://digits.com/product/financials): Digits Financials generates real-time, customizable financial statements and reports directly from the AGL with collaboration features that let business owners, finance teams, and accountants review and share financials without exporting into spreadsheets.
+
+- [Digits Developer Blog](https://digits.com/blog/?subcategory=developer): The Digits Developer Blog provides technical content, examples, and updates for developers integrating with Digits' APIs, building on financial data, or extending automation around the AGL.
+
+- [Digits Financials Evolution](https://digits.com/blog/what-s-next-for-digits-from-real-time-to-verified-financials): This post explains Digits' roadmap from real-time to verified financials, the role of the AGL in that journey, and the introduction of the Accountant Directory to help businesses find trusted professionals.
+
+- [AI Invoicing Software](https://digits.com/product/invoicing): Digits Invoicing automates invoice creation, delivery, payment tracking, and syncing into the AGL so revenue, receivables, and cash insights are always accurate and up to date without extra data entry.
+
+- [AI-Native Accounting Podcast](https://digits.com/ai-native-accounting): AI-Native Accounting is a podcast that brings experts from the accounting profession together to discuss AI, agentic systems, and products like Digits are transforming bookkeeping, controllership, and advisory services.
+
+- [AI-Powered Accounting Software](https://digits.com): Digits is the world's first AI-native accounting platform that does the work for you by auto-booking transactions, delivering real-time and eventually verified financials, and driving toward a fully automated month-end close for businesses and accounting firms.
+
+- [Digits vs Quickbooks](https://digits.com/compare/quickbooks): A side-by-side comparison of Digits and QuickBooks Online, explaining how Digits' AI-native Agentic General Ledger differs from legacy, manual-first accounting software. Covers automation depth, reconciliation workflows, reporting, collaboration, pricing structure, and user limits to help businesses and firms choose the right platform.

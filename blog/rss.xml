@@ -1,0 +1,561 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Digits</title><description>Automated Accounting - Clean books. Fast close. Live insights. Finally.</description><link>https://digits.com/</link><language>en</language><item><title>Streamlining Financial Management: Announcing Our API partnership with BILL</title><link>https://digits.com/blog/bill/</link><guid isPermaLink="true">https://digits.com/blog/bill/</guid><description>Digits + BILL syncs bills, invoices, and payments from BILL directly into Digits in real time—automatically booking activity to your books, matching transactions, and keeping your financials clean without the manual work.</description><pubDate>Tue, 27 Jan 2026 13:12:00 GMT</pubDate><content:encoded>&lt;p&gt;We’re thrilled to announce our latest API partnership with &lt;a href=&quot;https://bill.com?utm_source=blog&amp;amp;utm_campaign=partnership&quot;&gt;BILL&lt;/a&gt;, the intelligent finance platform trusted by half a million businesses to manage, move, and maximize their money. Together, we’re transforming financial operations for businesses and accountants by turning tedious back-office tasks into seamless, automated workflows—all updated in real time.&lt;/p&gt;&lt;br /&gt;
+&lt;h2&gt;Everything in One Place&lt;/h2&gt;&lt;br /&gt;
+&lt;p&gt;Imagine having all your bills, invoices, and payments effortlessly synced—no more juggling multiple platforms. Our integration with BILL makes this a reality, turning what used to be tedious tasks into smooth, automated operations.&lt;/p&gt;&lt;br /&gt;
+&lt;h2&gt;Connected in Real-Time&lt;/h2&gt;&lt;br /&gt;
+&lt;p&gt;With Digits, you get real-time financial data and insights powered by our Agentic General Ledger™. Track and analyze your finances with ease and precision. As a modern accounting platform built on the world’s first AGL®, Digits gives you immediate visibility as activity occurs. And with BILL connected, your accounts payable and payment data update automatically, offering a complete and connected view of your financial landscape.&lt;/p&gt;&lt;br /&gt;
+&lt;h2&gt;Empowering Your Growth&lt;/h2&gt;&lt;br /&gt;
+&lt;p&gt;Free yourself from manual inefficiencies and focus on what truly matters—growing your business. With Digits handling the accounting work and BILL streamlining your bill and payment workflows, you get cleaner, more accurate financials with far less effort—giving you the clarity and confidence to take on new challenges.&lt;/p&gt;&lt;br /&gt;
+&lt;h2&gt;Why You’ll Love This Integration&lt;/h2&gt;&lt;br /&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;No More Manual Entry:&lt;/strong&gt; Automatically read and sync bills, invoices, and their payments. Digits ensures every transaction from BILL is effortlessly captured and booked as a journal entry, freeing you to focus on growth.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Complete Financial Picture&lt;/strong&gt;: Keep tabs on accounts payable aging with real-time tracking. Everything you need for smarter decisions is right at your fingertips.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Flawless Financial Records:&lt;/strong&gt; Enjoy the peace of mind that comes with automated transaction matching. Digits seamlessly aligns all imports, including bank data, for accurate and clear financial oversight.&lt;/li&gt;
+&lt;/ul&gt;&lt;br /&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Digits&apos; integration with BILL is a game-changer. What I love most is how it automatically syncs bill payments and matches them with bank transactions, reducing manual hassle and the risk of duplicates—a huge efficiency boost for our team,” said Senior Accountant at &lt;a href=&quot;https://www.hiline.co/&quot;&gt;Hiline&lt;/a&gt;, Katie Burns&lt;/p&gt;&lt;br /&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;Ready to Level Up?&lt;/h2&gt;&lt;br /&gt;
+&lt;p&gt;Discover how Digits’ Agentic General Ledger™ and our integration with BILL can transform your financial operations and free your team to focus on growth.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;Dive in and experience the magic of Digits and BILL today.&lt;/p&gt;&lt;br /&gt;
+</content:encoded></item><item><title>Digits Now Thinks, Acts, and Answers</title><link>https://digits.com/blog/announcing-ask-digits/</link><guid isPermaLink="true">https://digits.com/blog/announcing-ask-digits/</guid><description>Meet Ask Digits, the new AI hub that lets you ask, review, and act across your books—bringing always-on intelligence to every part of your financial workflow.</description><pubDate>Mon, 08 Dec 2025 13:01:00 GMT</pubDate><content:encoded>&lt;p&gt;For decades, accounting software has been dumb. &lt;em&gt;Literally.&lt;/em&gt; Accountants, business owners, and finance teams spend hours booking and reconciling transactions, and then more hours exporting, pivoting, analyzing, and reporting on the data. When they log out, grab coffee, unplug for the night, or take a breather, all work stops, and their financials sit there at rest, doing nothing.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;You deserve to take breaks, but your financials don&apos;t!&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;At Digits, your accounting software doesn’t wait for you. It works &lt;em&gt;&lt;strong&gt;for&lt;/strong&gt;&lt;/em&gt; you, 24/7. Last month, &lt;a href=&quot;https://digits.com/blog/ai-bank-reconciliations/&quot;&gt;we launched AI Bank Reconciliations&lt;/a&gt; and &lt;a href=&quot;https://digits.com/blog/what-s-next-for-digits-from-real-time-to-verified-financials/&quot;&gt;announced that Digits now auto-books 95%+&lt;/a&gt; of small business transactions in real time, as they happen.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;Today, we&apos;re bringing agentic intelligence to the review, analysis, and reporting side of the monthly close—and letting you Ask Digits for whatever you want, whenever you want it!&lt;/p&gt;&lt;br /&gt;
+&lt;h2&gt;Meet Ask Digits&lt;/h2&gt;&lt;br /&gt;
+&lt;p&gt;Ask Digits is your central hub for interacting with the full power of Digits—an always-available assistant that empowers you to command, question, and collaborate with the AI agent working across your books.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;Ask questions about your finances in plain English, search for any transaction, vendor, or customer in a split second, trigger quick actions like creating transactions or reports, kick-off and monitor the progress of background tasks like bank statement reconciliations—all from one central place. Ask Digits provides contextual prompts to guide you when the agent needs input to complete work, creating a simple yet powerful collaboration loop.&lt;/p&gt;&lt;br /&gt;
+&lt;h3&gt;Fast, Accurate &amp;amp; Secure&lt;/h3&gt;&lt;br /&gt;
+&lt;p&gt;Unlike other accounting platforms that send your full, raw financials to ChatGPT and hope for the best, Ask Digits is built right in. The agent maintains direct access to your books and leverages Digits’ powerful financial modeling engine to guarantee the math always adds up.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;“Digits is SOC 2–certified with end-to-end encryption, delivering fast, accurate financial answers — with full context carried forward every time you Ask Digits.” It remembers your financial world, not just the last question.&lt;/p&gt;&lt;br /&gt;
+&lt;h3&gt;Multi-Modal, Multi-Channel&lt;/h3&gt;&lt;br /&gt;
+&lt;p&gt;Ask Digits also speaks images, documents, and email! Drop a PDF bank statement to start reconciling. Drop a receipt to find and match the right transaction. Or simply forward them via email to &lt;strong&gt;&amp;lt;your company&amp;gt;@digits.cc&lt;/strong&gt; and the agent will get right to work.&lt;/p&gt;&lt;br /&gt;
+&lt;h2&gt;Your Firm&apos;s Signature&lt;/h2&gt;&lt;br /&gt;
+&lt;p&gt;For our accounting firm partners, Ask Digits becomes even more powerful, learning and expressing the uniqueness of your firm to your clients.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;Today, we&apos;re announcing an add-on available through the Digits Accountant Partner Program: the Firm Signature package.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;&lt;img src=&quot;https://digits.com//assets/images/uploads/blog/custom-firm.webp&quot; alt=&quot;custom firm branding &quot;&gt;&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;Building upon &lt;a href=&quot;https://digits.com/blog/firm-models-are-here-exclusive-to-the-digits-accounting-partner-program/&quot;&gt;our work on Firm Models&lt;/a&gt;, Firm Signature grants access to deep customization of the end-to-end Digits product experience, including a branded Digits interface—so every client sees your expertise, your standards, and your name. It allows firms to embed their identity and best practices directly into Digits through:&lt;/p&gt;&lt;br /&gt;
+&lt;ul&gt;
+&lt;li&gt;Private Firm Models trained exclusively on your firm’s clients and team workflows&lt;/li&gt;
+&lt;li&gt;A branded Ask [Firm] experience, including firm logo, agent name, and tone&lt;/li&gt;
+&lt;li&gt;Firm-standard templates for charts of accounts, reports, and dashboards&lt;/li&gt;
+&lt;li&gt;Practice-area customization for firms serving multiple specialties or verticals&lt;/li&gt;
+&lt;/ul&gt;&lt;br /&gt;
+&lt;p&gt;The Firm Signature package is available today. Contact your Partner Manager for details.&lt;/p&gt;&lt;br /&gt;
+&lt;h2&gt;Experience Agent Intelligence Today&lt;/h2&gt;&lt;br /&gt;
+&lt;p&gt;Ask Digits is the result of years of heads-down engineering work, with the initial product vision and prototypes dating back to early 2023. I want to thank our product design and engineering teams for their tireless work in bringing this capability to reality.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;Ask Digits is available today, for free, for everyone on Digits. We can&apos;t wait to hear what you think!&lt;/p&gt;&lt;br /&gt;
+</content:encoded></item><item><title>Always Be Closing: Introducing AI Bank Reconciliations</title><link>https://digits.com/blog/ai-bank-reconciliations/</link><guid isPermaLink="true">https://digits.com/blog/ai-bank-reconciliations/</guid><description>Introducing AI Bank Reconciliations: the AGL upgrade that automates your month-end close and ensures accuracy, end to end.</description><pubDate>Mon, 10 Nov 2025 14:58:00 GMT</pubDate><content:encoded>&lt;p&gt;Month-end close wasn’t supposed to cost you your evenings. Yet for most firms and in-house finance teams, bank and card reconciliations are still a grind: exporting statements, babysitting fragile rules, hunting down mismatches, and patching “close enough” balances just to get the books out the door.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;We&apos;ve built &lt;strong&gt;AI Bank Reconciliations&lt;/strong&gt; to flip that script!&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;Starting today, the AGL automatically reconciles bank statement PDFs for you, ensuring balance sheet accounts tie out while surfacing any anomalies for your review. Simply drag and drop the bank statement onto Digits, and the AGL handles the rest for you. It&apos;s literally that easy.&lt;/p&gt;&lt;br /&gt;
+&lt;h2&gt;What Are “AI” Bank Reconciliations?&lt;/h2&gt;&lt;br /&gt;
+&lt;p&gt;Think of AI reconciliations as giving your close process its own dedicated team of tireless junior staff, in the form of an AI agent:&lt;/p&gt;&lt;br /&gt;
+&lt;ul&gt;
+&lt;li&gt;It ingests bank feeds, bank statements, and ledger data.&lt;/li&gt;
+&lt;li&gt;It automatically matches transactions and finalizes reconciliations, without rules you have to configure or maintain.&lt;/li&gt;
+&lt;li&gt;It runs continuously, so by the time you’re ready to close, most of the work is already done for you.&lt;/li&gt;
+&lt;/ul&gt;&lt;br /&gt;
+&lt;p&gt;Instead of manually identifying transaction matches and ticking boxes, you’re presented with a clean reconciliation status and a short, prioritized list of exceptions to review, cutting the month-end close process across your client base by hours, every single month.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;Welcome to the ledger that reconciles itself.&lt;/p&gt;&lt;br /&gt;
+&lt;h2&gt;Much Harder Than It Looks&lt;/h2&gt;&lt;br /&gt;
+&lt;p&gt;How hard can it be for AI to match numbers between a data feed and a bank statement? Just like manual reconciliations – harder than it looks!  Bank and credit card statements are messy.  Fees hide in summaries and deposits. Withdrawals swap places across institutions. Sometimes multiple transactions for the same amount show up on the same day.  Other times, the same transaction might show up twice or not at all.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;Getting it right meant designing a system that can catch duplicates, detect missing transactions, and distinguish a true mismatch from a sync delay — all without creating more noise for you.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;Behind every “auto-reconciled” badge is a complex system of AI data extraction, logic checks, and heuristics to ensure accuracy. After months of design, testing, and refinement, AI Reconciliations are delivering results that speak for themselves:&lt;/p&gt;&lt;br /&gt;
+&lt;ul&gt;
+&lt;li&gt;75% less time spent on reconciliations&lt;/li&gt;
+&lt;li&gt;Faster, more accurate month-end closes&lt;/li&gt;
+&lt;li&gt;A shift from manual preparation to confident review&lt;/li&gt;
+&lt;/ul&gt;&lt;br /&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;quot;AI Bank Recs have flipped my role on its head. I used to spend hours every week slogging through feeds and rules; now I log in and review a clean set of exceptions. My team’s time is now going into judgement and advisory work instead of just finding and matching. It’s the first time in years I’ve felt in control of the close, not buried by it.&amp;quot;&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;&lt;strong&gt;– Heather Taylor, Accounting Services Manager at Hiline&lt;/strong&gt;&lt;/p&gt;&lt;br /&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;Get Your Nights and Weekends Back&lt;/h2&gt;&lt;br /&gt;
+&lt;p&gt;With Digits handling the heavy lifting, you and your team can shift from &lt;em&gt;reconciling every transaction&lt;/em&gt; to &lt;em&gt;reviewing what truly matters&lt;/em&gt; — resulting in faster closes, fewer errors, and more time back in your week.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;AI Bank Reconciliations are available today for all accounting firms on Digits.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;&lt;strong&gt;Experience AI Bank Reconciliations today.&lt;/strong&gt;&lt;/p&gt;&lt;br /&gt;
+</content:encoded></item><item><title>What’s Next for Digits: From Real-Time to Verified Financials</title><link>https://digits.com/blog/what-s-next-for-digits-from-real-time-to-verified-financials/</link><guid isPermaLink="true">https://digits.com/blog/what-s-next-for-digits-from-real-time-to-verified-financials/</guid><description>Digits is redefining financials—moving from real-time insights to verified financials, and launching the Digits Accountant Directory to connect businesses with the professionals who power them.</description><pubDate>Tue, 04 Nov 2025 23:37:00 GMT</pubDate><content:encoded>&lt;p&gt;We started Digits to fix the problem every business owner knows all too well: financials always arrive too late. In every company I’ve built, I&apos;ve wanted financial visibility sooner because by the time reports arrived, the chance to act had already passed.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;When we introduced the &lt;a href=&quot;https://digits.com/blog/agl-announcement/?utm_source=whatsnext&amp;amp;utm_medium=blog&quot;&gt;Autonomous General Ledger®&lt;/a&gt; earlier this year, real-time financials finally became a reality. Digits now books 95%+ of small business transactions as they happen, automatically.&lt;/p&gt;&lt;br /&gt;
+&lt;h2&gt;Real-time Financials ≠ Verified Financials&lt;/h2&gt;&lt;br /&gt;
+&lt;p&gt;Thousands of business owners now use real-time financials on Digits to run their companies.  Yet verified financials—the version trusted by investors, lenders, and tax authorities—still lag behind.  Verified financials enable companies to raise capital, secure loans, and file taxes with confidence.  Today, they remain the result of painstaking, manual accounting work known as the month-end close.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;Most business owners don’t realize there’s a difference. Until recently, the technology simply didn’t exist to separate the financials you use to run your business from the ones &lt;em&gt;others use to evaluate it&lt;/em&gt;.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;With Digits, that’s changed — your financials now come together in real-time, as each transaction occurs, while accountants still wait until the end of each month to cross the t&apos;s and dot the i&apos;s:&lt;/p&gt;&lt;br /&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;strong&gt;Workflow&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;Digits&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;Accountants&lt;/strong&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Record Transactions&lt;/td&gt;
+&lt;td&gt;Real-time financials&lt;/td&gt;
+&lt;td&gt;Verified financials&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Reconcile Bank Statements&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Verified financials&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Update Schedules&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Verified financials&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Review &amp;amp; Correct&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Verified financials&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Analyze &amp;amp; Report&lt;/td&gt;
+&lt;td&gt;Real-time Financials&lt;/td&gt;
+&lt;td&gt;Verified financials&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;&lt;br /&gt;
+&lt;h2&gt;Goodbye, Manual Close&lt;/h2&gt;&lt;br /&gt;
+&lt;p&gt;The future is to converge both worlds. We believe verified financials should be just as immediate, delivered as soon as the month ends rather than weeks later. With today’s advances in AI, the tedium of the month-end close can finally become a thing of the past. Next week, we are launching a major feature that helps your accountant deliver verified, closed books faster than ever!&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;Looking ahead, however, even when AI removes all of the tedium, verified financials still depend on the professionals who interpret, validate, and stand behind the numbers&lt;/p&gt;&lt;br /&gt;
+&lt;h2&gt;Introducing the Digits Accountant Directory&lt;/h2&gt;&lt;br /&gt;
+&lt;p&gt;The &lt;a href=&quot;https://accountants.digits.com/&quot;&gt;Digits Accountant Directory&lt;/a&gt; showcases firms delivering verified financials with Digits — uniting automation, accuracy, and professional oversight to ensure every number stands up to scrutiny.&lt;/p&gt;&lt;br /&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Accountability and Trust:&lt;/strong&gt;&lt;br&gt;
+Boards, auditors, and regulators expect people, not technology, to take responsibility.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Professional Judgment and Materiality:&lt;/strong&gt;&lt;br&gt;
+Every month involves subjective decisions your accountant is best equipped to determine: accruals, reserves, timing, capitalization.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Interpretation and Context:&lt;/strong&gt;&lt;br&gt;
+Understanding why results changed, what matters, and how to communicate those outcomes requires specialized expertise.&lt;/li&gt;
+&lt;/ol&gt;&lt;br /&gt;
+&lt;p&gt;The Directory is now live: Explore firms by service area, industry specialization, or location, or let Digits match you with a certified partner who fits your business.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;Each firm represents the new standard for how businesses access live, reliable, decision-ready financials. Each firm has also completed Digits Certification, meeting the highest bar for verified accuracy in modern accounting.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;Verified financials mark a shift in what technology can do — but more importantly, in what professionals can deliver.  That foundation of trust sets the stage for what comes next.&lt;/p&gt;&lt;br /&gt;
+&lt;h2&gt;Autonomous General Ledger® → Agentic General Ledger™&lt;/h2&gt;&lt;br /&gt;
+&lt;p&gt;To establish this trust, we&apos;re renaming our Autonomous General Ledger® to the &lt;em&gt;Agentic&lt;/em&gt; General Ledger™.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;“Autonomous” suggests a fully self-driving system that could deliver results without professional input. That was critical for real-time financials, but isn&apos;t desirable for verified financials. &amp;quot;Agentic” better reflects Digits’ vision for how accounting should be automated—through an AI-native ledger that works for you &lt;em&gt;and your accountant&lt;/em&gt;.&lt;/p&gt;&lt;br /&gt;
+</content:encoded></item><item><title>Digits is Now Programmable</title><link>https://digits.com/blog/digits-is-now-programmable/</link><guid isPermaLink="true">https://digits.com/blog/digits-is-now-programmable/</guid><description>Digits is now programmable: Connect API opens the AGL to developers with AI-led categorization, vendor matching, reconciliation, and dimensional accounting.</description><pubDate>Tue, 28 Oct 2025 13:52:00 GMT</pubDate><content:encoded>&lt;h2&gt;Introducing the Connect API and Dimensional Accounting&lt;/h2&gt;&lt;br /&gt;
+&lt;p&gt;We’re excited to announce the Digits Connect API—the next generation of accounting APIs, built to make integrations faster, smarter, and AI-powered at their core.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;For years, accounting systems have relied on rigid integrations and manual setup. By opening up the AGL®—the Autonomous General Ledger®—we’re giving developers and accounting partners direct access to a ledger that understands context, not just data.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;Our Connect API automates categorization, vendor matching, and reconciliation using AI-driven logic built directly into the platform. And Digits now supports dimensional accounting across Departments, Locations, and Projects, so businesses can classify and analyze their financial data from every angle.&lt;/p&gt;&lt;br /&gt;
+&lt;h2&gt;We flipped the script on ledger integrations&lt;/h2&gt;&lt;br /&gt;
+&lt;p&gt;Integrating with accounting systems used to require substantial engineering investment and tedious mapping for users.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;&lt;strong&gt;Here’s the legacy playbook:&lt;/strong&gt;&lt;/p&gt;&lt;br /&gt;
+&lt;ol&gt;
+&lt;li&gt;Sync down the Chart of Accounts and all vendors&lt;/li&gt;
+&lt;li&gt;Build mapping UIs and make your users manually map their data&lt;/li&gt;
+&lt;li&gt;Apply heuristics and hope for the best when writing back to the ledger&lt;/li&gt;
+&lt;li&gt;Cross your fingers you don&apos;t create duplicates&lt;/li&gt;
+&lt;/ol&gt;&lt;br /&gt;
+&lt;p&gt;&lt;strong&gt;Now:&lt;/strong&gt;&lt;/p&gt;&lt;br /&gt;
+&lt;ol&gt;
+&lt;li&gt;Send raw transaction data to the Digits Connect API&lt;/li&gt;
+&lt;/ol&gt;&lt;br /&gt;
+&lt;p&gt;Since Digits is AI-native, we were able to rethink the integration playbook entirely.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;You don’t need to track the chart of accounts or ask users to manage mappings—those steps are gone. Just send the data you already have, and Digits takes care of the rest.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;When you send a raw transaction to Digits, the AGL® will research the vendor, enrich their profile, and post a fully categorized entry to the ledger. Automatically.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;&lt;img src=&quot;https://digits.com//assets/images/uploads/blog/4digits-comp.gif&quot; alt=&quot;&quot;&gt;&lt;/p&gt;&lt;br /&gt;
+&lt;h2&gt;&lt;strong&gt;The AI-native approach&lt;/strong&gt;&lt;/h2&gt;&lt;br /&gt;
+&lt;p&gt;Here&apos;s how simple it is:&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;&lt;strong&gt;Register the integration and configure category labels&lt;/strong&gt;&lt;/p&gt;&lt;br /&gt;
+&lt;pre&gt;&lt;code class=&quot;language-json&quot;&gt;POST https://connect.digits.com/v1/connection/sources
+
+{
+  &amp;quot;sources&amp;quot;: [
+    {
+      &amp;quot;external_id&amp;quot;: {&amp;quot;id&amp;quot;: &amp;quot;source-id-342&amp;quot;, &amp;quot;issuer&amp;quot;: &amp;quot;YourSystem&amp;quot;}, // Each source can have its own labels
+      &amp;quot;name&amp;quot;: &amp;quot;Corporate Credit Card - 8842&amp;quot;,
+      &amp;quot;type&amp;quot;: &amp;quot;credit&amp;quot;,
+      &amp;quot;subtype&amp;quot;: &amp;quot;credit_card&amp;quot;,
+      &amp;quot;labels&amp;quot;: [
+        {
+          &amp;quot;label&amp;quot;: &amp;quot;uncategorized_expense&amp;quot;,
+          &amp;quot;name&amp;quot;: &amp;quot;Expenses&amp;quot;,
+          &amp;quot;constraint&amp;quot;: [&amp;quot;Expenses&amp;quot;],
+
+          // Digits AI will intelligently determine where to book these lines
+          &amp;quot;prefer_ai&amp;quot;: true,
+
+          // AI labels treat the mapped category as a hint - probably an expense!
+          &amp;quot;search&amp;quot;: {
+            &amp;quot;names&amp;quot;: [&amp;quot;Uncategorized Expense&amp;quot;, &amp;quot;General Expense&amp;quot;],
+            &amp;quot;type&amp;quot;: &amp;quot;Expenses&amp;quot;
+          }
+        },
+        {
+          &amp;quot;label&amp;quot;: &amp;quot;liability_account&amp;quot;,
+          &amp;quot;name&amp;quot;: &amp;quot;Liability Account&amp;quot;,
+          &amp;quot;constraint&amp;quot;: [&amp;quot;Liabilities&amp;quot;],
+
+          // Digits will directly categorize as mapped
+          &amp;quot;prefer_ai&amp;quot;: false,
+
+          // Automatically maps the right home in the chart of accounts
+          &amp;quot;search&amp;quot;: {
+            &amp;quot;names&amp;quot;: [&amp;quot;Corporate Credit Card - 8842&amp;quot;, &amp;quot;Credit Cards&amp;quot;],
+            &amp;quot;type&amp;quot;: &amp;quot;Liabilities&amp;quot;
+          }
+        }
+      ]
+    }
+  ]
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;br /&gt;
+&lt;p&gt;&lt;strong&gt;Define dimensions like departments, locations, and projects&lt;/strong&gt;&lt;/p&gt;&lt;br /&gt;
+&lt;pre&gt;&lt;code class=&quot;language-json&quot;&gt;POST https://connect.digits.com/v1/source/departments
+
+{
+  &amp;quot;departments&amp;quot;: [
+    {
+      &amp;quot;external_id&amp;quot;: &amp;quot;dept-marketing&amp;quot;,
+      &amp;quot;name&amp;quot;: &amp;quot;Marketing&amp;quot;
+    }
+  ]
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;br /&gt;
+&lt;p&gt;&lt;strong&gt;Send raw descriptions with your category labels—we&apos;ll categorize and extract vendors&lt;/strong&gt;&lt;/p&gt;&lt;br /&gt;
+&lt;pre&gt;&lt;code class=&quot;language-json&quot;&gt;POST https://connect.digits.com/v1/source/transactions
+
+{
+  &amp;quot;transactions&amp;quot;: [
+    {
+      &amp;quot;source_id&amp;quot;: {&amp;quot;id&amp;quot;: &amp;quot;source-id-342&amp;quot;, &amp;quot;issuer&amp;quot;: &amp;quot;YourSystem&amp;quot;}, // The source ID from above
+      &amp;quot;external_id&amp;quot;: {&amp;quot;id&amp;quot;: &amp;quot;transaction-id-584&amp;quot;, &amp;quot;issuer&amp;quot;: &amp;quot;YourSystem&amp;quot;}, // Digits is idempotent by external ID
+      &amp;quot;date&amp;quot;: &amp;quot;2024-01-02T00:00:00Z&amp;quot;,
+      &amp;quot;entries&amp;quot;: [
+        {
+          &amp;quot;amount&amp;quot;: {&amp;quot;amount&amp;quot;: 2500,&amp;quot;code&amp;quot;: &amp;quot;USD&amp;quot;},
+          &amp;quot;type&amp;quot;: &amp;quot;Debit&amp;quot;,
+
+          // Raw description!
+          // Digits AI will categorize and work out the vendor.
+          &amp;quot;description&amp;quot;: &amp;quot;WHOLEFDS LAX 10250&amp;quot;,
+          &amp;quot;category&amp;quot;: {
+            &amp;quot;label&amp;quot;: &amp;quot;uncategorized_expense&amp;quot;
+          },
+
+          // Add dimensions like Department, Location, or Project
+          &amp;quot;department&amp;quot;: {&amp;quot;external_id&amp;quot;: {&amp;quot;id&amp;quot;: &amp;quot;dept-marketing&amp;quot;, &amp;quot;issuer&amp;quot;: &amp;quot;YourSystem&amp;quot;}}
+        },
+        {
+          &amp;quot;amount&amp;quot;: {&amp;quot;amount&amp;quot;: 2500, &amp;quot;code&amp;quot;: &amp;quot;USD&amp;quot;},
+          &amp;quot;type&amp;quot;: &amp;quot;Credit&amp;quot;,
+          &amp;quot;description&amp;quot;: &amp;quot;WHOLEFDS LAX 10250&amp;quot;,
+          &amp;quot;category&amp;quot;: {
+            &amp;quot;label&amp;quot;: &amp;quot;liability_account&amp;quot;
+          }
+        }
+      ]
+    }
+  ]
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;br /&gt;
+&lt;p&gt;The &lt;code&gt;uncategorized_expense&lt;/code&gt; label uses preferAI: true to leverage Digits AI for smart categorization based on the transaction descriptions.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;That’s it.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;A ledger integration that fits into a blog post. And with our &lt;a href=&quot;https://developer.digits.com/docs/sdks-llms&quot;&gt;OpenAPI spec&lt;/a&gt;, you can generate client code for the programming language of your choice.&lt;/p&gt;&lt;br /&gt;
+&lt;h2&gt;Dimensional Accounting&lt;/h2&gt;&lt;br /&gt;
+&lt;p&gt;As part of this launch, Digits now supports dimensional accounting across departments, locations, and projects.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;For accountants and business operators, this means you can classify and analyze payroll, expenses or revenue by different parts of the business—without exporting to spreadsheets or managing manual tags.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;It’s a simpler, more flexible way to see how money moves through your organization: where it’s earned, where it’s spent, and how each area contributes to the whole.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;&lt;img src=&quot;https://digits.com//assets/images/uploads/blog/dimensions-inline.png&quot; alt=&quot;dimensional accounting dashboard&quot;&gt;&lt;/p&gt;&lt;br /&gt;
+&lt;h2&gt;The Foundation for Programmable Accounting&lt;/h2&gt;&lt;br /&gt;
+&lt;p&gt;For the first time, we’re opening the foundations of the AGL®—the Autonomous General Ledger®—to everyone.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;Developers, firms, and software partners can now build directly on the same intelligent infrastructure that powers Digits. The AGL makes accounting programmable: flexible, AI-native, and built to understand the data you send. Further streamlining the integration process, our API ships with &lt;a href=&quot;https://developer.digits.com/docs/sdks-llms&quot;&gt;developer support for both MCP and LLMs.txt&lt;/a&gt;, enabling modern tooling from day one.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;Unlike legacy accounting platforms, Digits doesn’t believe access should come with strings attached. The Digits Connect API is free—no partner fees, no usage paywalls, no marketplace lock-ins.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;This is the future of open, programmable accounting—where the ledger works for you, not the other way around.&lt;/p&gt;&lt;br /&gt;
+&lt;h2&gt;Get started today&lt;/h2&gt;&lt;br /&gt;
+&lt;p&gt;&lt;em&gt;The Digits Connect API is available in preview today for developers to begin building and testing their apps. We&apos;ll open for app submission later this year.&lt;/em&gt;&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;Ready to build with Digits?&lt;/p&gt;&lt;br /&gt;
+</content:encoded></item><item><title>Agents in production: Lessons shared at MLOps World 2025</title><link>https://digits.com/blog/mlops-world-2025-slides/</link><guid isPermaLink="true">https://digits.com/blog/mlops-world-2025-slides/</guid><description>This October, Digits was invited to present our latest lessons learned from our Agents in Production journey at MLOps World 2025 conference.</description><pubDate>Sun, 12 Oct 2025 16:07:14 GMT</pubDate><content:encoded>&lt;p&gt;&lt;img src=&quot;https://digits.com//assets/images/uploads/blog/mlops-world-2025.jpg&quot; alt=&quot;null&quot;&gt;&lt;/p&gt;&lt;br /&gt;
+&lt;h1&gt;Agents in production: Lessons from building AI systems that actually work&lt;/h1&gt;&lt;br /&gt;
+&lt;p&gt;&lt;em&gt;By the Digits Machine Learning Team&lt;/em&gt;&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;Our team has spent years building and deploying machine learning systems for accounting. We&apos;ve learned that putting AI agents into production is less about the hype and more about the hard-earned lessons that only come from real-world deployment. At Digits, we&apos;ve been running AI agents in production for over 2 years at this point, and we want to share what we&apos;ve learned—starting with why we should probably stop calling them &amp;quot;agents&amp;quot; altogether.&lt;/p&gt;&lt;br /&gt;
+&lt;h2&gt;The problem with &amp;quot;agents&amp;quot;&lt;/h2&gt;&lt;br /&gt;
+&lt;p&gt;Let&apos;s address the elephant in the room: the term &amp;quot;agent&amp;quot; sets the wrong expectations. It conjures images of autonomous assistants bringing you martinis and handling everything independently. The reality is far more nuanced—and far less glamorous.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;Spy agents from movies like &amp;quot;James Bond&amp;quot; perform nondeterministic work with potentially catastrophic outcomes. They usually operate with a degree of opacity that can obscure their decision-making process. However, in artificial intelligence, we need transparency, not mystery. That&apos;s why, we think they should be called &lt;strong&gt;Process Daemons&lt;/strong&gt; — a term that better captures what they actually are: background processes that execute tasks with oversight and observability.&lt;/p&gt;&lt;br /&gt;
+&lt;h2&gt;What is a process daemon (or agent, if you must)?&lt;/h2&gt;&lt;br /&gt;
+&lt;p&gt;Strip away the marketing hype, and an agent is surprisingly simple. At its core, it&apos;s about 100 lines of code that combines four elements:&lt;/p&gt;&lt;br /&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;An objective&lt;/strong&gt; - What needs to be accomplished&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;An LLM&lt;/strong&gt; - The language model that processes and reasons&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Tools&lt;/strong&gt; - The capabilities the system can invoke&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;A response&lt;/strong&gt; - The output delivered back&lt;/li&gt;
+&lt;/ol&gt;&lt;br /&gt;
+&lt;p&gt;That&apos;s the foundation. Everything else is infrastructure built around these core components.&lt;/p&gt;&lt;br /&gt;
+&lt;h2&gt;How we use process daemons at Digits&lt;/h2&gt;&lt;br /&gt;
+&lt;p&gt;At Digits, we&apos;ve deployed agents for three primary use cases:&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;&lt;strong&gt;Hydrating vendor information&lt;/strong&gt; - Automatically enriching our data about vendors, reducing manual research time and improving data quality across our platform.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;&lt;strong&gt;Simplifying client onboarding&lt;/strong&gt; - Streamlining what used to be a complex, multi-step process into a smoother experience for new clients joining our platform.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;&lt;strong&gt;Handling complex user questions&lt;/strong&gt; - Addressing queries that require reasoning across multiple data sources and business logic, providing answers that would otherwise require significant human intervention.&lt;/p&gt;&lt;br /&gt;
+&lt;h2&gt;Building production-ready infrastructure&lt;/h2&gt;&lt;br /&gt;
+&lt;p&gt;Moving agents from prototype to production requires much more than the basic four components. Here&apos;s what we&apos;ve learned about building the infrastructure:&lt;/p&gt;&lt;br /&gt;
+&lt;h3&gt;Language models and frameworks&lt;/h3&gt;&lt;br /&gt;
+&lt;p&gt;All major LLM providers now offer models with tool-calling capabilities, and open source alternatives are increasingly viable. We evaluated numerous agent frameworks—LangChain, CrewAI, and others—but found them often too complex with too many dependencies for production environments.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;&lt;strong&gt;Our approach&lt;/strong&gt;: Implement the core agent loop ourselves. It&apos;s more work upfront, but it gives us control, reduces dependencies, and ensures production readiness.&lt;/p&gt;&lt;br /&gt;
+&lt;h3&gt;Agent tools: reuse, don&apos;t reinvent&lt;/h3&gt;&lt;br /&gt;
+&lt;p&gt;Production environments already have APIs. Rather than manually defining agent tools (too time-consuming) or automatically exposing all RPCs (too noisy), we wanted a curated approach.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;Our solution leverages Go&apos;s reflection capabilities to dynamically introspect function handlers and generate JSON schemas for inputs and outputs. This gives us the best of both worlds: automated tool generation with curation. Crucially, the existing APIs already handle access rights, so we&apos;re not creating new security concerns.&lt;/p&gt;&lt;br /&gt;
+&lt;h3&gt;Observability is non-negotiable&lt;/h3&gt;&lt;br /&gt;
+&lt;p&gt;Understanding what happens under the hood isn&apos;t optional in production. We needed lightweight decision traceability to debug issues and understand agent behavior.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;We use OpenTelemetry to integrate with our existing traces, making agent observability part of our broader system monitoring. Prompt comparison capabilities help us understand when changes improve or degrade performance.&lt;/p&gt;&lt;br /&gt;
+&lt;h3&gt;Memory vs. storage&lt;/h3&gt;&lt;br /&gt;
+&lt;p&gt;Here&apos;s a critical distinction: storage isn&apos;t memory. True agent memory combines semantic search with relational or graph databases, establishing context across conversations in a fundamentally different way than simple data persistence.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;We implement memory as a tool rather than relying on provider-specific memory solutions. This avoids vendor lock-in and gives us flexibility as the landscape evolves.&lt;/p&gt;&lt;br /&gt;
+&lt;h3&gt;Guardrails: don&apos;t trust your LLM&lt;/h3&gt;&lt;br /&gt;
+&lt;p&gt;Use a different LLM to evaluate responses. Simple guardrails can be implemented via LLM assessment, while more complex scenarios benefit from specialized guardrail frameworks. The key principle: never trust a single model to police itself.&lt;/p&gt;&lt;br /&gt;
+&lt;h2&gt;Lessons from the trenches&lt;/h2&gt;&lt;br /&gt;
+&lt;p&gt;After running agents in production, here are our hard-earned lessons:&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;&lt;strong&gt;Frameworks require scrutiny&lt;/strong&gt; - Open source frameworks offer great starting points, but evaluate them carefully for production readiness. Often, they&apos;re not ready for prime time without significant modification.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;&lt;strong&gt;Let applications drive infrastructure&lt;/strong&gt; - Don&apos;t build infrastructure in a vacuum. Let real application needs guide your architectural decisions.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;&lt;strong&gt;Task planning accelerates performance&lt;/strong&gt; - Using reasoning models to plan tasks upfront achieves faster completion times and higher accuracy with lower latency.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;&lt;strong&gt;Build for responsibility&lt;/strong&gt; - Responsible agents require observability, user feedback mechanisms, guardrails, and team notifications when things go wrong. This isn&apos;t optional; it&apos;s foundational.&lt;/p&gt;&lt;br /&gt;
+&lt;h2&gt;Continuous improvement&lt;/h2&gt;&lt;br /&gt;
+&lt;p&gt;The work doesn&apos;t stop at deployment. We capture user feedback about agent responses, design reward functions, and explore reinforcement learning to fine-tune agent-specific models. Each iteration makes our agents more effective at their specific tasks.&lt;/p&gt;&lt;br /&gt;
+&lt;h2&gt;A note on MCP and discovery protocols&lt;/h2&gt;&lt;br /&gt;
+&lt;p&gt;You might wonder about the Model Context Protocol (MCP) and other agent-to-agent communication standards. We haven&apos;t adopted these yet. For internal data discovery, MCP isn&apos;t necessary—we already have that infrastructure. The security scenarios remain unclear, and honestly, much of the current discussion feels more like marketing than practical necessity.&lt;/p&gt;&lt;br /&gt;
+&lt;h2&gt;Conclusion&lt;/h2&gt;&lt;br /&gt;
+&lt;p&gt;Building AI agents for production is less about dependency-heavy frameworks and more about practical engineering. Focus on the fundamentals: clear objectives, appropriate tooling, comprehensive observability, and robust guardrails. Reuse your existing APIs and infrastructure where possible. Stay vigilant about prompt injection attacks. And perhaps most importantly, set realistic expectations—both internally and with users.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;The future of AI in production isn&apos;t about magical agents. It&apos;s about well-engineered process daemons that reliably execute specific tasks with appropriate oversight and permissions. That might be less exciting than the hype, but it leads to more reliable and predictable systems.&lt;/p&gt;&lt;br /&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;em&gt;The Digits Engineering Team has over a decade of collective experience deploying machine learning systems across multiple industries.&lt;/em&gt;&lt;/p&gt;&lt;br /&gt;
+&lt;iframe src=&quot;https://drive.google.com/file/d/1cgbQsBlWyO13DnN8jZtYXlByEw_wDbeP/preview&quot; width=&quot;640&quot; height=&quot;380&quot; title=&quot;Agents in Production: Lessons shared at MLops World 2025&quot; allowfullscreen style=&quot;margin: 0 auto;border:0;&quot;&gt;&lt;/iframe&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;em&gt;Want to dive deeper? The full presentation covers implementation details, demos, and specific technical recommendations for each component of a production agent system.&lt;/em&gt;&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;&lt;a href=&quot;https://drive.google.com/file/d/1cgbQsBlWyO13DnN8jZtYXlByEw_wDbeP/view?usp=drive_link&quot;&gt;https://drive.google.com/file/d/1cgbQsBlWyO13DnN8jZtYXlByEw_wDbeP/view?usp=drive_link&lt;/a&gt;&lt;/p&gt;&lt;br /&gt;
+</content:encoded></item><item><title>Firm Models Are Here: Exclusive to the Digits Accountant Partner Program</title><link>https://digits.com/blog/firm-models-are-here-exclusive-to-the-digits-accounting-partner-program/</link><guid isPermaLink="true">https://digits.com/blog/firm-models-are-here-exclusive-to-the-digits-accounting-partner-program/</guid><description>Digits launches the Accountant Partner Program—your only way to unlock Firm Models: AI trained uniquely for your firm.</description><pubDate>Tue, 30 Sep 2025 15:34:00 GMT</pubDate><content:encoded>&lt;p&gt;Today I’m excited to announce the launch of the &lt;strong&gt;Digits Accountant Partner Program&lt;/strong&gt;—and with it, a breakthrough innovation in accounting technology: &lt;strong&gt;Firm Models.&lt;/strong&gt;&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;Firm Models are proprietary AI models trained exclusively on each firm’s own client base. Available only through our new Partner Program, they allow firms to capture the uniqueness of their practice and apply it across their entire client portfolio—driving maximum efficiency and automation.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;Unlike legacy platforms that tack on AI or send all your data to LLMs, Digits is an AI-native general ledger built from the ground up for accounting. That foundation makes Firm Models possible—and it’s something no other platform can match.&lt;/p&gt;&lt;br /&gt;
+&lt;h2&gt;Why Partner with Digits?&lt;/h2&gt;&lt;br /&gt;
+&lt;p&gt;Every firm is different. Your workflows, your verticals, and the way your team approaches client data reflect years of expertise. That uniqueness is your edge.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;The Partner Program was built to protect and amplify that uniqueness. It equips firms of all sizes with private, AI-native tools and resources that get smarter with every client onboarded and every action taken—delivering automation and predictive accuracy that compound as your firm grows.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;And for larger partners, the program goes even further. Firm Models provide private, firm-specific AI trained exclusively on your client base and workflows, setting a new benchmark for customization, data isolation, and security in accounting software. With Firm Models, your data remains fully secured, compliant, and isolated to your firm, so you can embrace AI with confidence.&lt;/p&gt;&lt;br /&gt;
+&lt;h2&gt;What Partners Gain&lt;/h2&gt;&lt;br /&gt;
+&lt;p&gt;Joining the Digits Accountant Partner Program unlocks tools and support designed to help firms modernize their practices with long-term competitive advantage:&lt;/p&gt;&lt;br /&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Exclusive Pricing &amp;amp; Free Firm Books&lt;/strong&gt; – Flexible wholesale pricing that scales with your clients, plus free Digits for your own books.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Firm Dashboard&lt;/strong&gt; – A centralized hub for client activity with real-time visibility and staff access controls.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Proprietary Firm Models&lt;/strong&gt; – Every client and every action makes your model smarter, compounding into a system uniquely tailored to your firm.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Dedicated Success &amp;amp; Migration&lt;/strong&gt; – Hands-on migration support and a success team to ensure a smooth transition from legacy systems.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Certification &amp;amp; Training&lt;/strong&gt; – Exclusive training for accountants at every level, plus a Coaching Certification to empower firm leaders. Certified firms also receive priority access to our Success Team. &lt;em&gt;All of this happens inside Digits Academy—our learning hub with insights from 2,000+ monthly closes and step-by-step guidance to build an AI-native practice.&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;br /&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;“The Digits Accountant Partner Program is about more than just adopting AI-native technology—it’s about driving an elevated client experience. By pairing world-class 1:1 training with the incredible Digits software, we are excited to deliver a fundamentally better client experience through smarter insights and stronger relationships.”&lt;/em&gt;&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;— &lt;strong&gt;Melissa Ciana, Partner, Acru Solutions&lt;/strong&gt;&lt;/p&gt;&lt;br /&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;The AI-Native Advantage&lt;/h2&gt;&lt;br /&gt;
+&lt;p&gt;Digits isn’t an “AI-enabled” feature bolted onto a legacy platform—it’s AI-native at the core. Our system continuously learns from every accounting action, capturing the patterns that drive efficiency across firms.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;During our August close cycle, Digits AI auto-booked 96.5% of client transactions directly to the ledger—a level of accuracy that demonstrates just how far AI-native accounting has come. Firm Models build on that foundation, compounding accuracy and efficiency as they continuously learn from your practice.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;Firm Models take this even further. They give each partner firm its own AI—trained on its own data, tuned to its workflows, and secured with industry-leading privacy. And because they’re exclusive to the Partner Program, firms gain not only transformative technology, but also the dedicated support, training, and resources needed to put it into practice.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;Over 700 firms have already applied to the Partner Program, and early partners are seeing results:&lt;/p&gt;&lt;br /&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;“Working directly with Digits, the most advanced accounting software in the world, Hiline has the opportunity to embed AI at the core of our operations and prove what’s possible when cutting-edge technology meets an AI-native firm.”&lt;/em&gt;&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;— &lt;strong&gt;Matt Gardner, CEO, Hiline&lt;/strong&gt;&lt;/p&gt;&lt;br /&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;Available Today&lt;/h2&gt;&lt;br /&gt;
+&lt;p&gt;This is the beginning of a new era in accounting—where firms don’t just adopt AI, they make it their own. Firm Models are just one example of what’s possible.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;But no matter the size of your practice, the &lt;strong&gt;Digits Accountant Partner Program&lt;/strong&gt; gives you the tools, training, and support to modernize your workflows and deliver a better client experience today. Through Digits Academy, you&apos;ll also have the education and certifications you need to lead with confidence in this AI-native era.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;Now is the time to join the hundreds of firms already applying. I can’t wait to welcome you to the Partner Program and see the impact it creates for your team and your clients.&lt;/p&gt;&lt;br /&gt;
+</content:encoded></item><item><title>Introducing Multiview Dashboards: Custom Dashboards, Endless Views</title><link>https://digits.com/blog/multiview-dashboards/</link><guid isPermaLink="true">https://digits.com/blog/multiview-dashboards/</guid><description>Introducing Multiview Dashboards: Custom Dashboards, Endless Views. Create multiple custom dashboards tailored to your needs—instantly responsive, fully integrated, and finally free from pivot tables.</description><pubDate>Wed, 17 Sep 2025 18:27:00 GMT</pubDate><content:encoded>&lt;p&gt;At Digits, our mission has always been to make finance effortless, insightful, and—dare we say—beautiful. Today, we’re taking another leap forward.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;You’ve always been able to customize your Digits dashboard. But now, for the first time, you can create multiple dashboards—each one fully custom, instantly responsive, and designed for the exact way you want to view your business.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;This is &lt;strong&gt;multiview dashboards&lt;/strong&gt;, and no ledger has ever offered this before.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;&lt;img src=&quot;https://digits.com//assets/images/uploads/blog/dashboard-toggle-small.gif&quot; alt=&quot;&quot;&gt;&lt;/p&gt;&lt;br /&gt;
+&lt;h2&gt;Dashboards, Your Way&lt;/h2&gt;&lt;br /&gt;
+&lt;p&gt;With Multiview Dashboards, Digits is no longer limited to a single, static view. Now you can:&lt;/p&gt;&lt;br /&gt;
+&lt;ul&gt;
+&lt;li&gt;Build dashboards for board meetings, department reviews, investor updates, or your own daily pulse checks.&lt;/li&gt;
+&lt;li&gt;Accountants and advisors can design dashboards for clients, unlocking new ways to deliver proactive, data-driven guidance.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Drag and drop&lt;/strong&gt; statements, vendors, accounts, categories, KPIs, and more into each dashboard.&lt;/li&gt;
+&lt;li&gt;Watch your data &lt;strong&gt;update instantly&lt;/strong&gt;—no refresh, no exports, no manual rebuilds.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Toggle between financial periods with a single click&lt;/strong&gt;, and see every dashboard adjust in real time.&lt;/li&gt;
+&lt;/ul&gt;&lt;br /&gt;
+&lt;p&gt;&lt;img src=&quot;https://digits.com//assets/images/uploads/blog/payroll-dashboard-small.gif&quot; alt=&quot;&quot;&gt;&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;And because Digits connects with &lt;strong&gt;Stripe, BILL, Mercury, Gusto, and 12,000+ other financial institutions&lt;/strong&gt;, every dashboard gives you a &lt;strong&gt;complete, unified view of your entire financial stack—all in one place.&lt;/strong&gt;&lt;/p&gt;&lt;br /&gt;
+&lt;h2&gt;Why Multiview Dashboards Change Everything&lt;/h2&gt;&lt;br /&gt;
+&lt;p&gt;Traditional ledgers are built on rigid, outdated architectures. At best, they let you tweak a single dashboard or download static reports. But when your business needs multiple perspectives—finance vs. ops vs. investor updates—you’re stuck juggling spreadsheets and building endless pivot tables in Excel.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;Digits changes the game. Our &lt;strong&gt;vector-graph data model&lt;/strong&gt; treats every element—vendors, accounts, statements, KPIs—as live objects. That’s what makes it possible not just to customize one dashboard, but to create &lt;strong&gt;multiple living dashboards&lt;/strong&gt; that adapt instantly to the way you work.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;Your finances, reimagined: &lt;strong&gt;flexible, real-time, and built for every view you need.&lt;/strong&gt;&lt;/p&gt;&lt;br /&gt;
+&lt;h2&gt;Try It Today&lt;/h2&gt;&lt;br /&gt;
+&lt;p&gt;We’re excited to put this power in your hands. Create dashboards for every angle of your business, explore your data from multiple perspectives, and discover insights you didn’t know were possible.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;&lt;strong&gt;This is what finance should feel like.&lt;/strong&gt;&lt;/p&gt;&lt;br /&gt;
+</content:encoded></item><item><title>How to Scale an Accounting Firm: 10 Strategies for Growth</title><link>https://digits.com/blog/how-to-scale-accounting-firm/</link><guid isPermaLink="true">https://digits.com/blog/how-to-scale-accounting-firm/</guid><description>To scale an accounting firm, you need the right systems, processes, and technology in place to help you offer stellar services to even more clients without sacrificing quality.</description><pubDate>Thu, 14 Aug 2025 15:37:00 GMT</pubDate><content:encoded>&lt;p&gt;Until recently, a CPA firm was limited in how much it could scale based on the number of accountants it had on staff. It was difficult to offer financial advisory and tax preparation services to too many clients without sacrificing quality or dramatically increasing overhead.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;Solo practitioners, in particular, often hit a ceiling, having to turn away work simply because there weren&apos;t enough hours in the day.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;But now, technology, smarter systems, and scalable service models have removed many of those roadblocks. From automation and AI to streamlined workflows and strategic hiring, firms of any size can now grow without ballooning their budgets.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;Here are 10 practical ways you can scale your accounting firm without going over budget or compromising the quality of service you offer.&lt;/p&gt;&lt;br /&gt;
+&lt;h2&gt;1. Save time and money with AI-powered accounting tools&lt;/h2&gt;&lt;br /&gt;
+&lt;p&gt;Having the right tech stack can dramatically reduce the time your team spends on day-to-day tasks like categorizing expenses, reconciling accounts, and sending invoices.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;For solo practitioners, AI can feel like having a full team behind you without the overhead. And for growing firms, it&apos;s the key to scaling without constantly hiring. By automating routine work like transaction categorization and bank reconciliation, you can free up hours each week to focus on higher-value services like advisory and client strategy.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;Accounting firms are already using Digits and its &lt;a href=&quot;https://digits.com/agl/&quot;&gt;Autonomous General Ledger®&lt;/a&gt; to automatically book over 93% of transactions. It learns from each client&apos;s historical data and chart of accounts, adapting as it goes so your team can close faster and spend less time on manual cleanup. Some clients have even &lt;a href=&quot;https://digits.com/customers/abra/&quot;&gt;reclaimed a full workday&lt;/a&gt; each month thanks to streamlined AI bookkeeping.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;The benefit of this automation is both time and money. By offloading repetitive tasks, you reduce your reliance on manual labor and free up employees to focus on work AI can&apos;t do, like client service and business development. That translates to lower payroll costs, fewer errors, and more capacity to take on new clients.&lt;/p&gt;&lt;br /&gt;
+&lt;h2&gt;2. Build a strong foundation with standardized processes&lt;/h2&gt;&lt;br /&gt;
+&lt;p&gt;A bottleneck for many accounting services firms is a lack of standardized processes. Many tasks are repeatable across clients. Clearly documenting each step ensures consistency and makes it easier to train new hires or delegate work efficiently. Examples of processes worth documenting include:&lt;/p&gt;&lt;br /&gt;
+&lt;ul&gt;
+&lt;li&gt;Month-end close procedures&lt;/li&gt;
+&lt;li&gt;Client onboarding workflows&lt;/li&gt;
+&lt;li&gt;Tax return preparation steps&lt;/li&gt;
+&lt;li&gt;Payroll processing checklists&lt;/li&gt;
+&lt;li&gt;Quarterly reporting timelines and deliverables&lt;/li&gt;
+&lt;/ul&gt;&lt;br /&gt;
+&lt;p&gt;Standardizing processes like these ensures each client receives consistent, high-quality service, no matter who handles the account. It also builds trust: Clients know exactly what to expect, when to expect it, and that nothing will fall through the cracks.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;New hires can easily ramp up by reading the training materials, which should clearly outline these processes. When they sit in on in-person training sessions, they&apos;re already up to date on the processes they&apos;ll be responsible for.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;Use tools like &lt;a href=&quot;https://scribehow.com/&quot;&gt;Scribe&lt;/a&gt; to create standard operating procedure (SOP) documents that describe processes, like how to perform month-end closes, and training materials. A screen recorder like &lt;a href=&quot;https://www.loom.com/&quot;&gt;Loom&lt;/a&gt; can also be helpful in demonstrating how you perform certain tasks in your accounting software, such as generating &lt;a href=&quot;https://digits.com/product/financials/&quot;&gt;financial reports&lt;/a&gt;.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;A well-documented process shortens turnaround times by eliminating guesswork and ensuring that every task follows a consistent, repeatable flow. It also reduces miscommunication by setting clear expectations for who does what and when, minimizing back-and-forth with clients.&lt;/p&gt;&lt;br /&gt;
+&lt;h2&gt;3. Hire admin and support staff early to offload busywork&lt;/h2&gt;&lt;br /&gt;
+&lt;p&gt;Another potential hurdle accounting firms face is the workload spike that inevitably happens at the end of each quarter and during tax season. If you&apos;re understaffed, routine administrative tasks often get deprioritized as your team shifts attention to the most time-sensitive client work.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;Preempt this potential issue at your firm by hiring new team members at least six to eight weeks before tax season begins. This gives you time to properly train them and build their confidence before crunch time.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;If you&apos;re a solo practitioner, consider hiring a temporary tax professional during your busy season to help manage client volume without compromising service quality. This way, you can take on more work while maintaining fast turnaround times and personalized service. Draft a clear, time-bound contract, typically lasting 10 to 14 weeks, to cover the full duration of tax season, including prep and post-deadline follow-up.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;For administrative support, you don&apos;t need to commit to full-time, in-house staff. Virtual assistants or offshore contractors can help with tasks like scheduling, document collection, or client communication, which frees up your time to focus on higher-value work without significantly increasing overhead.&lt;/p&gt;&lt;br /&gt;
+&lt;h2&gt;4. Specialize in a niche to attract higher-value clients&lt;/h2&gt;&lt;br /&gt;
+&lt;p&gt;Many clients choose an accounting firm based on price, especially if they don&apos;t fully understand the value of the services provided. By specializing and clearly differentiating your firm, you attract clients who care about your expertise, not just your cost. These clients tend to value your insights, stay with you longer, and refer others to you.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;Your niche might be offering financial advisory services to SaaS companies. Or helping small businesses set up their &lt;a href=&quot;https://digits.com/blog/c-corp-vs-s-corp-vs-llc/&quot;&gt;LLCs or S corps&lt;/a&gt;. Or offering your expertise to e-commerce brands on &lt;a href=&quot;https://digits.com/blog/small-business-tax-rates/&quot;&gt;tax compliance&lt;/a&gt;, inventory accounting, and platform integrations. Find the gap in the market based on your potential clients&apos; needs and fill it.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;When you specialize, you can charge premium rates for your deep understanding of that industry&apos;s needs. And clients are more likely to stay with a firm that &amp;quot;gets&amp;quot; their business. Plus, you&apos;re likely to get more referrals from industry peers because your name becomes synonymous with that niche.&lt;/p&gt;&lt;br /&gt;
+&lt;h2&gt;5. Add scalable services&lt;/h2&gt;&lt;br /&gt;
+&lt;p&gt;The more service offerings you automate, the easier it will be to scale sustainable growth for your firm. Accounting packages that include reconciliation, reporting, and payroll may require little manpower if you&apos;re set up to leverage AI tools that do the work for you.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;But scalability isn&apos;t just about automation. It&apos;s also about repeatability. Look for services that you can create templates for, deliver as a subscription, or package into tiers. Examples include:&lt;/p&gt;&lt;br /&gt;
+&lt;ul&gt;
+&lt;li&gt;Monthly bookkeeping with set deliverables and reports&lt;/li&gt;
+&lt;li&gt;Virtual CFO or advisory services with quarterly strategy calls&lt;/li&gt;
+&lt;li&gt;Automated sales tax compliance&lt;/li&gt;
+&lt;li&gt;Outsourced payroll processing&lt;/li&gt;
+&lt;li&gt;Client onboarding and training modules using recorded tutorials or checklists&lt;/li&gt;
+&lt;/ul&gt;&lt;br /&gt;
+&lt;p&gt;Platforms like &lt;a href=&quot;https://digits.com/#persona&quot;&gt;Digits&lt;/a&gt; make offering a lot of these services easier by combining automated workflows, &lt;a href=&quot;https://digits.com/product/dashboards/&quot;&gt;real-time dashboards&lt;/a&gt;, and branded client portals.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;With built-in tools for &lt;a href=&quot;https://digits.com/product/bookkeeping/&quot;&gt;reconciliation&lt;/a&gt;, &lt;a href=&quot;https://digits.com/product/bill-pay/&quot;&gt;bill pay&lt;/a&gt;, &lt;a href=&quot;https://digits.com/product/invoicing/&quot;&gt;invoicing&lt;/a&gt;, and &lt;a href=&quot;https://digits.com/product/financials/&quot;&gt;reporting&lt;/a&gt;, Digits makes it easy to offer services like monthly bookkeeping, accounts payable, and financial strategy, without adding more headcount. This way, you can deliver repeatable services at scale without reinventing the wheel for every client.&lt;/p&gt;&lt;br /&gt;
+&lt;h2&gt;6. Systematize client onboarding and communication&lt;/h2&gt;&lt;br /&gt;
+&lt;p&gt;Streamlining communication with clients and collecting documents frees up time to actually manage those accounts. If you&apos;re waiting for a tax client to bring you physical receipts and bank statements (because that&apos;s how you&apos;ve always done it), it might be time to invest in software that allows customers to easily upload their documents through a client portal. The documents can be automatically scanned to extract key data, which makes your work in filing their taxes faster and more efficient.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;If you find yourself responding to dozens of emails from clients about minutiae like whether they qualify for the child tax credit or whether a home office qualifies for a deduction, start automating some of your communications. For instance, you could have automatic reminders sent out that &lt;a href=&quot;https://digits.com/blog/startup-taxes-ultimate-guide/&quot;&gt;tax season&lt;/a&gt; is approaching or offer a chatbot to respond to frequently asked questions on your website.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;You can also create a customer intake form that minimizes the back-and-forth communication and gives you everything you need to create a custom plan to help that client. For example, if a new small business owner is seeking monthly bookkeeping and tax support, your intake form can collect key details like entity type, accounting software used, number of bank accounts, and typical monthly transactions. With this information, you can determine the client&apos;s needs right away.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;Another option is to work with a platform like Digits. It centralizes your client communication with built-in &lt;a href=&quot;https://digits.com/accountants/month-end-close/&quot;&gt;tools made for accounting firms&lt;/a&gt; like branded client portals, document upload vaults, and one-click Q&amp;amp;A workflows, so nothing gets lost in email or stuck waiting for follow-up.&lt;/p&gt;&lt;br /&gt;
+&lt;h2&gt;7. Build a marketing engine that brings in right-fit clients&lt;/h2&gt;&lt;br /&gt;
+&lt;p&gt;Search engine optimization, advertising, referrals, and social media are all great ways to build your client base. So, develop a marketing plan that targets your potential customers where they spend time. Then, consistently work to build trust with them as part of your growth strategy.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;Here are some elements you may want to consider as part of your marketing strategy:&lt;/p&gt;&lt;br /&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Website:&lt;/strong&gt; Ensure your website is informative and SEO-targeted so your brand reaches the right audience.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Blog:&lt;/strong&gt; Publish posts that answer common client questions, industry-specific tax tips, or downloadable checklists for tax season to drive traffic and build trust over time.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Advertising:&lt;/strong&gt; Invest in Google Ads to increase the likelihood that your site is found in search results.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Community participation:&lt;/strong&gt; Sponsor a local event that targets your audience, such as a small business networking gathering.&lt;/li&gt;
+&lt;/ul&gt;&lt;br /&gt;
+&lt;p&gt;To encourage referrals, set up a simple program that rewards existing clients, such as offering a service discount or a gift card for every qualified referral they send your way. Email your clients an invitation to participate with details on how to qualify.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;Also, don&apos;t underestimate the value of LinkedIn networking and niche Facebook groups, where your ideal clients are already looking for trusted professionals. Social media provides a great opportunity for you to engage in conversations with people in your target market.&lt;/p&gt;&lt;br /&gt;
+&lt;h2&gt;8. Expand your reach through partnerships&lt;/h2&gt;&lt;br /&gt;
+&lt;p&gt;Another effective way to scale is by forming partnerships with complementary businesses. For instance, if you serve small businesses or startups, consider offering free consultations through a local entrepreneur center. This builds trust early and positions you as a go-to trusted advisor, making participants more likely to return for ongoing financial services.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;You could co-host a webinar or podcast with a financial planner, providing tax advice to retirees while the financial planner talks about retirement plans. You can also offer this audience a bundled package of services, adding more value when they sign up for both services together.&lt;/p&gt;&lt;br /&gt;
+&lt;h2&gt;9. Use automation to increase capacity without new hires&lt;/h2&gt;&lt;br /&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.stamps.com/article/how-accounting-firms-can-reclaim-valuable-time-through-automation/&quot;&gt;Seventy-five percent of accountants&lt;/a&gt; say they&apos;re spending too much time on repetitive tasks that take their focus away from more important work. Save time and cut down on your hiring spend by automating everything from report generation to marketing emails.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;Today&apos;s cloud-based accounting tools automate transaction categorization, bank statement reconciliation, and accounts payable tasks. Rather than wasting energy on these time-consuming tasks, you can focus on providing that personal touch that strengthens your client relationships.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;For instance, Digits helps firms automate their entire back office, including reconciliation, bill pay, invoicing, reporting, and transaction review. With everything in one place, your team can work more efficiently, reduce errors, and serve more clients with the same headcount.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;Beyond accounting functions, automation can also streamline marketing, onboarding, and client communication. For example:&lt;/p&gt;&lt;br /&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://zapier.com/&quot;&gt;Zapier&lt;/a&gt; can automatically move new leads into your CRM and trigger onboarding sequences.&lt;/li&gt;
+&lt;li&gt;Project management platforms like &lt;a href=&quot;https://www.notion.com/product&quot;&gt;Notion&lt;/a&gt; can help centralize information, streamline onboarding and serve as a repository for client notes&lt;/li&gt;
+&lt;/ul&gt;&lt;br /&gt;
+&lt;p&gt;By automating routine tasks across your firm, you increase capacity, reduce operational costs, and deliver a more consistent client experience.&lt;/p&gt;&lt;br /&gt;
+&lt;h2&gt;10. Track KPIs like revenue per employee and client churn&lt;/h2&gt;&lt;br /&gt;
+&lt;p&gt;Key performance indicators (KPIs) help you understand what&apos;s working, what&apos;s wasting resources, and where your firm has room to grow. Two important metrics to help you scale are:&lt;/p&gt;&lt;br /&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Revenue per employee:&lt;/strong&gt; This tells you how efficiently your team is generating income. If this number is too low, it could signal overstaffing, underpricing, or unproductive workflows. Find ways to increase it by cutting unnecessary staff, implementing AI, or raising prices.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Client churn rate:&lt;/strong&gt; If clients are leaving frequently, you may have an onboarding, service delivery, or communication issue. High churn erodes accounting firm growth and wastes marketing dollars. Find ways to automate your onboarding process without losing that personal touch.&lt;/li&gt;
+&lt;/ul&gt;&lt;br /&gt;
+&lt;p&gt;You may also want to track these metrics:&lt;/p&gt;&lt;br /&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Client lifetime value (CLTV):&lt;/strong&gt; This is the total revenue you expect to earn from a client over the duration of your relationship. A high CLTV justifies investing more in client acquisition and retention strategies, like upselling advisory services.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Client acquisition cost (CAC):&lt;/strong&gt; This is the total cost of acquiring a new client, including marketing, sales, and onboarding. A high CAC may indicate inefficient marketing or sales funnels and can eat into profit margins if not offset by a high CLTV.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Average project turnaround time:&lt;/strong&gt; This refers to the time it takes to complete core deliverables, such as &lt;a href=&quot;https://digits.com/accountants/month-end-close/&quot;&gt;month-end close&lt;/a&gt;. A consistently long turnaround can signal workflow inefficiencies, while shorter, predictable timelines improve client satisfaction and free up capacity for more work.&lt;/li&gt;
+&lt;/ul&gt;&lt;br /&gt;
+&lt;p&gt;Understanding how your accounting firm is faring can help you make strategic decisions like whether to raise your prices, hire staff, or invest in technology.&lt;/p&gt;&lt;br /&gt;
+&lt;h2&gt;Scale your accounting firm with Digits&lt;/h2&gt;&lt;br /&gt;
+&lt;p&gt;Most accounting firms don&apos;t need more tools. They just need a platform built to scale. Digits replaces disconnected systems with one AI-native workspace that automates your back office from end to end — reconciliation, reporting, bill pay, invoicing, transaction review, and more — so you can deliver the books in days, not weeks.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;&lt;a href=&quot;https://digits.com/#persona&quot;&gt;Try Digits free&lt;/a&gt; and see how much &lt;em&gt;more&lt;/em&gt; your firm can handle when the busywork takes care of itself.&lt;/p&gt;&lt;br /&gt;
+&lt;h4&gt;FAQs&lt;/h4&gt;&lt;br /&gt;
+&lt;h5&gt;How do you scale an accounting firm?&lt;/h5&gt;&lt;br /&gt;
+&lt;p&gt;You can scale an accounting firm by adding AI-powered tools to your tech stack, hiring staff &lt;em&gt;before&lt;/em&gt; the busy season, specializing in a niche, and automating day-to-day tasks.&lt;/p&gt;&lt;br /&gt;
+&lt;h5&gt;How do accountants use AI?&lt;/h5&gt;&lt;br /&gt;
+&lt;p&gt;Artificial intelligence (AI) can automate many tasks for accountants, including transaction reconciliation, report generation, and bill pay. It can also help with business communication and forecasting.&lt;/p&gt;&lt;br /&gt;
+&lt;h5&gt;How does AI reduce accounting costs?&lt;/h5&gt;&lt;br /&gt;
+&lt;p&gt;AI can reduce the amount of manual labor involved in updating accounts and sending invoices. It can also reduce the incidence of human errors in data input, saving time and money.&lt;/p&gt;&lt;br /&gt;
+</content:encoded></item><item><title>Startup Stock Options: How to Create a Stock Option Plan for Your Startup</title><link>https://digits.com/blog/startup-stock-options/</link><guid isPermaLink="true">https://digits.com/blog/startup-stock-options/</guid><description>Considering offering startup stock options to employees? Let&apos;s look at how to create a stock option plan that works for your startup without unnecessary complexity.</description><pubDate>Thu, 14 Aug 2025 15:37:00 GMT</pubDate><content:encoded>&lt;p&gt;Startup founders, when you&apos;re building a new company, attracting top talent is just as crucial as securing funding. One of the best ways to motivate and retain employees? Company stock options.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;A strong stock option plan makes early hires long-term stakeholders, linking their success to the company&apos;s growth. Let&apos;s look at how to create a stock option plan that works for your startup without unnecessary complexity.&lt;/p&gt;&lt;br /&gt;
+&lt;h2&gt;What are startup stock options?&lt;/h2&gt;&lt;br /&gt;
+&lt;p&gt;Startup stock options let employees buy company shares at a set price after a certain period of time, giving them a chance to benefit if the company&apos;s value grows. These options are designed to attract and retain top talent by offering them a stake in the company&apos;s future success.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;When employees receive stock options, they don&apos;t own shares right away. Instead, they gain the right to buy them at a predetermined price (the &amp;quot;strike price&amp;quot;) after meeting certain conditions, like staying with the company for a certain amount of time. If the company grows and its stock value increases, employees can purchase shares at the lower strike price and potentially make a tidy profit for themselves.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;Another type of equity compensation is the Restricted Stock Award (RSA). With RSAs, employees receive actual shares of a company upfront rather than just the option to buy them later. However, these shares usually come with certain restrictions, such as a vesting schedule and the company&apos;s right to repurchase unvested shares if the employee leaves early.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;RSAs provide immediate ownership and potential tax advantages, but they require upfront commitment. Stock options, on the other hand, give employees flexibility so they can decide whether they want to invest in your startup.&lt;/p&gt;&lt;br /&gt;
+&lt;h2&gt;How do stock options work?&lt;/h2&gt;&lt;br /&gt;
+&lt;p&gt;Let&apos;s walk through the process of how stock options work. You hire an employee. As part of the benefits package, you grant 100 stock options. These options will vest after four years.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;Once the employee has worked for you for this period, she can exercise these stock options. She buys the shares at the strike price, which was set when the options were granted.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;If your company goes public, employees can sell their shares for a profit.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;Startup stock options are typically granted as part of a stock option plan, which outlines the rules for how employees earn and exercise their options. Let&apos;s dive deeper into each step of issuing stock options.&lt;/p&gt;&lt;br /&gt;
+&lt;h3&gt;1. Granting stock options&lt;/h3&gt;&lt;br /&gt;
+&lt;p&gt;When first hired, employees receive an offer to purchase a set number of shares of the company at a predetermined price, known as the strike price or exercise price. This price is usually based on the company&apos;s fair market value at the time of the stock option grant.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;The fair market value of your startup can be calculated in a few ways, but the most common is a 409A valuation. This is an independent appraisal used to determine stock option pricing.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;It&apos;s not necessarily every employee who gets stock options. You, as the founder, can determine whether to offer them to all new hires or just to certain roles or employees of a certain seniority. And it&apos;s up to you how many options to offer each employee. Generally, executives and founders have the most options, followed by early employees and mid-level employees. Junior and non-technical staff may receive fewer options or none at all.&lt;/p&gt;&lt;br /&gt;
+&lt;h3&gt;2. Following the vesting schedule&lt;/h3&gt;&lt;br /&gt;
+&lt;p&gt;A vesting schedule is a timeline that determines when employees can purchase stock options. Employees don&apos;t get all their stock options immediately. Instead, vesting ensures they gradually earn the right to buy shares over time. A vesting schedule helps companies reward long-term commitment and protect against employees leaving too soon.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;A common vesting schedule is four years with a one-year cliff. In other words, the first portion vests after a year, and the rest vests monthly or quarterly.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;For example, let&apos;s say your employee is granted 4,800 stock options. If there&apos;s a one-year cliff, she won&apos;t receive any until the end of the first year, at which point 1,200 options (25%) become available. The remaining 3,600 options vest evenly each month (100 per month) over the next three years.&lt;/p&gt;&lt;br /&gt;
+&lt;h3&gt;3. Exercising options&lt;/h3&gt;&lt;br /&gt;
+&lt;p&gt;Once vested, employees are free to exercise their stock options by purchasing shares at the predetermined strike price. This means they can buy company stock at a fixed cost, regardless of its current market value.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;If the company&apos;s stock value has increased since the options were granted, employees can purchase shares at a discount compared to the market price, allowing them to realize an immediate financial gain.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;They can either hold onto the shares in hopes of further appreciation or sell them to secure a profit. However, exercising stock options involves certain risks, including potential declines in stock value and tax implications.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;Proper timing and strategic planning can maximize the benefits of stock options as part of an overall compensation package.&lt;/p&gt;&lt;br /&gt;
+&lt;h3&gt;4. An exit event (IPO or acquisition) occurs&lt;/h3&gt;&lt;br /&gt;
+&lt;p&gt;When a company goes public through an initial public offering (IPO) or gets acquired by another firm, employees who own company shares can sell them at a profit.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;In an IPO, the company&apos;s shares become publicly traded on the stock market, often increasing in value if the business performs well and attracts investor interest. Employees who received stock options or equity grants as part of their compensation can then sell their shares, potentially seeing large financial gains.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;Similarly, during an acquisition, the acquiring company may offer to buy out existing shares at a premium, providing employees with a lucrative exit opportunity.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;The exact financial benefits depend on the acquisition terms, such as whether the deal is structured as a cash buyout or a stock exchange.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;In both cases, employees who hold equity in the company can capitalize on its success, making stock ownership a valuable incentive in startup and corporate compensation packages.&lt;/p&gt;&lt;br /&gt;
+&lt;h2&gt;Why are stock options essential for startups?&lt;/h2&gt;&lt;br /&gt;
+&lt;p&gt;Startups often can&apos;t match big tech salaries, so stock options are a cost-effective way to help startups recruit skilled professionals who believe in the company&apos;s vision and keep them there as shares vest over time.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;For instance, when Airbnb was getting started, they used stock options to attract top talent as they couldn&apos;t necessarily afford sky-high salaries. This strategy built a committed team, and when the company went public, early employees who held their options saw significant financial gains. In fact, on the day of the IPO, &lt;a href=&quot;https://www.reuters.com/article/world/airbnb-valuation-surges-past-100-billion-in-biggest-us-ipo-of-2020-idUSKBN28K29H/&quot;&gt;shares more than doubled&lt;/a&gt;, boosting the valuation to over $100 billion in 2020.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;Take inspiration from Airbnb&apos;s approach. Offering equity as a key incentive for early hires, especially when you don&apos;t have the budget to offer competitive salaries, can help you appeal to top talent.&lt;/p&gt;&lt;br /&gt;
+&lt;h2&gt;How to create a stock option plan for your startup&lt;/h2&gt;&lt;br /&gt;
+&lt;p&gt;If you&apos;re an &lt;a href=&quot;https://digits.com/blog/accounting-for-startups-founders-guide/&quot;&gt;early-stage startup founder&lt;/a&gt; thinking about creating a stock option plan, there are several steps you&apos;ll need to take to build that plan, each requiring careful planning and execution. Let&apos;s explore each one.&lt;/p&gt;&lt;br /&gt;
+&lt;h3&gt;1. Determine your equity pool size&lt;/h3&gt;&lt;br /&gt;
+&lt;p&gt;First, decide how much of the company&apos;s equity to allocate to stock options. Typical option pools range from 10% to 20% of total equity.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;To determine the right pool size, consider your startup&apos;s valuation, future hiring plans, and the competitive landscape for talent.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;If your budget doesn&apos;t allow you to pay top dollar for senior engineers, for example, you may want to offer a generous stock option as part of the benefits package. See what your competitors are offering to guide you in the process of deciding how much equity to offer as stock options.&lt;/p&gt;&lt;br /&gt;
+&lt;h3&gt;2. Choose the right type of stock option&lt;/h3&gt;&lt;br /&gt;
+&lt;p&gt;Next, choose the right type of stock option. Common choices include Incentive Stock Options (ISOs) and Non-Qualified Stock Options (NSOs).&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;&lt;strong&gt;ISOs&lt;/strong&gt; offer tax advantages for your employees: they don&apos;t pay tax when they exercise options, and if they hold the shares for two or more years from the grant date, they&apos;ll pay only the long-term capital gains rate. However, they are limited to employees.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;&lt;strong&gt;NSOs&lt;/strong&gt;, on the other hand, provide more flexibility in who can use them. With NSOs, there&apos;s no specific holding period to qualify for a particular tax treatment. And they can be granted to advisors and contractors.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;&lt;strong&gt;RSAs&lt;/strong&gt;, as we mentioned before, are ideal for early-stage startups when the company&apos;s valuation is very low. Employees can acquire these shares with minimal tax consequences.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;You can also choose to offer a mix of stock options based on different criteria for employees. Choosing the right mix of these options ensures your stock option plan aligns with company goals, talent acquisition strategies, and long-term financial planning.&lt;/p&gt;&lt;br /&gt;
+&lt;h3&gt;3. Design a vesting schedule&lt;/h3&gt;&lt;br /&gt;
+&lt;p&gt;A well-structured vesting period ensures employees earn their equity over time, incentivizing long-term commitment. Most startups use a four-year vesting schedule with a one-year cliff—employees must stay for at least a year before earning any stock.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;When you issue stock as part of a job offer, clearly outline the vesting period in the offer letter and stock option agreement. This sets expectations and reduces disputes. Additionally, define an expiration date, usually 10 years from the grant date, after which unexercised options become void.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;For the C-suite, consider tying vesting to a liquidity event, like an acquisition or IPO. This ensures that employees are rewarded when the company succeeds.&lt;/p&gt;&lt;br /&gt;
+&lt;h3&gt;4. Create legal documentation&lt;/h3&gt;&lt;br /&gt;
+&lt;p&gt;Next, draft stock option agreements that outline exercise price, vesting terms, and expiration. Hire an independent third party to conduct a &lt;a href=&quot;https://digits.com/blog/409a-valuations-startups/#:~:text=409A%20valuations%20are%20only%20needed,even%20a%20secondary%20stock%20sale.&quot;&gt;409A valuation&lt;/a&gt;, which determines the fair market value (FMV) of your startup. It may take two to four weeks to complete, so plan the timing accordingly.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;Keep &lt;a href=&quot;https://digits.com/blog/finance-tech-stack/&quot;&gt;cap tables&lt;/a&gt; updated whenever you issue or exercise stock options. There are cap table management tools such as Carta or Pulley that can help you manage them.&lt;/p&gt;&lt;br /&gt;
+&lt;h3&gt;5. Communicate the plan to employees&lt;/h3&gt;&lt;br /&gt;
+&lt;p&gt;Finally, communicate the plan to employees once it&apos;s ready. Share a detailed stock options guide and hold an employee education session, delving into the value and mechanics of stock options, grants, vesting schedules, and tax implications. Maintain transparency about potential dilution and liquidity events.&lt;/p&gt;&lt;br /&gt;
+&lt;h2&gt;Common mistakes to avoid when offering stock options&lt;/h2&gt;&lt;br /&gt;
+&lt;p&gt;A poorly managed startup stock option plan can lead to legal, financial, and retention issues. Avoid these key mistakes to ensure a fair and effective equity program:&lt;/p&gt;&lt;br /&gt;
+&lt;h3&gt;Over-promising equity during negotiations&lt;/h3&gt;&lt;br /&gt;
+&lt;p&gt;One of the biggest mistakes startups make is not properly explaining dilution. As the company raises funding and issues more shares, existing ownership percentages decrease. Employees may not fully understand how dilution affects their equity, leading to frustration when their stake is smaller than expected. To avoid this:&lt;/p&gt;&lt;br /&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Provide a clear equity breakdown:&lt;/strong&gt; Show employees how their percentage ownership could change over time with potential funding rounds.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Use equity calculators:&lt;/strong&gt; Offer tools that help employees visualize how dilution impacts their stake.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Discuss liquidity events:&lt;/strong&gt; Explain how stock options convert into financial gains, emphasizing that the value depends on company performance and future funding rounds.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Be transparent in offer letters:&lt;/strong&gt; Clearly outline how many shares employees receive, potential dilution scenarios, and what that means in real terms.&lt;/li&gt;
+&lt;/ul&gt;&lt;br /&gt;
+&lt;h3&gt;Neglecting tax implications for employees and the company&lt;/h3&gt;&lt;br /&gt;
+&lt;p&gt;Failing to consider the tax treatment of startup stock options can also create unexpected financial burdens for both employees and the company.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;Different types of stock options, such as Incentive Stock Options (ISOs) and Non-Qualified Stock Options (NSOs), come with varying tax consequences. A lack of clarity can lead to costly mistakes.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;Employees may not realize that exercising stock options can trigger immediate &lt;a href=&quot;https://digits.com/blog/startup-bookkeeping-101-with-tips-from-a-cpa/&quot;&gt;tax liabilities&lt;/a&gt;. For example, NSOs are taxed as ordinary income upon exercise, while ISO holders may have to pay capital gains tax when selling shares. And employees exercising ISOs may be subject to Alternative Minimum Tax (AMT), a tax many do not anticipate.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;Realize that your startup, too, will have to navigate tax obligations and reporting requirements. The company can &lt;a href=&quot;https://warrenaverett.com/insights/non-qualified-stock-options/&quot;&gt;deduct compensation expenses related to NSOs&lt;/a&gt;, but not ISOs, unless they are disqualified from favorable tax treatment.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;Also, startups must properly withhold taxes on NSO exercises and report stock-based compensation on &lt;a href=&quot;https://digits.com/blog/1099-vs-w2/&quot;&gt;employee W-2s or 1099s&lt;/a&gt;.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;To prevent tax-related surprises:&lt;/p&gt;&lt;br /&gt;
+&lt;ul&gt;
+&lt;li&gt;Provide employees with clear documentation on the tax treatment of their stock options.&lt;/li&gt;
+&lt;li&gt;Encourage employees to consult a financial advisor before exercising options.&lt;/li&gt;
+&lt;li&gt;Stay compliant with 409A valuations to ensure options are granted at fair market value.&lt;/li&gt;
+&lt;/ul&gt;&lt;br /&gt;
+&lt;p&gt;By proactively addressing tax considerations, startups can prevent misunderstandings, reduce legal risks, and ensure employees fully benefit from their stock option grants.&lt;/p&gt;&lt;br /&gt;
+&lt;h3&gt;Failing to update employees on equity plan changes&lt;/h3&gt;&lt;br /&gt;
+&lt;p&gt;A stock option plan is not static. It evolves as a startup grows, raises funding, and adjusts its equity strategy. Failing to update and communicate changes to employees can lead to confusion, frustration, and even legal disputes.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;To ensure clear communication, hold annual or semi-annual meetings to discuss changes to the equity plan, upcoming funding rounds, and potential impacts on startup employees. Provide updated option agreements, summary sheets, and FAQs whenever adjustments are made.&lt;/p&gt;&lt;br /&gt;
+&lt;h2&gt;Simplify the financial management of your startup with Digits&lt;/h2&gt;&lt;br /&gt;
+&lt;p&gt;Startup stock options are a powerful tool for attracting and retaining top talent while aligning employee incentives with company growth. However, effectively managing an equity compensation plan requires careful financial planning, accurate record-keeping, and a clear understanding of the company&apos;s financial health. Without the right tools, founders may struggle to determine how much equity to allocate and whether a stock option plan makes sense for their business.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;Digits simplifies this process by providing real-time financial insights, automated bookkeeping, and AI-powered transaction tracking. With its intuitive dashboards and precise financial reporting, founders can assess their startup&apos;s financial position, evaluate the impact of stock options on their cap table, and make data-driven decisions about offering equity.&lt;/p&gt;&lt;br /&gt;
+&lt;p&gt;Take control of your startup&apos;s finances with ease. &lt;a href=&quot;https://digits.com/#persona&quot;&gt;Try Digits for free&lt;/a&gt; and see how an AI-native accounting platform can help you build a sustainable and scalable business. &lt;a href=&quot;https://digits.com/&quot;&gt;&lt;/a&gt;&lt;/p&gt;&lt;br /&gt;
+</content:encoded></item></channel></rss>

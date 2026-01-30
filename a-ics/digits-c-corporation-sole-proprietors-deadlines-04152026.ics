@@ -1,0 +1,13 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ical.marudot.com//iCal Event Maker
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+DTSTAMP:20251023T173343Z
+UID:1761240705499-53699@ical.marudot.com
+DTSTART;VALUE=DATE:20260415
+DTEND;VALUE=DATE:20260416
+SUMMARY:C Corporations & Sole Proprietors
+DESCRIPTION:Reminder from your friends at Digits — C Corp & Sole Prop returns are due!\n\n• Deadline to file Form 1120 (C Corporation) and Form 1040 with Schedule C (Sole Proprietor) with the IRS\n• Deadline to pay any taxes owed for 2025\n• Deadline to request an extension (Form 4868 for individuals\, Form 7004 for corporations)
+END:VEVENT
+END:VCALENDAR

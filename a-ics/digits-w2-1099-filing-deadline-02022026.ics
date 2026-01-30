@@ -1,0 +1,13 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ical.marudot.com//iCal Event Maker
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+DTSTAMP:20251023T173216Z
+UID:1761240586146-73073@ical.marudot.com
+DTSTART;VALUE=DATE:20260202
+DTEND;VALUE=DATE:20260203
+SUMMARY:W-2 & 1099 Filing Deadline
+DESCRIPTION:Reminder from your friends at Digits - 1099 work is due!\n\n• Deadline to furnish W-2s to employees and 1099-NEC forms to contractors\n• Deadline to file W-2s with the SSA and 1099-NEC forms with the IRS (paper or electronic)\n• Deadline to send 1099-MISC Copy B to recipients\n\nHelpful Resources:\nWhat is a 1099: https://digits.com/blog/what-is-a-1099-nec/
+END:VEVENT
+END:VCALENDAR
