@@ -1,8 +1,8 @@
 # Update footer links and inject CSS across all HTML files
 $Mappings = @{
-    'Latest News' = @{ text='Our Ai Technology'; href='http://127.0.0.1:5503/agl/' }
-    'Changelog' = @{ text='Bank Grade Security'; href='http://127.0.0.1:5503/security/' }
-    'Developer API' = @{ text='Real Time Integration'; href='http://127.0.0.1:5503/integrations/' }
+    'Latest News' = @{ text='Our Ai Technology'; href='/agl/' }
+    'Changelog' = @{ text='Bank Grade Security'; href='/security/' }
+    'Developer API' = @{ text='Real Time Integration'; href='/integrations/' }
 }
 $css = '@media (min-width: 1200px) { .footer-menu-container .footer-nav-link.header-h3-style { font-size: 1.6rem; } }'
 
