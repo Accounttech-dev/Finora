@@ -1,12 +1,12 @@
 ﻿{
-  "name": "Digits",
-  "short_name": "Digits",
+  "name": "Finora",
+  "short_name": "Finora",
   "description": "Incredible, real-time analysis for businesses. Just a few clicks to set up.",
   "dir": "auto",
   "lang": "en-US",
   "display": "standalone",
   "orientation": "any",
-  "start_url": "https://digits.com",
+  "start_url": "https://finora.com",
   "background_color": "#6ecddd",
   "theme_color": "#6ecddd",
   "icons": [
