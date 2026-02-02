@@ -1,0 +1,9 @@
+/* Hide Sign in links on mobile devices (screens below 768px) */
+@media (max-width: 767px) {
+
+    .login-link,
+    #login-link,
+    #login-link-mobile {
+        display: none !important;
+    }
+}
