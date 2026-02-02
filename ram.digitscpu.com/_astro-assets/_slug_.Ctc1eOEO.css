@@ -1,5 +1,18 @@
 ﻿@charset "UTF-8";
 
+/* Hide orphaned dropdown items from old "Why Finora" navigation that appear after About Us */
+.top-nav-item:has(a[href="about-us/"])+li.dropdown-item {
+    display: none !important;
+}
+
+.top-nav-item:has(a[href="about-us/"])+li.dropdown-item+li.dropdown-item {
+    display: none !important;
+}
+
+.top-nav-item:has(a[href="about-us/"])+li.dropdown-item+li.dropdown-item+li.dropdown-item {
+    display: none !important;
+}
+
 .rich-text {
     --vertical-spacing-top: 1.25em;
     --vertical-spacing-bottom: 1em;
@@ -1068,4 +1081,8 @@
     #login-link-mobile {
         display: none !important
     }
+}
+
+button[data-modal='get-started'] {
+    display: none !important
 }

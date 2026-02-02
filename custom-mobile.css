@@ -1,3 +1,8 @@
+/* Hide dropdown links globally */
+a.dropdown-link {
+    display: none;
+}
+
 /* Hide Sign in links on mobile devices (screens below 768px) */
 @media (max-width: 767px) {
 
