@@ -40,14 +40,38 @@ $css2 = '@media (min-width: 1025px) { .header-h3-style, h3 { font-size: 1.9rem; 
     $css2Pattern = '(?is)<style>\s*@media\s*\(min-width:\s*1025px\)[\s\S]*?\}</style>'
     $s = [Regex]::Replace($s, $css2Pattern, '', [System.Text.RegularExpressions.RegexOptions]::IgnoreCase)
 
-    # Add header CSS to all pages (font-size: 1.9rem for h3/header-h3-style)
-    if ($s -notmatch [Regex]::Escape($css2)) {
-        if ($s -match '(?i)</body>') {
-            $s = $s -replace '(?i)</body>', "<style>$css2</style>`n</body>"
-        } else {
-            $s = $s + "`n<style>$css2</style>`n"
+    # Add header CSS only to pricing or faq pages
+    if ($f.FullName -match '(?i)\\pricing\\|(?i)\\faq\\|(?i)\\pricing\\index.html|(?i)\\faq\\index.html') {
+        if ($s -notmatch [Regex]::Escape($css2)) {
+            if ($s -match '(?i)</body>') {
+                $s = $s -replace '(?i)</body>', "<style>$css2</style>`n</body>"
+            } else {
+                $s = $s + "`n<style>$css2</style>`n"
+            }
         }
     }
+
+    # Remove header submenu items that link to Zoom webinars or the Academy
+    $submenuPatterns = @(
+        '(?is)<li[^>]*>\s*<a[^>]*href\s*=\s*"https?:\\/\\/events\\.zoom\\.us[^"]*"[^>]*>[\s\S]*?<\/li>',
+        '(?is)<li[^>]*>\s*<a[^>]*href\s*=\s*"https?:\\/\\/academy\\.digits\\.com[^"]*"[^>]*>[\s\S]*?<\/li>'
+    )
+    foreach ($p in $submenuPatterns) {
+        $s = [Regex]::Replace($s, $p, '', [System.Text.RegularExpressions.RegexOptions]::IgnoreCase)
+    }
+
+    # Also remove mobile-nav variants (without full class attributes)
+    $mobilePatterns = @(
+        '(?is)<a[^>]*href\s*=\s*"https?:\\/\\/events\\.zoom\\.us[^"]*"[^>]*>[\s\S]*?<\/a>',
+        '(?is)<a[^>]*href\s*=\s*"https?:\\/\\/academy\\.digits\\.com[^"]*"[^>]*>[\s\S]*?<\/a>'
+    )
+    foreach ($p in $mobilePatterns) {
+        $s = [Regex]::Replace($s, $p, '', [System.Text.RegularExpressions.RegexOptions]::IgnoreCase)
+    }
+
+    # Hide any Pricing navigation links (catch relative, absolute, or parent paths)
+    $pricingPattern = '(?is)<a\b([^>]*?)\bhref\s*=\s*"[^"]*\bpricing\/?[^"]*"([^>]*)>\s*Pricing\s*<\/a>'
+    $s = [Regex]::Replace($s, $pricingPattern, '<span class="top-nav-link" style="display:none"> Pricing </span>', [System.Text.RegularExpressions.RegexOptions]::IgnoreCase)
 
     if ($s -ne $orig) {
         Set-Content -Path $f.FullName -Value $s -Encoding UTF8
