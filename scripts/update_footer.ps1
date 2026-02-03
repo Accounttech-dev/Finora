@@ -1,83 +1,103 @@
-# Update footer links and inject CSS across all HTML files
-$Mappings = @{
-    'Latest News' = @{ text='Our Ai Technology'; href='/agl/' }
-    'Changelog' = @{ text='Bank Grade Security'; href='/security/' }
-    'Developer API' = @{ text='Real Time Integration'; href='/integrations/' }
+# Script to update footer content across all HTML files
+# Updates text content and removes specific href links
+
+$ErrorActionPreference = "Stop"
+
+# Get all HTML files
+$files = Get-ChildItem -Path "C:\projects\ai" -Filter "*.html" -Recurse -File
+
+Write-Host "Found $($files.Count) HTML files to process" -ForegroundColor Cyan
+
+foreach ($file in $files) {
+    Write-Host "`nProcessing: $($file.Name)" -ForegroundColor Yellow
+    
+    $content = Get-Content $file.FullName -Raw -Encoding UTF8
+    $originalContent = $content
+    $changed = $false
+    
+    # 1. Replace "Our Ai Technology" with "Real-time Bookkeeping"
+    if ($content -match 'Our Ai Technology') {
+        $content = $content -replace 'Our Ai Technology', 'Real-time Bookkeeping'
+        Write-Host "  ✓ Replaced 'Our Ai Technology' with 'Real-time Bookkeeping'" -ForegroundColor Green
+        $changed = $true
+    }
+    
+    # 2. Replace "Bank Grade Security" with "Month-end Close Automation"
+    if ($content -match 'Bank Grade Security') {
+        $content = $content -replace 'Bank Grade\s+Security', 'Month-end Close Automation'
+        Write-Host "  ✓ Replaced 'Bank Grade Security' with 'Month-end Close Automation'" -ForegroundColor Green
+        $changed = $true
+    }
+    
+    # 3. Replace "Real Time Integration" link with "About Us" span (remove href)
+    if ($content -match 'Real Time\s+Integration') {
+        # Find and replace the anchor tag with a span
+        $content = $content -replace '<a\s+class="footer-nav-link header-h3-style"\s+href="[^"]*"\s+target="_blank"\s+rel="noopener noreferrer"\s+data-astro-cid-[^>]*>\s*Real Time\s+Integration\s*</a>', '<span class="footer-nav-link header-h3-style">About Us</span>'
+        Write-Host "  ✓ Replaced 'Real Time Integration' link with 'About Us' text" -ForegroundColor Green
+        $changed = $true
+    }
+    
+    # 4. Remove href from deadline items (convert a tags to spans)
+    # W-2 & 1099 Filing Deadline
+    if ($content -match 'W-2 &amp; 1099 Filing Deadline') {
+        $content = $content -replace '<a\s+class="deadline-link"\s+href="a-ics/[^"]*w2-1099[^"]*\.ics"\s+download\s+rel="noopener noreferrer"\s+data-astro-cid-[^>]*>', '<span class="deadline-link" data-astro-cid-csx6xpza>'
+        $content = $content -replace '(W-2 &amp; 1099 Filing Deadline.*?)</a>\s*</li>', '$1</span> </li>'
+        Write-Host "  ✓ Removed href from 'W-2 & 1099 Filing Deadline'" -ForegroundColor Green
+        $changed = $true
+    }
+    
+    # Partnerships & S Corporations
+    if ($content -match 'Partnerships &amp; S Corporations') {
+        $content = $content -replace '<a\s+class="deadline-link"\s+href="a-ics/[^"]*partnership[^"]*\.ics"\s+download\s+rel="noopener noreferrer"\s+data-astro-cid-[^>]*>', '<span class="deadline-link" data-astro-cid-csx6xpza>'
+        $content = $content -replace '(Partnerships &amp; S Corporations.*?)</a>\s*</li>', '$1</span> </li>'
+        Write-Host "  ✓ Removed href from 'Partnerships & S Corporations'" -ForegroundColor Green
+        $changed = $true
+    }
+    
+    # C Corporations & Sole Proprietors
+    if ($content -match 'C Corporations &amp; Sole Proprietors') {
+        $content = $content -replace '<a\s+class="deadline-link"\s+href="a-ics/[^"]*c-corporation[^"]*\.ics"\s+download\s+rel="noopener noreferrer"\s+data-astro-cid-[^>]*>', '<span class="deadline-link" data-astro-cid-csx6xpza>'
+        $content = $content -replace '(C Corporations &amp; Sole Proprietors.*?)</a>\s*</li>', '$1</span> </li>'
+        Write-Host "  ✓ Removed href from 'C Corporations & Sole Proprietors'" -ForegroundColor Green
+        $changed = $true
+    }
+    
+    # 5. Remove href from "Terms of Service" (convert to span)
+    if ($content -match 'Terms of Service') {
+        $content = $content -replace '<a\s+href="https://my\.digits\.com/legal/terms-of-service"\s+class="footer-legal-nav-link"\s+data-astro-cid-[^>]*>\s*Terms of Service\s*</a>', '<span class="footer-legal-nav-link" data-astro-cid-ej6hapv5>Terms of Service</span>'
+        Write-Host "  ✓ Removed href from 'Terms of Service'" -ForegroundColor Green
+        $changed = $true
+    }
+    
+    # 6. Remove href from "Privacy Policy" (convert to span)
+    if ($content -match 'Privacy Policy') {
+        $content = $content -replace '<a\s+href="https://my\.digits\.com/legal/privacy-policy"\s+class="footer-legal-nav-link"\s+data-astro-cid-[^>]*>\s*Privacy Policy\s*</a>', '<span class="footer-legal-nav-link" data-astro-cid-ej6hapv5>Privacy Policy</span>'
+        Write-Host "  ✓ Removed href from 'Privacy Policy'" -ForegroundColor Green
+        $changed = $true
+    }
+    
+    # 7. Remove href from "Accountant Directory" (convert to span)
+    if ($content -match 'Accountant Directory') {
+        $content = $content -replace '<a\s+class="footer-nav-link header-h3-style"\s+href="https://accountants\.digits\.com/"\s+target="_blank"\s+rel="noopener noreferrer"\s+data-astro-cid-[^>]*>\s*Accountant Directory\s*</a>', '<span class="footer-nav-link header-h3-style">Accountant Directory</span>'
+        Write-Host "  ✓ Removed href from 'Accountant Directory'" -ForegroundColor Green
+        $changed = $true
+    }
+    
+    # 8. Remove href from "Integration Partners" (convert to span)
+    if ($content -match 'Integration Partners') {
+        $content = $content -replace '<a\s+class="footer-nav-link header-h3-style"\s+href="integrations/"\s+data-astro-cid-[^>]*>\s*Integration Partners\s*</a>', '<span class="footer-nav-link header-h3-style">Integration Partners</span>'
+        Write-Host "  ✓ Removed href from 'Integration Partners'" -ForegroundColor Green
+        $changed = $true
+    }
+    
+    # Save changes if content was modified
+    if ($changed) {
+        Set-Content -Path $file.FullName -Value $content -Encoding UTF8 -NoNewline
+        Write-Host "  ✓ File updated successfully" -ForegroundColor Green
+    } else {
+        Write-Host "  - No footer changes needed" -ForegroundColor Gray
+    }
 }
-$css = '@media (min-width: 1200px) { .footer-menu-container .footer-nav-link.header-h3-style { font-size: 1.6rem; } }'
 
-$files = Get-ChildItem -Path . -Recurse -Filter *.html -File
-$changed = @()
-
-foreach ($f in $files) {
-    try {
-        $s = Get-Content -Raw -Encoding UTF8 -Path $f.FullName
-    } catch {
-        continue
-    }
-    $orig = $s
-
-    foreach ($key in $Mappings.Keys) {
-        $textEscaped = [Regex]::Escape($key)
-        $replacementText = $Mappings[$key].text
-        $replacementHref = $Mappings[$key].href
-        $pattern = '<a\b([^>]*class\s*=\s*"[^"]*footer-nav-link[^"]*"[^>]*)\bhref\s*=\s*"[^"]*"([^>]*)>\s*' + $textEscaped + '\s*</a>'
-        $repl = '<a$1 href="' + $replacementHref + '"$2> ' + $replacementText + ' </a>'
-        $s = [Regex]::Replace($s, $pattern, $repl, [System.Text.RegularExpressions.RegexOptions]::IgnoreCase)
-    }
-
-    if ($s -notmatch [Regex]::Escape($css)) {
-        if ($s -match '(?i)</body>') {
-            $s = $s -replace '(?i)</body>', "<style>$css</style>`n</body>"
-        } else {
-            $s = $s + "`n<style>$css</style>`n"
-        }
-    }
-
-$css2 = '@media (min-width: 1025px) { .header-h3-style, h3 { font-size: 1.9rem; font-weight: 300; letter-spacing: -.025rem; line-height: 110%; } }'
-
-    # Remove any previously-inserted header CSS block to avoid duplicates
-    $css2Pattern = '(?is)<style>\s*@media\s*\(min-width:\s*1025px\)[\s\S]*?\}</style>'
-    $s = [Regex]::Replace($s, $css2Pattern, '', [System.Text.RegularExpressions.RegexOptions]::IgnoreCase)
-
-    # Add header CSS only to pricing or faq pages
-    if ($f.FullName -match '(?i)\\pricing\\|(?i)\\faq\\|(?i)\\pricing\\index.html|(?i)\\faq\\index.html') {
-        if ($s -notmatch [Regex]::Escape($css2)) {
-            if ($s -match '(?i)</body>') {
-                $s = $s -replace '(?i)</body>', "<style>$css2</style>`n</body>"
-            } else {
-                $s = $s + "`n<style>$css2</style>`n"
-            }
-        }
-    }
-
-    # Remove header submenu items that link to Zoom webinars or the Academy
-    $submenuPatterns = @(
-        '(?is)<li[^>]*>\s*<a[^>]*href\s*=\s*"https?:\\/\\/events\\.zoom\\.us[^"]*"[^>]*>[\s\S]*?<\/li>',
-        '(?is)<li[^>]*>\s*<a[^>]*href\s*=\s*"https?:\\/\\/academy\\.digits\\.com[^"]*"[^>]*>[\s\S]*?<\/li>'
-    )
-    foreach ($p in $submenuPatterns) {
-        $s = [Regex]::Replace($s, $p, '', [System.Text.RegularExpressions.RegexOptions]::IgnoreCase)
-    }
-
-    # Also remove mobile-nav variants (without full class attributes)
-    $mobilePatterns = @(
-        '(?is)<a[^>]*href\s*=\s*"https?:\\/\\/events\\.zoom\\.us[^"]*"[^>]*>[\s\S]*?<\/a>',
-        '(?is)<a[^>]*href\s*=\s*"https?:\\/\\/academy\\.digits\\.com[^"]*"[^>]*>[\s\S]*?<\/a>'
-    )
-    foreach ($p in $mobilePatterns) {
-        $s = [Regex]::Replace($s, $p, '', [System.Text.RegularExpressions.RegexOptions]::IgnoreCase)
-    }
-
-    # Hide any Pricing navigation links (catch relative, absolute, or parent paths)
-    $pricingPattern = '(?is)<a\b([^>]*?)\bhref\s*=\s*"[^"]*\bpricing\/?[^"]*"([^>]*)>\s*Pricing\s*<\/a>'
-    $s = [Regex]::Replace($s, $pricingPattern, '<span class="top-nav-link" style="display:none"> Pricing </span>', [System.Text.RegularExpressions.RegexOptions]::IgnoreCase)
-
-    if ($s -ne $orig) {
-        Set-Content -Path $f.FullName -Value $s -Encoding UTF8
-        $changed += $f.FullName
-    }
-}
-
-Write-Output "Updated files count: $($changed.Count)"
-foreach ($c in $changed) { Write-Output $c }
+Write-Host "`n✓ Footer update completed!" -ForegroundColor Cyan
+Write-Host "Total files processed: $($files.Count)" -ForegroundColor Cyan

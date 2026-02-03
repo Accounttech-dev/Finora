@@ -1,63 +1,137 @@
 import os
 import re
+from pathlib import Path
 
-# Mapping: original inner text -> (new inner text, new href)
-MAPPINGS = {
-    "Latest News": ("Our Ai Technology", "http://127.0.0.1:5503/agl/"),
-    "Changelog": ("Bank Grade Security", "http://127.0.0.1:5503/security/"),
-    "Developer API": ("Real Time Integration", "http://127.0.0.1:5503/integrations/"),
-}
+def update_footer_in_file(file_path):
+    """Update footer content in a single HTML file"""
+    try:
+        with open(file_path, 'r', encoding='utf-8') as f:
+            content = f.read()
+        
+        original_content = content
+        
+        # 1. Replace "Our Ai Technology" with "Real-time Bookkeeping"
+        content = content.replace('Our Ai Technology', 'Real-time Bookkeeping')
+        
+        # 2. Replace "Bank Grade Security" with "Month-end Close Automation"
+        content = re.sub(r'Bank Grade\s+Security', 'Month-end Close Automation', content)
+        
+        # 3. Replace "Real Time Integration" link with "About Us" span
+        content = re.sub(
+            r'<a\s+class="footer-nav-link header-h3-style"\s+href="[^"]*"\s+target="_blank"\s+rel="noopener noreferrer"\s+data-astro-cid-[^>]*>\s*Real Time\s+Integration\s*</a>',
+            '<span class="footer-nav-link header-h3-style">About Us</span>',
+            content
+        )
+        
+        # 4-6. Remove href from deadline items (convert a tags to spans)
+        # W-2 & 1099 Filing Deadline
+        content = re.sub(
+            r'<a\s+class="deadline-link"\s+href="[^"]*w2-1099[^"]*\.ics"\s+download\s+rel="noopener noreferrer"\s+data-astro-cid-[^>]*>',
+            '<span class="deadline-link" data-astro-cid-csx6xpza>',
+            content
+        )
+        content = re.sub(
+            r'(W-2 &amp; 1099 Filing Deadline.*?)</a>\s*</li>',
+            r'\1</span> </li>',
+            content
+        )
+        
+        # Partnerships & S Corporations
+        content = re.sub(
+            r'<a\s+class="deadline-link"\s+href="[^"]*partnership[^"]*\.ics"\s+download\s+rel="noopener noreferrer"\s+data-astro-cid-[^>]*>',
+            '<span class="deadline-link" data-astro-cid-csx6xpza>',
+            content
+        )
+        content = re.sub(
+            r'(Partnerships &amp; S Corporations.*?)</a>\s*</li>',
+            r'\1</span> </li>',
+            content
+        )
+        
+        # C Corporations & Sole Proprietors
+        content = re.sub(
+            r'<a\s+class="deadline-link"\s+href="[^"]*c-corporation[^"]*\.ics"\s+download\s+rel="noopener noreferrer"\s+data-astro-cid-[^>]*>',
+            '<span class="deadline-link" data-astro-cid-csx6xpza>',
+            content
+        )
+        content = re.sub(
+            r'(C Corporations &amp; Sole Proprietors.*?)</a>\s*</li>',
+            r'\1</span> </li>',
+            content
+        )
+        
+        # 7.  Remove href from Terms of Service
+        content = re.sub(
+            r'<a\s+href="https://my\.digits\.com/legal/terms-of-service"\s+class="footer-legal-nav-link"\s+data-astro-cid-[^>]*>\s*Terms of Service\s*</a>',
+            '<span class="footer-legal-nav-link" data-astro-cid-ej6hapv5>Terms of Service</span>',
+            content
+        )
+        
+        # 8. Remove href from Privacy Policy
+        content = re.sub(
+            r'<a\s+href="https://my\.digits\.com/legal/privacy-policy"\s+class="footer-legal-nav-link"\s+data-astro-cid-[^>]*>\s*Privacy Policy\s*</a>',
+            '<span class="footer-legal-nav-link" data-astro-cid-ej6hapv5>Privacy Policy</span>',
+            content
+        )
+        
+        # 9. Remove href from Accountant Directory
+        content = re.sub(
+            r'<a\s+class="footer-nav-link header-h3-style"\s+href="https://accountants\.digits\.com/"\s+target="_blank"\s+rel="noopener noreferrer"\s+data-astro-cid-[^>]*>\s*Accountant Directory\s*</a>',
+            '<span class="footer-nav-link header-h3-style">Accountant Directory</span>',
+            content
+        )
+        
+        # 10. Remove href from Integration Partners  
+        content = re.sub(
+            r'<a\s+class="footer-nav-link header-h3-style"\s+href="[^"]*integrations?/"\s+data-astro-cid-[^>]*>\s*Integration Partners\s*</a>',
+            '<span class="footer-nav-link header-h3-style">Integration Partners</span>',
+            content
+        )
+        # Also match variations with different href paths
+        content = re.sub(
+            r'<a\s+class="footer-nav-link header-h3-style"\s+href="\.\./about-us/"\s+data-astro-cid-[^>]*>\s*Integration Partners\s*</a>',
+            '<span class="footer-nav-link header-h3-style">Integration Partners</span>',
+            content
+        )
+        content = re.sub(
+            r'<a\s+class="footer-nav-link header-h3-style"\s+href="/about-us/"\s+data-astro-cid-[^>]*>\s*Integration Partners\s*</a>',
+            '<span class="footer-nav-link header-h3-style">Integration Partners</span>',
+            content
+        )
+        
+        # Save if changed
+        if content != original_content:
+            with open(file_path, 'w', encoding='utf-8') as f:
+                f.write(content)
+            return True
+        return False
+    except Exception as e:
+        print(f"  ✗ Error processing {file_path}: {e}")
+        return False
 
-CSS_SNIPPET = "@media (min-width: 1200px) { .footer-menu-container .footer-nav-link.header-h3-style { font-size: 1.5rem; } }"
-
-ANCHOR_RE = re.compile(r"(<a\b[^>]*>)(.*?)(</a>)", re.IGNORECASE | re.DOTALL)
-
-changed_files = []
-
-for root, dirs, files in os.walk('.'):
-    for fn in files:
-        if not fn.lower().endswith('.html'):
+def main():
+    # Get all HTML files in the project
+    project_path = Path(r"C:\projects\ai")
+    html_files = list(project_path.glob("**/*.html"))
+    
+    print(f"Found {len(html_files)} HTML files to process\n")
+    
+    files_updated = 0
+    for html_file in html_files:
+        # Skip node_modules and .git directories
+        if 'node_modules' in html_file.parts or '.git' in html_file.parts:
             continue
-        path = os.path.join(root, fn)
-        try:
-            with open(path, 'r', encoding='utf-8') as f:
-                s = f.read()
-        except Exception:
-            continue
+        
+        print(f"Processing: {html_file.name}")
+        if update_footer_in_file(html_file):
+            print(f"  ✓ Updated")
+            files_updated += 1
+        else:
+            print(f"  - No changes needed")
+    
+    print(f"\n✓ Footer update completed!")
+    print(f"Total files processed: {len(html_files)}")
+    print(f"Files updated: {files_updated}")
 
-        orig = s
-        def repl_anchor(m):
-            start_tag = m.group(1)
-            inner = m.group(2)
-            end_tag = m.group(3)
-            inner_clean = re.sub(r"\s+", " ", inner).strip()
-            # Exact match against keys
-            if inner_clean in MAPPINGS:
-                new_text, new_href = MAPPINGS[inner_clean]
-                # Replace or add href in start_tag
-                if re.search(r"\bhref\s*=\s*\"[^\"]*\"", start_tag):
-                    start_tag = re.sub(r"\bhref\s*=\s*\"[^\"]*\"", f'href="{new_href}"', start_tag)
-                else:
-                    # insert before final >
-                    start_tag = start_tag[:-1] + f' href="{new_href}">'
-                return start_tag + new_text + end_tag
-            return m.group(0)
-
-        s = ANCHOR_RE.sub(repl_anchor, s)
-
-        # Insert CSS snippet before </body> if not already present
-        if CSS_SNIPPET not in s:
-            if '</body>' in s:
-                s = s.replace('</body>', f'<style>{CSS_SNIPPET}</style>\n</body>')
-            else:
-                s = s + f'\n<style>{CSS_SNIPPET}</style>\n'
-
-        if s != orig:
-            with open(path, 'w', encoding='utf-8') as f:
-                f.write(s)
-            changed_files.append(path)
-
-print('Updated files:')
-for p in changed_files:
-    print(p)
-print(f'Total updated: {len(changed_files)}')
+if __name__ == "__main__":
+    main()
