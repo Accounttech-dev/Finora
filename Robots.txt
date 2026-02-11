@@ -1,0 +1,75 @@
+User-agent: *
+Allow: /
+Sitemap: https://www.aifinora.com/sitemap.xml
+
+# AI Platform Crawlers
+# OpenAI (ChatGPT): ALLOWING training, ALLOWING citation
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ChatGPT-User/2.0
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+# Anthropic (Claude): ALLOWING training, ALLOWING citation
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: claude-web
+Allow: /
+
+# Google (Gemini): ALLOWING training
+User-agent: Google-Extended
+Allow: /
+
+# Microsoft (Copilot): ALLOWING citation
+User-agent: bingbot
+Allow: /
+
+# Perplexity AI: ALLOWING training, ALLOWING citation
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Perplexity-User/1.0
+Allow: /
+
+# Meta (Llama): ALLOWING training
+User-agent: FacebookBot
+Allow: /
+
+# General AI Datasets
+User-agent: CCBot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Googlebot-Video
+Allow: /
+
+User-agent: Googlebot-News
+Allow: /
+
+# Social Media Crawlers
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Facebot
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
