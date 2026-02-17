@@ -1,0 +1,142 @@
+﻿<li class="top-nav-item top-nav-dropdown" data-astro-cid-e4bd7mep>
+              <span class="top-nav-link" data-astro-cid-e4bd7mep>Industries <span class="top-nav-dropdown-icon"
+                  data-astro-cid-e4bd7mep></span></span>
+              <div class="mega-menu">
+                <div class="mega-column">
+                  <div class="mega-title">E-commerce</div>
+                  <a href="services/ask-finora/">Ask Finora</a>
+                  <a href="services/bookkeeping/">Real-time Bookkeeping</a>
+                  <a href="services/month-end-close/">Month-end Close</a>
+                  <a href="services/dashboards/">Insights & Dashboards</a>
+                  <a href="services/financials/">Financial Reporting</a>
+                  <a href="services/bill-pay/">Bill Pay</a>
+                  <a href="services/invoicing/">Invoicing</a>
+                  <a href="services/business-setup/">Business Setup</a>
+                </div>
+                <div class="mega-column">
+                  <div class="mega-title">Healthcare</div>
+                  <a href="services/ask-finora/">Ask Finora</a>
+                  <a href="services/bookkeeping/">Real-time Bookkeeping</a>
+                  <a href="services/month-end-close/">Month-end Close</a>
+                  <a href="services/dashboards/">Insights & Dashboards</a>
+                  <a href="services/financials/">Financial Reporting</a>
+                  <a href="services/bill-pay/">Bill Pay</a>
+                  <a href="services/invoicing/">Invoicing</a>
+                  <a href="services/business-setup/">Business Setup</a>
+                </div>
+                <div class="mega-column">
+                  <div class="mega-title">Real Estate</div>
+                  <a href="services/ask-finora/">Ask Finora</a>
+                  <a href="services/bookkeeping/">Real-time Bookkeeping</a>
+                  <a href="services/month-end-close/">Month-end Close</a>
+                  <a href="services/dashboards/">Insights & Dashboards</a>
+                  <a href="services/financials/">Financial Reporting</a>
+                  <a href="services/bill-pay/">Bill Pay</a>
+                  <a href="services/invoicing/">Invoicing</a>
+                  <a href="services/business-setup/">Business Setup</a>
+                </div>
+                <div class="mega-column">
+                  <div class="mega-title">Retail</div>
+                  <a href="services/ask-finora/">Ask Finora</a>
+                  <a href="services/bookkeeping/">Real-time Bookkeeping</a>
+                  <a href="services/month-end-close/">Month-end Close</a>
+                  <a href="services/dashboards/">Insights & Dashboards</a>
+                  <a href="services/financials/">Financial Reporting</a>
+                  <a href="services/bill-pay/">Bill Pay</a>
+                  <a href="services/invoicing/">Invoicing</a>
+                  <a href="services/business-setup/">Business Setup</a>
+                </div>
+                <div class="mega-column">
+                  <div class="mega-title">Manufacturing</div>
+                  <a href="services/ask-finora/">Ask Finora</a>
+                  <a href="services/bookkeeping/">Real-time Bookkeeping</a>
+                  <a href="services/month-end-close/">Month-end Close</a>
+                  <a href="services/dashboards/">Insights & Dashboards</a>
+                  <a href="services/financials/">Financial Reporting</a>
+                  <a href="services/bill-pay/">Bill Pay</a>
+                  <a href="services/invoicing/">Invoicing</a>
+                  <a href="services/business-setup/">Business Setup</a>
+                </div>
+                <div class="mega-column">
+                  <div class="mega-title">Food & Beverage</div>
+                  <a href="services/ask-finora/">Ask Finora</a>
+                  <a href="services/bookkeeping/">Real-time Bookkeeping</a>
+                  <a href="services/month-end-close/">Month-end Close</a>
+                  <a href="services/dashboards/">Insights & Dashboards</a>
+                  <a href="services/financials/">Financial Reporting</a>
+                  <a href="services/bill-pay/">Bill Pay</a>
+                  <a href="services/invoicing/">Invoicing</a>
+                  <a href="services/business-setup/">Business Setup</a>
+                </div>
+              </div>
+            </li>
+
+            <style>
+              .top-nav-dropdown {
+                position: relative;
+              }
+
+              .mega-menu {
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 1100px;
+                max-width: 95vw;
+                background: white;
+                display: flex;
+                gap: 20px;
+                padding: 25px 20px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+                opacity: 0;
+                visibility: hidden;
+                transition: all 0.25s ease;
+                z-index: 999;
+                border-radius: 8px;
+              }
+
+              .top-nav-dropdown:hover .mega-menu {
+                opacity: 1;
+                visibility: visible;
+              }
+
+              .mega-column {
+                display: flex;
+                flex-direction: column;
+                min-width: 140px;
+                flex: 1;
+              }
+
+              .mega-title {
+                font-weight: 600;
+                margin-bottom: 10px;
+                font-size: 14px;
+                color: #000;
+                border-bottom: 2px solid #6ecddd;
+                padding-bottom: 8px;
+              }
+
+              .mega-column a {
+                text-decoration: none;
+                color: #444;
+                font-size: 12px;
+                margin: 3px 0;
+                padding: 4px 8px;
+                border-radius: 4px;
+                transition: all 0.2s ease;
+              }
+
+              .mega-column a:hover {
+                color: #000;
+                background: rgba(110, 205, 221, 0.1);
+              }
+
+              /* Mobile menu service text colors */
+              .dropdown-link-title {
+                color: #000 !important;
+              }
+
+              .dropdown-link-desc {
+                color: #666 !important;
+              }
+            </style>
