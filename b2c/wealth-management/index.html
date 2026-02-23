@@ -3014,7 +3014,16 @@ AI Finora provides integrated wealth management services tailored to meet the ev
                   <script
                     type="module">const e = ["var(--color-pink-accent)", "var(--color-blue-accent)", "var(--color-red-accent)"]; document.addEventListener("DOMContentLoaded", (() => { document.querySelectorAll(".quote-carousel").forEach((t => { (t => { const l = t.querySelectorAll(".quote-item"), o = t.querySelector(".quote-overlay"), c = t.querySelectorAll(".progress-dot"), a = parseInt(t.style.getPropertyValue("--interval")) || 5e3, r = "false" !== t.dataset.autoPlay, s = t.dataset.quoteTheme; let n = 0, u = null; const i = t => s ? `var(--color-${s})` : e[t % e.length]; if (0 === l.length) return; const v = i(0); if (o.style.setProperty("--accent-color", v), l.length > 1) { const e = () => { l.forEach(((e, t) => { e.classList.toggle("active", t === n) })); const e = i(n); o.style.setProperty("--accent-color", e) }, t = () => { c.forEach(((e, t) => { e.classList.toggle("active", t === n), e.classList.remove("manual") })) }, s = t => { n = t, e(), c.forEach(((e, t) => { e.classList.toggle("active", t === n), t === n ? e.classList.add("manual") : e.classList.remove("manual") })), g() }, v = () => { n = (n + 1) % l.length, e(), t() }, d = () => { u = setInterval((() => { v() }), a) }, g = () => { u && (clearInterval(u), u = null) }; c.forEach(((e, t) => { const l = i(t); e.style.setProperty("--accent-color", l), e.classList.toggle("active", 0 === t), e.addEventListener("click", (() => { s(t) })) })), r && d() } })(t) })) }));</script>
                 </div>
-   
+          <style>
+
+/* Mobile screens */
+@media (max-width: 768px) {
+  .quote-text {
+    font-size: 20px !important;
+    line-height: 1.4 !important; /* readability better */
+  }
+}
+            </style>
               </div>
             </div>
           </div>
