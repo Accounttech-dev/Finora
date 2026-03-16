@@ -1853,6 +1853,13 @@ function toggleMobileInd(btn) {
             const e = document.querySelector("#alert-banner"), t = document.querySelector("#header"), n = document.querySelectorAll("#header .top-nav-dropdown"), o = document.querySelector("#hamburger-button"), r = document.querySelectorAll("#header .top-nav-mobile-link-dropdown"), a = document.querySelectorAll("header .top-nav-mobile-back-btn"), c = "scrolled", d = "blur-active"; let u = null, s = !1, l = !1; function i() { t?.classList.add(d) } function f() { t?.classList.remove(d) } function v(e) { e.setAttribute("data-dd-open", "false") } u = function (t) { const n = e ? e.offsetHeight : 0; return t ? t + n : n }(u), n.forEach((e => { e.addEventListener("mouseenter", (() => { i() })), e.addEventListener("mouseleave", (e => { !function (e) { if (e.hasFocus) return; f() }(e) })), e.addEventListener("focusin", (e => { !function (e) { e.hasFocus = !0, i() }(e) })), e.addEventListener("focusout", (e => { !function (e) { e.hasFocus = !1, f() }(e) })) })), document.addEventListener("scroll", (() => { !function () { const e = window.scrollY; e > u && !s ? (s = !0, t?.classList.add(c)) : e <= u && s && (s = !1, t?.classList.remove(c)) }() })), o?.addEventListener("click", (e => { !function (e) { e.preventDefault(), l ? (l = !1, t?.setAttribute("data-nav-open", "false"), r.forEach((e => { v(e.closest(".top-nav-mobile-dropdown")) }))) : (l = !0, t?.setAttribute("data-nav-open", "true")) }(e) })), r.forEach((e => { e.addEventListener("click", (e => { !function (e) { e.preventDefault(); const t = e.target.closest(".top-nav-mobile-dropdown"), n = "true" === t.getAttribute("data-dd-open"); n ? v(t) : function (e) { e.setAttribute("data-dd-open", "true") }(t) }(e) })) })), a.forEach((e => { e.addEventListener("click", (e => { !function (e) { e.preventDefault(); const t = e.target.closest(".top-nav-mobile-dropdown"); "true" === t.getAttribute("data-dd-open") && v(t) }(e) })) }));
         </script>
         <main>
+
+          <section class="contact-section">
+  <div class="contact-badge">Contact Us</div>
+  <h1 class="contact-heading">Let's Talk</h1>
+  <p class="contact-subtext">Book a discovery call to see how we can work together and get you closer to your goals.</p>
+</section>
+
           <div class="page-container" style="max-width:1200px;margin:auto;padding:40px 20px;">
 
             <div class="calendly-wrapper" style="width:100%;border-radius:12px;overflow:hidden;">
@@ -2209,6 +2216,61 @@ function toggleMobileInd(btn) {
     --global-heading-color: var(--color-black);
     background-color: var(--color-green);
     border-radius: var(--global-border-radius);
+}
+
+
+.contact-section {
+  width: 100%;
+  background-color: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px 70px;
+  text-align: center;
+}
+
+.contact-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  border: 1px solid #d1d1d1;
+  border-radius: 999px;
+  padding: 6px 16px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #111;
+  background: #fff;
+  margin-bottom: 22px;
+}
+
+.contact-badge::before {
+  content: '';
+  width: 7px;
+  height: 7px;
+  background-color: #111;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.contact-heading {
+  font-size: clamp(52px, 8vw, 96px);
+  font-weight: 900;
+  color: #111;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  margin-bottom: 20px;
+  font-family: 'Arial Black', Arial, sans-serif;
+  text-transform: uppercase;
+}
+
+.contact-subtext {
+  font-size: 16px;
+  color: #444;
+  max-width: 540px;
+  line-height: 1.6;
 }
       </style>
 </body>
