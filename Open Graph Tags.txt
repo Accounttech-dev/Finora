@@ -1,0 +1,13 @@
+<!-- Open Graph Tags -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="AI Finora">
+<meta property="og:title" content="AI Finora | AI-Powered Accounting & Bookkeeping Services">
+<meta property="og:description" content="AI Finora delivers AI-powered accounting, bookkeeping, financial reporting, invoicing, and outsourced finance services for growing businesses.">
+<meta property="og:url" content="https://www.aifinora.com/">
+<meta property="og:image" content="https://www.aifinora.com/a-images/ai-finora-logo.png">
+
+<!-- Twitter Card Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AI Finora | AI-Powered Accounting & Bookkeeping Services">
+<meta name="twitter:description" content="AI Finora delivers AI-powered accounting, bookkeeping, financial reporting, invoicing, and outsourced finance services for growing businesses.">
+<meta name="twitter:image" content="https://www.aifinora.com/a-images/ai-finora-logo.png">
