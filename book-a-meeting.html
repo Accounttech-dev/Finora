@@ -46,6 +46,14 @@
             --global-inset-max-width: 1200px;
         }
     </style>
+    <script>
+(function() {
+  var canonical = document.createElement("link");
+  canonical.rel = "canonical";
+  canonical.href = window.location.origin + window.location.pathname;
+  document.head.appendChild(canonical);
+})();
+</script>
     <link rel="stylesheet" href="../ram.digitscpu.com/_astro-assets/booked.0_EVPCIz.css">
     <link rel="stylesheet" href="../ram.digitscpu.com/_astro-assets/index.BW-MCg4d.css">
     <link rel="stylesheet" href="../ram.digitscpu.com/_astro-assets/index.CGhjID6V.css">

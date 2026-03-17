@@ -352,7 +352,15 @@
   <link rel="preload" href="https://ram.digitscpu.com/_astro-assets/fonts/fdb5fedc93844555.woff2" as="font"
     type="font/woff2" crossorigin="">
   <script type="module" src="../../../ram.digitscpu.com/_astro-assets/page.DeRjBIrH.js"></script>
-   <link rel="canonical" href="https://www.aifinora.com/<?php echo $_SERVER['REQUEST_URI']; ?>" />
+
+  <script>
+(function() {
+  var canonical = document.createElement("link");
+  canonical.rel = "canonical";
+  canonical.href = window.location.origin + window.location.pathname;
+  document.head.appendChild(canonical);
+})();
+</script>
   <link href="../../sitemap.xml" rel="sitemap">
   <link rel="icon" type="image/x-icon" href="../../favicon/favicon5e1f.ico?v=2" sizes="48x48">
   <link rel="icon" type="image/png" href="../../favicon/favicon-64.png" sizes="64x64">

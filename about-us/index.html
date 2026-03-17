@@ -116,6 +116,14 @@
   }
 }
 </script>
+<script>
+(function() {
+  var canonical = document.createElement("link");
+  canonical.rel = "canonical";
+  canonical.href = window.location.origin + window.location.pathname;
+  document.head.appendChild(canonical);
+})();
+</script>
 <meta name="google-site-verification" content="GwsG8CoeBW2YIa9aLIWGkx45Qyqspdu1B8DW78TYgzU" />
   <meta name="robots" content="noindex, nofollow">
   <meta charset="utf-8">
@@ -304,7 +312,6 @@
       }
     }
   </style>
-  <link rel="canonical" href="https://www.aifinora.com/<?php echo $_SERVER['REQUEST_URI']; ?>" />
   <link rel="stylesheet" href="../../ram.digitscpu.com/_astro-assets/index.M3BnNg-0.css">
   <link rel="stylesheet" href="../../ram.digitscpu.com/_astro-assets/component-library.BGhx_IQW.css">
   <link rel="stylesheet" href="../../ram.digitscpu.com/_astro-assets/_slug_.qPFyvrl0.css">
