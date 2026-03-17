@@ -336,8 +336,14 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="generator" content="Astro v5.16.7">
 
- <link rel="canonical" href="https://www.aifinora.com/<?php echo $_SERVER['REQUEST_URI']; ?>" />
-   <link rel="icon" type="image/png" href="favicon/favicon-32.png" sizes="32x32">
+<script>
+(function() {
+  var canonical = document.createElement("link");
+  canonical.rel = "canonical";
+  canonical.href = window.location.origin + window.location.pathname;
+  document.head.appendChild(canonical);
+})();
+</script>   <link rel="icon" type="image/png" href="favicon/favicon-32.png" sizes="32x32">
   <link rel="icon" type="image/x-icon" href="favicon/favicon5e1f.ico?v=2" sizes="48x48">
   <link rel="icon" type="image/png" href="favicon/favicon-64.png" sizes="64x64">
   <link rel="icon" type="image/png" href="favicon/favicon-128.png" sizes="128x128">
