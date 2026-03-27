@@ -76,6 +76,65 @@
     :root {
       --main-font: StabilGrotesk-029909808665ec7b, "StabilGrotesk-029909808665ec7b fallback: Arial", Helvetica, Arial, sans-serif;
     }
+
+     .finora-reporting-section {
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 48px;
+    padding: 0px 0px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .finora-reporting-img {
+    flex: 0 0 48%;
+    max-width: 48%;
+  }
+
+  .finora-reporting-img img.security-seal-img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    display: block;
+  }
+
+  .finora-reporting-content {
+    flex: 1;
+  }
+
+  .finora-reporting-content h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #111;
+    line-height: 1.35;
+    margin-bottom: 16px;
+  }
+
+  .finora-reporting-content p {
+    font-size: 17px;
+    color: #444;
+    line-height: 1.7;
+  }
+
+  @media (max-width: 768px) {
+    .finora-reporting-section {
+      flex-direction: column;
+      padding: 36px 20px;
+      gap: 28px;
+    }
+    .finora-reporting-img {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+    .security-seal-img {
+      height: 350px !important;
+      object-fit: contain;
+    }
+    .finora-reporting-content h2 {
+      font-size: 24px;
+    }
+  }
   </style>
   <script>
 (function() {
@@ -1545,42 +1604,267 @@ Contact Us          </a>
                 <div data-astro-cid-kgxlwazw="true" data-astro-cid-bjh6wx2o
                   style="--mBottom: 0;--mTop: 0;--pBottom: var(--space-xl-responsive);--pTop: var(--space-none-responsive);">
                   <div class="plain-english-section" data-astro-cid-qxtrh5p7>
-                    <div class="heading-wrapper" data-astro-cid-xktwx3m6
-                      style="--textColor: var(--global-heading-color);--headingMaxWidthMobile: none;--headingMaxWidthTablet: none;--headingMaxWidthDesktop: none;--textAlign: center;--margin: 0 auto;">
-                      <h2 data-astro-cid-xktwx3m6="true" class="header-h3-style"><span class="heading"
-                          data-astro-cid-xktwx3m6
-                          style="--textColor: var(--global-heading-color);--headingMaxWidthMobile: none;--headingMaxWidthTablet: none;--headingMaxWidthDesktop: none;--textAlign: center;--margin: 0 auto;font-size: 28px;">
-                          Streamlined Client Billing Processes for Operational Efficiency</span></h2>
-                    </div>
+
+
+                    <div class="finora-section">
+  <h2>Streamlined Client Billing Processes for Operational Efficiency
+</h2>
+  <p class="fin-subtitle">AI Finora designs customized workflows that align with your service structure, pricing models, and contractual agreements. Whether your business operates on recurring billing, milestone-based invoicing, or usage-based charges, we ensure that every invoice reflects accurate data and agreed terms.</p>
+
+  <p class="fin-label">Key benefits of our client billing process include:
+
+</p>
+
+  <div class="fin-cards">
+
+    <div class="fin-card active">
+      <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="24" cy="30" r="13" stroke="white" stroke-width="2.5"/>
+        <path d="M19 18 Q24 12 29 18" stroke="white" stroke-width="2.5" fill="none"/>
+        <path d="M21 14 L27 14" stroke="white" stroke-width="2.5"/>
+        <text x="24" y="34" text-anchor="middle" font-size="13" fill="white" font-family="Arial" font-weight="bold">$</text>
+        <ellipse cx="14" cy="38" rx="4" ry="2.5" stroke="white" stroke-width="2" fill="none"/>
+        <ellipse cx="34" cy="38" rx="4" ry="2.5" stroke="white" stroke-width="2" fill="none"/>
+      </svg> 
+      <span class="fin-card-label">Accurate invoice generation aligned<br>with contracts and service delivery</span>
+    </div>
+
+    <div class="fin-card">
+      <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="8" y="22" width="32" height="18" rx="2" stroke="#333" stroke-width="1.8"/>
+        <rect x="10" y="19" width="28" height="5" rx="1" stroke="#333" stroke-width="1.5"/>
+        <rect x="12" y="16" width="24" height="5" rx="1" stroke="#333" stroke-width="1.5"/>
+        <text x="24" y="34" text-anchor="middle" font-size="10" fill="#333" font-family="Arial">$</text>
+        <polyline points="36,10 40,5 44,10" stroke="#333" stroke-width="2" fill="none"/>
+        <line x1="40" y1="5" x2="40" y2="16" stroke="#333" stroke-width="2"/>
+      </svg>
+
+      <span class="fin-card-label">  Automated recurring billing<br> and scheduled invoicing</span>
+    </div>
+
+    <div class="fin-card">
+      <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <ellipse cx="24" cy="36" rx="12" ry="4" stroke="#333" stroke-width="1.8" fill="none"/>
+        <ellipse cx="24" cy="30" rx="12" ry="4" stroke="#333" stroke-width="1.8" fill="none"/>
+        <ellipse cx="24" cy="24" rx="12" ry="4" stroke="#333" stroke-width="1.8" fill="none"/>
+        <line x1="12" y1="24" x2="12" y2="36" stroke="#333" stroke-width="1.8"/>
+        <line x1="36" y1="24" x2="36" y2="36" stroke="#333" stroke-width="1.8"/>
+        <text x="24" y="27" text-anchor="middle" font-size="6" fill="#333" font-family="Arial">$</text>
+        <polyline points="28,10 38,5 38,15" stroke="#333" stroke-width="2" fill="none"/>
+        <line x1="24" y1="17" x2="38" y2="5" stroke="#333" stroke-width="2"/>
+      </svg>
+      <span class="fin-card-label">Real-time payment tracking<br>and status updates</span>
+    </div>
+
+    <div class="fin-card">
+      <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="8" y="28" width="6" height="12" stroke="#333" stroke-width="1.8" fill="none"/>
+        <rect x="17" y="20" width="6" height="20" stroke="#333" stroke-width="1.8" fill="none"/>
+        <rect x="26" y="14" width="6" height="26" stroke="#333" stroke-width="1.8" fill="none"/>
+        <circle cx="37" cy="15" r="7" stroke="#333" stroke-width="1.8" fill="none"/>
+        <line x1="42" y1="20" x2="46" y2="24" stroke="#333" stroke-width="2"/>
+        <text x="37" y="19" text-anchor="middle" font-size="7" fill="#333" font-family="Arial">$</text>
+      </svg>
+      <span class="fin-card-label">Reduced billing disputes<br>through clear documentation</span>
+    </div>
+
+  </div>
+
+  <div class="fin-expense">
+    <h3>Improved cash flow through faster collections
+</h3>
+    <p>By optimizing client billing, businesses can eliminate revenue leakage and maintain consistent financial performance.
+
+</p>
+  </div>
+</div>
+
+            <style>
+  .finora-section {
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+    padding: 100px 40px;
+    background: #fff;
+    color: #1a1a1a;
+  }
+  .finora-section h2 {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #111;
+  }
+  .fin-subtitle {
+    font-size: 20px;
+    color: #555;
+    line-height: 1.7;
+    max-width: 780px;
+    margin: 0 auto 46px;
+  }
+  .fin-label {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 26px;
+    color: #111;
+  }
+  .fin-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+    max-width: 1200px;
+    margin: 0 auto 56px;
+  }
+  .fin-card {
+    border: 2px solid #ddd;
+    border-radius: 16px;
+    padding: 44px 24px 34px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    cursor: pointer;
+    transition: border-color 0.2s, background 0.2s;
+  }
+  .fin-card.active {
+    background-color: #7dd8e8;
+    border-color: #7dd8e8;
+  }
+  .fin-card:not(.active):hover {
+    border-color: #7dd8e8;
+  }
+  .fin-card svg {
+    width: 80px;
+    height: 80px;
+  }
+  .fin-card-label {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.5;
+    text-align: center;
+    color: #111;
+  }
+  .fin-card.active .fin-card-label {
+    color: #fff;
+  }
+  .fin-expense h3 {
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: #111;
+  }
+  .fin-expense p {
+    font-size: 20px;
+    color: #555;
+    line-height: 1.7;
+    max-width: 780px;
+    margin: 0 auto;
+  }
+  @media (max-width: 640px) {
+    .fin-cards { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 380px) {
+    .fin-cards { grid-template-columns: 1fr; }
+  }
+
+   .finora-close-section {
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 48px;
+    padding: 50px 40px;
+    background: #fff;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .finora-close-img {
+    flex: 0 0 48%;
+    max-width: 48%;
+  }
+
+  .finora-close-img img {
+    width: 100%;
+    height: 380px;
+    border-radius: 16px;
+    object-fit: cover;
+    display: block;
+  }
+
+  .finora-close-content {
+    flex: 1;
+  }
+
+  .finora-close-content h2 {
+    font-size: 25px;
+    font-weight: 700;
+    color: #111;
+    line-height: 1.35;
+    margin-bottom: 12px;
+  }
+
+  .finora-close-content .fin-desc {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 16px;
+  }
+
+  .finora-close-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 18px;
+  }
+
+  .finora-close-content ul li {
+    font-size: 16px;
+    color: #333;
+    padding: 3px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .finora-close-content ul li::before {
+    content: "●";
+    color: #333;
+    font-size: 16px;
+    flex-shrink: 0;
+  }
+
+  .finora-close-content .fin-footer-text {
+    font-size: 16px;
+    color: #777;
+    line-height: 1.6;
+  }
+
+  @media (max-width: 768px) {
+    .finora-close-section {
+      flex-direction: column;
+      padding: 36px 20px;
+      gap: 28px;
+    }
+    .finora-close-img {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+    .finora-close-img img {
+      height: 240px;
+    }
+    .finora-close-content h2 {
+      font-size: 16px;
+    }
+  }
+</style>
                     <div class="plain-english-section-content" data-astro-cid-qxtrh5p7>
                    
                       <script type="module"
                         src="../../../ram.digitscpu.com/_astro-assets/DotLottie.astro_astro_type_script_index_0_lang.CBFY1vH8.js"></script>
-                      <div class="plain-english-section-content-text" data-astro-cid-qxtrh5p7>
-                        <p class="subheading paragraph-regular" data-astro-cid-yp5l7k64
-                          style="margin-top: 20px;font-size:20px; var(--global-text-color);--subheadingMaxWidthMobile: none;--subheadingMaxWidthTablet: none;--subheadingMaxWidthDesktop: none;--textAlign: left;--margin: 0;">
-                          AI Finora designs customized workflows that align with your service structure, pricing models, and contractual agreements. Whether your business operates on recurring billing, milestone-based invoicing, or usage-based charges, we ensure that every invoice reflects accurate data and agreed terms. </p>
-
-                      </div>
+                  
 
                     </div>
                   </div>
-                  <p class="subheading paragraph-regular"
-                    style="margin-top:15px; margin-bottom:15px; font-size:20px; color: var(--global-text-color); --subheadingMaxWidthMobile: none; --subheadingMaxWidthTablet: none; --subheadingMaxWidthDesktop: none; --textAlign: left; --margin: 0;">
-                    Key benefits of our client billing process include:
-                  </p>
-                  <ul
-                    style="font-size:20px; color: var(--global-text-color); margin-left:-21px; padding-left:25px; line-height:1.8; list-style: disc !important;">
-                    <li>●	Accurate invoice generation aligned with contracts and service delivery</li>
-                    <li>●	Automated recurring billing and scheduled invoicing</li>
-                    <li>●	Real-time payment tracking and status updates</li>
-                    <li>●	Reduced billing disputes through clear documentation</li>
-                    <li>●	Improved cash flow through faster collections</li>
-                  </ul>
-                  <p class="subheading paragraph-regular"
-                    style="margin-top:15px; margin-bottom:15px; font-size:20px; color: var(--global-text-color); --subheadingMaxWidthMobile: none; --subheadingMaxWidthTablet: none; --subheadingMaxWidthDesktop: none; --textAlign: left; --margin: 0;">
-                    By optimizing client billing, businesses can eliminate revenue leakage and maintain consistent financial performance.
-                  </p>
+        
+              
+              
                 </div>
 
               </div>
@@ -1646,39 +1930,48 @@ Our systems verify billable services, cross check contractual rates, and ensure 
                 <div data-astro-cid-kgxlwazw="true" data-astro-cid-bjh6wx2o
                   style="--mBottom: 0;--mTop: 0;--pBottom: var(--space-xl-responsive);--pTop: var(--space-xl-responsive);">
                   <div class="surface-tasks-section" data-astro-cid-qxtrh5p7>
-                   
+                   <div class="finora-close-section">
+
+  <!-- Left: Image -->
+  <div class="finora-close-img">
+    <img src="/Banner-8.jpg" alt="AI Finora Accounting Software on tablet" />
+  </div>
+
+  <!-- Right: Content -->
+  <div class="finora-close-content">
+
+    <h2>Automated Client Billing<br>for Scalable Growth</h2>
+
+    <p class="fin-desc">
+      As businesses grow, billing complexity increases. Managing multiple clients, diverse pricing structures, and varying payment terms requires scalable solutions. AI Finora integrates intelligent automation into client billing workflows to reduce manual workload and improve consistency.
+      Automation supports:
+    </p>
+
+    <ul>
+      <li>Subscription and retainer based billing models</li>
+      <li>Usage-based and variable pricing structures</li>
+      <li>Multi currency invoicing for global clients</li>
+      <li>Automated reminders and follow ups</li>
+      <li>Centralized billing dashboards for management oversight</li>
+    </ul>
+
+    <p class="fin-footer-text">
+With automated client billing, your organization can handle higher transaction volumes without sacrificing accuracy or control.
+
+    </p>
+  </div>
+
+</div>
                   
                     </div>
                     <div class="surface-tasks-section-content-text" data-astro-cid-qxtrh5p7>
                       <div class="heading-block" data-astro-cid-64ls44ko
                         style="--gap: var(--space-m-responsive);--flexDirection: row;--marginBottom: var(--space-none-responsive);--textAlign: flex-start;">
-                        <div class="heading-wrapper" data-astro-cid-xktwx3m6
-                          style="--textColor: var(--global-heading-color);--headingMaxWidthMobile: none;--headingMaxWidthTablet: none;--headingMaxWidthDesktop: none;--textAlign: left;--margin: 0;">
-                          <h2 data-astro-cid-xktwx3m6="true" class="header-h3-style"><span class="heading"
-                              data-astro-cid-xktwx3m6
-                              style="--textColor: var(--global-heading-color);--headingMaxWidthMobile: none;--headingMaxWidthTablet: none;--headingMaxWidthDesktop: none;--textAlign: left;--margin: 0;font-size: 28px;">
-                              Automated Client Billing for Scalable Growth</span></h2>
-                        </div>
-                        <p class="subheading paragraph-regular" data-astro-cid-yp5l7k64
-                          style="font-size: 20px; var(--global-text-color);--subheadingMaxWidthMobile: none;--subheadingMaxWidthTablet: none;--subheadingMaxWidthDesktop: none;--textAlign: left;--margin: 0;">
-                         As businesses grow, billing complexity increases. Managing multiple clients, diverse pricing structures, and varying payment terms requires scalable solutions. AI Finora integrates intelligent automation into client billing workflows to reduce manual workload and improve consistency.</p>
-                      </div>
-                      <p class="subheading paragraph-regular"
-                        style="margin-top:15px; margin-bottom:15px; font-size:20px; color: var(--global-text-color); --subheadingMaxWidthMobile: none; --subheadingMaxWidthTablet: none; --subheadingMaxWidthDesktop: none; --textAlign: left; --margin: 0;">
-                        Automation supports:
-                      </p>
-                      <ul
-                        style="font-size:18px; color: var(--global-text-color); margin-left:-21px; padding-left:25px; line-height:1.8; list-style: disc !important;">
-                        <li>●	Subscription and retainer based billing models</li>
-                        <li>●	Usage-based and variable pricing structures</li>
-                        <li>●	Multi currency invoicing for global clients</li>
-                        <li>●	Automated reminders and follow ups</li>
-                        <li>●	Centralized billing dashboards for management oversight</li>
-                      </ul>
-                      <p class="subheading paragraph-regular"
-                        style="margin-top:15px; margin-bottom:15px; font-size:20px; color: var(--global-text-color); --subheadingMaxWidthMobile: none; --subheadingMaxWidthTablet: none; --subheadingMaxWidthDesktop: none; --textAlign: left; --margin: 0;">
-                        With automated client billing, your organization can handle higher transaction volumes without sacrificing accuracy or control. 
-                      </p>
+                  
+                       
+                     
+                     
+                    
                     </div>
                   </div>
                 </div>
@@ -1747,22 +2040,40 @@ Our systems verify billable services, cross check contractual rates, and ensure 
                             </svg> Enterprise-grade security </li> -->
                         </ul>
                       </div>
-                      <div data-astro-cid-qxtrh5p7>
-                        <source srcset=""
-                            type="image/webp"> <img
-                            src="../../../Bannerss.png" alt
-                            data-astro-cid-qxtrh5p7="true" loading="lazy" decoding="async" fetchpriority="auto"
-                            width="900" height="898" class="security-seal-img">
-                        </picture>
-                      </div>
-                      <style>
-                        @media (max-width: 768px) {
-  .security-seal-img {
-    height: 350px !important;
-  }
-}
-                      </style>
-                      </div>
+                   <div class="finora-reporting-section">
+
+  <!-- Left: Image -->
+  <div class="finora-reporting-img">
+    <div data-astro-cid-qxtrh5p7>
+      <picture data-astro-cid-qxtrh5p7="true">
+        <source srcset="" type="image/webp">
+        <img
+          src="../../../Bannerss.png"
+          alt="AI Finora Security Shield"
+          data-astro-cid-qxtrh5p7="true"
+          loading="lazy"
+          decoding="async"
+          fetchpriority="auto"
+          width="900"
+          height="800"
+          class="security-seal-img">
+      </picture>
+    </div>
+  </div>
+
+  <!-- Right: Content -->
+  <div class="finora-reporting-content">
+
+    <h2>Strengthening Cash Flow <br>Through Structured Client Billing</h2>
+    <p>
+      Effective client billing plays a direct role in maintaining healthy cash flow. Delayed invoices and inconsistent follow ups can create unnecessary financial strain. AI Finora establishes structured billing cycles and proactive collection processes that ensure timely revenue realization.
+    </p>
+    <p>
+      By reducing payment delays and improving visibility into outstanding balances, our client billing solutions support stronger liquidity and financial stability.
+    </p>
+  </div>
+
+</div>
                     </div>
                   </div>
                 </div>
@@ -1779,29 +2090,8 @@ Our systems verify billable services, cross check contractual rates, and ensure 
                       <div class="lottie-container" data-astro-cid-3eraze7f style="--aspectRatio: 3/2;">
                          <div class="panel panel--small" data-astro-cid-2bia3bdi
                   style="--panelBackgroundColor: var(--color-white);--shadow: 0 8px 50px 0 rgba(50,73,127,.25);--offsetBackgroundColor: var(--color-white);--offsetHeightPercentage: 17%;">
-                  <div class="panel-container" data-astro-cid-2bia3bdi
-                    style="--panelBackgroundColor: var(--color-white);--shadow: 0 8px 50px 0 rgba(50,73,127,.25);--offsetBackgroundColor: var(--color-white);--offsetHeightPercentage: 17%;">
-                    <div class="video-container" data-astro-cid-q7fvs3qy style="--aspectRatio: 2/1;--borderRadius: 0;">
-                      <div class="digits-loader" data-astro-cid-5uuorzxx>
-                        <div data-astro-cid-5uuorzxx></div>
-                        <div data-astro-cid-5uuorzxx></div>
-                        <div data-astro-cid-5uuorzxx></div>
-                      </div> <video class="video" autoplay muted loop
-                        poster="/client-2.jpg"
-                        preload="metadata" playsinline data-astro-cid-q7fvs3qy
-                        style="--aspectRatio: 2/1;--borderRadius: 0;">
-                        <source src="/client-2.jpg"
-                          type="video/webm" data-astro-cid-q7fvs3qy style="--aspectRatio: 2/1;--borderRadius: 0;">
-                        <source src="/client-2.jpg" type="video/mp4"
-                          data-astro-cid-q7fvs3qy style="--aspectRatio: 2/1;--borderRadius: 0;">
-                        <p data-astro-cid-q7fvs3qy style="--aspectRatio: 2/1;--borderRadius: 0;">
-                          Your browser doesn't support HTML5 video. Here's a <a
-                            href="/client-2.jpg"
-                            data-astro-cid-q7fvs3qy style="--aspectRatio: 2/1;--borderRadius: 0;">link to the video</a>
-                          instead.
-                        </p>
-                      </video>
-                    </div>
+                 
+               
                   </div>
                 </div>
                 </div>
@@ -1809,25 +2099,7 @@ Our systems verify billable services, cross check contractual rates, and ensure 
             </div>
                     </div>
                     <div class="upload-section-content-text" data-astro-cid-qxtrh5p7>
-                      <div class="heading-block" data-astro-cid-64ls44ko
-                        style="--gap: var(--space-m-responsive);--flexDirection: row;--marginBottom: var(--space-none-responsive);--textAlign: flex-start;">
-                        <div class="heading-wrapper" data-astro-cid-xktwx3m6
-                          style="--textColor: var(--global-heading-color);--headingMaxWidthMobile: none;--headingMaxWidthTablet: none;--headingMaxWidthDesktop: none;--textAlign: left;--margin: 0;">
-                          <h2 data-astro-cid-xktwx3m6="true" class="header-h3-style"><span class="heading"
-                              data-astro-cid-xktwx3m6
-                              style="--textColor: var(--global-heading-color);--headingMaxWidthMobile: none;--headingMaxWidthTablet: none;--headingMaxWidthDesktop: none;--textAlign: left;--margin: 0;font-size: 28px;">
-                              Strengthening Cash Flow Through Structured Client Billing</span></h2>
-                        </div>
-                        <p class="subheading paragraph-regular" data-astro-cid-yp5l7k64
-                          style="font-size: 20px; var(--global-text-color);--subheadingMaxWidthMobile: none;--subheadingMaxWidthTablet: none;--subheadingMaxWidthDesktop: none;--textAlign: left;--margin: 0;">
-                          Effective client billing plays a direct role in maintaining healthy cash flow. Delayed invoices and inconsistent follow ups can create unnecessary financial strain. AI Finora establishes structured billing cycles and proactive collection processes that ensure timely revenue realization.
-                           <p class="subheading paragraph-regular" data-astro-cid-yp5l7k64
-                          style="font-size: 20px; var(--global-text-color);--subheadingMaxWidthMobile: none;--subheadingMaxWidthTablet: none;--subheadingMaxWidthDesktop: none;--textAlign: left;--margin: 0;margin-bottom: 20px;">
-                          By reducing payment delays and improving visibility into outstanding balances, our client billing solutions support stronger liquidity and financial stability.
-                          <span class='highlight'>
-
-                          </p>
-                      </div>
+                 
                     </div>
                   </div>
                 </div>
@@ -2359,6 +2631,18 @@ Our systems verify billable services, cross check contractual rates, and ensure 
 
             div[data-astro-cid-bjh6wx2o] {
     margin-bottom: -5px;
+    margin-top: var(--mTop);
+    padding-bottom: var(--pBottom);
+    padding-top: var(--pTop);
+}
+
+.dotlottie-canvas[data-astro-cid-3eraze7f], .lottie-container[data-astro-cid-3eraze7f] {
+    height: 100%;
+    position: relative;
+    width: 0%;
+}
+div[data-astro-cid-bjh6wx2o] {
+    /* margin-bottom: -32px; */
     margin-top: var(--mTop);
     padding-bottom: var(--pBottom);
     padding-top: var(--pTop);
