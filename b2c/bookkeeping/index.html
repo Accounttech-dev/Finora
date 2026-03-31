@@ -1585,10 +1585,66 @@ function toggleMobileInd(btn) {
                 style="--gap: var(--space-m-responsive);--flexDirection: row;--marginBottom: var(--space-none-responsive);--textAlign: center;">
                 <div class="heading-wrapper" data-astro-cid-xktwx3m6
                   style="--textColor: var(--global-heading-color);--headingMaxWidthMobile: 370px;--headingMaxWidthTablet: 450px;--headingMaxWidthDesktop: 800px;--textAlign: center;--margin: 0 auto;">
-                  <h1 data-astro-cid-xktwx3m6="true" class="header-h1-style"><span class="heading"
-                      data-astro-cid-xktwx3m6
-                      style="font-size:70px; var(--global-heading-color);--headingMaxWidthMobile: 370px;--headingMaxWidthTablet: 450px;--headingMaxWidthDesktop: 800px;--textAlign: center;--margin: 0 auto;"><b>Personal
-                        Bookkeeping Services for All Businesses</b></span></h1>
+                <h1 data-astro-cid-xktwx3m6="true" class="header-h1-style">
+  <span 
+    class="heading"
+    data-astro-cid-xktwx3m6
+    style="font-size:70px; var(--global-heading-color);
+    --headingMaxWidthMobile: 370px;
+    --headingMaxWidthTablet: 450px;
+    --headingMaxWidthDesktop: 800px;
+    --textAlign: center;
+    --margin: 0 auto;">
+    <b>Personal Bookkeeping Services for All Businesses</b>
+  </span>
+</h1>
+
+<style>
+@media (max-width: 768px){
+  .header-h1-style .heading{
+    
+    font-size:30px !important;
+  }
+}
+@media (max-width: 768px){
+  .bg-timeline-container{
+    text-align: center !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+    .bg-timeline-container p, 
+  .bg-timeline-container span, 
+  .bg-timeline-container h1, 
+  .bg-timeline-container h2 {
+    padding: 8px 25px; /* text ke around thodi vertical padding */
+  }
+
+}
+
+@media (max-width: 768px) {
+  .section-subtext {
+    padding: 0 15px; /* left-right padding for mobile */
+    margin: 17px auto 46px; /* vertical margin same */
+    font-size: 16px; /* optional: thoda chhota font mobile ke liye */
+    max-width: 100%; /* mobile pe full width kaam kare */
+  }
+}
+
+@media (max-width: 768px) {
+  a.cta.cta--medium {
+    display: block;
+    width: fit-content; /* button ki natural width */
+    padding: 7px 24px; /* andar ki space bada di */
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 16px; /* text thoda bada kar sakte ho */
+  }
+}
+</style>
                 </div>
                 <p class="subheading subheadline-light" data-astro-cid-yp5l7k64
                   style="font-size: 18px; var(--global-text-color);--subheadingMaxWidthMobile: 370px;--subheadingMaxWidthTablet: 450px;--subheadingMaxWidthDesktop: 800px;--textAlign: center;--margin: 0 auto;">
@@ -1691,8 +1747,11 @@ Contact Us          </a>
 @media (max-width: 768px) {
   .bg-timeline-heading {
     margin-top: 30px !important;
+    padding: 5px;
   }
 }
+
+
 </style>
                       <p class="paragraph-light" style="font-size: 20px;" data-astro-cid-7kjucwzk>Hiring and managing an
                         in house bookkeeping team can be expensive and time consuming. That’s why many businesses are
@@ -1722,7 +1781,7 @@ Contact Us          </a>
                       <h4 class="bg-timeline-heading header-h2-style" style="font-size: 30px;" data-astro-cid-7kjucwzk>
                         With outsourced bookkeeping services you gain:
                       </h4>
-                      <ul style="list-style-type: disc; font-size: 20px; margin-bottom: 20px; padding-left: 20px;">
+                      <ul style="list-style-type: disc; font-size: 18px; margin-bottom: 20px; padding-left: 20px;">
                         <li>● Scalable support as your business grows</li>
                         <li>● Reduced administrative workload</li>
                         <li>● Improved financial accuracy</li>
@@ -3097,13 +3156,14 @@ Contact Us          </a>
     padding-left: 0px;
     padding-right: 0px;
 }
-    .section-heading {
-      font-size: 32px;
-      font-weight: 700;
-      text-align: center;
-      margin: 40px 0 20px;
-      font-family: Arial, sans-serif;
-    }
+   @media (max-width: 768px) {
+  .section-heading {
+    font-size: 25px; /* mobile pe thoda chhota */
+    margin: 25px 15px 15px; /* upar, left-right aur niche spacing */
+    text-align: center; /* already center hai, ensure ho jaye */
+    line-height: 1.3; /* thoda compact spacing */
+  }
+}
 
     .section-subtext {
       font-size: 17px;
