@@ -1545,27 +1545,31 @@ Contact Us          </a>
                   style="--mBottom: 0;--mTop: 0;--pBottom: var(--space-xl-responsive);--pTop: var(--space-none-responsive);">
                   <div class="plain-english-section" data-astro-cid-qxtrh5p7>
                 
-                  <div class="finora-section">
-  <h2>Accurate Daily POS Reconciliation for Revenue Protection
-</h2>
+                 <div class="finora-section">
+  <h2>Real-Time Access to Financial Data</h2>
+  <p class="fin-subtitle">
+    Ask Finora connects your financial data in one place and gives you instant access to the information that matters most.
+    Instead of waiting for monthly statements or manually reviewing spreadsheets, you can simply ask questions and receive
+    clear, accurate answers about your finances.
+  </p>
   <p class="fin-subtitle">Our daily POS reconciliation services include:</p>
-
 
   <div class="fin-cards">
 
-    <div class="fin-card active">
+    <!-- 1st card – icon colors changed to #333 -->
+    <div class="fin-card">
       <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="24" cy="30" r="13" stroke="white" stroke-width="2.5"/>
-        <path d="M19 18 Q24 12 29 18" stroke="white" stroke-width="2.5" fill="none"/>
-        <path d="M21 14 L27 14" stroke="white" stroke-width="2.5"/>
-        <text x="24" y="34" text-anchor="middle" font-size="13" fill="white" font-family="Arial" font-weight="bold">$</text>
-        <ellipse cx="14" cy="38" rx="4" ry="2.5" stroke="white" stroke-width="2" fill="none"/>
-        <ellipse cx="34" cy="38" rx="4" ry="2.5" stroke="white" stroke-width="2" fill="none"/>
+        <circle cx="24" cy="30" r="13" stroke="#333" stroke-width="2.5"/>
+        <path d="M19 18 Q24 12 29 18" stroke="#333" stroke-width="2.5" fill="none"/>
+        <path d="M21 14 L27 14" stroke="#333" stroke-width="2.5"/>
+        <text x="24" y="34" text-anchor="middle" font-size="13" fill="#333" font-family="Arial" font-weight="bold">$</text>
+        <ellipse cx="14" cy="38" rx="4" ry="2.5" stroke="#333" stroke-width="2" fill="none"/>
+        <ellipse cx="34" cy="38" rx="4" ry="2.5" stroke="#333" stroke-width="2" fill="none"/>
       </svg>
-    
-      <span class="fin-card-label">   Matching POS sales reports with <br>cash collections and card payments</span>
+      <span class="fin-card-label">Income and expense <br>summaries</span>
     </div>
 
+    <!-- 2nd card -->
     <div class="fin-card">
       <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
         <rect x="8" y="22" width="32" height="18" rx="2" stroke="#333" stroke-width="1.8"/>
@@ -1575,9 +1579,10 @@ Contact Us          </a>
         <polyline points="36,10 40,5 44,10" stroke="#333" stroke-width="2" fill="none"/>
         <line x1="40" y1="5" x2="40" y2="16" stroke="#333" stroke-width="2"/>
       </svg>
-      <span class="fin-card-label"> Reconciling third-party delivery platform<br>sales with settlement statements</span>
+      <span class="fin-card-label">Budget<br> tracking </span>
     </div>
 
+    <!-- 3rd card -->
     <div class="fin-card">
       <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
         <ellipse cx="24" cy="36" rx="12" ry="4" stroke="#333" stroke-width="1.8" fill="none"/>
@@ -1589,9 +1594,10 @@ Contact Us          </a>
         <polyline points="28,10 38,5 38,15" stroke="#333" stroke-width="2" fill="none"/>
         <line x1="24" y1="17" x2="38" y2="5" stroke="#333" stroke-width="2"/>
       </svg>
-=      <span class="fin-card-label">   Verifying refunds, voids,<br>and promotional discounts</span>
+      <span class="fin-card-label">Savings <br> tracking</span>
     </div>
 
+    <!-- 4th card -->
     <div class="fin-card">
       <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
         <rect x="8" y="28" width="6" height="12" stroke="#333" stroke-width="1.8" fill="none"/>
@@ -1601,19 +1607,23 @@ Contact Us          </a>
         <line x1="42" y1="20" x2="46" y2="24" stroke="#333" stroke-width="2"/>
         <text x="37" y="19" text-anchor="middle" font-size="7" fill="#333" font-family="Arial">$</text>
       </svg>
-      <span class="fin-card-label">Identifying discrepancies between<br>recorded sales and deposits</span>
+      <span class="fin-card-label">Real-time financial <br> insights</span>
     </div>
 
   </div>
 
   <div class="fin-expense">
-    <h3> Preparing structured daily reconciliation summaries for management review</h3>
-    <p>By ensuring that each transaction is validated and documented, we protect your business from revenue leakage and strengthen financial transparency.</p>
+    <h3>Take Control of Your Financial Life with Finora</h3>
+    <p>
+      AI Finora helps you take control of your finances with smart technology, real-time insights, and automated financial organization.
+      From budgeting and expense tracking to savings planning and financial guidance, Ask Finora makes managing your money easier,
+      smarter, and more efficient.
+    </p>
   </div>
 </div>
 
 <style>
-   .finora-section {
+  .finora-section {
     font-family: 'Inter', sans-serif;
     text-align: center;
     padding: 100px 40px;
@@ -1655,19 +1665,19 @@ Contact Us          </a>
     align-items: center;
     gap: 24px;
     cursor: pointer;
-    transition: border-color 0.2s, background 0.2s;
+    transition: border-color 0.2s, background 0.2s, color 0.2s;
   }
-  .fin-card.active {
+
+  .fin-card:hover {
     background-color: #7dd8e8;
     border-color: #7dd8e8;
   }
-  .fin-card:not(.active):hover {
-    border-color: #7dd8e8;
-  }
+
   .fin-card svg {
     width: 80px;
     height: 80px;
   }
+
   .fin-card-label {
     font-size: 18px;
     font-weight: 500;
@@ -1675,9 +1685,23 @@ Contact Us          </a>
     text-align: center;
     color: #111;
   }
-  .fin-card.active .fin-card-label {
+
+  .fin-card:hover .fin-card-label {
     color: #fff;
   }
+
+  .fin-card svg * {
+    transition: stroke 0.2s, fill 0.2s;
+  }
+
+  .fin-card:hover svg * {
+    stroke: #fff !important;
+  }
+
+  .fin-card:hover svg text {
+    fill: #fff !important;
+  }
+
   .fin-expense h3 {
     font-size: 26px;
     font-weight: 700;
