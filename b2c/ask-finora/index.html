@@ -1482,15 +1482,11 @@ function toggleMobileInd(btn) {
                   style="--textColor: var(--global-heading-color);--headingMaxWidthMobile: none;--headingMaxWidthTablet: none;--headingMaxWidthDesktop: none;--textAlign: center;--margin: 0 auto;">
                   <h1 data-astro-cid-xktwx3m6="true" class="header-h2-style"><span class="heading"
                       data-astro-cid-xktwx3m6
-                      style="--textColor: var(--global-heading-color);--headingMaxWidthMobile: none;--headingMaxWidthTablet: none;--headingMaxWidthDesktop: none;--textAlign: center;--margin: 0 auto;">AI
-                      Financial Advisor and Accounting Support</span></h1>
+                      style="--textColor: var(--global-heading-color);--headingMaxWidthMobile: none;--headingMaxWidthTablet: none;--headingMaxWidthDesktop: none;--textAlign: center;--margin: 0 auto;">AI Financial Advisor and Smart Accounting Support for Individuals</span></h1>
                 </div>
                 <p class="subheading paragraph-light" data-astro-cid-yp5l7k64
                   style=" font-size:18px;--textColor: var(--global-text-color);--subheadingMaxWidthMobile: none;--subheadingMaxWidthTablet: none;--subheadingMaxWidthDesktop: none;--textAlign: center;--margin: 0 auto;">
-                  Ask Finora is AI Finora’s advanced AI driven financial intelligence system designed to support
-                  businesses with accurate, Personal financial insights. Built to enhance modern financial accounting,
-                  Ask Finora provides immediate access to financial data, automated analysis, and professional level
-                  guidance that empowers better decision making.
+                  Ask Finora is AI Finora’s advanced AI-driven financial intelligence system designed to support individuals with accurate, real-time personal financial insights. Built to simplify modern personal finance management, Ask Finora provides instant access to financial information, automated analysis, and intelligent financial guidance to help individuals make smarter financial decisions.
                 <li class="cta-menu-item" data-astro-cid-u4eztjub>
           <a href="/contact-us/" id="get-started-button" class="cta cta--small"
             data-astro-cid-u4eztjub="true" data-astro-cid-i4xokolx
@@ -1566,7 +1562,7 @@ Contact Us          </a>
             </div> -->
             
             
-            <style>
+           <style>
   .finora-section {
     font-family: 'Inter', sans-serif;
     text-align: center;
@@ -1609,19 +1605,19 @@ Contact Us          </a>
     align-items: center;
     gap: 24px;
     cursor: pointer;
-    transition: border-color 0.2s, background 0.2s;
+    transition: border-color 0.2s, background 0.2s, color 0.2s;
   }
-  .fin-card.active {
+
+  .fin-card:hover {
     background-color: #7dd8e8;
     border-color: #7dd8e8;
   }
-  .fin-card:not(.active):hover {
-    border-color: #7dd8e8;
-  }
+
   .fin-card svg {
     width: 80px;
     height: 80px;
   }
+
   .fin-card-label {
     font-size: 18px;
     font-weight: 500;
@@ -1629,9 +1625,23 @@ Contact Us          </a>
     text-align: center;
     color: #111;
   }
-  .fin-card.active .fin-card-label {
+
+  .fin-card:hover .fin-card-label {
     color: #fff;
   }
+
+  .fin-card svg * {
+    transition: stroke 0.2s, fill 0.2s;
+  }
+
+  .fin-card:hover svg * {
+    stroke: #fff !important;
+  }
+
+  .fin-card:hover svg text {
+    fill: #fff !important;
+  }
+
   .fin-expense h3 {
     font-size: 26px;
     font-weight: 700;
@@ -1645,6 +1655,7 @@ Contact Us          </a>
     max-width: 780px;
     margin: 0 auto;
   }
+
   @media (max-width: 640px) {
     .fin-cards { grid-template-columns: repeat(2, 1fr); }
   }
@@ -1655,24 +1666,28 @@ Contact Us          </a>
 
 <div class="finora-section">
   <h2>Real-Time Access to Financial Data</h2>
-  <p class="fin-subtitle">Ask Finora integrates directly with AI Finora's accounting and bookkeeping services to provide immediate access to business critical financial information.</p>
-
-  <p class="fin-label">This Personal access supports</p>
+  <p class="fin-subtitle">
+    Ask Finora connects your financial data in one place and gives you instant access to the information that matters most.
+    Instead of waiting for monthly statements or manually reviewing spreadsheets, you can simply ask questions and receive
+    clear, accurate answers about your finances.
+  </p>
 
   <div class="fin-cards">
 
-    <div class="fin-card active">
+    <!-- 1st card – icon colors changed to #333 -->
+    <div class="fin-card">
       <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="24" cy="30" r="13" stroke="white" stroke-width="2.5"/>
-        <path d="M19 18 Q24 12 29 18" stroke="white" stroke-width="2.5" fill="none"/>
-        <path d="M21 14 L27 14" stroke="white" stroke-width="2.5"/>
-        <text x="24" y="34" text-anchor="middle" font-size="13" fill="white" font-family="Arial" font-weight="bold">$</text>
-        <ellipse cx="14" cy="38" rx="4" ry="2.5" stroke="white" stroke-width="2" fill="none"/>
-        <ellipse cx="34" cy="38" rx="4" ry="2.5" stroke="white" stroke-width="2" fill="none"/>
+        <circle cx="24" cy="30" r="13" stroke="#333" stroke-width="2.5"/>
+        <path d="M19 18 Q24 12 29 18" stroke="#333" stroke-width="2.5" fill="none"/>
+        <path d="M21 14 L27 14" stroke="#333" stroke-width="2.5"/>
+        <text x="24" y="34" text-anchor="middle" font-size="13" fill="#333" font-family="Arial" font-weight="bold">$</text>
+        <ellipse cx="14" cy="38" rx="4" ry="2.5" stroke="#333" stroke-width="2" fill="none"/>
+        <ellipse cx="34" cy="38" rx="4" ry="2.5" stroke="#333" stroke-width="2" fill="none"/>
       </svg>
-      <span class="fin-card-label">Revenue and expense<br>analysis</span>
+      <span class="fin-card-label">Income and expense <br>summaries</span>
     </div>
 
+    <!-- 2nd card -->
     <div class="fin-card">
       <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
         <rect x="8" y="22" width="32" height="18" rx="2" stroke="#333" stroke-width="1.8"/>
@@ -1682,9 +1697,10 @@ Contact Us          </a>
         <polyline points="36,10 40,5 44,10" stroke="#333" stroke-width="2" fill="none"/>
         <line x1="40" y1="5" x2="40" y2="16" stroke="#333" stroke-width="2"/>
       </svg>
-      <span class="fin-card-label">Cash flow<br>tracking</span>
+      <span class="fin-card-label">Budget<br> tracking </span>
     </div>
 
+    <!-- 3rd card -->
     <div class="fin-card">
       <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
         <ellipse cx="24" cy="36" rx="12" ry="4" stroke="#333" stroke-width="1.8" fill="none"/>
@@ -1696,9 +1712,10 @@ Contact Us          </a>
         <polyline points="28,10 38,5 38,15" stroke="#333" stroke-width="2" fill="none"/>
         <line x1="24" y1="17" x2="38" y2="5" stroke="#333" stroke-width="2"/>
       </svg>
-      <span class="fin-card-label">Profitability<br>breakdowns</span>
+      <span class="fin-card-label">Savings <br> tracking</span>
     </div>
 
+    <!-- 4th card -->
     <div class="fin-card">
       <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
         <rect x="8" y="28" width="6" height="12" stroke="#333" stroke-width="1.8" fill="none"/>
@@ -1708,15 +1725,20 @@ Contact Us          </a>
         <line x1="42" y1="20" x2="46" y2="24" stroke="#333" stroke-width="2"/>
         <text x="37" y="19" text-anchor="middle" font-size="7" fill="#333" font-family="Arial">$</text>
       </svg>
-      <span class="fin-card-label">Transaction<br>categorization clarity</span>
+      <span class="fin-card-label">Real-time financial <br> insights</span>
     </div>
 
   </div>
 
   <div class="fin-expense">
-    <h3>Expense trend monitoring</h3>
-    <p>Instead of waiting for monthly summaries or manually reviewing spreadsheets users can ask questions and receive instant accurate responses.</p>
+    <h3>Take Control of Your Financial Life with Finora</h3>
+    <p>
+      AI Finora helps you take control of your finances with smart technology, real-time insights, and automated financial organization.
+      From budgeting and expense tracking to savings planning and financial guidance, Ask Finora makes managing your money easier,
+      smarter, and more efficient.
+    </p>
   </div>
+</div>
 </div>
 
             <div style="background:linear-gradient(to bottom, rgba(212, 234, 248, 1), rgba(243, 247, 248, 1))"
@@ -1730,17 +1752,12 @@ Contact Us          </a>
                       style="--textColor: var(--global-heading-color);--headingMaxWidthMobile: none;--headingMaxWidthTablet: none;--headingMaxWidthDesktop: none;--textAlign: center;--margin: 0 auto;">
                       <h2 data-astro-cid-xktwx3m6="true" class="header-h3-style"><span class="heading"
                           data-astro-cid-xktwx3m6
-                          style="--textColor: var(--global-heading-color);--headingMaxWidthMobile: none;--headingMaxWidthTablet: none;--headingMaxWidthDesktop: none;--textAlign: center;--margin: 0 auto;">Ask
-                          Support for Accounting Services & Financial Advisory</span></h2>
+                          style="--textColor: var(--global-heading-color);--headingMaxWidthMobile: none;--headingMaxWidthTablet: none;--headingMaxWidthDesktop: none;--textAlign: center;--margin: 0 auto;">
+                          AI Support for Personal Financial Planning & Advisory</span></h2>
                     </div>
                     <p class="subheading paragraph-light" data-astro-cid-yp5l7k64
                       style="font-size:19px; var(--global-text-color);--subheadingMaxWidthMobile: none;--subheadingMaxWidthTablet: 540px;--subheadingMaxWidthDesktop: 100%;--textAlign: center;--margin: 0 auto;">
-                      We strengthen your overall accounting services framework by acting as a digital extension of your
-                      finance team. It supports companies that manage accounting internally as well as those using
-                      outsourced bookkeeping services or outsourced accounting services. Strategic financial decisions
-                      often require the expertise of a financial advisor, financial consultant, or financial analyst.
-                      Ask Finora enhances that process by delivering AI powered advisory insights based on Personal
-                      financial data.
+                    Making smart financial decisions can be challenging without guidance. Finora acts as your digital financial assistant, offering AI-powered insights to help with budgeting, savings, debt management, expense tracking, goal planning, and investment monitoring—empowering individuals and families to take control of their financial future.
                       <strong>for</strong> you.
                     </p>
                   </div>
@@ -1927,22 +1944,24 @@ Contact Us          </a>
 
   <!-- Right: Content -->
   <div class="finora-close-content">
-    <h2>Ask Advanced Financial Close<br>and Month End Automation Support</h2>
+    <h2>Smart Monthly Financial Summary and Organization</h2>
 
     <p class="fin-desc">
-      Ask Finora enhances financial close automation and month end close automation by providing immediate visibility into closing progress reconciliation status and reporting accuracy.
+      Managing everyday finances becomes easier when everything is organized and easy to understand. Ask Finora automatically organizes your financial data and provides easy-to-read monthly financial summaries.
     </p>
 
     <ul>
-      <li>Confirm reconciliation completion</li>
-      <li>Identify pending entries</li>
-      <li>Validate financial summaries</li>
+      <li>Track monthly income and spending</li>
+      <li>Identify unnecessary expenses</li>
+      <li>Monitor savings progress</li>
       <li>Review closing timelines</li>
-      <li>Detect inconsistencies before final reporting</li>
+      <li>Review monthly financial summaries</li>
+      <li>Detect unusual expenses</li>
+      <li>Stay prepared for upcoming bills and payments</li>
     </ul>
 
     <p class="fin-footer-text">
-      This intelligent oversight reduces errors accelerates financial closing processes and improves overall reporting accuracy.
+      This gives you a clear picture of your financial situation and helps you stay financially organized.
     </p>
   </div>
 
@@ -2094,10 +2113,9 @@ Contact Us          </a>
 
   <!-- Right: Content -->
   <div class="finora-reporting-content">
-    <h2>Upload Real Time Financial<br>Reporting and Analysis</h2>
+    <h2>Real-Time Financial Reports and Insights</h2>
     <p>
-      Accurate reporting drives better business decisions. Ask Finora strengthens financial reporting processes by enabling users to request customized financial summaries instantly.
-    </p>
+Ask Finora allows users to generate customized financial summaries and reports instantly, making it easier to track spending, monitor savings, and manage overall financial activities. Instead of manually reviewing statements and spreadsheets, users can access clear financial reports that show monthly spending, savings progress, income versus expenses, and budget performance.     </p>
   </div>
 
 </div>
@@ -2199,10 +2217,9 @@ Contact Us          </a>
                          <canvas class="dotlottie-canvas"
                           data-lottie="https://ram.digitscpu.com/_astro-assets/agl-stack.Hnryebjm.lottie"
                           data-astro-cid-d4e2ptyq></canvas> </div>
-                      <h3 class="link-tiles-tile-heading" data-astro-cid-d4e2ptyq style="font-size: 28px;">Smart General Ledger?</h3> <span
-                        class="link-tiles-tile-subtitle paragraph-light" data-astro-cid-d4e2ptyq style="font-size: 20px;"> AI Finora is an
-                        AI powered financial accounting platform that automates bookkeeping services, reconciliations,
-                        and transaction management. </span> <a href="../../b2c/bookkeeping/"
+                      <h3 class="link-tiles-tile-heading" data-astro-cid-d4e2ptyq style="font-size: 28px;">Smart Money Management Tools</h3> <span
+                        class="link-tiles-tile-subtitle paragraph-light" data-astro-cid-d4e2ptyq style="font-size: 20px;"> 
+                        AI Finora provides automation tools that make managing your finances simple and stress-free. </span> <a href="../../b2c/bookkeeping/"
                         class="cta cta--medium link-tiles-tile-cta" aria-label="Explore AGL?"
                         data-astro-cid-d4e2ptyq="true" data-astro-cid-i4xokolx
                         style="--bg: transparent;--textColor: var(--negative-color);--border: var(--negative-color);--hoverBg: var(--color-green);--hoverText: var(--color-black);--hoverBorder: transparent;--focusColor: var(--color-green);--width: auto;">Explore
@@ -2223,9 +2240,7 @@ Contact Us          </a>
                           Automated Bill Management
                         </h3>
                       </h3> <span class="link-tiles-tile-subtitle paragraph-light" data-astro-cid-d4e2ptyq style="font-size: 20px;">
-                        Streamline your accounts payable and small business invoicing with AI Finora’s intelligent
-                        automation. Reduce manual effort and ensure timely payments, all while keeping your financial
-                        data organized and accurate.
+                       Track and manage your bills, subscriptions, and payments in one place. Get reminders and avoid missed payments.
                       </span> <a href="/b2b/client-billing/" class="cta cta--medium link-tiles-tile-cta"
                         aria-label="Explore security" data-astro-cid-d4e2ptyq="true" data-astro-cid-i4xokolx
                         style="margin-top: 40px; transparent;--textColor: var(--negative-color);--border: var(--negative-color);--hoverBg: var(--color-green);--hoverText: var(--color-black);--hoverBorder: transparent;--focusColor: var(--color-green);--width: auto;">Explore
@@ -2248,9 +2263,7 @@ Contact Us          </a>
                           Real-Time Financial Insights
                         </h3>
                       </h3> <span class="link-tiles-tile-subtitle paragraph-light" data-astro-cid-d4e2ptyq style="font-size: 20px;">
-                        AI Finora transforms financial data into actionable insights with automated financial reporting.
-                        Monitor KPIs like cash flow, revenue, and expenses to make informed decisions and drive business
-                        growth.
+                        Turn your financial data into simple insights so you can make better decisions about spending, saving, and planning.
                       </span> <a href="/b2b/financials/" class="cta cta--medium link-tiles-tile-cta"
                         aria-label="Explore better accounting" data-astro-cid-d4e2ptyq="true" data-astro-cid-i4xokolx
                         style="margin-top: 40px;--bg: transparent;--textColor: var(--negative-color);--border: var(--negative-color);--hoverBg: var(--color-green);--hoverText: var(--color-black);--hoverBorder: transparent;--focusColor: var(--color-green);--width: auto;">Explore
@@ -2268,12 +2281,10 @@ Contact Us          </a>
                           data-astro-cid-d4e2ptyq></canvas> </div>
                       <h3 class="link-tiles-tile-heading" data-astro-cid-d4e2ptyq>
                         <h3 class="link-tiles-tile-heading" data-astro-cid-d4e2ptyq=""style="font-size: 28px;">
-                          Secure &amp; Compliant
+                          Secure & Private
                         </h3>
-                      </h3> <span class="link-tiles-tile-subtitle paragraph-light" data-astro-cid-d4e2ptyq style="font-size: 20px;">Your
-                        financial data is protected with AI Finora’s bank-grade security. We use advanced encryption and
-                        secure storage to keep your records safe, whether you’re managing accounting services for small
-                        business or working with a financial advisor.
+                      </h3> <span class="link-tiles-tile-subtitle paragraph-light" data-astro-cid-d4e2ptyq style="font-size: 20px;">
+                       Your financial information is protected with advanced encryption and secure systems, ensuring complete privacy and security.
                       </span> <a href="/become-our-partner/" class="cta cta--medium link-tiles-tile-cta"
                         aria-label="Explore financials" data-astro-cid-d4e2ptyq="true" data-astro-cid-i4xokolx
                         style="margin-top: 40px;--bg: transparent;--textColor: var(--negative-color);--border: var(--negative-color);--hoverBg: var(--color-green);--hoverText: var(--color-black);--hoverBorder: transparent;--focusColor: var(--color-green);--width: auto;">Explore
@@ -2626,3 +2637,14 @@ h1.header-h2-style {
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+

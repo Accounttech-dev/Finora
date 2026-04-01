@@ -1606,29 +1606,30 @@ Contact Us          </a>
                   <div class="plain-english-section" data-astro-cid-qxtrh5p7>
 
 
-                    <div class="finora-section">
-  <h2>Streamlined Client Billing Processes for Operational Efficiency
-</h2>
-  <p class="fin-subtitle">AI Finora designs customized workflows that align with your service structure, pricing models, and contractual agreements. Whether your business operates on recurring billing, milestone-based invoicing, or usage-based charges, we ensure that every invoice reflects accurate data and agreed terms.</p>
-
-  <p class="fin-label">Key benefits of our client billing process include:
-
-</p>
+                   <div class="finora-section">
+  <h2>Real-Time Access to Financial Data</h2>
+  <p class="fin-subtitle">
+    Ask Finora connects your financial data in one place and gives you instant access to the information that matters most.
+    Instead of waiting for monthly statements or manually reviewing spreadsheets, you can simply ask questions and receive
+    clear, accurate answers about your finances.
+  </p>
 
   <div class="fin-cards">
 
-    <div class="fin-card active">
+    <!-- 1st card – icon colors changed to #333 -->
+    <div class="fin-card">
       <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="24" cy="30" r="13" stroke="white" stroke-width="2.5"/>
-        <path d="M19 18 Q24 12 29 18" stroke="white" stroke-width="2.5" fill="none"/>
-        <path d="M21 14 L27 14" stroke="white" stroke-width="2.5"/>
-        <text x="24" y="34" text-anchor="middle" font-size="13" fill="white" font-family="Arial" font-weight="bold">$</text>
-        <ellipse cx="14" cy="38" rx="4" ry="2.5" stroke="white" stroke-width="2" fill="none"/>
-        <ellipse cx="34" cy="38" rx="4" ry="2.5" stroke="white" stroke-width="2" fill="none"/>
-      </svg> 
-      <span class="fin-card-label">Accurate invoice generation aligned<br>with contracts and service delivery</span>
+        <circle cx="24" cy="30" r="13" stroke="#333" stroke-width="2.5"/>
+        <path d="M19 18 Q24 12 29 18" stroke="#333" stroke-width="2.5" fill="none"/>
+        <path d="M21 14 L27 14" stroke="#333" stroke-width="2.5"/>
+        <text x="24" y="34" text-anchor="middle" font-size="13" fill="#333" font-family="Arial" font-weight="bold">$</text>
+        <ellipse cx="14" cy="38" rx="4" ry="2.5" stroke="#333" stroke-width="2" fill="none"/>
+        <ellipse cx="34" cy="38" rx="4" ry="2.5" stroke="#333" stroke-width="2" fill="none"/>
+      </svg>
+      <span class="fin-card-label">Income and expense <br>summaries</span>
     </div>
 
+    <!-- 2nd card -->
     <div class="fin-card">
       <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
         <rect x="8" y="22" width="32" height="18" rx="2" stroke="#333" stroke-width="1.8"/>
@@ -1638,10 +1639,10 @@ Contact Us          </a>
         <polyline points="36,10 40,5 44,10" stroke="#333" stroke-width="2" fill="none"/>
         <line x1="40" y1="5" x2="40" y2="16" stroke="#333" stroke-width="2"/>
       </svg>
-
-      <span class="fin-card-label">  Automated recurring billing<br> and scheduled invoicing</span>
+      <span class="fin-card-label">Budget<br> tracking </span>
     </div>
 
+    <!-- 3rd card -->
     <div class="fin-card">
       <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
         <ellipse cx="24" cy="36" rx="12" ry="4" stroke="#333" stroke-width="1.8" fill="none"/>
@@ -1653,9 +1654,10 @@ Contact Us          </a>
         <polyline points="28,10 38,5 38,15" stroke="#333" stroke-width="2" fill="none"/>
         <line x1="24" y1="17" x2="38" y2="5" stroke="#333" stroke-width="2"/>
       </svg>
-      <span class="fin-card-label">Real-time payment tracking<br>and status updates</span>
+      <span class="fin-card-label">Savings <br> tracking</span>
     </div>
 
+    <!-- 4th card -->
     <div class="fin-card">
       <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
         <rect x="8" y="28" width="6" height="12" stroke="#333" stroke-width="1.8" fill="none"/>
@@ -1665,17 +1667,18 @@ Contact Us          </a>
         <line x1="42" y1="20" x2="46" y2="24" stroke="#333" stroke-width="2"/>
         <text x="37" y="19" text-anchor="middle" font-size="7" fill="#333" font-family="Arial">$</text>
       </svg>
-      <span class="fin-card-label">Reduced billing disputes<br>through clear documentation</span>
+      <span class="fin-card-label">Real-time financial <br> insights</span>
     </div>
 
   </div>
 
   <div class="fin-expense">
-    <h3>Improved cash flow through faster collections
-</h3>
-    <p>By optimizing client billing, businesses can eliminate revenue leakage and maintain consistent financial performance.
-
-</p>
+    <h3>Take Control of Your Financial Life with Finora</h3>
+    <p>
+      AI Finora helps you take control of your finances with smart technology, real-time insights, and automated financial organization.
+      From budgeting and expense tracking to savings planning and financial guidance, Ask Finora makes managing your money easier,
+      smarter, and more efficient.
+    </p>
   </div>
 </div>
 
@@ -1722,19 +1725,19 @@ Contact Us          </a>
     align-items: center;
     gap: 24px;
     cursor: pointer;
-    transition: border-color 0.2s, background 0.2s;
+    transition: border-color 0.2s, background 0.2s, color 0.2s;
   }
-  .fin-card.active {
+
+  .fin-card:hover {
     background-color: #7dd8e8;
     border-color: #7dd8e8;
   }
-  .fin-card:not(.active):hover {
-    border-color: #7dd8e8;
-  }
+
   .fin-card svg {
     width: 80px;
     height: 80px;
   }
+
   .fin-card-label {
     font-size: 18px;
     font-weight: 500;
@@ -1742,9 +1745,23 @@ Contact Us          </a>
     text-align: center;
     color: #111;
   }
-  .fin-card.active .fin-card-label {
+
+  .fin-card:hover .fin-card-label {
     color: #fff;
   }
+
+  .fin-card svg * {
+    transition: stroke 0.2s, fill 0.2s;
+  }
+
+  .fin-card:hover svg * {
+    stroke: #fff !important;
+  }
+
+  .fin-card:hover svg text {
+    fill: #fff !important;
+  }
+
   .fin-expense h3 {
     font-size: 26px;
     font-weight: 700;
@@ -1757,6 +1774,13 @@ Contact Us          </a>
     line-height: 1.7;
     max-width: 780px;
     margin: 0 auto;
+  }
+
+  @media (max-width: 640px) {
+    .fin-cards { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 380px) {
+    .fin-cards { grid-template-columns: 1fr; }
   }
   @media (max-width: 640px) {
     .fin-cards { grid-template-columns: repeat(2, 1fr); }
@@ -1853,6 +1877,44 @@ Contact Us          </a>
       font-size: 16px;
     }
   }
+  @media (max-width: 768px) {
+    .finora-close-content h2 {
+        font-size: 16px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+  .finora-close-content .fin-desc {
+    font-size: 16px;
+color: #555;
+line-height: 1.6;
+margin-bottom: 16px;
+text-align: center;
+  }
+}
+.finora-close-content ul li {
+    font-size: 16px;
+    color: #333;
+    padding: 3px 0;
+    display: flex;
+    gap: 8px;
+    text-align: left;
+}
+@media (max-width: 768px) {
+  .finora-reporting-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+    padding: 0px 0px;
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
 </style>
                     <div class="plain-english-section-content" data-astro-cid-qxtrh5p7>
                    
