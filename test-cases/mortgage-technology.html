@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Streamlining Mortgage Technology Operations | AI Finora Case Studies</title>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="case-detail.css">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Open Sans', sans-serif; font-size: 13px; color: #333; background: #fff; }
+  .hero {
+    background: linear-gradient(rgba(0,0,0,0.58), rgba(0,0,0,0.58)),
+                url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1400&q=80') center/cover no-repeat;
+    min-height: 170px; display: flex; align-items: flex-end; padding: 30px 40px 24px;
+  }
+  .hero-inner { max-width: 960px; width: 100%; }
+  .hero-back { display: inline-flex; align-items: center; gap: 6px; color: rgba(255,255,255,0.85); text-decoration: none; font-size: 12px; margin-bottom: 12px; padding: 5px 12px; border: 1px solid rgba(255,255,255,0.4); border-radius: 4px; transition: background 0.2s; }
+  .hero-back:hover { background: rgba(255,255,255,0.15); }
+  .hero h1 { color: #fff; font-size: 26px; font-weight: 700; line-height: 1.35; max-width: 720px; }
+  .hero-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px; }
+  .tag-badge { background: rgba(255,255,255,0.18); border: 1px solid rgba(255,255,255,0.4); color: #fff; font-size: 11px; padding: 3px 10px; border-radius: 20px; }
+  .form-bar { background: #c0392b; padding: 14px 30px; display: flex; align-items: flex-start; gap: 10px; flex-wrap: wrap; }
+  .form-bar-label { color: #fff; font-size: 13px; font-weight: 700; min-width: 130px; line-height: 1.4; }
+  .form-bar-label span { display: block; font-size: 11px; font-weight: 400; }
+  .form-bar input[type="text"] { height: 30px; border: none; padding: 0 10px; font-size: 12px; min-width: 110px; flex: 1; background: #fff; }
+  .form-bar textarea { height: 42px; border: none; padding: 6px 10px; font-size: 12px; min-width: 160px; flex: 2; resize: none; background: #fff; }
+  .captcha-box { display: flex; align-items: center; background: #fff; padding: 4px 8px; font-size: 13px; font-weight: 700; gap: 6px; height: 30px; letter-spacing: 2px; }
+  .btn-submit { background: #333; color: #fff; border: none; padding: 0 18px; height: 30px; font-size: 12px; font-weight: 700; cursor: pointer; text-transform: uppercase; letter-spacing: 1px; }
+  .privacy-link { font-size: 10px; color: #ffcccc; text-decoration: underline; cursor: pointer; align-self: flex-end; }
+  .breadcrumb { padding: 8px 30px; font-size: 11px; color: #666; border-bottom: 1px solid #eee; }
+  .breadcrumb a { color: #c0392b; text-decoration: none; }
+  .breadcrumb a:hover { text-decoration: underline; }
+  .breadcrumb span { color: #999; margin: 0 4px; }
+  .page-body { max-width: 980px; margin: 0 auto; padding: 28px 20px; display: flex; gap: 30px; align-items: flex-start; }
+  .main-content { flex: 1; min-width: 0; }
+  .sidebar { width: 220px; flex-shrink: 0; }
+  .section-title { color: #c0392b; font-size: 20px; font-weight: 700; margin-bottom: 12px; font-family: 'Roboto', sans-serif; }
+  .customer-section { margin-bottom: 28px; }
+  .customer-section p { line-height: 1.7; margin-bottom: 10px; color: #444; font-size: 13px; }
+  .card-box { background: #f9f9f9; border: 1px solid #eee; padding: 22px 26px; margin-bottom: 28px; }
+  .card-box > p { color: #444; line-height: 1.7; margin-bottom: 14px; font-size: 13px; }
+  .check-list { list-style: none; padding: 0; }
+  .check-list li { display: flex; align-items: flex-start; gap: 8px; padding: 5px 0; font-size: 13px; color: #333; line-height: 1.55; }
+  .check-list li::before { content: ''; display: inline-block; width: 14px; height: 14px; min-width: 14px; border-radius: 50%; background: #c0392b url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M2 6l3 3 5-5' stroke='white' stroke-width='1.8' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/10px no-repeat; margin-top: 2px; }
+  .check-list li strong { font-weight: 700; }
+  .result-section { margin-bottom: 28px; }
+  .summary-section { margin-bottom: 20px; }
+  .summary-section p { color: #444; line-height: 1.7; margin-bottom: 14px; font-size: 13px; }
+  .summary-bullets { list-style: none; padding: 0; margin-bottom: 14px; }
+  .summary-bullets li { display: flex; align-items: flex-start; gap: 8px; padding: 4px 0; font-size: 13px; color: #333; }
+  .summary-bullets li::before { content: ''; display: inline-block; width: 14px; height: 14px; min-width: 14px; border-radius: 50%; background: #c0392b url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M2 6l3 3 5-5' stroke='white' stroke-width='1.8' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/10px no-repeat; margin-top: 2px; }
+  .cta-text { font-size: 13px; color: #444; margin-top: 8px; }
+  .cta-text a { color: #c0392b; font-weight: 600; text-decoration: none; }
+  .cta-text a:hover { text-decoration: underline; }
+  .sidebar-title { font-size: 16px; font-weight: 700; color: #c0392b; margin-bottom: 14px; font-family: 'Roboto', sans-serif; }
+  .related-link { display: flex; align-items: center; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid #eee; text-decoration: none; color: #333; font-size: 12.5px; line-height: 1.4; gap: 8px; }
+  .related-link:hover { color: #c0392b; }
+  .related-link .arrow { color: #c0392b; font-size: 16px; flex-shrink: 0; }
+  .btn-more { display: inline-block; background: #c0392b; color: #fff; text-decoration: none; padding: 9px 18px; font-size: 12px; font-weight: 700; margin-top: 16px; border-radius: 2px; }
+  .btn-more:hover { background: #a93226; }
+  .contact-box { margin-top: 20px; background: linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.55)), url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80') center/cover no-repeat; padding: 30px 18px; text-align: center; border-radius: 2px; }
+  .contact-box p { color: #fff; font-size: 14px; font-weight: 700; line-height: 1.4; margin-bottom: 12px; }
+  .btn-contact { display: inline-block; background: #c0392b; color: #fff; text-decoration: none; padding: 8px 18px; font-size: 12px; font-weight: 700; border-radius: 2px; }
+  .btn-contact:hover { background: #a93226; }
+  @media (max-width: 768px) { .hero { padding: 24px 20px 20px; } .hero h1 { font-size: 20px; } .page-body { flex-direction: column; padding: 20px 16px; } .sidebar { width: 100%; } }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="hero-inner">
+    <a class="hero-back" href="index.html">&#8592; Back to Case Studies</a>
+    <h1>Streamlining Mortgage Technology Operations</h1>
+    <div class="hero-tags">
+      <span class="tag-badge">FinTech</span>
+      <span class="tag-badge">Mortgage</span>
+      <span class="tag-badge">Back Office</span>
+    </div>
+  </div>
+</div>
+
+<div class="form-bar">
+  <div class="form-bar-label">Talk to Our Experts<span>Schedule Your Free Consultation</span></div>
+  <input type="text" placeholder="Name*">
+  <input type="text" placeholder="Email*">
+  <input type="text" placeholder="Phone*">
+  <textarea placeholder="Requirements*"></textarea>
+  <div style="display:flex;flex-direction:column;gap:4px;align-items:flex-start;">
+    <div class="captcha-box">BS M3 &nbsp; &#x21bb;</div>
+    <a class="privacy-link" href="#">Privacy Policy</a>
+  </div>
+  <button class="btn-submit">SUBMIT</button>
+</div>
+
+<div class="breadcrumb">
+  <a href="index.html">Case Studies</a><span>&gt;</span>
+  <a href="#">Streamlining Mortgage Technology Operations</a>
+</div>
+
+<div class="page-body">
+  <div class="main-content">
+
+    <div class="customer-section">
+      <div class="section-title">The Customer</div>
+      <p>Our client was a Denver-based private FinTech company specializing in digital mortgage platforms. The organization served banks, credit unions, and mortgage brokers across the United States. Rapid growth in loan origination volumes outpaced internal processing capacity. The operations team required scalable back-office support to sustain service commitments to financial institution partners.</p>
+      <p>The client managed a high volume of loan documentation, compliance verification tasks, and borrower data processing requirements. Internal staff struggled to keep pace with demand. Turnaround times were extending beyond acceptable service level thresholds, placing existing client relationships at risk.</p>
+    </div>
+
+    <div class="card-box">
+      <div class="section-title">The Challenges</div>
+      <p>The client's back-office operations were under significant strain due to exponential growth in digital mortgage applications. The absence of scalable processes created systemic quality and timing failures.</p>
+      <ul class="check-list">
+        <li><div><strong>Documentation volume:</strong> Loan processing document volumes exceeded internal team capacity by over 60%.</div></li>
+        <li><div><strong>Data accuracy gaps:</strong> Inconsistent data validation across loan files led to recurring errors and rework cycles.</div></li>
+        <li><div><strong>Turnaround delays:</strong> Processing delays frequently pushed beyond SLA thresholds, jeopardizing institutional client commitments.</div></li>
+        <li><div><strong>Compliance exposure:</strong> Inadequate compliance verification workflows created regulatory risk across multiple state jurisdictions.</div></li>
+        <li><div><strong>Integration gaps:</strong> Back-office processes were not fully integrated with the client's digital mortgage platform, creating manual handoffs.</div></li>
+        <li><div><strong>Staff scalability:</strong> No scalable staffing model existed to absorb volume spikes without quality degradation.</div></li>
+      </ul>
+    </div>
+
+    <div class="card-box">
+      <div class="section-title">The Solutions</div>
+      <p>A dedicated processing team was deployed to assume end-to-end responsibility for mortgage document management. The engagement focused on workflow integration, quality assurance, and compliance alignment.</p>
+      <ul class="check-list">
+        <li><div><strong>End-to-end ownership:</strong> The team assumed complete responsibility for loan documentation intake, processing, and compliance verification.</div></li>
+        <li><div><strong>Workflow integration:</strong> Back-office processes were seamlessly integrated with the client's existing digital mortgage platform.</div></li>
+        <li><div><strong>Data validation framework:</strong> A structured data validation protocol eliminated recurring errors and reduced rework significantly.</div></li>
+        <li><div><strong>Compliance verification:</strong> Systematic compliance checks were embedded at every stage of the loan processing workflow.</div></li>
+        <li><div><strong>Scalable staffing model:</strong> A flexible team structure was established to absorb volume fluctuations without service disruption.</div></li>
+        <li><div><strong>SLA management:</strong> Defined turnaround targets were met consistently through structured queue management and daily reporting.</div></li>
+      </ul>
+    </div>
+
+    <div class="result-section">
+      <div class="section-title">The Result</div>
+      <p style="color:#444;line-height:1.7;margin-bottom:14px;font-size:13px;">The engagement delivered measurable improvements across processing speed, data accuracy, compliance adherence, and client growth capacity.</p>
+      <ul class="check-list">
+        <li><div><strong>Loan processing time:</strong> Processing cycle times reduced by 40%, consistently meeting institutional client SLA commitments.</div></li>
+        <li><div><strong>Data accuracy:</strong> Loan file accuracy improved to 99.2%, eliminating costly rework and downstream corrections.</div></li>
+        <li><div><strong>Client acquisition:</strong> Three new institutional clients were successfully onboarded within six months of engagement commencement.</div></li>
+        <li><div><strong>Compliance error reduction:</strong> Compliance-related error rates declined by 85%, strengthening regulatory standing across jurisdictions.</div></li>
+      </ul>
+    </div>
+
+    <div class="summary-section">
+      <div class="section-title">The Summary</div>
+      <p>The engagement stabilized mortgage back-office operations by deploying an integrated processing team aligned with the client's digital platform. Loan file accuracy, turnaround speed, and compliance performance all improved substantially. The scalable staffing model positioned the client to onboard new institutional clients without operational disruption.</p>
+      <ul class="summary-bullets">
+        <li>40% processing time reduction</li>
+        <li>99.2% data accuracy achieved</li>
+        <li>3 new institutional clients onboarded</li>
+        <li>85% compliance error reduction</li>
+      </ul>
+      <p class="cta-text">Explore our <a href="/contact-us/">finance and accounting services</a> to achieve similar results for your organization!</p>
+    </div>
+
+  </div>
+
+  <div class="sidebar">
+    <div class="sidebar-title">Related Case Studies</div>
+    <a class="related-link" href="transaction-operations.html">Optimizing High-Volume Transaction Operations<span class="arrow">&#8594;</span></a>
+    <a class="related-link" href="financial-back-office.html">Financial Back Office Support Services<span class="arrow">&#8594;</span></a>
+    <a class="related-link" href="financial-research.html">Financial Research Services<span class="arrow">&#8594;</span></a>
+    <div style="text-align:center;"><a class="btn-more" href="index.html">View All Case Studies &#8594;</a></div>
+    <div class="contact-box">
+      <p>Let's build smarter solutions together!</p>
+      <a class="btn-contact" href="/contact-us/">Contact us</a>
+    </div>
+  </div>
+</div>
+</body>
+</html>
