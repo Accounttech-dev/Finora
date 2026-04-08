@@ -1784,7 +1784,7 @@ function toggleMobileInd(btn) {
                 </div>
                 <ul class="list" data-astro-cid-a3zumnlt>
                   <li class="item" data-astro-cid-a3zumnlt>
-                    <div class="icon" data-astro-cid-a3zumnlt> <svg width="22" height="22"
+                     <div class="icon" data-astro-cid-a3zumnlt style="background-color: teal; padding: 8px; border-radius: 8px; display: flex; align-items: center; justify-content: center;"> <svg width="22" height="22"
                         data-astro-cid-a3zumnlt="true" data-icon="general-icons/arrows">
                         <symbol id="ai:local:general-icons/arrows" viewBox="0 0 31 31">
                           <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
@@ -1800,7 +1800,7 @@ function toggleMobileInd(btn) {
                     </div>
                   </li>
                   <li class="item" data-astro-cid-a3zumnlt>
-                    <div class="icon" data-astro-cid-a3zumnlt> <svg width="22" height="22"
+                    <div class="icon" data-astro-cid-a3zumnlt style="background-color: teal; padding: 8px; border-radius: 8px; display: flex; align-items: center; justify-content: center;"> <svg width="22" height="22"
                         data-astro-cid-a3zumnlt="true" data-icon="general-icons/no">
                         <symbol id="ai:local:general-icons/no" viewBox="0 0 31 31">
                           <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
@@ -1815,7 +1815,7 @@ function toggleMobileInd(btn) {
                     </div>
                   </li>
                   <li class="item" data-astro-cid-a3zumnlt>
-                    <div class="icon" data-astro-cid-a3zumnlt> <svg width="22" height="22"
+                    <div class="icon" data-astro-cid-a3zumnlt style="background-color: teal; padding: 8px; border-radius: 8px; display: flex; align-items: center; justify-content: center;"> <svg width="22" height="22"
                         data-astro-cid-a3zumnlt="true" data-icon="general-icons/stars">
                         <symbol id="ai:local:general-icons/stars" viewBox="0 0 31 31">
                           <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
@@ -1830,7 +1830,7 @@ function toggleMobileInd(btn) {
                     </div>
                   </li>
                   <li class="item" data-astro-cid-a3zumnlt>
-                    <div class="icon" data-astro-cid-a3zumnlt> <svg width="22" height="22"
+                    <div class="icon" data-astro-cid-a3zumnlt style="background-color: teal; padding: 8px; border-radius: 8px; display: flex; align-items: center; justify-content: center;"> <svg width="22" height="22"
                         data-astro-cid-a3zumnlt="true" data-icon="general-icons/credit-card-tilted">
                         <symbol id="ai:local:general-icons/credit-card-tilted" viewBox="0 0 32 31">
                           <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
@@ -2431,6 +2431,32 @@ div[data-astro-cid-bjh6wx2o] {
 
 .link-tiles-tile-cta[data-astro-cid-d4e2ptyq] {
     margin-top: 20px;
+}
+
+ @media (min-width: 1025px) { .item[data-astro-cid-a3zumnlt] { gap: 32px;
+    padding-left: 120px;   /* adjust value as needed */
+    padding-right: 120px; 
+  
+  } }
+
+  .icon {
+    background-color: teal;
+    border-radius: 8px;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon svg use {
+    color: white;
+    stroke: white !important;
+}
+
+.icon svg {
+    stroke: white !important;
+    color: white;
+    overflow: visible;
 }
   </style>
 
