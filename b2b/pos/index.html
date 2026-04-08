@@ -1566,60 +1566,35 @@ Contact Us          </a>
 
   <div class="fin-cards">
 
-    <!-- 1st card – icon colors changed to #333 -->
-    <div class="fin-card">
-      <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="24" cy="30" r="13" stroke="#333" stroke-width="2.5"/>
-        <path d="M19 18 Q24 12 29 18" stroke="#333" stroke-width="2.5" fill="none"/>
-        <path d="M21 14 L27 14" stroke="#333" stroke-width="2.5"/>
-        <text x="24" y="34" text-anchor="middle" font-size="13" fill="#333" font-family="Arial" font-weight="bold">$</text>
-        <ellipse cx="14" cy="38" rx="4" ry="2.5" stroke="#333" stroke-width="2" fill="none"/>
-        <ellipse cx="34" cy="38" rx="4" ry="2.5" stroke="#333" stroke-width="2" fill="none"/>
-      </svg>
-      <span class="fin-card-label">Income and expense <br>summaries</span>
-    </div>
-
+     <!-- 1st card – icon colors changed to #333 -->
+   <div class="fin-card">
+  <img src="/expense.png" alt="Income and expense summaries" class="fin-card-icon">
+  <span class="fin-card-label">
+    Income and expense <br>summaries
+  </span>
+</div>
     <!-- 2nd card -->
-    <div class="fin-card">
-      <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect x="8" y="22" width="32" height="18" rx="2" stroke="#333" stroke-width="1.8"/>
-        <rect x="10" y="19" width="28" height="5" rx="1" stroke="#333" stroke-width="1.5"/>
-        <rect x="12" y="16" width="24" height="5" rx="1" stroke="#333" stroke-width="1.5"/>
-        <text x="24" y="34" text-anchor="middle" font-size="10" fill="#333" font-family="Arial">$</text>
-        <polyline points="36,10 40,5 44,10" stroke="#333" stroke-width="2" fill="none"/>
-        <line x1="40" y1="5" x2="40" y2="16" stroke="#333" stroke-width="2"/>
-      </svg>
-      <span class="fin-card-label">Budget<br> tracking </span>
-    </div>
+   <div class="fin-card">
+  <img src="/personal.png" alt="Income and expense summaries" class="fin-card-icon">
+  <span class="fin-card-label">
+    Budget<br>tracking
+  </span>
+</div>
 
     <!-- 3rd card -->
     <div class="fin-card">
-      <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <ellipse cx="24" cy="36" rx="12" ry="4" stroke="#333" stroke-width="1.8" fill="none"/>
-        <ellipse cx="24" cy="30" rx="12" ry="4" stroke="#333" stroke-width="1.8" fill="none"/>
-        <ellipse cx="24" cy="24" rx="12" ry="4" stroke="#333" stroke-width="1.8" fill="none"/>
-        <line x1="12" y1="24" x2="12" y2="36" stroke="#333" stroke-width="1.8"/>
-        <line x1="36" y1="24" x2="36" y2="36" stroke="#333" stroke-width="1.8"/>
-        <text x="24" y="27" text-anchor="middle" font-size="6" fill="#333" font-family="Arial">$</text>
-        <polyline points="28,10 38,5 38,15" stroke="#333" stroke-width="2" fill="none"/>
-        <line x1="24" y1="17" x2="38" y2="5" stroke="#333" stroke-width="2"/>
-      </svg>
-      <span class="fin-card-label">Savings <br> tracking</span>
-    </div>
-
+  <img src="/Savings.ico" alt="Income and expense summaries" class="fin-card-icon">
+  <span class="fin-card-label">
+    Savings<br>tracking
+  </span>
+</div>
     <!-- 4th card -->
-    <div class="fin-card">
-      <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect x="8" y="28" width="6" height="12" stroke="#333" stroke-width="1.8" fill="none"/>
-        <rect x="17" y="20" width="6" height="20" stroke="#333" stroke-width="1.8" fill="none"/>
-        <rect x="26" y="14" width="6" height="26" stroke="#333" stroke-width="1.8" fill="none"/>
-        <circle cx="37" cy="15" r="7" stroke="#333" stroke-width="1.8" fill="none"/>
-        <line x1="42" y1="20" x2="46" y2="24" stroke="#333" stroke-width="2"/>
-        <text x="37" y="19" text-anchor="middle" font-size="7" fill="#333" font-family="Arial">$</text>
-      </svg>
-      <span class="fin-card-label">Real-time financial <br> insights</span>
-    </div>
-
+   <div class="fin-card">
+  <img src="/Real.png" alt="Income and expense summaries" class="fin-card-icon">
+  <span class="fin-card-label">
+   Real-time financial<br>insights
+  </span>
+</div>
   </div>
 
   <div class="fin-expense">
@@ -1639,6 +1614,8 @@ Contact Us          </a>
     padding: 100px 40px;
     background: #fff;
     color: #1a1a1a;
+    margin-top: -90px;
+    margin-bottom: -220px;
   }
   .finora-section h2 {
     font-size: 42px;
@@ -1677,7 +1654,10 @@ Contact Us          </a>
     cursor: pointer;
     transition: border-color 0.2s, background 0.2s, color 0.2s;
   }
-
+.cta-menu-item[data-astro-cid-u4eztjub]:first-of-type {
+    margin-left: 0;
+    margin-top: 28px;
+}
   .fin-card:hover {
     background-color: #7dd8e8;
     border-color: #7dd8e8;
@@ -1731,6 +1711,43 @@ Contact Us          </a>
   @media (max-width: 380px) {
     .fin-cards { grid-template-columns: 1fr; }
   }
+  @media (max-width: 768px) {
+  .finora-reporting-section {
+    flex-direction: column;  /* icon aur text vertically stack ho jaye */
+    gap: 24px;               /* mobile me thoda kam gap */
+    padding: 0 16px;         /* thoda horizontal padding */
+    text-align: center;      /* text center align rahe */
+  }
+}
+@media (max-width: 768px) {
+  .subheading[data-astro-cid-yp5l7k64] {
+    margin-bottom: 0 !important; /* mobile par negative margin hata do */
+  }
+}
+@media (max-width: 768px) {
+  .finora-close-content .fin-footer-text {
+    margin-bottom: 70px; /* mobile-friendly spacing */
+    text-align: center;   /* optional: center text on mobile */
+  }
+}
+@media (max-width: 768px) {
+  .finora-section {
+    padding: 100px 40px;   /* mobile-friendly padding */
+    margin-top: -90px;    /* mobile me thoda kam negative margin */
+    margin-bottom: -116px; /* mobile me thoda kam negative margin */
+  }
+}
+@media (max-width: 768px) {
+  .header-h2-style,
+  .header-h3-style,
+  h2,
+  h3 {
+    font-size: 20px;   /* mobile-friendly font size */
+    line-height: 1.1;  /* thoda better spacing mobile ke liye */
+    font-weight: 300;  /* same as desktop */
+    font-style: normal; /* same as desktop */
+  }
+}
 </style>
 
                     </div>
@@ -1838,6 +1855,7 @@ This detailed verification process ensures that all funds owed to your business 
     background: #fff;
     max-width: 1100px;
     margin: 0 auto;
+    margin-bottom: -180px;
   }
 
   .finora-close-img {
@@ -1899,7 +1917,13 @@ This detailed verification process ensures that all funds owed to your business 
     color: #777;
     line-height: 1.6;
   }
-
+.subheading[data-astro-cid-yp5l7k64] {
+    color: var(--textColor);
+    margin: var(--margin);
+    max-width: var(--subheadingMaxWidthMobile);
+    text-align: var(--textAlign);
+    margin-bottom: -47px;
+}
   @media (max-width: 768px) {
     .finora-close-section {
       flex-direction: column;
