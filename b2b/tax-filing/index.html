@@ -198,6 +198,35 @@
   <link rel="stylesheet" href="../../../ram.digitscpu.com/_astro-assets/index.BW-MCg4d.css">
   <link rel="stylesheet" href="../../../ram.digitscpu.com/_astro-assets/index.CGhjID6V.css">
   <link rel="stylesheet" href="../../../ram.digitscpu.com/_astro-assets/_slug_.B8LIuXOv.css">
+  <link rel="stylesheet" href="../../../../ram.digitscpu.com/_astro-assets/component-library.BGhx_IQW.css">
+  <link rel="stylesheet" href="../../../../ram.digitscpu.com/_astro-assets/_slug_.qPFyvrl0.css">
+  <link rel="stylesheet" href="../../../../ram.digitscpu.com/_astro-assets/_slug_.vhmekWSL.css">
+  <link rel="stylesheet" href="../../../../ram.digitscpu.com/_astro-assets/index.BW-MCg4d.css">
+  <link rel="stylesheet" href="../../../../ram.digitscpu.com/_astro-assets/_slug_.DP4NPrhC.css">
+  <link rel="stylesheet" href="../../../../ram.digitscpu.com/_astro-assets/_slug_.CgE9J-e-.css">
+  <style>
+    div[data-astro-cid-bjh6wx2o] {
+      margin-bottom: var(--mBottom);
+      margin-top: var(--mTop);
+      padding-bottom: var(--pBottom);
+      padding-top: var(--pTop)
+    }
+  </style>
+  <link rel="stylesheet" href="../../../../ram.digitscpu.com/_astro-assets/index.BbDXTsXE.css">
+  <link rel="stylesheet" href="../../../../ram.digitscpu.com/_astro-assets/_slug_.C2iB4JcZ.css">
+  <link rel="stylesheet" href="../../../../ram.digitscpu.com/_astro-assets/_slug_.CLGFpSjd.css">
+  <link rel="stylesheet" href="../../../../ram.digitscpu.com/_astro-assets/_slug_.BMK2fe_p.css">
+  <link rel="stylesheet" href="../../../../ram.digitscpu.com/_astro-assets/_slug_.BCOt1NAM.css">
+  <link rel="stylesheet" href="../../../../ram.digitscpu.com/_astro-assets/index.CGiEcBiJ.css">
+  <link rel="stylesheet" href="../../../../ram.digitscpu.com/_astro-assets/financials.EHUQRewD.css">
+  <link rel="preload" href="https://ram.digitscpu.com/_astro-assets/fonts/839d472bc2e30b30.woff2" as="font"
+    type="font/woff2" crossorigin="">
+  <link rel="preload" href="https://ram.digitscpu.com/_astro-assets/fonts/1326b20544574fdb.woff2" as="font"
+    type="font/woff2" crossorigin="">
+  <link rel="preload" href="https://ram.digitscpu.com/_astro-assets/fonts/fdb5fedc93844555.woff2" as="font"
+    type="font/woff2" crossorigin="">
+  <script type="module" src="../../../../ram.digitscpu.com/_astro-assets/page.DeRjBIrH.js"></script>
+
   <style>
     .hero-container {
       position: relative
@@ -217,13 +246,29 @@
       padding-bottom: var(--pBottom);
       padding-top: var(--pTop)
     }
+    div[data-astro-cid-bjh6wx2o] {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
   </style>
   <link rel="stylesheet" href="../../../ram.digitscpu.com/_astro-assets/_slug_.JmnZcPdZ.css">
   <style>
     .has-dots[data-astro-cid-kgxlwazw] {
       position: relative
     }
+.bg-timeline-text-chunk[data-astro-cid-7kjucwzk] .cta[data-astro-cid-7kjucwzk] {
+  /* jo bhi tumhare paas already hai woh rehne do, sirf ye cheeze adjust karo */
 
+  display: flex;              /* text ko vertically center / shift karne ke liye  */
+  align-items: center;        /* center; agar ab bhi upar lage to 'flex-end' try karo */
+  justify-content: center;
+
+  padding-top: 10px;          /* text ko neeche push karega */
+  padding-bottom: 6px;        /* zarurat ho to isko kam/zyada kar sakte ho */
+
+  line-height: 1;             /* taake line-height text ko upar na kheenchay */
+}
     .has-dots[data-astro-cid-kgxlwazw]:after {
       background-image: radial-gradient(circle, var(--ghost-color) 2px, transparent 0);
       background-repeat: repeat;
@@ -306,6 +351,7 @@
       animation-delay: 0s;
       left: 56px
     }
+    
 
     @keyframes digits-loader {
       0% {
@@ -401,6 +447,9 @@
   pointer-events: auto;
   transform: translateX(-50%) translateY(0);
   transition: opacity 0.18s ease 0s, transform 0.18s ease 0s, visibility 0s linear 0s;
+}
+.bookkeeping-page .bg-timeline-container-outer {
+    padding-top: 200px;
 }
 
 /* Left Panel */
@@ -511,6 +560,7 @@
   transition: transform 0.2s;
   flex-shrink: 0;
 }
+
 .mobile-ind-toggle.open .toggle-arrow { transform: rotate(-135deg) translateY(1px); }
 .mobile-ind-links { display: none; padding: 4px 20px 12px 20px; flex-direction: column; gap: 0; }
 .mobile-ind-links.open { display: flex; }
@@ -537,10 +587,15 @@
   transition: transform 0.2s;
   vertical-align: middle;
 }
+
 .top-nav-dropdown:hover .top-nav-dropdown-icon {
   transform: rotate(-135deg) translateY(1px);
 }
-
+@media (max-width: 768px) {
+  .bookkeeping-page .bg-timeline-container-outer {
+    padding-top: 49px;   /* jitni chahiye utni value r akh lo */
+  }
+}
 /* Keep existing styles working */
 .dropdown-link-title { color: #000 !important; }
 .dropdown-link-desc  { color: #666 !important; }
@@ -1717,6 +1772,7 @@ AI Finora provides reliable and structured sales tax filing services designed to
                         style="text-decoration: none;">Get started</a>
                     </div>
                     
+                    
                   </li>
                    <li class="bg-timeline-item bg-timeline-item-animated" data-astro-cid-7kjucwzk>
                     <div class="bg-timeline-text-chunk" data-astro-cid-7kjucwzk>
@@ -1743,6 +1799,7 @@ AI Finora provides reliable and structured sales tax filing services designed to
                         style="--bg: var(--color-green);--textColor: var(--color-black);--border: transparent;--hoverBg: var(--negative-color);--hoverText: var(--positive-color);--hoverBorder: transparent;--focusColor: var(--negative-color);--width: auto; margin-top: 30px;"
                         style="text-decoration: none;">Get started</a>
                     </div>
+                    
                     
                   </li>
                   <style>
@@ -1961,7 +2018,25 @@ AI Finora provides reliable and structured sales tax filing services designed to
   </div>
   </div>
   </div>
-
+<div style="" data-astro-cid-kgxlwazw="true" class="global-padding-inline bg-mode-blue container">
+        <div class="section-container-fullbleed" data-astro-cid-kgxlwazw>
+          <div data-astro-cid-kgxlwazw="true" data-astro-cid-bjh6wx2o
+            style="--mBottom: 0;--mTop: 0;--pBottom: var(--space-global-responsive);--pTop: var(--space-none-responsive);">
+            <div class="cta-block" data-astro-cid-uz5nai6c>
+              <div class="block-wrapper" data-astro-cid-uz5nai6c>
+                <div class="block-content bg-mode-default" data-astro-cid-uz5nai6c>
+                  <h2 class="header-h1-style title" data-astro-cid-uz5nai6c>Switch to Finora today</h2>
+                  <h3 class="subtitle subheadline-light" data-astro-cid-uz5nai6c>Experience accounting reimagined.</h3>
+                  <div class="cta-container" data-astro-cid-uz5nai6c> <a href="/contact-us/" class="cta cta--medium"
+                      data-astro-cid-uz5nai6c="true" data-astro-cid-i4xokolx
+                      style="--bg: var(--negative-color);--textColor: var(--positive-color);--border: transparent;--hoverBg: transparent;--hoverText: var(--negative-color);--hoverBorder: var(--negative-color);--focusColor: var(--negative-color);--width: auto;"
+                      style="text-decoration: none;">Get started</a> </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
   <!-- <section class="global-padding-inline container" style="margin-top: var(--space-xl-responsive); margin-bottom: var(--space-xl-responsive);">
         <div class="section-container-standard">
           <h3 class="header-h3-style" style="text-align: center; margin-bottom: var(--space-m-responsive);">Serving businesses in:</h3>
@@ -2382,6 +2457,13 @@ div[data-astro-cid-bjh6wx2o] {
     margin-top: var(--mTop);
     padding-bottom: 0px;
     padding-top: var(--pTop);
+}
+
+body {
+    margin-top: -22px;
+    max-width: 100%;
+    overflow-x: hidden;
+    width: 100%;
 }
   </style>
 
