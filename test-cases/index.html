@@ -1966,6 +1966,37 @@ function toggleMobileInd(btn) {
     .detail-sections { grid-template-columns: 1fr; }
     .detail-section.full { grid-column: 1; }
   }
+
+
+  @media (max-width: 768px) {
+
+  .cta-form-wrap {
+    padding: 16px;
+  }
+
+  .cta-row {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .cta-form-wrap input,
+  .cta-form-wrap textarea {
+    width: 100%;
+  }
+
+  .cta-form-wrap input {
+    height: 40px;
+  }
+
+  .cta-form-wrap textarea {
+    height: 90px;
+  }
+
+  .captcha-group {
+    width: 100%;
+  }
+
+}
 </style>
 </head>
 <body>
