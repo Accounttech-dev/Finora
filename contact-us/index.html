@@ -1778,6 +1778,8 @@ United States</p>
                         </div>
                         
                     </div>
+                    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
                 </div>
             </div>
         </main>
@@ -2146,6 +2148,36 @@ s1.charset='UTF-8';
 s1.setAttribute('crossorigin','*');
 s0.parentNode.insertBefore(s1,s0);
 })();
+</script>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+
+emailjs.init("yZYLtxVyc6w0htmsy");
+
+const form = document.getElementById('contactForm');
+const successMessage = document.getElementById('successMessage');
+
+form.addEventListener('submit', function (e) {
+e.preventDefault();
+
+emailjs.sendForm(
+'service_cpqf23n',
+'template_htqqbkl',
+this
+)
+.then(function () {
+successMessage.style.display = "block";
+form.reset();
+}, function (error) {
+console.log("FAILED...", error);
+alert("Failed to send message");
+});
+
+});
+
+});
 </script>
 <!--End of Tawk.to Script-->
 </body>
