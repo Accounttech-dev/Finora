@@ -1670,6 +1670,7 @@ function toggleMobileInd(btn) {
                         <p>Have questions about Finora? We'd love to hear from you. Send us a message and we'll respond
                             as soon as possible.</p>
                     </div>
+<form id="contactForm" class="contact-form" action="https://formsubmit.co/tayub6951@gmail.com" method="POST">
 
                     <div class="contact-content">
                         <div class="contact-form-wrapper">
@@ -1713,6 +1714,7 @@ function toggleMobileInd(btn) {
                                 <p>Your message has been sent successfully. We'll get back to you soon.</p>
                             </div>
                         </div>
+                      </form>
 
                         <div class="contact-info">
                             <h2 class="contact-info-title">Other Ways to Connect</h2>
@@ -2079,8 +2081,54 @@ United States</p>
     </style>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const form = document.getElementById('contactForm');
+document.addEventListener('DOMContentLoaded', function () {
+    const form = document.getElementById('contactForm');
+    const successMessage = document.getElementById('successMessage');
+
+    form.addEventListener('submit', function (e) {
+
+        // Clear errors
+        document.querySelectorAll('.form-input, .form-textarea').forEach(el => el.classList.remove('error'));
+        document.querySelectorAll('.error-message').forEach(el => el.classList.remove('show'));
+
+        let isValid = true;
+
+        const name = document.getElementById('name');
+        const email = document.getElementById('email');
+        const message = document.getElementById('message');
+
+        if (!name.value.trim()) {
+            name.classList.add('error');
+            document.getElementById('nameError').classList.add('show');
+            isValid = false;
+        }
+
+        if (!email.value.trim() || !isValidEmail(email.value)) {
+            email.classList.add('error');
+            document.getElementById('emailError').classList.add('show');
+            isValid = false;
+        }
+
+        if (!message.value.trim()) {
+            message.classList.add('error');
+            document.getElementById('messageError').classList.add('show');
+            isValid = false;
+        }
+
+        if (!isValid) {
+            e.preventDefault(); // ❌ only stop when invalid
+            return;
+        }
+
+        // ✅ allow submit to FormSubmit
+        successMessage.classList.add('show');
+    });
+
+    function isValidEmail(email) {
+        const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(String(email).toLowerCase());
+    }
+});            const form = document.getElementById('contactForm');
             const successMessage = document.getElementById('successMessage');
 
             form.addEventListener('submit', function (e) {
