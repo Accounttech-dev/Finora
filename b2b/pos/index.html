@@ -1488,10 +1488,10 @@ function toggleMobileInd(btn) {
                 style="--gap: var(--space-m-responsive);--flexDirection: row;--marginBottom: var(--space-none-responsive);--textAlign: center;">
                 <div class="heading-wrapper" data-astro-cid-xktwx3m6
                   style="--textColor: var(--global-heading-color);--headingMaxWidthMobile: none;--headingMaxWidthTablet: none;--headingMaxWidthDesktop: none;--textAlign: center;--margin: 0 auto;">
-                  <h1 data-astro-cid-xktwx3m6="true" class="header-h2-style"><span class="heading"
+                  <h1 data-astro-cid-xktwx3m6="true" class="header-h2-style"><br class="heading"
                       data-astro-cid-xktwx3m6
-                      style="--textColor: var(--global-heading-color);--headingMaxWidthMobile: none;--headingMaxWidthTablet: none;--headingMaxWidthDesktop: none;--textAlign: center;--margin: 0 auto;font-size: 55px;">
-                      POS Reconciliation Services for Food and Beverage Businesses</span></h1>
+                      style="--textColor: var(--global-heading-color);--headingMaxWidthMobile: none;--headingMaxWidthTablet: none;--headingMaxWidthDesktop: none;--textAlign: center;--margin: 0 auto;font-size: 50px;">
+                      POS Reconciliation Services for Food </br> and Beverage Businesses</span></h1>
                 </div>
                 <p class="subheading paragraph-light" data-astro-cid-yp5l7k64
                   style=" font-size:18px;--textColor: var(--global-text-color);--subheadingMaxWidthMobile: none;--subheadingMaxWidthTablet: none;--subheadingMaxWidthDesktop: none;--textAlign: center;--margin: 0 auto;font-size: 20px;">
@@ -1608,6 +1608,24 @@ Contact Us          </a>
 </div>
 
 <style>
+  @media (min-width: 1025px) {
+    .header-h2-style, h2 {
+        font-size: 3.5rem;
+        letter-spacing: -.07rem;
+        line-height: 1.1;
+    }
+}
+  @media (max-width: 768px) {
+  .header-h2-style, 
+  .header-h3-style, 
+  h2, 
+  h3 {
+    font-size: 32px !important;
+    line-height: 1.1;
+    font-weight: 300;
+    font-style: normal;
+  }
+}
   .finora-section {
     font-family: 'Inter', sans-serif;
     text-align: center;
@@ -1617,6 +1635,7 @@ Contact Us          </a>
     margin-top: -90px;
     margin-bottom: -220px;
   }
+  
   .finora-section h2 {
     font-size: 42px;
     font-weight: 700;

@@ -1489,10 +1489,10 @@ function toggleMobileInd(btn) {
                 style="--gap: var(--space-m-responsive);--flexDirection: row;--marginBottom: var(--space-none-responsive);--textAlign: center;">
                 <div class="heading-wrapper" data-astro-cid-xktwx3m6
                   style="--textColor: var(--global-heading-color);--headingMaxWidthMobile: none;--headingMaxWidthTablet: none;--headingMaxWidthDesktop: none;--textAlign: center;--margin: 0 auto;">
-                  <h1 data-astro-cid-xktwx3m6="true" class="header-h2-style"><span class="heading"
+                  <h1 data-astro-cid-xktwx3m6="true" class="header-h2-style"><br class="heading"
                       data-astro-cid-xktwx3m6
-                      style="--textColor: var(--global-heading-color);--headingMaxWidthMobile: none;--headingMaxWidthTablet: none;--headingMaxWidthDesktop: none;--textAlign: center;--margin: 0 auto;font-size: 55px;">
-                     Project and Cost Accounting Solutions for Financial Precision</span></h1>
+                      style="--textColor: var(--global-heading-color);--headingMaxWidthMobile: none;--headingMaxWidthTablet: none;--headingMaxWidthDesktop: none;--textAlign: center;--margin: 0 auto;font-size: 50px;">
+                     Project and Cost Accounting Solutions </br>for Financial Precision</span></h1>
                 </div>
                 <p class="subheading paragraph-light" data-astro-cid-yp5l7k64
                   style=" font-size:20px;--textColor: var(--global-text-color);--subheadingMaxWidthMobile: none;--subheadingMaxWidthTablet: none;--subheadingMaxWidthDesktop: none;--textAlign: center;--margin: 0 auto;">
@@ -1886,6 +1886,13 @@ By adopting a modern project cost accounting solution, businesses can eliminate 
     margin-top: -60px;
     margin: 0 auto;
   }
+  @media (min-width: 1025px) {
+    .header-h1-style, .header-h2-style, h1, h2 {
+        font-style: normal;
+        font-weight: 300;
+        line-height: 105%;
+    }
+}
 .link-tiles-group[data-astro-cid-d4e2ptyq] {
     margin-bottom: 17px;
 }
@@ -2887,7 +2894,11 @@ div[data-astro-cid-bjh6wx2o] {
  font-size: 26px;
  font-weight: 700;
 }
-
+@media (max-width: 768px) {
+    .header-h2-style .heading {
+        font-size: 32px !important;
+    }
+}
   </style>
 
 
