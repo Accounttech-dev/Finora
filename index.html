@@ -204,8 +204,14 @@
       margin-bottom: var(--mBottom);
       margin-top: var(--mTop);
       padding-bottom: var(--pBottom);
-      padding-top: var(--pTop);
+      /* padding-top: var(--pTop); */
     }
+
+    @media (max-width: 768px) {
+  div[data-astro-cid-bjh6wx2o] {
+    margin-bottom: 0;
+  }
+}
   </style>
   <link rel="stylesheet" href="../ram.digitscpu.com/_astro-assets/_slug_.JmnZcPdZ.css">
   <style>
@@ -323,6 +329,7 @@
         top: 24px
       }
     }
+    
   </style>
   <link rel="stylesheet" href="../ram.digitscpu.com/_astro-assets/component-library.-hzYtEr1.css">
   <link rel="preload" href="https://ram.digitscpu.com/_astro-assets/fonts/839d472bc2e30b30.woff2" as="font"
@@ -413,10 +420,10 @@
 ══════════════════════════════════════════════════════════ -->
 
 <style>
-/* ── Industries Two-Panel Mega Menu (Desktop) ── */
+  
 .industries-mega {
   position: absolute;
-  top: 100%;           /* flush to nav — bridge covers the gap */
+  top: 100%;           
   left: 50%;
   transform: translateX(-50%) translateY(6px);
   width: 780px;
@@ -429,21 +436,18 @@
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  /* delay on hide so mouse can travel to mega menu */
   transition: opacity 0.22s ease 0s, transform 0.22s ease 0s, visibility 0s linear 0.22s;
   z-index: 9999;
-  /* invisible top padding bridges the gap so hover doesn't break */
   margin-top: 10px;
 }
 
-/* Invisible bridge: covers the gap between nav link and mega menu */
 .top-nav-dropdown:has(.industries-mega)::after {
   content: '';
   position: absolute;
   top: 100%;
   left: 0;
   right: 0;
-  height: 14px;        /* same as margin-top above */
+  height: 14px;       
   z-index: 9998;
 }
 
@@ -491,7 +495,40 @@
   padding: 24px 26px;
   min-height: 420px;
 }
+@media (max-width: 768px) {
+  .link-tiles-heading-container[data-astro-cid-d4e2ptyq],
+  .link-tiles[data-astro-cid-d4e2ptyq] {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: -125px;
+  }
+}
+@media (max-width: 768px) {
+  .screenshot-wrapper-outer[data-astro-cid-4yqstrs4] {
+    background-color: var(--color-white-50);
+    border-radius: 10px;
+    box-shadow: -2px 2px 5px var(--color-black-05);
 
+    height: auto;
+    width: 100%;
+    max-width: 100%;
+
+    margin: 0 auto 100px auto; 
+    
+    overflow: hidden;
+    position: relative;
+
+    display: flex;
+    align-items: center;   
+    justify-content: center; 
+  }
+
+  html, body {
+    overflow-x: hidden;
+  }
+}
 .industry-panel { display: none; animation: fadeInPanel 0.16s ease; }
 .industry-panel.active { display: block; }
 
@@ -513,6 +550,7 @@
   padding-bottom: 16px;
   border-bottom: 1px solid #ececec;
 }
+
 .industry-services-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 2px; }
 .industry-service-item a {
   display: flex;
@@ -2441,7 +2479,7 @@ function toggleMobileInd(btn) {
                   style="--gap: var(--space-m-responsive);--flexDirection: row;--marginBottom: var(--space-l-responsive);--textAlign: center;">
                   <div class="heading-wrapper" data-astro-cid-xktwx3m6
                     style="--textColor: var(--global-heading-color);--headingMaxWidthMobile: none;--headingMaxWidthTablet: none;--headingMaxWidthDesktop: none;--textAlign: center;--margin: 0 auto;">
-                    <h2 data-astro-cid-xktwx3m6="true" class="header-h3-style" style="margin-top: 60px;">
+                    <h2 data-astro-cid-xktwx3m6="true" class="header-h3-style" style="margin-top: 150px;">
                       <span class="heading" data-astro-cid-xktwx3m6 style="--textColor: var(--global-heading-color);
                --headingMaxWidthMobile: none;
                --headingMaxWidthTablet: none;
@@ -2478,6 +2516,12 @@ function toggleMobileInd(btn) {
     line-height: 1.4 !important; /* readability better */
   }
 }
+@media (max-width: 768px) {
+  .screenshot-wrapper-outer[data-astro-cid-4yqstrs4] video {
+    width: 77% !important;
+    height: auto !important;
+    object-fit: contain;
+  
             </style>
                         <style>
                           .link-tiles-tile-image[data-astro-cid-d4e2ptyq] {
@@ -2699,6 +2743,7 @@ function toggleMobileInd(btn) {
 
 /* RESPONSIVE */
 
+
 @media (max-width: 900px) {
   .email-container {
     grid-template-columns: 1fr;
@@ -2718,6 +2763,13 @@ function toggleMobileInd(btn) {
     border-radius: 4px;
   }
 }
+.heading-wrapper[data-astro-cid-xktwx3m6] {
+    margin: var(--margin);
+    max-width: var(--headingMaxWidthMobile);
+    text-align: var(--textAlign);
+    margin-top: 116px;
+}
+
 </style>
 
 <section class="email-section">
@@ -3154,6 +3206,7 @@ function toggleMobileInd(btn) {
     </main>
   </div>
  <style>
+  
 .custom-footer {
   background-color: #242633; /* Dark slate blue background */
   color: #ffffff;
@@ -3332,6 +3385,8 @@ function toggleMobileInd(btn) {
     overflow: hidden;
     font-family: inherit;
 }
+
+
 </style>
 
 <div class="custom-footer">
@@ -3511,6 +3566,7 @@ function toggleMobileInd(btn) {
         font-size: 1.6rem;
       }
     }
+    
   </style>
 
 
@@ -3519,6 +3575,14 @@ function toggleMobileInd(btn) {
 
 
   <style>
+    .heading-wrapper[data-astro-cid-xktwx3m6] {
+    margin: var(--margin);
+    max-width: var(--headingMaxWidthMobile);
+    text-align: var(--textAlign);
+    margin-top: 25px;
+}
+
+ 
     @media (min-width: 1025px) {
       .screenshot-wrapper-outer[data-astro-cid-4yqstrs4] {
         aspect-ratio: 10.3 / 7.8;
@@ -3573,11 +3637,12 @@ function toggleMobileInd(btn) {
         background-color: var(--color-white-50);
         border-radius: 10px 10px 10px 10px;
         box-shadow: -2px 2px 5px var(--color-black-05);
-        height: 312px;
-        margin-left: -12px;
+        height: 247px;
+        
+        margin-bottom: 100px;
         overflow: hidden;
         position: relative;
-width: 412px;
+width: 320px;
       }
 
       .screenshot-wrapper-inner[data-astro-cid-4yqstrs4] {
@@ -3605,6 +3670,7 @@ border-radius: 18px;
 }
 img.two-up-video-text-image {
     border-radius:12px;
+    margin-bottom: 80px;
 }
 @media (max-width: 768px) {
   .timeline-text-container[data-astro-cid-koubowtq] {
@@ -3617,6 +3683,8 @@ img.two-up-video-text-image {
 }
 
 }
+
+
 
   </style>
 </body>
