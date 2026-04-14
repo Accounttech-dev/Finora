@@ -275,7 +275,19 @@
     body {
       transition: background-color .3s ease
     }
-
+.bg-mode-default, .bg-mode-white {
+    --positive-color: var(--color-white);
+    --negative-color: var(--color-black);
+    --ghost-color: var(--color-black-10);
+    --ghost-color-dark: var(--color-black-30);
+    --global-heading-color: var(--negative-color);
+    --global-text-color: var(--color-black-60);
+    --global-link-color: var(--negative-color);
+    --global-link-color-hover: var(--color-black-60);
+    --global-border-color: var(--color-black-10);
+    --global-nav-bg: var(--color-white);
+    margin-top: -66px;
+}
     .digits-loader[data-astro-cid-5uuorzxx],
     .digits-loader[data-astro-cid-5uuorzxx] div[data-astro-cid-5uuorzxx] {
       box-sizing: border-box
@@ -3579,7 +3591,7 @@ function toggleMobileInd(btn) {
     margin: var(--margin);
     max-width: var(--headingMaxWidthMobile);
     text-align: var(--textAlign);
-    margin-top: 25px;
+    margin-top: 10px;
 }
 
  
@@ -3666,7 +3678,12 @@ border-radius: 18px;
     grid-column-end: 8;
     grid-column-start: 1;
 }
-
+.header-h2-style, .header-h3-style, h2, h3 {
+    font-style: normal;
+    font-weight: 300;
+    line-height: 120%;
+    margin-top: 35px;
+}
 }
 img.two-up-video-text-image {
     border-radius:12px;
