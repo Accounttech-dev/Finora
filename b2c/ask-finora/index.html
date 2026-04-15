@@ -1659,9 +1659,9 @@ Contact Us          </a>
   @media (max-width: 640px) {
     .fin-cards { grid-template-columns: repeat(2, 1fr); }
   }
-  @media (max-width: 380px) {
+  /* @media (max-width: 380px) {
     .fin-cards { grid-template-columns: 1fr; }
-  }
+  } */
 </style>
 
 <div class="finora-section">
@@ -1815,6 +1815,17 @@ Contact Us          </a>
               </div>
             </div>
             <style>
+              @media (max-width: 768px) {
+  .header-h2-style, 
+  .header-h3-style, 
+  h2, 
+  h3 {
+    font-style: normal;
+    font-weight: 300;
+    line-height: 120%;
+    margin-top: -20px;
+  }
+}
   .finora-close-section {
     font-family: 'Inter', sans-serif;
     display: flex;
@@ -1928,6 +1939,36 @@ Contact Us          </a>
     height: 60px;
     margin-bottom: -8px;
   }
+}
+@media (max-width: 768px) {
+
+    .finora-close-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Content ko tod ke flex bana do */
+    .finora-close-content {
+        display: contents;
+    }
+
+    /* 1️⃣ Heading sab se upar */
+    .finora-close-content h2 {
+        order: 1;
+        font-size: 22px;
+        text-align: center;
+    }
+
+    /* 2️⃣ Image */
+    .finora-close-img {
+        order: 2;
+    }
+
+    /* 3️⃣ Baaki text */
+    .finora-close-content p,
+    .finora-close-content ul {
+        order: 3;
+    }
 }
 </style>
 
@@ -2065,7 +2106,20 @@ Contact Us          </a>
     color: #444;
     line-height: 1.7;
   }
+@media (max-width: 768px) {
 
+    .finora-close-content .fin-desc {
+        text-align: center;
+    }
+
+}
+@media (max-width: 768px) {
+
+    .finora-close-content .fin-footer-text {
+        text-align: center;
+    }
+
+}
   @media (max-width: 768px) {
     .finora-reporting-section {
       flex-direction: column;
@@ -2079,9 +2133,10 @@ Contact Us          </a>
     .security-seal-img {
       height: 350px !important;
       object-fit: contain;
+      margin-top: -41px;
     }
     .finora-reporting-content h2 {
-      font-size: 24px;
+      font-size: 22px;
     }
   }
 </style>
@@ -2208,6 +2263,16 @@ Ask Finora allows users to generate customized financial summaries and reports i
                           span.heading.detail {
                             margin-top: 30px;
                           }
+                          @media (max-width: 768px) {
+
+    .header-h3-style,
+    h3 {
+        font-size: 22px;
+        
+    }
+    
+
+}
                         </style>
 
                          <canvas class="dotlottie-canvas"

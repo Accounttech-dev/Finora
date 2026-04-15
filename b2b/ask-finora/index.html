@@ -1670,9 +1670,9 @@ Contact Us          </a>
   @media (max-width: 640px) {
     .fin-cards { grid-template-columns: repeat(2, 1fr); }
   }
-  @media (max-width: 380px) {
+  /* @media (max-width: 380px) {
     .fin-cards { grid-template-columns: 1fr; }
-  }
+  } */
 
     @media (max-width: 768px) {
   .finora-section {
@@ -1946,6 +1946,61 @@ Contact Us          </a>
       font-size: 16px;
     }
   }
+  @media (max-width: 768px) {
+
+    .finora-close-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Content ko tod ke flex bana do */
+    .finora-close-content {
+        display: contents;
+    }
+
+    /* 1️⃣ Heading sab se upar */
+    .finora-close-content h2 {
+        order: 1;
+        text-align: center;
+    }
+
+    /* 2️⃣ Image */
+    .finora-close-img {
+        order: 2;
+    }
+
+    /* 3️⃣ Baaki text */
+    .finora-close-content p,
+    .finora-close-content ul {
+        order: 3;
+    }
+}
+@media (max-width: 768px) {
+
+    .finora-close-content .fin-desc {
+        font-size: 16px;
+        color: #555;
+        line-height: 1.6;
+        margin-bottom: 16px;
+        text-align: center;
+    }
+    @media (max-width: 768px) {
+    .finora-close-content .fin-footer-text {
+        font-size: 16px;
+        color: #777;
+        line-height: 1.6;
+        text-align: center;
+    }
+}
+@media (max-width: 768px) {
+    .finora-reporting-img img.security-seal-img {
+        width: 100%;
+        max-width: 600px;
+        height: auto;
+        display: block;
+        margin-top: -34px;
+    }
+}
 </style>
 
 <div class="finora-close-section">
@@ -2097,6 +2152,7 @@ Contact Us          </a>
     }
     .finora-reporting-content h2 {
       font-size: 24px;
+      margin-top: -30px;
     }
   }
 </style>
@@ -2772,7 +2828,11 @@ h1.header-h2-style {
 ul.bg-timeline-container-list {
     margin-bottom: -100px;
 }
-
+@media (max-width: 768px) {
+    .finora-close-content h2 {
+        font-size: 22px;
+    }
+}
   </style>
   
 

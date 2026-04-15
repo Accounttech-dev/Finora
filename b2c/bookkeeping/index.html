@@ -1857,13 +1857,62 @@
 
                     @media (max-width: 768px) {
                       .bg-timeline-container {
-                        text-align: center !important;
+                      
                         display: flex;
                         justify-content: center;
                         align-items: center;
                         flex-direction: column;
                       }
-
+@media (max-width: 768px) {
+  /* 1. Reduce overall extreme padding in all major section blocks */
+  div[data-astro-cid-bjh6wx2o] {
+    padding-top: 30px !important;
+    padding-bottom: 30px !important;
+  }
+  /* 2. Reduce the gap inside the Hero section and Heading block */
+  .hero[data-astro-cid-2eilvbqz], 
+  .heading-block[data-astro-cid-64ls44ko],
+  .cta-container[data-astro-cid-64ls44ko] {
+    gap: 15px !important;
+  }
+  /* 3. CENTER the overall timeline item block */
+  .bg-timeline-text-chunk {
+    margin-bottom: -15px !important;
+    margin-top: -40px !important;
+    text-align: center !important; /* Yeh sab text (headings/p) ko center karega */
+  }
+  /* 4. Tweak the inner vertical padding of timeline text elements */
+  .bg-timeline-container p,
+  .bg-timeline-container span,
+  .bg-timeline-container h1,
+  .bg-timeline-container h2,
+  .bg-timeline-container h4 {
+    padding: 5px 15px !important; 
+    text-align: center !important; /* Pakka karega ki headings/p bhi perfectly center hain */
+  }
+  /* 5. FIX LISTS: List ka text left aligment pe aayega, lekin block center mein rahega */
+  .bg-timeline-text-chunk ul {
+    margin-bottom: 15px !important;
+    text-align: left !important;       /* Text andar left-aligned rahega */
+    display: inline-block !important;  /* Bullet points ko screen ke center position mein set rakhega */
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: 20px !important;     /* Bullets visible rakhne ke liye left padding */
+  }
+  .bg-timeline-text-chunk ul li {
+    text-align: left !important;       /* li ko explicit left text-align diya hai */
+  }
+  /* 6. Overriding the spacing for the Timeline Section itself */
+  .bg-timeline-section[data-astro-cid-7kjucwzk] {
+    padding-top: 15px !important;
+  }
+  
+  /* 7. Ensure lists and paragraphs overlap smoothly */
+  .bg-timeline-text-chunk p {
+    margin-top: -25px !important; 
+    margin-bottom: -17px !important;
+  }
+}
                       .bg-timeline-container p,
                       .bg-timeline-container span,
                       .bg-timeline-container h1,
