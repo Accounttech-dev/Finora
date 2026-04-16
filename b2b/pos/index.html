@@ -1615,7 +1615,7 @@ Contact Us          </a>
   .header-h3-style, 
   h2, 
   h3 {
-    font-size: 32px !important;
+    font-size: 33px !important;
     line-height: 1.1;
     font-weight: 300;
     font-style: normal;
@@ -1722,6 +1722,12 @@ Contact Us          </a>
   @media (max-width: 640px) {
     .fin-cards { grid-template-columns: repeat(2, 1fr); }
   }
+  @media (max-width: 640px) {
+    .fin-cards {
+        grid-template-columns: repeat(2, 1fr);
+        margin-bottom: 17px;
+    }
+}
   @media (max-width: 380px) {
     .fin-cards { grid-template-columns: 1fr; }
   }
@@ -1751,6 +1757,8 @@ Contact Us          </a>
     margin-bottom: -116px; /* mobile me thoda kam negative margin */
   }
 }
+
+
 @media (max-width: 768px) {
   .header-h2-style,
   .header-h3-style,
@@ -1911,7 +1919,7 @@ This detailed verification process ensures that all funds owed to your business 
   }
 
   .finora-close-content ul li {
-    font-size: 16px;
+    font-size: 20px;
     color: #333;
     padding: 3px 0;
     display: flex;
@@ -1950,6 +1958,7 @@ This detailed verification process ensures that all funds owed to your business 
     }
     .finora-close-img img {
       height: 240px;
+      margin-top: -30px;
     }
     .finora-close-content h2 {
       font-size: 16px;
@@ -2112,16 +2121,47 @@ POS reconciliation is not limited to revenue tracking. It also plays a critical 
     .security-seal-img {
       height: 350px !important;
       object-fit: contain;
+              margin-top: -37px;
+
     }
     .finora-reporting-content h2 {
-      font-size: 24px;
+      font-size: 20px;
+      margin-top: -47px;
     }
   }
+  @media (max-width: 768px) {
+    .header-h2-style, .header-h3-style, h2, h3 {
+        font-size: 20px;
+        line-height: 1.1;
+        font-weight: 300;
+        font-style: normal;
+        margin-top: -3px;
+    }
+}
+
                         @media (max-width: 768px) {
   .security-seal-img {
     height: 350px !important;
   }
 }
+@media (max-width: 768px) {
+    .global-padding-inline[data-astro-cid-kgxlwazw] {
+        padding-left: var(--global-padding);
+        padding-right: var(--global-padding);
+        margin-bottom: -26px;
+    }
+}
+@media (max-width: 768px) {
+    .subheading[data-astro-cid-yp5l7k64] {
+        margin-bottom: -34px !important;
+    }
+}
+@media (max-width: 768px) {
+    .subheading[data-astro-cid-yp5l7k64] {
+        margin-bottom: 16px !important;
+    }
+}
+
                       </style>
                       </div>
                     </div>
@@ -2578,6 +2618,8 @@ POS reconciliation is not limited to revenue tracking. It also plays a critical 
     grid-column-start: 1;
 }
 }
+
+
 </style>
 
 <div class="custom-footer">
@@ -2769,7 +2811,16 @@ s0.parentNode.insertBefore(s1,s0);
         font-size: 1.6rem;
       }
     }
-
+@media (max-width: 768px) {
+    .block-content[data-astro-cid-uz5nai6c] {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: var(--space-m);
+        margin-top: -42px;
+    }
+}
     .subheading {
       font-size: 17px;
       line-height: 1.55;
@@ -2839,23 +2890,24 @@ div[data-astro-cid-bjh6wx2o] {
   }
 }
 
-@media (max-width: 768px) {
-  img, 
-  picture {
-    width: 60px;
-    height: 60px;
-  }
-}
+
+
 
 @media (max-width: 768px) {
   .header-h2-style .heading {
     font-size: 32px !important;
   }
 }
-
+@media (max-width: 768px) {
+    .finora-reporting-content p {
+        font-size: 20px;
+        color: #444;
+        line-height: 1.7;
+    }
+}
 @media (max-width: 768px) {
   p.subheading.paragraph-light[data-astro-cid-yp5l7k64] {
-    font-size: 17px !important;
+    font-size: 20px !important;
   }
 }
 
@@ -2866,13 +2918,71 @@ div[data-astro-cid-bjh6wx2o] {
     padding-right: var(--global-padding);
   }
 }
-
+@media (max-width: 768px) {
+    .fin-subtitle {
+        font-size: 20px;
+        color: #555;
+        line-height: 1.7;
+        max-width: 780px;
+        margin: 0 auto 10px;
+    }
+}
 .header-h3-style{
  font: caption;
  font-size: 26px;
  font-weight: 700;
 }
-
+@media (max-width: 767px) {
+    /* 🔴 DHYAN DEIN: Yahan aapko apne outer parent wrapper ka naam likhna hoga jisme img aur content dono hain. 
+       (Agar `.row` ya `.finora-wrapper` hai toh usko aise flex banayein) */
+    .replace-this-with-parent-class {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+    /* Content ko tod ke flex/parent level par le aao */
+    .finora-close-content {
+        display: contents !important;
+    }
+    /* 1️⃣ Heading sab se upar (order kam=upar) */
+    .finora-close-content h2 {
+        order: 1 !important;
+        font-size: 22px !important;
+        text-align: center !important;
+        margin-top: -18px;
+        margin-bottom: 20px !important; /* Thodi space ke liye */
+    }
+    /* 2️⃣ Image uske niche */
+    .finora-close-img {
+        order: 2 !important;
+        margin-bottom: 20px !important;
+    }
+    /* 3️⃣ Baaki text sabse niche */
+    .finora-close-content p,
+    .finora-close-content ul {
+        order: 3 !important;
+        margin-top: -23px;
+       
+    }
+}
+@media (max-width: 768px) {
+    .finora-close-content .fin-desc {
+        font-size: 20px;
+        color: #555;
+        line-height: 1.6;
+        margin-bottom: 5px;
+        text-align: center;
+        margin-top: -26px;
+    }
+}
+@media (max-width: 768px) {
+    .finora-close-content .fin-footer-text {
+        /* margin-bottom: 70px; */
+        text-align: center;
+        margin-top: -33px;
+        font-size: 20px;
+        margin-bottom: -15px;
+    }
+}
   </style>
 
 
