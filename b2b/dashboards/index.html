@@ -2277,6 +2277,59 @@ s0.parentNode.insertBefore(s1,s0);
     gap: 5px !important;
   }
 }
+@media (max-width: 767px) {
+    /* 1. Main outer box ko column banana (Sirf Pehla Box) */
+    .mosaic-grid[data-astro-cid-ow3t4hak] .mosaic-grid-tile:first-child {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+    /* 2. Text wale Inner Box (wrapper) ko invisible break karna taaki 
+          Heading aur Paragraph alag alag (image k uper/niche) move ho saken */
+    .mosaic-grid[data-astro-cid-ow3t4hak] .mosaic-grid-tile:first-child .tile-content-wrapper {
+        display: contents !important;
+    }
+    /* 3️⃣ SABSE UPAR: Sirf Header Text (Aapka diya hua class) */
+    .mosaic-grid[data-astro-cid-ow3t4hak] .mosaic-grid-tile:first-child .subheadline-light[data-astro-cid-ow3t4hak] {
+        order: 1 !important;
+        margin-bottom: 20px !important; 
+    }
+    /* 2️⃣ BEECH MEIN: Image Box */
+    .mosaic-grid[data-astro-cid-ow3t4hak] .mosaic-grid-tile:first-child .tile-image-wrapper[data-astro-cid-ow3t4hak] {
+        order: 2 !important;
+        margin-bottom: 20px !important; 
+    }
+    /* 1️⃣ SABSE NICHE: Subtext / Bacha Hua Paragraph */
+    .mosaic-grid[data-astro-cid-ow3t4hak] .mosaic-grid-tile:first-child p.tile-subtitle {
+        order: 3 !important;
+    }
+    /* Image Height Fix (Taaki image scale theek rahe) */
+    .mosaic-grid[data-astro-cid-ow3t4hak] .mosaic-grid-tile:first-child .tile-image-wrapper[data-astro-cid-ow3t4hak] img[data-astro-cid-ow3t4hak] {
+        height: auto !important;
+    }
+}
+
+@media (max-width: 768px) {
+  .subheading[data-astro-cid-yp5l7k64] {
+    color: var(--textColor);
+    margin: var(--margin);
+    max-width: var(--subheadingMaxWidthMobile);
+    text-align: var(--textAlign);
+    margin-bottom: 22px;
+  }
+}
+@media (max-width: 767px) {
+    .mosaic-grid[data-astro-cid-ow3t4hak] .mosaic-grid-tile:first-child .subheadline-light[data-astro-cid-ow3t4hak] {
+        order: 1 !important;
+        margin-bottom: 24px !important;
+    }
+}
+@media (max-width: 767px) {
+    .mosaic-grid[data-astro-cid-ow3t4hak] .mosaic-grid-tile:first-child p.tile-subtitle {
+        order: 3 !important;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
   </style>
 
 </body>
