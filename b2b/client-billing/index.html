@@ -115,6 +115,7 @@
     font-size: 17px;
     color: #444;
     line-height: 1.7;
+    margin-bottom: 27px;
   }
 
   @media (max-width: 768px) {
@@ -2847,14 +2848,73 @@ div[data-astro-cid-bjh6wx2o] {
   .header-h3-style, 
   h2, 
   h3 {
-    font-size: 32px !important;
+    font-size: 33px !important;
   }
+}
+@media (max-width: 768px) {
+    .finora-reporting-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 48px;
+        padding: 0px 0px;
+        max-width: 1100px;
+        margin: 0 auto;
+        text-align: center;
+        font-family: 'Inter', sans-serif;
+       
+    }
+}
+@media (max-width: 768px) {
+    .rounded[data-astro-cid-kgxlwazw] {
+        border-radius: var(--global-border-radius);
+        margin-bottom: 5px;
+    }
+}
+.finora-reporting-content p
+Specificity: (0,1,1)
+ {
+    font-size: 17px;
+    color: #444;
+    line-height: 1.7;
+    margin-bottom: 20px;
 }
 @media (min-width: 1025px) {
     .header-h2-style, h2 {
         font-size: 3.5rem;
         letter-spacing: -.07rem;
         line-height: 1.2;
+    }
+}
+@media (max-width: 767px) {
+    /* 🔴 DHYAN DEIN: Yahan aapko apne outer parent wrapper ka naam likhna hoga jisme img aur content dono hain. 
+       (Agar `.row` ya `.finora-wrapper` hai toh usko aise flex banayein) */
+    .replace-this-with-parent-class {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+    /* Content ko tod ke flex/parent level par le aao */
+    .finora-close-content {
+        display: contents !important;
+    }
+    /* 1️⃣ Heading sab se upar (order kam=upar) */
+    .finora-close-content h2 {
+        order: 1 !important;
+        font-size: 22px !important;
+        text-align: center !important;
+        margin-bottom: 20px !important; /* Thodi space ke liye */
+        margin-top: 20px;
+    }
+    /* 2️⃣ Image uske niche */
+    .finora-close-img {
+        order: 2 !important;
+        margin-bottom: 20px !important;
+    }
+    /* 3️⃣ Baaki text sabse niche */
+    .finora-close-content p,
+    .finora-close-content ul {
+        order: 3 !important;
+        text-align: center; /* Agar isay bhi center rakhna ho toh */
     }
 }
   </style>
