@@ -1549,7 +1549,7 @@ function toggleMobileInd(btn) {
                       Professional Client Billing Solutions for </br> Accurate and Timely Revenue</span></h1>
                 </div>
                 <p class="subheading paragraph-light" data-astro-cid-yp5l7k64
-                  style=" font-size:20px;--textColor: var(--global-text-color);--subheadingMaxWidthMobile: none;--subheadingMaxWidthTablet: none;--subheadingMaxWidthDesktop: none;--textAlign: center;--margin: 0 auto;">
+                  style="--textColor: var(--global-text-color);--subheadingMaxWidthMobile: none;--subheadingMaxWidthTablet: none;--subheadingMaxWidthDesktop: none;--textAlign: center;--margin: 0 auto;">
                   AI Finora provides structured and technology driven client billing solutions designed to ensure accuracy, transparency, and efficiency at every stage of the billing cycle. Our systems help businesses generate precise invoices, track payments in real time, minimize disputes, and maintain complete financial control. 
                 <li class="cta-menu-item" data-astro-cid-u4eztjub>
           <a href="/contact-us/" id="get-started-button" class="cta cta--small"
@@ -1664,6 +1664,9 @@ Contact Us          </a>
 </div>
 
             <style>
+              .subheading .paragraph-light{
+                font-size: 20px;
+              }
   .finora-section {
     font-family: 'Inter', sans-serif;
     text-align: center;
@@ -1871,21 +1874,26 @@ Contact Us          </a>
 
 @media (max-width: 768px) {
   .finora-close-content .fin-desc {
-    font-size: 16px;
+    font-size: 18px;
 color: #555;
 line-height: 1.6;
 margin-bottom: 16px;
 text-align: center;
   }
-}
-.finora-close-content ul li {
-    font-size: 16px;
+  .finora-close-content .fin-footer-text{
+    font-size: 18px;
+  }
+  .finora-close-content ul li {
+    font-size: 18px;
     color: #333;
     padding: 3px 0;
     display: flex;
     gap: 8px;
     text-align: left;
 }
+ 
+}
+
 @media (max-width: 768px) {
   .finora-reporting-section {
     display: flex;
@@ -1933,7 +1941,7 @@ text-align: center;
                           </style>
                     </div>
                     <p class="subheading paragraph-light" data-astro-cid-yp5l7k64
-                      style="font-size:20px; var(--global-text-color);--subheadingMaxWidthMobile: none;--subheadingMaxWidthTablet: 540px;--subheadingMaxWidthDesktop: 100%;--textAlign: center;--margin: 0 auto;margin-bottom: 20px;">
+                      style=" var(--global-text-color);--subheadingMaxWidthMobile: none;--subheadingMaxWidthTablet: 540px;--subheadingMaxWidthDesktop: 100%;--textAlign: center;--margin: 0 auto;margin-bottom: 20px;">
                      Accuracy in client billing builds trust and protects profitability. Errors in pricing, missed billable items, or delayed invoicing can disrupt cash flow and affect client relationships. AI Finora implements validation controls and reconciliation procedures to ensure that every transaction is correctly recorded.
 Our systems verify billable services, cross check contractual rates, and ensure tax compliance where applicable. Detailed billing records and transparent reporting allow businesses to respond quickly to client inquiries and maintain strong professional credibility.
 
@@ -2813,7 +2821,7 @@ s0.parentNode.insertBefore(s1,s0);
 @media (max-width: 768px) {
 
   .header-h2-style .heading {
-    font-size: 28px !important;
+    font-size: 26px !important;
   }
 
 }
@@ -2848,7 +2856,7 @@ div[data-astro-cid-bjh6wx2o] {
   .header-h3-style, 
   h2, 
   h3 {
-    font-size: 33px !important;
+    font-size: 25px !important;
   }
 }
 @media (max-width: 768px) {
@@ -2923,6 +2931,50 @@ Specificity: (0,1,1)
     gap: 0;
   }
 }
+@media (max-width: 768px) {
+    .subheading .paragraph-light{
+                font-size: 19px;
+              }
+            .finora-section{
+                  padding: 84px 30px;
+            }
+            .fin-card{
+              padding: 10px 10px 10px;
+            }
+            .fin-card-icon{
+              width: 50px;
+              height: 50px;
+            }
+            .fin-card-icon{
+              font-size: 25px;
+            }
+            .fin-subtitle {
+              font-size: 18px;
+            }
+            .fin-expense h3 {
+              font-size: 25px;
+            }
+            .fin-expense p {
+              font-size: 18px;
+            }
+            .subheading .paragraph-light{
+              font-size: 18px;
+            }
+            .finora-reporting-content h2{
+              font-size: 25px;
+            }
+            .finora-reporting-content h2{
+              font-size: 18px;
+            }
+            .finora-reporting-content p {
+              font-size: 18px;
+            }
+            .finora-reporting-content{
+              padding: 10px 7px;
+            }
+}
+
+
   </style>
 
 
