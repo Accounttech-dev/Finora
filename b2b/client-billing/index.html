@@ -1765,15 +1765,15 @@ Contact Us          </a>
   @media (max-width: 640px) {
     .fin-cards { grid-template-columns: repeat(2, 1fr); }
   }
-  @media (max-width: 380px) {
+  /* @media (max-width: 380px) {
     .fin-cards { grid-template-columns: 1fr; }
-  }
+  } */
   @media (max-width: 640px) {
     .fin-cards { grid-template-columns: repeat(2, 1fr); }
   }
-  @media (max-width: 380px) {
+  /* @media (max-width: 380px) {
     .fin-cards { grid-template-columns: 1fr; }
-  }
+  } */
 
    .finora-close-section {
     font-family: 'Inter', sans-serif;
@@ -2968,7 +2968,16 @@ div[data-astro-cid-bjh6wx2o] {
             }
 }
 
-
+  @media (max-width: 380px) {
+    /* .fin-cards { grid-template-columns: 1fr; } */
+    .fin-card{
+      width: 150px;
+    }
+    .fin-cards{
+      position: relative;
+      right: 25px;
+    }
+  }
   </style>
 
 
