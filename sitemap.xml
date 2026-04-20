@@ -1,74 +1,189 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
+  <!-- Homepage -->
   <url>
     <loc>https://www.aifinora.com/</loc>
-    <lastmod>2026-02-11</lastmod>
+    <lastmod>2026-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
+  <!-- About -->
   <url>
     <loc>https://www.aifinora.com/about-us/</loc>
-    <lastmod>2026-02-11</lastmod>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- B2C Services -->
+  <url>
+    <loc>https://www.aifinora.com/b2c/ask-finora/</loc>
+    <lastmod>2026-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://www.aifinora.com/services/ask-finora/</loc>
-    <lastmod>2026-02-11</lastmod>
+    <loc>https://www.aifinora.com/b2c/bookkeeping/</loc>
+    <lastmod>2026-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://www.aifinora.com/services/bookkeeping/</loc>
-    <lastmod>2026-02-11</lastmod>
+    <loc>https://www.aifinora.com/b2c/cash-flow-management/</loc>
+    <lastmod>2026-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://www.aifinora.com/services/month-end-close/</loc>
-    <lastmod>2026-02-11</lastmod>
+    <loc>https://www.aifinora.com/b2c/wealth-management/</loc>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- B2B Services -->
+  <url>
+    <loc>https://www.aifinora.com/b2b/ask-finora/</loc>
+    <lastmod>2026-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://www.aifinora.com/services/dashboards/</loc>
-    <lastmod>2026-02-11</lastmod>
+    <loc>https://www.aifinora.com/b2b/real-time-bookkeeping/</loc>
+    <lastmod>2026-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://www.aifinora.com/services/financials/</loc>
-    <lastmod>2026-02-11</lastmod>
+    <loc>https://www.aifinora.com/b2b/month-end-close/</loc>
+    <lastmod>2026-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://www.aifinora.com/services/bill-pay/</loc>
-    <lastmod>2026-02-11</lastmod>
+    <loc>https://www.aifinora.com/b2b/dashboards/</loc>
+    <lastmod>2026-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://www.aifinora.com/services/invoicing/</loc>
-    <lastmod>2026-02-11</lastmod>
+    <loc>https://www.aifinora.com/b2b/financials/</loc>
+    <lastmod>2026-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://www.aifinora.com/services/business-setup/</loc>
-    <lastmod>2026-02-11</lastmod>
+    <loc>https://www.aifinora.com/b2b/amazon-reconciliation/</loc>
+    <lastmod>2026-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
 
+  <url>
+    <loc>https://www.aifinora.com/b2b/tax-filing/</loc>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.aifinora.com/b2b/Inventory-Management/</loc>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.aifinora.com/b2b/revenue-recognition/</loc>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.aifinora.com/b2b/insurance-reconciliation/</loc>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.aifinora.com/b2b/billing-management/</loc>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.aifinora.com/b2b/property-management-accounting/</loc>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.aifinora.com/b2b/insurance-mortgage-loan-accounting/</loc>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.aifinora.com/b2b/client-billing/</loc>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.aifinora.com/b2b/project-&amp;-cost-accounting/</loc>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.aifinora.com/b2b/key-service-industry-kPIs/</loc>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.aifinora.com/b2b/pos/</loc>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.aifinora.com/b2b/item-margin-analyzer/</loc>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.aifinora.com/become-our-partner/</loc>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.aifinora.com/test-cases/</loc>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
