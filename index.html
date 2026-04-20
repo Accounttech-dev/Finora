@@ -300,7 +300,15 @@
       top: calc(50% - 40px);
       width: 80px
     }
+    @media (max-width: 768px) {
+    .digits-loader[data-astro-cid-5uuorzxx] {
 
+  transform: translate(-50%, -50%);
+   width: 80px;
+  height: 80px;
+  color: var(--color-green);
+}
+    }
     .digits-loader[data-astro-cid-5uuorzxx],
     .digits-loader[data-astro-cid-5uuorzxx] div[data-astro-cid-5uuorzxx] {
       display: inline-block;
@@ -3699,16 +3707,7 @@ img.two-up-video-text-image {
 
 }
 
-    @media (max-width: 768px) {
-    .digits-loader[data-astro-cid-5uuorzxx] {
 
-  transform: translate(-50%, -50%);
-  
-  width: 80px;
-  height: 80px;
-  color: var(--color-green);
-}
-    }
 
   </style>
 </body>
@@ -3740,6 +3739,315 @@ img.two-up-video-text-image {
     box.appendChild(img);
 
   });
+</script>
+
+<script>
+// ============================================
+// COMPLETE OPTIMIZATION SCRIPT - COPY AS IS
+// ============================================
+
+(function() {
+    'use strict';
+    
+    // Get elements
+    const video = document.getElementById('mainVideo');
+    const container = document.getElementById('videoContainer');
+    const spinner = document.getElementById('loadingSpinner');
+    const placeholder = document.getElementById('videoPlaceholder');
+    
+    // Configuration
+    const config = {
+        retryCount: 3,           // Retry loading if fails
+        retryDelay: 1000,        // Delay between retries (ms)
+        loadTimeout: 8000,       // Max loading time (ms)
+        lowQualityFirst: true    // Load low quality first
+    };
+    
+    let loadAttempts = 0;
+    let timeoutId = null;
+    
+    // ========== 1. SPEED OPTIMIZATION ==========
+    function optimizeVideoLoading() {
+        // Preload only metadata initially (fast)
+        video.preload = 'metadata';
+        
+        // Force hardware acceleration
+        video.style.transform = 'translateZ(0)';
+        video.style.backfaceVisibility = 'hidden';
+        
+        // Enable fast seeking
+        video.addEventListener('loadedmetadata', function() {
+            if (video.readyState >= 1) {
+                startPlayback();
+            }
+        });
+    }
+    
+    // ========== 2. SMART PLAYBACK ==========
+    function startPlayback() {
+        // Try to play immediately when enough data loaded
+        if (video.readyState >= 2) {  // HAVE_CURRENT_DATA
+            playVideo();
+        } else {
+            video.addEventListener('canplay', playVideo, { once: true });
+        }
+    }
+    
+    function playVideo() {
+        video.play().then(() => {
+            // Success - hide everything
+            hideLoadingIndicators();
+            console.log('Video playing smoothly');
+        }).catch(error => {
+            console.log('Autoplay blocked:', error);
+            showPlayButton();
+        });
+    }
+    
+    // ========== 3. LOADING INDICATORS ==========
+    function showLoadingSpinner() {
+        if (spinner) {
+            spinner.classList.add('active');
+        }
+    }
+    
+    function hideLoadingIndicators() {
+        if (spinner) {
+            spinner.classList.remove('active');
+        }
+        if (container) {
+            container.classList.add('video-loaded');
+        }
+        if (timeoutId) {
+            clearTimeout(timeoutId);
+        }
+    }
+    
+    // ========== 4. RETRY MECHANISM ==========
+    function loadWithRetry() {
+        showLoadingSpinner();
+        
+        // Set timeout for slow loading
+        timeoutId = setTimeout(() => {
+            console.log('Loading timeout, retrying...');
+            retryLoading();
+        }, config.loadTimeout);
+        
+        // Monitor loading progress
+        video.addEventListener('canplaythrough', function onCanPlay() {
+            clearTimeout(timeoutId);
+            hideLoadingIndicators();
+            video.removeEventListener('canplaythrough', onCanPlay);
+        });
+        
+        // Handle errors
+        video.addEventListener('error', function onError() {
+            console.error('Video error:', video.error);
+            retryLoading();
+            video.removeEventListener('error', onError);
+        });
+    }
+    
+    function retryLoading() {
+        loadAttempts++;
+        
+        if (loadAttempts < config.retryCount) {
+            console.log(`Retry attempt ${loadAttempts}/${config.retryCount}`);
+            
+            // Clear and reload
+            video.load();
+            
+            setTimeout(() => {
+                loadWithRetry();
+            }, config.retryDelay);
+        } else {
+            console.error('All retry attempts failed');
+            showFallbackMessage();
+        }
+    }
+    
+    // ========== 5. FALLBACK FOR AUTOPLAY BLOCK ==========
+    function showPlayButton() {
+        const playBtn = document.createElement('button');
+        playBtn.innerHTML = '▶ Click to Play';
+        playBtn.style.cssText = `
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 12px 30px;
+            background: rgba(0,0,0,0.8);
+            color: white;
+            border: 2px solid white;
+            border-radius: 40px;
+            font-size: 16px;
+            cursor: pointer;
+            z-index: 100;
+            font-family: Arial, sans-serif;
+            transition: all 0.3s ease;
+        `;
+        
+        playBtn.onmouseenter = () => {
+            playBtn.style.background = 'rgba(255,255,255,0.9)';
+            playBtn.style.color = 'black';
+        };
+        
+        playBtn.onmouseleave = () => {
+            playBtn.style.background = 'rgba(0,0,0,0.8)';
+            playBtn.style.color = 'white';
+        };
+        
+        playBtn.onclick = () => {
+            video.play();
+            playBtn.remove();
+            hideLoadingIndicators();
+        };
+        
+        container.appendChild(playBtn);
+    }
+    
+    // ========== 6. FALLBACK MESSAGE ==========
+    function showFallbackMessage() {
+        const errorMsg = document.createElement('div');
+        errorMsg.innerHTML = '⚠️ Video failed to load. Please refresh the page.';
+        errorMsg.style.cssText = `
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0,0,0,0.8);
+            color: white;
+            padding: 15px 25px;
+            border-radius: 8px;
+            font-family: Arial, sans-serif;
+            z-index: 100;
+            text-align: center;
+        `;
+        
+        const refreshBtn = document.createElement('button');
+        refreshBtn.innerHTML = 'Retry';
+        refreshBtn.style.cssText = `
+            margin-left: 15px;
+            padding: 5px 15px;
+            background: white;
+            color: black;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        `;
+        refreshBtn.onclick = () => location.reload();
+        
+        errorMsg.appendChild(refreshBtn);
+        container.appendChild(errorMsg);
+        hideLoadingIndicators();
+    }
+    
+    // ========== 7. PERFORMANCE OPTIMIZATIONS ==========
+    function optimizePerformance() {
+        // Pause video when tab is not active (saves resources)
+        document.addEventListener('visibilitychange', () => {
+            if (document.hidden) {
+                video.pause();
+            } else if (video.readyState >= 2) {
+                video.play().catch(e => console.log('Playback resumed'));
+            }
+        });
+        
+        // Use Intersection Observer - pause when out of view
+        if ('IntersectionObserver' in window) {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (!entry.isIntersecting) {
+                        video.pause();
+                    } else if (video.paused && video.readyState >= 2) {
+                        video.play().catch(e => console.log('Resumed on view'));
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            observer.observe(container);
+        }
+        
+        // Clear cache on page refresh
+        window.addEventListener('beforeunload', () => {
+            if (video.src) {
+                // Don't actually clear, just log
+                console.log('Page refreshing');
+            }
+        });
+    }
+    
+    // ========== 8. CREATE THUMBNAIL QUICKLY ==========
+    async function createQuickThumbnail() {
+        try {
+            // Try to capture first frame as thumbnail
+            video.currentTime = 0.1;
+            video.addEventListener('seeked', function onSeeked() {
+                const canvas = document.createElement('canvas');
+                canvas.width = video.videoWidth;
+                canvas.height = video.videoHeight;
+                const ctx = canvas.getContext('2d');
+                ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+                
+                // Set as placeholder background
+                const thumbnailUrl = canvas.toDataURL();
+                if (placeholder) {
+                    placeholder.style.backgroundImage = `url(${thumbnailUrl})`;
+                }
+                video.removeEventListener('seeked', onSeeked);
+            });
+        } catch(e) {
+            console.log('Thumbnail capture failed');
+        }
+    }
+    
+    // ========== 9. NETWORK SPEED DETECTION ==========
+    function detectNetworkSpeed() {
+        if ('connection' in navigator) {
+            const connection = navigator.connection;
+            const speed = connection.effectiveType;
+            
+            console.log(`Network speed: ${speed}`);
+            
+            // Adjust quality based on speed
+            if (speed === 'slow-2g' || speed === '2g') {
+                // Very slow connection - maybe show low quality version
+                console.log('Slow connection detected');
+                video.preload = 'none'; // Don't preload on slow network
+            } else if (speed === '3g') {
+                video.preload = 'metadata';
+            } else {
+                video.preload = 'auto';
+            }
+        }
+    }
+    
+    // ========== 10. MAIN INITIALIZATION ==========
+    function init() {
+        console.log('Video optimization script started');
+        
+        // Run all optimizations
+        detectNetworkSpeed();
+        optimizeVideoLoading();
+        optimizePerformance();
+        
+        // Start loading with retry mechanism
+        loadWithRetry();
+        
+        // Optional: Create thumbnail (takes 1-2 seconds)
+        setTimeout(() => {
+            createQuickThumbnail();
+        }, 1000);
+    }
+    
+    // Start when page is ready
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+    } else {
+        init();
+    }
+    
+})();
 </script>
 <!--Start of Tawk.to Script-->
 <script type="text/javascript">
