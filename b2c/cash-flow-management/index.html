@@ -2574,6 +2574,28 @@ div[data-astro-cid-bjh6wx2o] {
     gap: 13px !important;
   }
 }
+
+
+/* Mobile Screen: Reorder image and text for mosaic grid tiles */
+@media (max-width: 768px) {
+  /* Target each mosaic grid tile and reorder its children */
+  .mosaic-grid-tile {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  /* Move the image wrapper before the content wrapper */
+  .mosaic-grid-tile .tile-image-wrapper {
+    order: 1 !important;
+    margin-bottom: 16px !important; /* Add space between image and text */
+    margin-top: 0 !important;
+  }
+
+  /* Move the content wrapper after the image */
+  .mosaic-grid-tile .tile-content-wrapper {
+    order: 2 !important;
+  }
+}
   </style>
 
 
