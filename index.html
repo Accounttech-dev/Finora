@@ -2804,40 +2804,92 @@ function toggleMobileInd(btn) {
 
     </div>
 
-    <form class="email-form">
-      <div class="email-row">
-        <input type="text" placeholder="First Name*">
-        <input type="text" placeholder="Last Name*">
-      </div>
+   <form class="email-form" id="contact-form">
+  <div class="email-row">
+    <input type="text" name="first_name" placeholder="First Name*" required>
+    <input type="text" name="last_name" placeholder="Last Name*" required>
+  </div>
 
-      <div class="email-row">
-        <input type="email" placeholder="Email*">
-        <input type="text" placeholder="Phone#">
-      </div>
+  <div class="email-row">
+    <input type="email" name="email" placeholder="Email*" required>
+    <input type="text" name="phone" placeholder="Phone#">
+  </div>
 
-      <input type="text" placeholder="Company*">
-      <input type="text" placeholder="Website">
+  <input type="text" name="company" placeholder="Company*" required>
+  <input type="text" name="website" placeholder="Website">
 
-      <select>
-        <option>I’m interested in:</option>
-        <option>Marketing</option>
-        <option>Design</option>
-        <option>Development</option>
-      </select>
+  <select name="interest">
+    <option>I’m interested in:</option>
+    <option>Marketing</option>
+    <option>Design</option>
+    <option>Development</option>
+  </select>
 
-      <textarea placeholder="Message"></textarea>
+  <textarea name="message" placeholder="Message"></textarea>
+     <div class="email-row">
+                                    <div class="recaptcha-wrap">
+                                        <div class="g-recaptcha" data-sitekey="6LdnA9ksAAAAAKfGrBB7uzl3bRWENxLU0AQ2zynT" data-theme="dark"></div>
+                                    </div>
+                                    <div class="error-message" id="recaptchaError">Please complete the reCAPTCHA verification</div>
+                                </div>
 
-      <div class="email-consent">
-        By submitting this form you agree to our privacy policy.
-        By providing a telephone number and submitting this form you are consenting
-        to be contacted by SMS text message. Message & data rates may apply.
-        You can reply STOP to opt-out of further messaging.
-      </div>
+  <div class="email-consent">
+    By submitting this form you agree to our privacy policy...
+  </div>
 
-      <button type="submit">Submit</button>
-    </form>
+  <button type="submit">Submit</button>
+</form>
 
   </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script>
+  (function(){
+    emailjs.init("zOEb9EpODCU2EQ02o"); // replace
+  })();
+</script>
+
+<script>
+document.getElementById("contact-form").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    let isValid = true;
+
+    // reCAPTCHA validation
+    var recaptchaResponse = typeof grecaptcha !== 'undefined' ? grecaptcha.getResponse() : '';
+
+    if (!recaptchaResponse) {
+        alert("Please complete the reCAPTCHA.");
+        isValid = false;
+    }
+
+    if (!isValid) return;
+
+    emailjs.sendForm(
+        "service_9i4mi43",   // EmailJS Service ID
+        "template_c3wc9b7",  // EmailJS Template ID
+        this
+    )
+    .then(function() {
+        alert("Message sent successfully!");
+
+        // reset form + reCAPTCHA
+        document.getElementById("contact-form").reset();
+        if (typeof grecaptcha !== 'undefined') {
+            grecaptcha.reset();
+        }
+    })
+    .catch(function(error) {
+        console.error("FAILED...", error);
+        alert("Failed to send message. Please try again.");
+
+        if (typeof grecaptcha !== 'undefined') {
+            grecaptcha.reset();
+        }
+    });
+});
+</script>
 </section>
 
  
@@ -3584,7 +3636,12 @@ function toggleMobileInd(btn) {
         font-size: 1.6rem;
       }
     }
-    
+        .recaptcha-wrap {
+            margin-bottom: 8px;
+        }
+        .recaptcha-wrap .g-recaptcha {
+            transform-origin: top left;
+        }
   </style>
 
 
