@@ -2646,7 +2646,7 @@ function toggleMobileInd(btn) {
   max-width: 1200px;
   margin: auto;
   display: grid;
-  grid-template-columns: 420px 1fr;
+  grid-template-columns: 460px 1fr;
   gap: -450px;
   align-items: flex-start;
 }
@@ -2794,56 +2794,58 @@ function toggleMobileInd(btn) {
 
 <section class="email-section">
   <div class="email-container">
-
     <div class="email-left">
-      <h2>Let’s</br> connect.</h2>
+      <h2>Let’s<br> connect.</h2>
       <p>
-        Have a question? Need to maximize your marketing performance?
-        Let’s talk about growing your business.
+        Have a question? Want to talk about accounting, bookkeeping, or growing your business?
+        We’re here to help.
       </p>
-
       <p class="phone"><strong>Give us a ring.</strong> (828) 367-0905</p>
-
     </div>
 
-   <form class="email-form" id="contact-form">
-  <div class="email-row">
-    <input type="text" name="first_name" placeholder="First Name*" required>
-    <input type="text" name="last_name" placeholder="Last Name*" required>
-  </div>
+    <form class="email-form" id="contact-form">
+      <div class="email-row">
+        <input type="text" name="first_name" placeholder="First Name*" required autocomplete="given-name">
+        <input type="text" name="last_name" placeholder="Last Name*" required autocomplete="family-name">
+      </div>
 
-  <div class="email-row">
-    <input type="email" name="email" placeholder="Email*" required>
-    <input type="text" name="phone" placeholder="Phone#">
-  </div>
+      <div class="email-row">
+        <input type="email" name="email" placeholder="Email*" required autocomplete="email">
+        <input type="tel" name="phone" placeholder="Phone#" autocomplete="tel">
+      </div>
 
-  <input type="text" name="company" placeholder="Company*" required>
-  <input type="text" name="website" placeholder="Website">
+      <input type="text" name="company" placeholder="Company*" required autocomplete="organization">
+      <input type="url" name="website" placeholder="Website (https://...)" autocomplete="url">
 
-  <select name="interest">
-    <option>I’m interested in:</option>
-    <option>Marketing</option>
-    <option>Design</option>
-    <option>Development</option>
-  </select>
+      <select name="interest" required>
+        <option value="" disabled selected>I’m interested in:</option>
+        <option value="B2C — Personal bookkeeping">B2C — Personal bookkeeping</option>
+        <option value="B2B — Business accounting">B2B — Business accounting</option>
+        <option value="Partnership">Partnership</option>
+        <option value="General inquiry">General inquiry</option>
+      </select>
 
-  <textarea name="message" placeholder="Message"></textarea>
-     <div class="email-row">
-                                     <div class="recaptcha-wrap">
+      <textarea name="message" placeholder="Message"></textarea>
+      <input type="hidden" name="g-recaptcha-response" id="g-recaptcha-response">
+
+      <div class="recaptcha-wrap">
         <!-- Widget renders here after api.js loads -->
         <div id="recaptcha-container" class="g-recaptcha"></div>
         <div class="error-message" id="recaptchaError" role="alert">
           Please complete the reCAPTCHA verification.
         </div>
+      </div>
 
 
-  <button type="submit">Submit</button>
-</form>
-
+      <button type="submit" id="contact-submit-btn">Submit</button>
+    </form>
   </div>
-<script src="https://www.google.com/recaptcha/api.js?onload=aiFinoraRecaptchaOnLoad&render=explicit" async defer></script>
+</section>
 
-  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<!-- reCAPTCHA v2 — explicit render so the widget always binds after API is ready -->
+<script src="https://www.google.com/recaptcha/api.js?onload=aiFinoraRecaptchaOnLoad&render=explicit" async defer></script>
 
 <script>
 (function () {
@@ -2920,10 +2922,13 @@ function toggleMobileInd(btn) {
         submitBtn.textContent = 'Sending…';
       }
 
-      // Optional: pass token to EmailJS if your template uses it (hidden field)
-      // emailjs.sendForm(service, template, form, { publicKey: '...' })
+      // Keep token in form payload in case template references it.
+      var recaptchaInput = document.getElementById('g-recaptcha-response');
+      if (recaptchaInput) recaptchaInput.value = token;
 
-      emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, form)
+      emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, form, {
+        publicKey: EMAILJS_PUBLIC_KEY
+      })
         .then(function () {
           alert('Message sent successfully!');
           form.reset();
@@ -2931,7 +2936,17 @@ function toggleMobileInd(btn) {
         })
         .catch(function (err) {
           console.error('EmailJS error:', err);
-          alert('Failed to send message. Please try again or email us directly.');
+          // EmailJS returns useful text for 400s (invalid service/template/public key, etc.).
+          var details = '';
+          if (err) {
+            if (typeof err.text === 'string' && err.text.trim()) details = err.text;
+            else if (typeof err.message === 'string' && err.message.trim()) details = err.message;
+            else if (typeof err.status !== 'undefined') details = 'status=' + err.status;
+          }
+          if (details) {
+            console.error('EmailJS reject reason:', details);
+          }
+          alert('Failed to send message. ' + (details ? ('Reason: ' + details) : 'Please try again or email us directly.'));
           resetRecaptcha();
         })
         .finally(function () {
@@ -2944,48 +2959,6 @@ function toggleMobileInd(btn) {
   });
 })();
 </script>
-
-<script>
-document.getElementById("contact-form").addEventListener("submit", function(e) {
-    e.preventDefault();
-
-    let isValid = true;
-
-    // reCAPTCHA validation
-    var recaptchaResponse = typeof grecaptcha !== 'undefined' ? grecaptcha.getResponse() : '';
-
-    if (!recaptchaResponse) {
-        alert("Please complete the reCAPTCHA.");
-        isValid = false;
-    }
-
-    if (!isValid) return;
-
-    emailjs.sendForm(
-        "service_9i4mi43",   // EmailJS Service ID
-        "template_c3wc9b7",  // EmailJS Template ID
-        this
-    )
-    .then(function() {
-        alert("Message sent successfully!");
-
-        // reset form + reCAPTCHA
-        document.getElementById("contact-form").reset();
-        if (typeof grecaptcha !== 'undefined') {
-            grecaptcha.reset();
-        }
-    })
-    .catch(function(error) {
-        console.error("FAILED...", error);
-        alert("Failed to send message. Please try again.");
-
-        if (typeof grecaptcha !== 'undefined') {
-            grecaptcha.reset();
-        }
-    });
-});
-</script>
-</section>
 
  
               <div data-astro-cid-j7pv25f6="true" data-astro-cid-bjh6wx2o
