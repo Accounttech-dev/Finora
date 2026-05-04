@@ -378,6 +378,8 @@
   <link rel="icon" type="image/png" href="favicon/favicon-1024.png" sizes="1024x1024">
   <link rel="icon" href="favicon/favicon5e1f.svg?v=2" type="image/svg+xml">
   <link rel="apple-touch-icon" href="favicon/favicon-180x1805e1f.png?v=2">
+  <link rel="preconnect" href="https://www.google.com" crossorigin>
+<link rel="preconnect" href="https://www.gstatic.com" crossorigin>
   <link rel="manifest" href="favicon/manifest.json">
   <meta property="og:title" content="Finora - AI-Native Accounting Software">
   <meta property="og:image" content="https://ram.digitscpu.com/_astro-assets/digits-og.BBSAo2lm_133Fia.webp">
@@ -2827,27 +2829,120 @@ function toggleMobileInd(btn) {
 
   <textarea name="message" placeholder="Message"></textarea>
      <div class="email-row">
-                                    <div class="recaptcha-wrap">
-                                        <div class="g-recaptcha" data-sitekey="6LdnA9ksAAAAAKfGrBB7uzl3bRWENxLU0AQ2zynT" data-theme="dark"></div>
-                                    </div>
-                                    <div class="error-message" id="recaptchaError">Please complete the reCAPTCHA verification</div>
-                                </div>
+                                     <div class="recaptcha-wrap">
+        <!-- Widget renders here after api.js loads -->
+        <div id="recaptcha-container" class="g-recaptcha"></div>
+        <div class="error-message" id="recaptchaError" role="alert">
+          Please complete the reCAPTCHA verification.
+        </div>
 
-  <div class="email-consent">
-    By submitting this form you agree to our privacy policy...
-  </div>
 
   <button type="submit">Submit</button>
 </form>
 
   </div>
+<script src="https://www.google.com/recaptcha/api.js?onload=aiFinoraRecaptchaOnLoad&render=explicit" async defer></script>
 
   <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 
 <script>
-  (function(){
-    emailjs.init("zOEb9EpODCU2EQ02o"); // replace
-  })();
+(function () {
+  'use strict';
+
+  var SITE_KEY = '6LdnA9ksAAAAAKfGrBB7uzl3bRWENxLU0AQ2zynT';
+  var EMAILJS_PUBLIC_KEY = 'zOEb9EpODCU2EQ02o';
+  var EMAILJS_SERVICE_ID = 'service_9i4mi43';
+  var EMAILJS_TEMPLATE_ID = 'template_c3wc9b7';
+
+  var recaptchaWidgetId = null;
+  var form = null;
+  var submitBtn = null;
+  var recaptchaError = null;
+
+  window.aiFinoraRecaptchaOnLoad = function () {
+    var el = document.getElementById('recaptcha-container');
+    if (!el || typeof grecaptcha === 'undefined') return;
+    recaptchaWidgetId = grecaptcha.render(el, {
+      sitekey: SITE_KEY,
+      theme: 'dark'
+    });
+  };
+
+  function getRecaptchaToken() {
+    if (recaptchaWidgetId === null || typeof grecaptcha === 'undefined') return '';
+    return grecaptcha.getResponse(recaptchaWidgetId) || '';
+  }
+
+  function resetRecaptcha() {
+    if (recaptchaWidgetId !== null && typeof grecaptcha !== 'undefined') {
+      grecaptcha.reset(recaptchaWidgetId);
+    }
+  }
+
+  function showRecaptchaError(show) {
+    if (!recaptchaError) return;
+    recaptchaError.classList.toggle('visible', !!show);
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    form = document.getElementById('contact-form');
+    submitBtn = document.getElementById('contact-submit-btn');
+    recaptchaError = document.getElementById('recaptchaError');
+
+    if (typeof emailjs !== 'undefined') {
+      emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+    }
+
+    if (!form) return;
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      showRecaptchaError(false);
+
+      if (typeof emailjs === 'undefined') {
+        alert('Email service is still loading. Please wait a moment and try again.');
+        return;
+      }
+
+      if (typeof grecaptcha === 'undefined' || recaptchaWidgetId === null) {
+        alert('Security check is still loading. Please wait a few seconds and try again.');
+        return;
+      }
+
+      var token = getRecaptchaToken();
+      if (!token) {
+        showRecaptchaError(true);
+        return;
+      }
+
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending…';
+      }
+
+      // Optional: pass token to EmailJS if your template uses it (hidden field)
+      // emailjs.sendForm(service, template, form, { publicKey: '...' })
+
+      emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, form)
+        .then(function () {
+          alert('Message sent successfully!');
+          form.reset();
+          resetRecaptcha();
+        })
+        .catch(function (err) {
+          console.error('EmailJS error:', err);
+          alert('Failed to send message. Please try again or email us directly.');
+          resetRecaptcha();
+        })
+        .finally(function () {
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Submit';
+          }
+        });
+    });
+  });
+})();
 </script>
 
 <script>
