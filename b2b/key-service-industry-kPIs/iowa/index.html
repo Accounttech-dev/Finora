@@ -10,113 +10,281 @@
   <meta name="description" content=" AI Finora provides KPI tracking solutions in Iowa to help service businesses monitor performance, improve efficiency, and drive growth.">
 
 
-      <script type="application/ld+json">
+ <script type="application/ld+json">
+
 {
   "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "AI Finora",
-  "url": "https://www.aifinora.com/",
-  "logo": "https://www.aifinora.com/path-to-your-logo.png",
-  "sameAs": [
-    "https://www.linkedin.com/company/aifinora",
-    "https://twitter.com/aifinora",
-    "https://www.facebook.com/aifinora"
-  ],
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "telephone": "+1 828-367-0905",
-    "contactType": "Customer Service",
-    "email": "sales@aifinora.com",
-    "areaServed": "US",
-    "availableLanguage": ["English"]
-  },
-  "description": "AI Finora is the first AI-native accounting platform providing AI-powered bookkeeping, month-end close automation, dashboards, financial reporting, invoicing, and more.",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Your Street Address",
-    "addressLocality": "City",
-    "addressRegion": "State",
-    "postalCode": "ZIP",
-    "addressCountry": "US"
-  },
-  "hasOfferCatalog": {
-    "@type": "OfferCatalog",
-    "name": "AI Finora Services",
-    "itemListElement": [
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Ask Finora",
-          "url": "https://www.aifinora.com/services/ask-finora/",
-          "description": "AI-powered virtual financial assistant to answer your accounting questions instantly."
-        }
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.aifinora.com/#organization",
+      "name": "AI Finora",
+      "url": "https://www.aifinora.com/",
+      "logo": "https://www.aifinora.com/a-images/ai-finora-logo.png",
+      "description": "AI Finora is a service-based organization providing AI-powered financial management, bookkeeping, accounting, tax filing, inventory management, wealth management, dashboards, reconciliation, and business financial solutions for B2B and B2C clients in the USA.",
+      "email": "sales@aifinora.com",
+      "telephone": "+1-828-367-0905",
+      "sameAs": [
+        "https://www.facebook.com/profile.php?id=61576412956226&mibextid=wwXIfr",
+        "https://www.instagram.com/ai_finora_igsh=MTV2MnNnNDM3OTdydw%3D%3D&utm_source=qr",
+        "https://www.linkedin.com/company/accountechstudiollc/"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "45 Grant Mercer Drive",
+        "addressLocality": "Youngsville",
+        "addressRegion": "NC",
+        "postalCode": "27525",
+        "addressCountry": "US"
       },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Real-time Bookkeeping",
-          "url": "https://www.aifinora.com/services/bookkeeping/",
-          "description": "Automated, real-time bookkeeping powered by AI to keep your financials accurate and up-to-date."
-        }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Month-end Close Automation",
-          "url": "https://www.aifinora.com/services/month-end-close/",
-          "description": "Automated month-end close process to save time and reduce errors."
-        }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Insights & Dashboards",
-          "url": "https://www.aifinora.com/services/dashboards/",
-          "description": "Interactive dashboards with real-time insights to make data-driven decisions."
-        }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Financial Reporting",
-          "url": "https://www.aifinora.com/services/financials/",
-          "description": "AI-powered financial reporting with live KPIs including revenue, burn rate, and runway."
-        }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Bill Pay",
-          "url": "https://www.aifinora.com/services/bill-pay/",
-          "description": "Automated accounts payable solution for fast and secure bill payments."
-        }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Invoicing",
-          "url": "https://www.aifinora.com/services/invoicing/",
-          "description": "Create and send AI-generated invoices quickly and efficiently."
-        }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Business Setup",
-          "url": "https://www.aifinora.com/services/business-setup/",
-          "description": "Complete AI-assisted business setup services to start your company hassle-free."
-        }
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-828-367-0905",
+        "contactType": "customer service",
+        "email": "sales@aifinora.com",
+        "areaServed": "US",
+        "availableLanguage": [
+          "English"
+        ]
       }
-    ]
-  }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.aifinora.com/#website",
+      "url": "https://www.aifinora.com/",
+      "name": "AI Finora",
+      "publisher": {
+        "@id": "https://www.aifinora.com/#organization"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://www.aifinora.com/?s={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "Service",
+      "serviceType": "Financial Management Services",
+      "provider": {
+        "@id": "https://www.aifinora.com/#organization"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "United States"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "AI Finora Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Ask Finora B2C",
+              "url": "https://www.aifinora.com/b2c/ask-finora/"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Bookkeeping",
+              "url": "https://www.aifinora.com/b2c/bookkeeping/"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Cash Flow Management",
+              "url": "https://www.aifinora.com/b2c/cash-flow-management/"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Wealth Management B2C",
+              "url": "https://www.aifinora.com/b2c/wealth-management/"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Ask Finora B2B",
+              "url": "https://www.aifinora.com/b2b/ask-finora/"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Real Time Bookkeeping",
+              "url": "https://www.aifinora.com/b2b/real-time-bookkeeping/"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Month End Close",
+              "url": "https://www.aifinora.com/b2b/month-end-close/"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Dashboards",
+              "url": "https://www.aifinora.com/b2b/dashboards/"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Financials",
+              "url": "https://www.aifinora.com/b2b/financials/"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Amazon Reconciliation",
+              "url": "https://www.aifinora.com/b2b/amazon-reconciliation/"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Tax Filing",
+              "url": "https://www.aifinora.com/b2b/tax-filing/"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Inventory Management",
+              "url": "https://www.aifinora.com/b2b/Inventory-Management/"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Revenue Recognition",
+              "url": "https://www.aifinora.com/b2b/revenue-recognition/"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Insurance Reconciliation",
+              "url": "https://www.aifinora.com/b2b/insurance-reconciliation/"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Billing Management",
+              "url": "https://www.aifinora.com/b2b/billing-management/"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Property Management Accounting",
+              "url": "https://www.aifinora.com/b2b/property-management-accounting/"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Insurance Mortgage Loan Accounting",
+              "url": "https://www.aifinora.com/b2b/insurance-mortgage-loan-accounting/"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Wealth Management B2B",
+              "url": "https://www.aifinora.com/b2b/wealth-management/"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Client Billing",
+              "url": "https://www.aifinora.com/b2b/client-billing/"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Project and Cost Accounting",
+              "url": "https://www.aifinora.com/b2b/project-&-cost-accounting/"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Key Service Industry KPIs",
+              "url": "https://www.aifinora.com/b2b/key-service-industry-kPIs/"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "POS Services",
+              "url": "https://www.aifinora.com/b2b/pos/"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Item Margin Analyzer",
+              "url": "https://www.aifinora.com/b2b/item-margin-analyzer/"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Become Our Partner",
+              "url": "https://www.aifinora.com/become-our-partner/"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Test Cases",
+              "url": "https://www.aifinora.com/test-cases/"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "AboutPage",
+      "url": "https://www.aifinora.com/about-us/",
+      "name": "About Us"
+    }
+  ]
 }
 </script>
   <style>
