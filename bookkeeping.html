@@ -1539,7 +1539,9 @@ img {
 
 /* ── SMALL MOBILE (max 480px) ── */
 @media (max-width: 480px) {
-
+    .cta-desc br {
+        display: none;
+    }
     .why-card h4 {
     font-size: 1.2rem;
     font-weight: 700;
@@ -1586,7 +1588,7 @@ img {
 
     /* Section title */
     .section-title {
-        font-size: 24px;
+        font-size: 26px;
 
     }
 @media (max-width: 480px) {
@@ -1948,7 +1950,7 @@ your books yourself.</p>
             
             <div class="review-form-wrapper fade-up delay-1">
                 <div class="review-form-card">
-                    <form class="advanced-form">
+                    <form  id="advancedForm" class="advanced-form">
                         <div class="form-row">
                             <div class="form-group">
                                 <label>Full Name</label>
@@ -2250,6 +2252,91 @@ your books yourself.</p>
     });
 
 });
+
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwRVFFKzxGEg9Xab283vEs6ndC505xp6EktlnJGlHqi7VeUlwlV2FlPtGv5vYVvDBkh/exec";
+
+  async function submitToGoogleSheet(form, formType) {
+    const formData = new FormData(form);
+
+    const data = {
+      formType: formType,
+      fullName: formData.get("fullName") || "",
+      email: formData.get("email") || "",
+      phone: formData.get("phone") || "",
+      businessName: formData.get("businessName") || "",
+      businessState: formData.get("businessState") || "",
+      accountingSoftware: formData.get("accountingSoftware") || "",
+      serviceNeeded: formData.get("serviceNeeded") || "",
+      monthsBehind: formData.get("monthsBehind") || "",
+      message: formData.get("message") || ""
+    };
+
+    await fetch(GOOGLE_SCRIPT_URL, {
+      method: "POST",
+      mode: "no-cors",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(data)
+    });
+  }
+
+  const heroForm = document.getElementById("heroForm");
+  const advancedForm = document.getElementById("advancedForm");
+
+  if (heroForm) {
+    heroForm.addEventListener("submit", async function(event) {
+      event.preventDefault();
+
+      const button = heroForm.querySelector("button[type='submit']");
+      const originalText = button.textContent;
+
+      button.textContent = "Submitting...";
+      button.disabled = true;
+
+      try {
+        await submitToGoogleSheet(heroForm, "Hero Form - $200 Offer");
+
+        alert("Thank you! Your request has been submitted.");
+        heroForm.reset();
+
+      } catch (error) {
+        alert("Something went wrong. Please try again.");
+        console.error(error);
+
+      } finally {
+        button.textContent = originalText;
+        button.disabled = false;
+      }
+    });
+  }
+
+  if (advancedForm) {
+    advancedForm.addEventListener("submit", async function(event) {
+      event.preventDefault();
+
+      const button = advancedForm.querySelector("button[type='submit']");
+      const originalText = button.textContent;
+
+      button.textContent = "Submitting...";
+      button.disabled = true;
+
+      try {
+        await submitToGoogleSheet(advancedForm, "Advanced Form - Free Review");
+
+        alert("Thank you! Your request has been submitted.");
+        advancedForm.reset();
+
+      } catch (error) {
+        alert("Something went wrong. Please try again.");
+        console.error(error);
+
+      } finally {
+        button.textContent = originalText;
+        button.disabled = false;
+      }
+    });
+  }
 
     </script>
 </body>
