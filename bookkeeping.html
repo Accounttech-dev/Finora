@@ -1539,6 +1539,14 @@ img {
 
 /* ── SMALL MOBILE (max 480px) ── */
 @media (max-width: 480px) {
+
+    .why-card h4 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    line-height: 1.25;
+    margin: 0;
+    color: var(--white);
+}
    .top-strip-left span {
     color: #374151;
     font-weight: 600;
@@ -1578,11 +1586,14 @@ img {
 
     /* Section title */
     .section-title {
-        font-size: 18px;
-                white-space: normal;
+        font-size: 24px;
 
     }
-
+@media (max-width: 480px) {
+    .section-title br {
+        display: none;
+    }
+}
     /* Banner */
     .full-width-banner h2 {
         font-size: 1.7rem;
