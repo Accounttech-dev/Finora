@@ -8,7 +8,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="canonical" href="/bookkeeping">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <style>
@@ -16,7 +15,6 @@
    CSS VARIABLES & DESIGN SYSTEM
    ========================================================================== */
 :root {
-    /* Colors */
     --primary-blue: #3B82F6;
     --primary-blue-hover: #2563EB;
     --dark-navy: #081225;
@@ -28,51 +26,31 @@
     --text-main: #1F2937;
     --text-light: #6B7280;
     --white: #FFFFFF;
-    
-    /* Gradients */
     --gradient-btn: linear-gradient(135deg, #3B82F6 0%, #7C3AED 100%);
     --gradient-text: linear-gradient(135deg, #60A5FA 0%, #A78BFA 100%);
     --gradient-hero: radial-gradient(circle at 50% 50%, rgba(124, 58, 237, 0.15) 0%, rgba(8, 18, 37, 1) 50%);
-    
-    /* Spacing */
     --sp-sm: 0.5rem;
     --sp-md: 1rem;
     --sp-lg: 2rem;
     --sp-xl: 4rem;
     --section-pad: 5rem 0;
-    
-    /* Border Radius */
     --br-sm: 8px;
     --br-md: 12px;
     --br-lg: 16px;
     --br-xl: 20px;
     --br-2xl: 24px;
     --br-pill: 9999px;
-    
-    /* Shadows */
     --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
     --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
     --shadow-glow: 0 0 20px rgba(59, 130, 246, 0.4);
     --shadow-glow-purple: 0 0 25px rgba(124, 58, 237, 0.4);
     --shadow-card-dark: 0 10px 30px rgba(0, 0, 0, 0.3);
-    
-    /* Transitions */
     --transition: all 0.3s ease;
 }
 
-/* ==========================================================================
-   RESET & GLOBAL STYLES
-   ========================================================================== */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
 
 body {
     font-family: 'montserrat', sans-serif;
@@ -82,36 +60,12 @@ body {
     overflow-x: hidden;
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
-    transition: var(--transition);
-}
+a { text-decoration: none; color: inherit; transition: var(--transition); }
+ul { list-style: none; }
+img { max-width: 100%; height: auto; display: block; }
 
-ul {
-    list-style: none;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
-
-/* ==========================================================================
-   UTILITY CLASSES
-   ========================================================================== */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1.5rem;
-    width: 100%;
-}
-
-.section-padding {
-    padding: var(--section-pad);
-}
-
+.container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; width: 100%; }
+.section-padding { padding: 40px; }
 .text-center { text-align: center; }
 .bg-white { background-color: var(--white); }
 .bg-light { background-color: var(--light-gray); }
@@ -134,18 +88,9 @@ img {
 .pt-10 { padding-top: 2.5rem; }
 .pb-10 { padding-bottom: 2.5rem; }
 
-/* Layout Utilities */
-.two-col-layout {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-}
+.two-col-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; }
+.align-center { align-items: center; }
 
-.align-center {
-    align-items: center;
-}
-
-/* Typography Utilities */
 .section-title {
     font-size: 2.9rem;
     font-weight: 700;
@@ -171,9 +116,7 @@ img {
     margin-bottom: 1rem;
 }
 
-.badge-text.dark-mode {
-    color: #93C5FD;
-}
+.badge-text.dark-mode { color: #93C5FD; }
 
 .section-subtitle-bold {
     font-size: 1.5rem;
@@ -183,7 +126,6 @@ img {
     letter-spacing: 0.05em;
 }
 
-/* Buttons */
 .btn {
     display: inline-flex;
     align-items: center;
@@ -199,6 +141,7 @@ img {
     transition: var(--transition);
     gap: 0.5rem;
 }
+
 @media (min-width: 1024px) {
     .btnddd {
         display: inline-flex;
@@ -217,6 +160,18 @@ img {
     }
 }
 
+@media (max-width: 480px) {
+    .btnddd {
+              position: relative;
+
+                color: transparent;
+
+        /* position: relative; */
+        transform: translateY(740px);
+                z-index: 999;
+
+    }
+}
 .btns {
     display: inline-flex;
     align-items: center;
@@ -232,8 +187,9 @@ img {
     transition: var(--transition);
     gap: 0.5rem;
 }
+
 .btnss {
-      display: inline-flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     padding: 1rem 8.5rem;
@@ -247,6 +203,7 @@ img {
     transition: var(--transition);
     gap: 0.5rem;
 }
+
 .btnsss {
     display: inline-flex;
     align-items: center;
@@ -263,64 +220,19 @@ img {
     gap: 0.5rem;
 }
 
-.btn-lg {
-    padding: 1.25rem 2.5rem;
-    font-size: 1.125rem;
-}
+.btn-lg { padding: 1.25rem 2.5rem; font-size: 1.125rem; }
+.btn-full { width: 100%; }
+.btn-primary { background: var(--gradient-btn); color: var(--white); }
+.btn-primary:hover { transform: translateY(-2px); box-shadow: var(--shadow-glow-purple); }
+.btn-secondary { background-color: var(--primary-blue); color: var(--white); }
+.btn-secondary:hover { background-color: var(--primary-blue-hover); transform: translateY(-2px); box-shadow: var(--shadow-glow); }
+.btn-gradient { background: var(--gradient-btn); color: var(--white); }
+.btn-gradient:hover { transform: translateY(-2px); box-shadow: var(--shadow-glow-purple); }
+.btn-outline-light { background-color: #2c4766; border: 2px solid rgba(255, 255, 255, 0.2); color: var(--white); }
+.btn-outline-light:hover { background-color: #2c4766; border-color: rgba(255, 255, 255, 0.5); }
+.btn-glow { box-shadow: var(--shadow-glow); }
 
-.btn-full {
-    width: 100%;
-}
-
-.btn-primary {
-    background: var(--gradient-btn);
-    color: var(--white);
-}
-
-.btn-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-glow-purple);
-}
-
-.btn-secondary {
-    background-color: var(--primary-blue);
-    color: var(--white);
-}
-
-.btn-secondary:hover {
-    background-color: var(--primary-blue-hover);
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-glow);
-}
-
-.btn-gradient {
-    background: var(--gradient-btn);
-    color: var(--white);
-}
-
-.btn-gradient:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-glow-purple);
-}
-
-.btn-outline-light {
-    background-color: #2c4766;
-    border: 2px solid rgba(255, 255, 255, 0.2);
-    color: var(--white);
-}
-
-.btn-outline-light:hover {
-    background-color: #2c4766;
-    border-color: rgba(255, 255, 255, 0.5);
-}
-
-.btn-glow {
-    box-shadow: var(--shadow-glow);
-}
-
-/* ==========================================================================
-   HEADER / TOP STRIP
-   ========================================================================== */
+/* TOP STRIP */
 .top-strip {
     background-color: var(--white);
     border-bottom: 1px solid rgba(11,31,58,0.06);
@@ -330,122 +242,39 @@ img {
     color: #374151;
 }
 
-.top-strip-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1rem;
-}
-
-.top-strip-left span {
-    color: #374151;
-    font-weight: 600;
-    font-size: 0.9rem;
-}
-
-.top-strip-right {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    color: #6B7280;
-    font-size: 0.85rem;
-}
-
-.top-strip-right a {
-    color: var(--primary-blue);
-    font-weight: 700;
-}
-
-.top-strip-right a:hover {
-    color: var(--primary-blue-hover);
-}
-
-.top-strip-right .address {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    color: #6B7280;
-}
+.top-strip-container { display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+.top-strip-left span { color: #374151; font-weight: 600; font-size: 0.9rem; }
+.top-strip-right { display: flex; align-items: center; gap: 1rem; color: #6B7280; font-size: 0.85rem; }
+.top-strip-right a { color: var(--primary-blue); font-weight: 700; }
+.top-strip-right a:hover { color: var(--primary-blue-hover); }
+.top-strip-right .address { display: flex; align-items: center; gap: 0.5rem; color: #6B7280; }
 
 @media (max-width: 992px) {
-    .top-strip-container {
-        flex-direction: column;
-        gap: 0.25rem;
-        text-align: center;
-    }
-    .top-strip-right {
-        justify-content: center;
-    }
+    .top-strip-container { flex-direction: column; gap: 0.25rem; text-align: center; }
+    .top-strip-right { justify-content: center; }
 }
 
-.top-strip-cta {
-    color: #000422;
-    font-weight: 600;
-    text-decoration: underline;
-}
+.top-strip-cta { color: #000422; font-weight: 600; text-decoration: underline; }
+.top-strip .address { display: flex; align-items: center; gap: 0.5rem; color: #6B7280; font-size: 0.85rem; }
+.top-strip .address i { color: #374151; }
 
-.top-strip .address {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    color: #6B7280;
-    font-size: 0.85rem;
-}
+.full-width-banner { position: relative; }
+.banner-link { position: absolute; inset: 0; z-index: 5; display: block; text-decoration: none; }
+.banner-content { position: relative; z-index: 10; }
+.banner-glow { position: absolute; z-index: 1; }
 
-.top-strip .address i {
-    color: #374151;
-}
-.full-width-banner {
-    position: relative;
-}
-
-.banner-link {
-    position: absolute;
-    inset: 0;
-    z-index: 5;
-    display: block;
-    text-decoration: none;
-}
-
-/* content upar rahe */
-.banner-content {
-    position: relative;
-    z-index: 10;
-}
-
-/* glow elements behind */
-.banner-glow {
-    position: absolute;
-    z-index: 1;
-}
-/* ==========================================================================
-   HERO SECTION
-   ========================================================================== */
+/* HERO */
 .hero {
-    /* background image with dark fallback color */
-    /* background-color: var(--dark-navy); */
     background-image: url('/hero-1.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
-    padding: 6rem 0;
+    padding: 7rem 0;
     overflow: hidden;
-    /* color: var(--white); */
 }
 
-.hero::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-    z-index: 1;
-}
-
-
-
-
-/* Decorative glow elements removed to show hero image cleanly */
+.hero::before { content: ''; position: absolute; inset: 0; pointer-events: none; z-index: 1; }
 
 .hero-container {
     position: relative;
@@ -456,7 +285,6 @@ img {
     align-items: center;
 }
 
-/* Desktop: align hero form to the right and constrain width */
 @media (min-width: 993px) {
     .hero-form-wrapper {
         display: flex;
@@ -464,59 +292,19 @@ img {
         justify-self: end;
         max-width: 540px;
         width: 100%;
-        margin-right: -5.5rem; /* pull form to the container edge */
+        margin-right: -5.5rem;
     }
-
-    .hero-form-card {
-        width: 100%;
-        max-width: 520px;
-        margin-left: auto;
-    }
+    .hero-form-card { width: 100%; max-width: 520px; margin-left: auto; }
 }
 
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    margin-bottom: 2rem;
-}
+.logo { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 2rem; }
+.logo-icon { width: 40px; height: 40px; background: var(--gradient-btn); border-radius: var(--br-sm); display: flex; align-items: center; justify-content: center; font-size: 1.25rem; }
+.logo-text { font-size: 1.5rem; font-weight: 800; letter-spacing: -0.02em; }
 
-.logo-icon {
-    width: 40px;
-    height: 40px;
-    background: var(--gradient-btn);
-    border-radius: var(--br-sm);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.25rem;
-}
+.hero-title { font-size: 4rem; font-weight: 800; line-height: 1.1; margin-bottom: 1.5rem; letter-spacing: -0.03em; }
+.hero-subtitle { font-size: 1.125rem; color: #9CA3AF; margin-bottom: 2.5rem; max-width: 90%; }
 
-.logo-text {
-    font-size: 1.5rem;
-    font-weight: 800;
-    letter-spacing: -0.02em;
-}
-
-.hero-title {
-    font-size: 4rem;
-    font-weight: 800;
-    line-height: 1.1;
-    margin-bottom: 1.5rem;
-    letter-spacing: -0.03em;
-}
-
-.hero-subtitle {
-    font-size: 1.125rem;
-    color: #9CA3AF;
-    margin-bottom: 2.5rem;
-    max-width: 90%;
-}
-
-.price-badge-container {
-    margin-bottom: 2rem;
-}
-
+.price-badge-container { margin-bottom: 2rem; }
 .price-badge {
     background: linear-gradient(90deg, rgba(15, 28, 54, 0.8) 0%, rgba(30, 58, 138, 0.6) 100%);
     border: 1px solid rgba(59, 130, 246, 0.3);
@@ -547,38 +335,12 @@ img {
     100% { left: 200%; }
 }
 
-.price-badge-left {
-    background-color: var(--primary-blue);
-    padding: 0.75rem 1.25rem;
-    border-radius: var(--br-md);
-    text-align: center;
-}
+.price-badge-left { background-color: var(--primary-blue); padding: 0.75rem 1.25rem; border-radius: var(--br-md); text-align: center; }
+.offer-tag { font-size: 0.75rem; font-weight: 700; line-height: 1.2; display: block; }
+.price-badge-right { padding: 0 2rem; }
+.price-amount { font-size: 3.5rem; font-weight: 800; line-height: 1; text-shadow: 0 0 20px rgba(255, 255, 255, 0.3); }
 
-.offer-tag {
-    font-size: 0.75rem;
-    font-weight: 700;
-    line-height: 1.2;
-    display: block;
-}
-
-.price-badge-right {
-    padding: 0 2rem;
-}
-
-.price-amount {
-    font-size: 3.5rem;
-    font-weight: 800;
-    line-height: 1;
-    text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
-}
-
-.hero-features {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin-bottom: 2.5rem;
-}
-
+.hero-features { display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 2.5rem; }
 .mini-feature {
     display: flex;
     align-items: center;
@@ -601,37 +363,12 @@ img {
     position: relative;
 }
 
-.form-title {
-    font-size: 2.15rem;
-    font-weight: 700;
-    color: #080b2f;
-    margin-bottom: 0.25rem;
-    text-align: center;
-}
+.form-title { font-size: 2.15rem; font-weight: 700; color: #080b2f; margin-bottom: 0.25rem; text-align: center; }
+.form-subtitle { color: var(--text-light); text-align: center; margin-bottom: 2rem; font-size: 0.885rem; }
 
-.form-subtitle {
-    color: var(--text-light);
-    text-align: center;
-    margin-bottom: 2rem;
-    font-size: 0.885rem;
-}
-
-.input-group {
-    position: relative;
-    margin-bottom: 1rem;
-}
-
-.input-icon {
-    position: absolute;
-    left: 1rem;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #9CA3AF;
-}
-
-.input-group textarea ~ .input-icon {
-    top: 1.5rem;
-}
+.input-group { position: relative; margin-bottom: 1rem; }
+.input-icon { position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); color: #9CA3AF; }
+.input-group textarea ~ .input-icon { top: 1.5rem; }
 
 .input-group input,
 .input-group textarea {
@@ -645,10 +382,7 @@ img {
     background-color: #F9FAFB;
 }
 
-.input-group textarea {
-    resize: vertical;
-}
-
+.input-group textarea { resize: vertical; }
 .input-group input:focus,
 .input-group textarea:focus {
     outline: none;
@@ -657,1018 +391,382 @@ img {
     box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
 }
 
-.form-security {
-    text-align: center;
-    font-size: 0.75rem;
-    color: var(--text-light);
-    margin-top: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.375rem;
-}
+.form-security { text-align: center; font-size: 0.75rem; color: var(--text-light); margin-top: 1rem; display: flex; align-items: center; justify-content: center; gap: 0.375rem; }
+.form-security i { color: #10B981; }
 
-.form-security i {
-    color: #10B981;
-}
+/* TRUST STRIP */
+.trust-strip { background-color: var(--white); padding: 2rem 0; border-bottom: 1px solid var(--border-light); }
+.trust-container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem; }
+.trust-item { display: flex; align-items: center; gap: 0.75rem; font-weight: 600; font-size: 0.9375rem; color: var(--text-main); }
+.trust-item i { font-size: 1.25rem; }
 
-/* ==========================================================================
-   TRUST ICON ROW
-   ========================================================================== */
-.trust-strip {
-    background-color: var(--white);
-    padding: 2rem 0;
-    border-bottom: 1px solid var(--border-light);
-}
+/* PROBLEM SECTION */
+.problem-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
+.problem-card { background-color: var(--white); border: 1px solid var(--border-light); border-radius: var(--br-lg); padding: 1.5rem; transition: var(--transition); display: flex; flex-direction: column; gap: 1rem; }
+.problem-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); border-color: #BFDBFE; }
+.icon-box-sm { width: 40px; height: 40px; background-color: #EFF6FF; color: #3853a4; border-radius: var(--br-sm); display: flex; align-items: center; justify-content: center; font-size: 1.25rem; }
+.problem-card p { font-weight: 700; font-size: 1.1rem; margin: 0; }
 
-.trust-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-}
+/* SERVICE OFFER */
+.checklist-card { background-color: var(--white); border-radius: var(--br-2xl); padding: 2.5rem; box-shadow: var(--shadow-lg); }
+.check-list { display: grid; gap: 1rem; }
+.check-list li { display: flex; align-items: flex-start; gap: 0.75rem; font-weight: 600; font-size: 1.0625rem; }
+.check-list i { margin-top: 0.25rem; font-size: 1.25rem; }
 
-.trust-item {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    font-weight: 600;
-    font-size: 0.9375rem;
-    color: var(--text-main);
-}
-
-.trust-item i {
-    font-size: 1.25rem;
-}
-
-/* ==========================================================================
-   PROBLEM SECTION
-   ========================================================================== */
-.problem-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1.5rem;
-}
-
-.problem-card {
-    background-color: var(--white);
-    border: 1px solid var(--border-light);
-    border-radius: var(--br-lg);
-    padding: 1.5rem;
-    transition: var(--transition);
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.problem-card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-lg);
-    border-color: #BFDBFE;
-}
-
-.icon-box-sm {
-    width: 40px;
-    height: 40px;
-    background-color: #EFF6FF;
-    color: #3853a4;
-    border-radius: var(--br-sm);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.25rem;
-}
-
-.problem-card p {
-    font-weight: 700;
-    font-size: 1.1rem;
-    margin: 0;
-}
-
-/* ==========================================================================
-   SERVICE OFFER SECTION
-   ========================================================================== */
-.checklist-card {
-    background-color: var(--white);
-    border-radius: var(--br-2xl);
-    padding: 2.5rem;
-    box-shadow: var(--shadow-lg);
-}
-
-.check-list {
-    display: grid;
-    gap: 1rem;
-}
-
-.check-list li {
-    display: flex;
-    align-items: flex-start;
-    gap: 0.75rem;
-    font-weight: 600;
-    font-size: 1.0625rem;
-}
-
-.check-list i {
-    margin-top: 0.25rem;
-    font-size: 1.25rem;
-}
-
-/* ==========================================================================
-   FULL WIDTH BANNER
-   ========================================================================== */
+/* FULL WIDTH BANNER */
 .full-width-banner {
-  background-image: url('/hero-2.jpg');
-      background-size: cover;
+    background-image: url('/hero-2.jpg');
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-  
-      border-radius: var(--br-2xl);
+    border-radius: var(--br-2xl);
     padding: 3rem 2rem;
     text-align: center;
     position: relative;
     overflow: hidden;
     box-shadow: var(--shadow-glow-purple);
+    cursor: pointer;
 }
 
-.full-width-banner .banner-content {
-    position: relative;
-    z-index: 2;
-}
+.full-width-banner .banner-content { position: relative; z-index: 2; }
+.full-width-banner h2 { color: var(--white); font-size: 3.5rem; font-weight: 800; margin: 0; letter-spacing: -0.02em; }
+.banner-glow { position: absolute; width: 300px; height: 300px; background: var(--gradient-btn); border-radius: 50%; filter: blur(80px); opacity: 0.3; z-index: 1; }
+.banner-glow.left { top: -150px; left: -100px; }
+.banner-glow.right { bottom: -150px; right: -100px; }
 
-.full-width-banner h2 {
-    color: var(--white);
-    font-size: 3.5rem;
-    font-weight: 800;
-    margin: 0;
-    letter-spacing: -0.02em;
-}
-
-.banner-glow {
-    position: absolute;
-    width: 300px;
-    height: 300px;
-    background: var(--gradient-btn);
-    border-radius: 50%;
-    filter: blur(80px);
-    opacity: 0.3;
-    z-index: 1;
-}
-
-.banner-glow.left {
-    top: -150px;
-    left: -100px;
-}
-
-.banner-glow.right {
-    bottom: -150px;
-    right: -100px;
-}
-
-/* ==========================================================================
-   BENEFITS SECTION
-   ========================================================================== */
+/* BENEFITS */
 .benefits-grid {
     width: 122%;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 1rem;
-        padding: 1.3rem;
+    padding: 1.3rem;
     margin-left: -127px;
 }
 
-.benefit-card {
-    background-color: #192c46;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 8px;
-    padding: 1rem;
-    transition: var(--transition);
-}
+.benefit-card { background-color: #192c46; border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 8px; padding: 1rem; transition: var(--transition); }
+.benefit-card:hover { background-color: #192c46; transform: translateY(-5px); box-shadow: var(--shadow-lg); border-color: rgba(255, 255, 255, 0.2); }
+.icon-box-dark { width: 40px; height: 40px; background-color: #edf5ff; color: #3853a4; border-radius: var(--br-sm); display: flex; align-items: center; justify-content: center; font-size: 1.25rem; margin-bottom: 1.25rem; }
+.benefit-card h4 { font-size: 1.125rem; font-weight: 700; margin-bottom: 0.75rem; }
+.benefit-card p { font-size: 0.875rem; color: #E5E7EB; margin: 0; }
 
-.benefit-card:hover {
-    background-color: #192c46;
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-lg);
-    border-color: rgba(255, 255, 255, 0.2);
-}
+/* WHY CHOOSE */
+.why-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.75rem; align-items: start; max-width: 1100px; margin: 0 auto; }
+.why-card { background: #192c46; border: 1px solid rgba(255, 255, 255, 0.04); border-radius: 8px; padding: 2.2rem 0.70rem; display: flex; flex-direction: column; justify-content: center; gap: 0.6rem; min-height: 150px; transition: var(--transition); box-shadow: 0 6px 14px rgba(2,8,23,0.35); }
+.why-card:hover { background: #192c46; border-color: rgba(255, 255, 255, 0.12); transform: translateY(-4px); }
+.icon-box-glass { width: 36px; height: 36px; flex-shrink: 0; background: #e0e8ff; border-radius: var(--br-sm); display: flex; align-items: center; justify-content: center; color: #192c46; }
+.why-card h4 { font-size: 0.785rem; font-weight: 700; line-height: 1.25; margin: 0; color: var(--white); }
 
-.icon-box-dark {
-    width: 40px;
-    height: 40px;
-    background-color: #edf5ff;
-    color: #3853a4;
-    border-radius: var(--br-sm);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.25rem;
-    margin-bottom: 1.25rem;
-}
+/* FREE REVIEW */
+.pill-cards { display: flex; flex-direction: column; gap: 1rem; margin-top: 2rem; max-width: 660px; }
+.pill-card { display: flex; align-items: center; gap: 0.75rem; padding: 0.65rem 1rem; background-color: var(--white); border: 1px solid var(--border-light); border-radius: var(--br-md); font-weight: 700; font-size: 0.95rem; box-shadow: 0 8px 20px rgba(2,8,23,0.06); width: 100%; }
+.pill-card i { display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 34px; background: #EFF6FF; color: var(--primary-blue); border-radius: 8px; flex-shrink: 0; font-size: 0.95rem; }
 
-.benefit-card h4 {
-    font-size: 1.125rem;
-    font-weight: 700;
-    margin-bottom: 0.75rem;
-}
+@media (max-width: 992px) { .pill-cards { margin-left: 0; max-width: 100%; padding-left: 0; } }
 
-.benefit-card p {
-    font-size: 0.875rem;
-    color: #E5E7EB;
-    margin: 0;
-}
+.review-form-card { background-color: var(--white); border-radius: var(--br-2xl); padding: 2.5rem; box-shadow: var(--shadow-lg); border: 1px solid var(--border-light); }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem; }
+.form-group { margin-bottom: 1.5rem; }
+.form-row .form-group { margin-bottom: 0; }
+.form-group label { display: block; font-size: 0.83rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--text-main); }
+.form-group input, .form-group select, .form-group textarea { width: 100%; padding: 0.75rem 1rem; border: 1px solid var(--border-light); border-radius: var(--br-md); font-family: inherit; font-size: 0.9375rem; font-weight: 700; background-color: var(--white); transition: var(--transition); }
+.form-group textarea { resize: vertical; }
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: var(--primary-blue); box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1); }
 
-/* ==========================================================================
-   WHY CHOOSE SECTION
-   ========================================================================== */
-.why-grid {
-    display: grid;
-    /* Match PSD: 4 equal columns centered within container on desktop */
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1.75rem;
-    align-items: start;
-    max-width: 1100px;
-    margin: 0 auto;
-}
+/* FAQ */
+.accordion-item { background-color: var(--white); border: 1px solid var(--border-light); border-radius: var(--br-lg); margin-bottom: 1rem; overflow: hidden; transition: var(--transition); }
+.accordion-item:hover { border-color: #BFDBFE; }
+.accordion-header { padding: 1.25rem 1.5rem; display: flex; justify-content: space-between; align-items: center; cursor: pointer; background-color: var(--white); }
+.accordion-header h4 { font-size: 1.0625rem; font-weight: 700; margin: 0; }
+.toggle-icon { color: var(--text-light); transition: var(--transition); }
+.accordion-item.active .toggle-icon { color: var(--primary-blue); }
+.accordion-body { padding: 0 1.5rem; max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; }
+.accordion-body p { padding-bottom: 1.25rem; margin: 0; font-size: 13px; color: black; }
 
-.why-card {
-    background: #192c46;
-    border: 1px solid rgba(255, 255, 255, 0.04);
-    border-radius: 8px;
-    padding: 2.2rem 0.70rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 0.6rem;
-    min-height: 150px;
-    transition: var(--transition);
-    box-shadow: 0 6px 14px rgba(2,8,23,0.35);
-}
+/* FINAL CTA */
+.final-cta { background: linear-gradient(to right, #0b213e, #113158); position: relative; overflow: hidden; }
+.cta-bg-glow { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 80%; height: 80%; pointer-events: none; }
+.cta-desc { color: #9CA3AF; font-size: 1.125rem; margin-bottom: 2.5rem; }
+.cta-buttons { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
 
-.why-card:hover {
-    background: #192c46;
-    border-color: rgba(255, 255, 255, 0.12);
-    transform: translateY(-4px);
-}
+/* FOOTER */
+.footer { background-color: #071629; color: var(--text-light); padding: 2rem 0; font-size: 0.875rem; }
+.footer-container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+.back-to-top { font-weight: 600; }
+.back-to-top:hover { color: var(--white); }
 
-.icon-box-glass {
-    width: 36px;
-    height: 36px;
-    flex-shrink: 0;
-    background: #e0e8ff;
-    border-radius: var(--br-sm);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #192c46;
-}
-
-.why-card h4 {
-    font-size: 0.785rem;
-    font-weight: 700;
-    line-height: 1.25;
-    margin: 0;
-    color: var(--white);
-}
-
-/* ==========================================================================
-   FREE REVIEW SECTION
-   ========================================================================== */
-.pill-cards {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    margin-top: 2rem;
-    /* Constrain to left column width like PSD */
-    max-width: 660px;
-}
-
-.pill-card {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    padding: 0.65rem 1rem;
-    background-color: var(--white);
-    border: 1px solid var(--border-light);
-    border-radius: var(--br-md);
-    font-weight: 700;
-    font-size: 0.95rem;
-    box-shadow: 0 8px 20px rgba(2,8,23,0.06);
-    width: 100%;
-}
-
-.pill-card i {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 34px;
-    height: 34px;
-    background: #EFF6FF;
-    color: var(--primary-blue);
-    border-radius: 8px;
-    flex-shrink: 0;
-    font-size: 0.95rem;
-}
-
-@media (max-width: 992px) {
-    .pill-cards {
-        margin-left: 0;
-        max-width: 100%;
-        padding-left: 0;
-    }
-}
-
-/* Advanced Form */
-.review-form-card {
-    background-color: var(--white);
-    border-radius: var(--br-2xl);
-    padding: 2.5rem;
-    box-shadow: var(--shadow-lg);
-    border: 1px solid var(--border-light);
-}
-
-.form-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
-    margin-bottom: 1.5rem;
-}
-
-.form-group {
-    margin-bottom: 1.5rem;
-}
-
-.form-row .form-group {
-    margin-bottom: 0;
-}
-
-.form-group label {
-    display: block;
-    font-size: 0.83rem;
-    font-weight: 700;
-    margin-bottom: 0.5rem;
-    color: var(--text-main);
-}
-
-.form-group input,
-.form-group select,
-.form-group textarea {
-    width: 100%;
-    padding: 0.75rem 1rem;
-    border: 1px solid var(--border-light);
-    border-radius: var(--br-md);
-    font-family: inherit;
-    font-size: 0.9375rem;
-        font-weight: 700;
-
-    background-color: var(--white);
-    transition: var(--transition);
-}
-
-.form-group textarea {
-    resize: vertical;
-}
-
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
-    outline: none;
-    border-color: var(--primary-blue);
-    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
-}
-
-/* ==========================================================================
-   FAQ SECTION
-   ========================================================================== */
-.accordion-item {
-    background-color: var(--white);
-    border: 1px solid var(--border-light);
-    border-radius: var(--br-lg);
-    margin-bottom: 1rem;
-    overflow: hidden;
-    transition: var(--transition);
-}
-
-.accordion-item:hover {
-    border-color: #BFDBFE;
-}
-
-.accordion-header {
-    padding: 1.25rem 1.5rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
-    background-color: var(--white);
-}
-
-.accordion-header h4 {
-    font-size: 1.0625rem;
-    font-weight: 700;
-    margin: 0;
-}
-
-.toggle-icon {
-    color: var(--text-light);
-    transition: var(--transition);
-}
-
-.accordion-item.active .toggle-icon {
-    color: var(--primary-blue);
-}
-
-.accordion-body {
-    padding: 0 1.5rem;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-out;
-}
-
-.accordion-body p {
-    padding-bottom: 1.25rem;
-    margin: 0;
-    font-size: 13px;
-    color: black;
-}
-
-/* ==========================================================================
-   FINAL CTA SECTION
-   ========================================================================== */
-.final-cta {
-  background: linear-gradient(to right, #0b213e, #113158);  
-  
-    position: relative;
-    overflow: hidden;
-}
-
-.cta-bg-glow {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 80%;
-    height: 80%;
-    pointer-events: none;
-}
-
-.cta-desc {
-    color: #9CA3AF;
-    font-size: 1.125rem;
-    margin-bottom: 2.5rem;
-}
-
-.cta-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    flex-wrap: wrap;
-}
-
-/* ==========================================================================
-   FOOTER
-   ========================================================================== */
-.footer {
-    background-color: #071629;
-    color: var(--text-light);
-    padding: 2rem 0;
-    font-size: 0.875rem;
-}
-
-.footer-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-}
-
-.back-to-top {
-    font-weight: 600;
-}
-
-.back-to-top:hover {
-    color: var(--white);
-}
-
-/* ==========================================================================
-   ANIMATIONS
-   ========================================================================== */
-.fade-up {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.fade-up.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
+/* ANIMATIONS */
+.fade-up { opacity: 0; transform: translateY(30px); transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
+.fade-up.visible { opacity: 1; transform: translateY(0); }
 .delay-1 { transition-delay: 0.1s; }
 .delay-2 { transition-delay: 0.2s; }
 .delay-3 { transition-delay: 0.3s; }
 .delay-4 { transition-delay: 0.4s; }
 
 /* ==========================================================================
-   RESPONSIVE DESIGN
+   MODAL POPUP STYLES
    ========================================================================== */
-@media (max-width: 1200px) {
-    .benefits-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(5, 12, 30, 0.75);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.35s ease, visibility 0.35s ease;
 }
 
-@media (max-width: 992px) {
-    .hero-title {
-        font-size: 3rem;
-    }
-    
-    .hero-container {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-    
-    .logo {
-        justify-content: center;
-    }
-    
-    .hero-subtitle {
-        margin: 0 auto 2.5rem;
-    }
-    
-    .hero-features {
-        justify-content: center;
-    }
-    
-    .price-badge-container {
-        display: flex;
-        justify-content: center;
-    }
-    
-    .hero-form-wrapper {
-        max-width: 500px;
-        margin: 0 auto;
-        width: 100%;
-    }
-    
-    .two-col-layout {
-        grid-template-columns: 1fr;
-        gap: 3rem;
-    }
-    
-    .service-content {
-        text-align: center;
-    }
-    
-    .problem-grid,
-    .why-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
-    .full-width-banner h2 {
-        font-size: 2.5rem;
-    }
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
 
-    /* Mobile: replace hero background with mains banner and stack form below image */
+.modal-box {
+    background: var(--white);
+    border-radius: var(--br-2xl);
+    padding: 2.5rem;
+    width: 100%;
+    max-width: 520px;
+    position: relative;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.45);
+    transform: translateY(40px) scale(0.96);
+    transition: transform 0.38s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.38s ease;
+    opacity: 0;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.modal-overlay.active .modal-box {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+}
+
+.modal-close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #F3F4F6;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6B7280;
+    font-size: 1rem;
+    transition: var(--transition);
+    z-index: 2;
+}
+
+.modal-close-btn:hover {
+    background: #E5E7EB;
+    color: #111827;
+}
+
+/* Scrollbar styling for modal */
+.modal-box::-webkit-scrollbar { width: 5px; }
+.modal-box::-webkit-scrollbar-track { background: #f1f1f1; border-radius: 10px; }
+.modal-box::-webkit-scrollbar-thumb { background: #c5cdd9; border-radius: 10px; }
+
+/* ==========================================================================
+   RESPONSIVE
+   ========================================================================== */
+@media (max-width: 1200px) { .benefits-grid { grid-template-columns: repeat(3, 1fr); } }
+
+@media (max-width: 992px) {
+    .hero-title { font-size: 3rem; }
+    .hero-container { grid-template-columns: 1fr; text-align: center; }
+    .logo { justify-content: center; }
+    .hero-subtitle { margin: 0 auto 2.5rem; }
+    .hero-features { justify-content: center; }
+    .price-badge-container { display: flex; justify-content: center; }
+    .hero-form-wrapper { max-width: 500px; margin: 0 auto; width: 100%; }
+    .two-col-layout { grid-template-columns: 1fr; gap: 3rem; }
+    .service-content { text-align: center; }
+    .problem-grid, .why-grid { grid-template-columns: repeat(2, 1fr); }
+    .full-width-banner h2 { font-size: 2.5rem; }
     .hero {
         background-image: url('/Mains-Banner.jpg');
         background-size: cover;
         background-position: center;
-                background-size: 115% 54%;
-        padding: 3.5rem 0; /* reduce vertical padding for mobile */
+        background-size: 115% 40%;
+        padding: 3.5rem 0;
     }
-
-    .hero-container {
-        grid-template-columns: 1fr; /* stack content */
-        text-align: center;
-    }
-
-    .hero-content {
-        order: 1;
-        min-height: 220px; /* ensure banner area has some height */
-    }
-
-    .hero-form-wrapper {
-        order: 2; /* place form below image */
-        max-width: 520px;
-        margin: 1.25rem auto 0;
-        width: calc(100% - 2rem);
-    }
+    .hero-container { grid-template-columns: 1fr; text-align: center; }
+    .hero-content { order: 1; min-height: 220px; }
+    .hero-form-wrapper { order: 2; max-width: 520px; margin: 1.25rem auto 0; width: calc(100% - 2rem); }
+    .benefits-grid { width: 100%; margin-left: 0; grid-template-columns: repeat(2, 1fr); padding: 0; }
+    .why-grid { grid-template-columns: repeat(2, 1fr); }
+    .hero-form-wrapper { max-width: 100%; margin: 0 auto; width: 100%; padding-top: 605px; }
+    .problem-grid { grid-template-columns: repeat(2, 1fr); }
+    .two-col-layout { grid-template-columns: 1fr; gap: 2rem; }
+    .section-title { font-size: 2.2rem; }
+    .full-width-banner h2 { font-size: 2.2rem; }
+    .btnss { padding: 1rem 2rem; width: 100%; }
+    .cta-buttons { flex-direction: column; align-items: center; }
+    .cta-buttons .btn, .cta-buttons .btnsss, .cta-buttons .btnss { width: 100%; max-width: 360px; justify-content: center; }
+    .form-row { grid-template-columns: 1fr; gap: 0; }
+    .pill-cards { max-width: 100%; }
 }
 
 @media (max-width: 768px) {
-    .top-strip-left span {
-    color: #374151;
-    font-weight: 600;
-    font-size: 0.7rem;
-}
-    .section-padding {
-        padding: 4rem 0;
-    }
-    
-    .section-title {
-        font-size: 2rem;
-    }
-    
-    .top-strip-container {
-        flex-direction: column;
-        gap: 0.5rem;
-        text-align: center;
-    }
-    
-    .trust-container {
-        justify-content: center;
-    }
-    
-    .benefits-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
-    .form-row {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
-    
-    .review-content {
-        text-align: center;
-    }
-    
-    .pill-cards {
-        align-items: center;
-    }
-    
-    .faq-content {
-        text-align: center;
-    }
-    
-    .cta-buttons {
-        flex-direction: column;
-    }
-    
-    .btn {
-        width: 100%;
-    }
+    .top-strip-left span { color: #374151; font-weight: 600; font-size: 0.7rem; }
+    .section-padding { padding: 4rem 0; }
+    .section-title { font-size: 2rem; }
+    .top-strip-container { flex-direction: column; gap: 0.5rem; text-align: center; }
+    .trust-container { justify-content: center; }
+    .benefits-grid { grid-template-columns: repeat(2, 1fr); }
+    .form-row { grid-template-columns: 1fr; gap: 1.5rem; }
+    .review-content { text-align: center; }
+    .pill-cards { align-items: center; }
+    .faq-content { text-align: center; }
+    .cta-buttons { flex-direction: column; }
+    .btn { width: 100%; }
+    .hero { padding: 75rem 0; margin-top: -1167px; margin-bottom: -1178px; }
+    .hero-form-card { padding: 1.75rem 1.25rem; }
+    .benefits-grid { grid-template-columns: 1fr; }
+    .why-grid { grid-template-columns: repeat(2, 1fr); max-width: 100%; }
+    .problem-grid { grid-template-columns: 1fr; }
+    .section-title { font-size: 1.85rem; line-height: 1.2; }
+    .full-width-banner { padding: 2rem 1.25rem; border-radius: 12px; }
+    .full-width-banner h2 { font-size: 1.75rem; }
+    .top-strip-container { flex-direction: column; text-align: center; gap: 0.3rem; }
+    .footer-container { flex-direction: column; text-align: center; }
+    .review-form-card { padding: 1.5rem 1rem; }
+    .checklist-card { padding: 1.5rem 1.25rem; }
+    .service-content { text-align: center; }
+    .faq-content, .review-content { text-align: center; }
+    .btn, .btns, .btnss, .btnsss { width: 100%; justify-content: center; }
+    .section-padding { padding: 3rem 0; }
+    .modal-box { padding: 2rem 1.25rem; }
 }
 
-@media (max-width: 576px) {
-    .hero-title {
-        font-size: 2.5rem;
-    }
-    
-    .price-badge {
-        flex-direction: column;
-        padding: 0;
-    }
-    
-    .price-badge-left {
-        width: 100%;
-        border-radius: var(--br-lg) var(--br-lg) 0 0;
-    }
-    
-    .price-badge-right {
-        padding: 1rem;
-    }
-    
-    .problem-grid,
-    .why-grid,
-    .benefits-grid {
-        grid-template-columns: 1fr;
-    }
-
-    /* Limit why-card titles to a single truncated line on small screens */
-    .why-card h4 {
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-    
-    .full-width-banner h2 {
-        font-size: 2rem;
-    }
-    
-    .footer-container {
-        flex-direction: column;
-        text-align: center;
-    }
+@media (max-width: 480px) {
+    .cta-desc br { display: none; }
+    .why-card h4 { font-size: 1.2rem; font-weight: 700; line-height: 1.25; margin: 0; color: var(--white); }
+    .top-strip-left span { color: #374151; font-weight: 600; font-size: 0.7rem; }
+    .check-list li { display: flex; align-items: flex-start; gap: 0.75rem; font-weight: 600; font-size: 0.9rem; }
+    .btnsss { font-size: 0.90rem; }
+    .btn { font-size: 0.90rem; }
+    .section-desc { font-size: 13px; color: var(--text-light); max-width: 800px; margin: 0 auto 2rem; }
+    .section-subtitle-bold { font-size: 1.0rem; font-weight: 700; margin-top: 2rem; margin-bottom: 1rem; letter-spacing: 0.05em; }
+    .why-grid { grid-template-columns: 1fr; }
+    .section-title { font-size: 23px; }
+    .pill-card { font-size: 1.0rem; justify-content: center;}
+    .form-group label { font-size: 1.0rem; }
+    .section-title br { display: none; }
+    .full-width-banner h2 { font-size: 1.1rem; }
+    .form-title { font-size: 1.6rem; }
+    .hero-form-card { padding: 1.5rem 1rem; border-radius: 16px; }
+    .accordion-header h4 { font-size: 0.95rem; }
+    .banner-section { padding-top: 1.5rem; padding-bottom: 1.5rem; }
+    .price-badge { flex-direction: column; padding: 0; }
+    .price-badge-left { width: 100%; border-radius: 12px 12px 0 0; }
+    .price-badge-right { padding: 1rem; }
 }
 
-/* s */
-
-/* ==========================================================================
-   MOBILE RESPONSIVE FIXES — ONLY ADD THESE TO YOUR style.css
-   Yeh sirf mobile screen ke liye hain. Desktop kuch bhi change nahi hoga.
-   ========================================================================== */
-
-/* ── TABLET (max 992px) ── */
-@media (max-width: 992px) {
-
-    /* Benefits grid — 122% width aur negative margin fix */
-    .benefits-grid {
-        width: 100%;
-        margin-left: 0;
-        grid-template-columns: repeat(2, 1fr);
-        padding: 0;
-    }
-
-    /* Why grid — 4 columns ki jagah 2 */
+@media (max-width: 480px) {
     .why-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        align-items: stretch;
     }
 
-    /* Hero form — center aur full width */
-    .hero-form-wrapper {
-        max-width: 100%;
-        margin: 0 auto;
-        width: 100%;
-                padding-top: 605px;
+    .why-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        min-height: 170px;
+        height: 100%;
+        padding: 1.2rem 0.8rem;
     }
 
-    /* Hero container single column */
-    .hero-container {
-        grid-template-columns: 1fr;
-        text-align: center;
+    .why-card h4 {
+        font-size: 0.9rem;
+        line-height: 1.4;
     }
+}
 
-    /* Problem grid — 2 columns */
+@media (max-width: 480px) {
     .problem-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
     }
 
-    /* Two column layouts stack */
-    .two-col-layout {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-
-    /* Section title smaller */
-    .section-title {
-        font-size: 2.2rem;
-    }
-
-    /* Banner heading smaller */
-    .full-width-banner h2 {
-        font-size: 2.2rem;
-    }
-
-    /* Review form submit button */
-    .btnss {
-        padding: 1rem 2rem;
-        width: 100%;
-    }
-
-    /* CTA buttons stack */
-    .cta-buttons {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .cta-buttons .btn,
-    .cta-buttons .btnsss,
-    .cta-buttons .btnss {
-        width: 100%;
-        max-width: 360px;
-        justify-content: center;
-    }
-
-    /* Form rows stack */
-    .form-row {
-        grid-template-columns: 1fr;
-        gap: 0;
-    }
-
-    /* Pill cards align left on mobile */
-    .pill-cards {
-        max-width: 100%;
-    }
-}
-
-/* ── MOBILE (max 768px) ── */
-@media (max-width: 768px) {
-
-    /* Hero padding reduce */
-    .hero {
-        padding: 43rem 0;
-        margin-top: -660px;
-                margin-bottom: -658px;
-    }
-
-    /* Hero form card padding */
-    .hero-form-card {
-        padding: 1.75rem 1.25rem;
-    }
-
-    /* Benefits grid — single column on small mobile */
-    .benefits-grid {
-        grid-template-columns: 1fr;
-    }
-
-    /* Why grid — single column */
-    .why-grid {
-        grid-template-columns: repeat(2, 1fr);
-        max-width: 100%;
-    }
-
-    /* Problem grid — single column */
-    .problem-grid {
-        grid-template-columns: 1fr;
-    }
-
-    /* Section title */
-    .section-title {
-        font-size: 1.85rem;
-        line-height: 1.2;
-    }
-
-    /* Banner */
-    .full-width-banner {
-        padding: 2rem 1.25rem;
-        border-radius: 12px;
-    }
-
-    .full-width-banner h2 {
-        font-size: 1.75rem;
-    }
-
-    /* Top strip */
-    .top-strip-container {
-        flex-direction: column;
-        text-align: center;
-        gap: 0.3rem;
-    }
-
-    /* Footer */
-    .footer-container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    /* Review form card */
-    .review-form-card {
-        padding: 1.5rem 1rem;
-    }
-
-    /* Checklist card */
-    .checklist-card {
-        padding: 1.5rem 1.25rem;
-    }
-
-    /* Form section title center */
-    .service-content {
-        text-align: center;
-    }
-
-    /* FAQ content center */
-    .faq-content,
-    .review-content {
-        text-align: center;
-    }
-
-    /* Buttons full width */
-    .btn,
-    .btns,
-    .btnss,
-    .btnsss {
-        width: 100%;
-        justify-content: center;
-    }
-
-    /* Hero section padding */
-    .section-padding {
-        padding: 3rem 0;
-    }
-}
-
-/* ── SMALL MOBILE (max 480px) ── */
-@media (max-width: 480px) {
-    .cta-desc br {
-        display: none;
-    }
-    .why-card h4 {
-    font-size: 1.2rem;
-    font-weight: 700;
-    line-height: 1.25;
-    margin: 0;
-    color: var(--white);
-}
-   .top-strip-left span {
-    color: #374151;
-    font-weight: 600;
-    font-size: 0.7rem;
-}
-
-.check-list li {
-    display: flex;
-    align-items: flex-start;
-    gap: 0.75rem;
-    font-weight: 600;
-    font-size: 0.9rem;
-}
-.btnsss{
-    font-size: 0.90rem;
-}
-.btn {
-    font-size: 0.90rem;
-}
-    .section-desc {
-    font-size: 13px;
-    color: var(--text-light);
-    max-width: 800px;
-    margin: 0 auto 2rem;
-}
-.section-subtitle-bold {
-    font-size: 1.0rem;
-    font-weight: 700;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-    letter-spacing: 0.05em;
-}
-    /* Why grid — single column on very small screens */
-    .why-grid {
-        grid-template-columns: 1fr;
-    }
-
-    /* Section title */
-    .section-title {
-        font-size: 23px;
-
-    }
-@media (max-width: 480px) {
- .pill-card{
-       font-size: 1.0rem;
- }
-    .form-group label{
-        font-size: 1.0rem;
-    }
-    .section-title br {
-        display: none;
-    }
-}
-    /* Banner */
-    .full-width-banner h2 {
-        font-size: 1.7rem;
-    }
-
-    /* Hero form title */
-    .form-title {
-        font-size: 1.6rem;
-    }
-
-    /* Hero form card */
-    .hero-form-card {
-        padding: 1.5rem 1rem;
-        border-radius: 16px;
-    }
-
-    /* Accordion header */
-    .accordion-header h4 {
-        font-size: 0.95rem;
-    }
-
-    /* Banner padding */
-    .banner-section {
-        padding-top: 1.5rem;
-        padding-bottom: 1.5rem;
-    }
-
-    /* Price badge full width */
-    .price-badge {
-        flex-direction: column;
-        padding: 0;
-    }
-
-    .price-badge-left {
-        width: 100%;
-        border-radius: 12px 12px 0 0;
-    }
-
-    .price-badge-right {
+    .problem-card {
         padding: 1rem;
+    }
+
+    .problem-card p {
+        font-size: 0.85rem;
+        line-height: 1.4;
     }
 }
 
 </style>
 <body>
-<!-- 
-    <script>
-        // If the page was opened as /bookkeeping.html, replace the URL to hide the .html
-        (function() {
-            try {
-                const path = window.location.pathname || '';
-                if (path.endsWith('/bookkeeping.html') || path === '/bookkeeping.html' || path === 'bookkeeping.html') {
-                    const newPath = path.replace(/\.html$/, '');
-                    history.replaceState(null, '', newPath + window.location.search + window.location.hash);
-                }
-            } catch (e) {
-                // fail silently
-            }
-        })();
-    </script> -->
 
-    <!-- HEADER / TOP STRIP -->
+    <!-- =====================================================
+         MODAL POPUP — Hero Form
+         ===================================================== -->
+    <div class="modal-overlay" id="heroFormModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <div class="modal-box">
+            <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close modal">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <h3 class="form-title" id="modalTitle">Get Started Today</h3>
+            <p class="form-subtitle">Book your bookkeeping consultation</p>
+
+            <form id="heroForm" class="contact-form">
+                <div class="input-group">
+                    <i class="fa-regular fa-user input-icon"></i>
+                    <input type="text" name="fullName" placeholder="Full Name*" required
+                        oninvalid="this.setCustomValidity('Please enter your full name')"
+                        oninput="this.setCustomValidity('')">
+                </div>
+                <div class="input-group">
+                    <i class="fa-regular fa-envelope input-icon"></i>
+                    <input type="email" name="email" placeholder="Email Address*" required>
+                </div>
+                <div class="input-group">
+                    <i class="fa-solid fa-phone input-icon"></i>
+                    <input type="tel" name="phone" placeholder="Phone Number*" required
+                        pattern="^\+1\d{10}$"
+                        title="Enter a valid US number like +12345678901">
+                </div>
+                <div class="input-group">
+                    <i class="fa-regular fa-building input-icon"></i>
+                    <input type="text" name="businessName" placeholder="Business Name*" required>
+                </div>
+                <div class="input-group">
+                    <i class="fa-regular fa-comment-dots input-icon"></i>
+                    <textarea name="message" placeholder="Message (Optional)" rows="2"></textarea>
+                </div>
+
+                <button type="submit" class="btns btn-full">Claim Your $200 Offer</button>
+                <div class="form-security">
+                    <i class="fa-solid fa-lock"></i> Secure & Confidential
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- HEADER -->
     <header class="top-strip">
         <div class="container top-strip-container">
             <div class="top-strip-left">
                 <i class="fa-solid fa-phone" aria-hidden="true" style="color:var(--primary-blue); margin-right:0.5rem"></i>
-                <span style="color: #929ba3;">Need Professional Bookkeeper? <a href="#contact" class="top-strip-cta">Book Schedule Now</a></span>
+                <span style="color: #929ba3;">Need Professional Bookkeeper? <a href="https://www.aifinora.com/book-a-meeting.html" class="top-strip-cta">Book Schedule Now</a></span>
             </div>
             <div class="top-strip-right">
                 <div class="address"><i class="fa-solid fa-map-pin" aria-hidden="true"></i>
@@ -1681,26 +779,22 @@ img {
     <!-- HERO SECTION -->
     <section class="hero" id="hero">
         <div class="container hero-container">
-            <!-- Left Content -->
             <div class="hero-content fade-up">
-              
-                
-                <a href="#contact" class="btnddd ">vxc </a>
+                <a href="https://www.aifinora.com/book-a-meeting.html" class="btnddd">vxc</a>
             </div>
-            
-            <!-- Right Content (Form) -->
+
+            <!-- Right Content (Form) — visible on desktop inside hero -->
             <div class="hero-form-wrapper fade-up delay-1">
                 <div class="hero-form-card">
                     <h3 class="form-title">Get Started Today</h3>
                     <p class="form-subtitle">Book your bookkeeping consultation</p>
-                    
-                    <form id="heroForm" class="contact-form">
+
+                    <form id="heroFormDesktop" class="contact-form">
                         <div class="input-group">
                             <i class="fa-regular fa-user input-icon"></i>
                             <input type="text" name="fullName" placeholder="Full Name*" required
-                             oninvalid="this.setCustomValidity('Please enter your full name')"
-  oninput="this.setCustomValidity('')"
-                            >
+                                oninvalid="this.setCustomValidity('Please enter your full name')"
+                                oninput="this.setCustomValidity('')">
                         </div>
                         <div class="input-group">
                             <i class="fa-regular fa-envelope input-icon"></i>
@@ -1709,10 +803,8 @@ img {
                         <div class="input-group">
                             <i class="fa-solid fa-phone input-icon"></i>
                             <input type="tel" name="phone" placeholder="Phone Number*" required
-                             pattern="^\+1\d{10}$"
-                               title="Enter a valid US number like +12345678901"
-
-                            >
+                                pattern="^\+1\d{10}$"
+                                title="Enter a valid US number like +12345678901">
                         </div>
                         <div class="input-group">
                             <i class="fa-regular fa-building input-icon"></i>
@@ -1722,7 +814,7 @@ img {
                             <i class="fa-regular fa-comment-dots input-icon"></i>
                             <textarea name="message" placeholder="Message (Optional)" rows="2"></textarea>
                         </div>
-                        
+
                         <button type="submit" class="btns btn-full">Claim Your $200 Offer</button>
                         <div class="form-security">
                             <i class="fa-solid fa-lock"></i> Secure & Confidential
@@ -1733,9 +825,6 @@ img {
         </div>
     </section>
 
-    <!-- TRUST ICON ROW -->
-
-
     <!-- PROBLEM SECTION -->
     <section class="problem-section section-padding bg-white">
         <div class="container">
@@ -1744,52 +833,44 @@ img {
                 <p class="section-desc">When bookkeeping is not updated, it becomes difficult to understand cash flow, profits, expenses, and tax obligations. AI Finora helps keep your records clean, organized, and easy to understand.</p>
                 <p class="section-subtitle-bold">COMMON ISSUES WE HELP WITH</p>
             </div>
-            
+
             <div class="problem-grid">
-                <!-- Card 1 -->
                 <div class="problem-card fade-up">
                     <div class="icon-box-sm"><i class="fa-solid fa-list-ul"></i></div>
                     <p>Transactions not categorized properly</p>
                 </div>
-                <!-- Card 2 -->
                 <div class="problem-card fade-up delay-1">
                     <div class="icon-box-sm"><i class="fa-solid fa-scale-balanced"></i></div>
                     <p>Bank and credit card accounts not reconciled</p>
                 </div>
-                <!-- Card 3 -->
                 <div class="problem-card fade-up delay-2">
                     <div class="icon-box-sm"><i class="fa-solid fa-chart-line"></i></div>
                     <p>No clear monthly profit and loss report</p>
                 </div>
-                <!-- Card 4 -->
                 <div class="problem-card fade-up delay-3">
                     <div class="icon-box-sm"><i class="fa-solid fa-money-bill-transfer"></i></div>
                     <p>Business expenses mixed or unclear</p>
                 </div>
-                <!-- Card 5 -->
                 <div class="problem-card fade-up">
                     <div class="icon-box-sm"><i class="fa-solid fa-file-invoice-dollar"></i></div>
                     <p>QuickBooks records not updated</p>
                 </div>
-                <!-- Card 6 -->
                 <div class="problem-card fade-up delay-1">
                     <div class="icon-box-sm"><i class="fa-regular fa-file-excel"></i></div>
                     <p>Missing monthly financial summaries</p>
                 </div>
-                <!-- Card 7 -->
                 <div class="problem-card fade-up delay-2">
                     <div class="icon-box-sm"><i class="fa-solid fa-file-signature"></i></div>
                     <p>Books not ready for tax filing</p>
                 </div>
-                <!-- Card 8 -->
                 <div class="problem-card fade-up delay-3">
                     <div class="icon-box-sm"><i class="fa-regular fa-clock"></i></div>
                     <p>Spending too much time on bookkeeping</p>
                 </div>
             </div>
-            
+
             <div class="text-center mt-10 fade-up">
-                <a href="#contact" class="btn ">Get Started Today</a>
+                <a href="#contact" class="btn">Get Started Today</a>
             </div>
         </div>
     </section>
@@ -1800,14 +881,9 @@ img {
             <div class="service-content fade-up">
                 <span class="badge-text">LIMITED STARTER OFFER</span>
                 <h2 class="section-title">Professional Bookkeeping <br>Services — Only $200</h2>
-                <p>AI Finora provides bookkeeping support for
-businesses that need accurate records, organized
-transactions, and clear monthly financial reporting.
-Our bookkeeping service helps you stay on top of
-your finances without wasting hours managing
-your books yourself.</p>
+                <p>AI Finora provides bookkeeping support for businesses that need accurate records, organized transactions, and clear monthly financial reporting. Our bookkeeping service helps you stay on top of your finances without wasting hours managing your books yourself.</p>
             </div>
-            
+
             <div class="service-checklist-wrapper fade-up delay-1">
                 <div class="checklist-card">
                     <ul class="check-list">
@@ -1825,21 +901,16 @@ your books yourself.</p>
         </div>
     </section>
 
-    <!-- FULL WIDTH BANNER -->
-   <section class="banner-section container pt-10 pb-10">
-    <div class="full-width-banner fade-up">
-
-        <a href="https://aifinora.com" class="banner-link"></a>
-
-        <div class="banner-content">
-            <h2>Start Bookkeeping For $200</h2>
+    <!-- FULL WIDTH BANNER — clicking anywhere on it opens modal -->
+    <section class="banner-section container pt-10 pb-10">
+        <div class="full-width-banner fade-up" id="bannerOpenModal" role="button" tabindex="0" aria-label="Start Bookkeeping For $200 — click to get started">
+            <div class="banner-content">
+                <h2>Start Bookkeeping For $200</h2>
+            </div>
+            <div class="banner-glow left"></div>
+            <div class="banner-glow right"></div>
         </div>
-
-        <div class="banner-glow left"></div>
-        <div class="banner-glow right"></div>
-
-    </div>
-</section>
+    </section>
 
     <!-- BENEFITS SECTION -->
     <section class="benefits-section section-padding bg-blue text-white">
@@ -1847,33 +918,28 @@ your books yourself.</p>
             <div class="section-header text-center fade-up">
                 <h2 class="section-title text-white">WHAT YOU GET WITH <br>AI FINORA BOOKKEEPING</h2>
             </div>
-            
+
             <div class="benefits-grid">
-                <!-- Card 1 -->
                 <div class="benefit-card fade-up">
                     <div class="icon-box-dark"><i class="fa-solid fa-file-lines"></i></div>
                     <h4>Clear Financial <br> Records</h4>
                     <p>Organized and categorized expenses for easy tracking and review.</p>
                 </div>
-                <!-- Card 2 -->
                 <div class="benefit-card fade-up delay-1">
                     <div class="icon-box-dark"><i class="fa-solid fa-money-bill-trend-up"></i></div>
                     <h4>Better Cash Flow Visibility</h4>
                     <p>Know exactly where your money is coming from and where it is going.</p>
                 </div>
-                <!-- Card 3 -->
                 <div class="benefit-card fade-up delay-2">
                     <div class="icon-box-dark"><i class="fa-solid fa-file-invoice"></i></div>
                     <h4>Tax-Ready<br> Books</h4>
                     <p>Clean financials ready for your CPA when tax season arrives.</p>
                 </div>
-                <!-- Card 4 -->
                 <div class="benefit-card fade-up delay-3">
                     <div class="icon-box-dark"><i class="fa-solid fa-user-clock"></i></div>
                     <h4>Less Manual <br> Work</h4>
                     <p>Save hours of data entry and let our experts handle your books.</p>
                 </div>
-                <!-- Card 5 -->
                 <div class="benefit-card fade-up delay-4">
                     <div class="icon-box-dark"><i class="fa-solid fa-chart-pie"></i></div>
                     <h4>Monthly Financial<br> Summary</h4>
@@ -1887,48 +953,40 @@ your books yourself.</p>
     <section class="why-choose section-padding bg-navy text-white">
         <div class="container">
             <div class="section-header text-center fade-up">
-                <span class="badge-text"style="color:white">WHY CHOOSE AI FINORA</span>
+                <span class="badge-text" style="color:white">WHY CHOOSE AI FINORA</span>
                 <h2 class="section-title text-white">Why Businesses Choose <br> AI Finora</h2>
-                <p class="section-desc"style="color:white">AI Finora gives businesses simple, reliable, and affordable bookkeeping support without confusing accounting language or unnecessary complexity.</p>
+                <p class="section-desc" style="color:white">AI Finora gives businesses simple, reliable, and affordable bookkeeping support without confusing accounting language or unnecessary complexity.</p>
             </div>
-            
+
             <div class="why-grid">
-                <!-- Card 1 -->
                 <div class="why-card fade-up">
                     <div class="icon-box-glass"><i class="fa-solid fa-flag-usa"></i></div>
                     <h4>USA-based <br> bookkeeping support</h4>
                 </div>
-                <!-- Card 2 -->
                 <div class="why-card fade-up delay-1">
                     <div class="icon-box-glass"><i class="fa-solid fa-tag"></i></div>
                     <h4>Affordable $200 <br> bookkeeping offer</h4>
                 </div>
-                <!-- Card 3 -->
                 <div class="why-card fade-up delay-2">
                     <div class="icon-box-glass"><i class="fa-solid fa-book"></i></div>
                     <h4>QuickBooks-<br>focused assistance</h4>
                 </div>
-                <!-- Card 4 -->
                 <div class="why-card fade-up delay-3">
                     <div class="icon-box-glass"><i class="fa-solid fa-chart-line"></i></div>
                     <h4>Clean-<br> monthly reporting</h4>
                 </div>
-                <!-- Card 5 -->
                 <div class="why-card fade-up">
                     <div class="icon-box-glass"><i class="fa-solid fa-file-invoice-dollar"></i></div>
                     <h4>Tax-ready <br> financial records</h4>
                 </div>
-                <!-- Card 6 -->
                 <div class="why-card fade-up delay-1">
                     <div class="icon-box-glass"><i class="fa-solid fa-headset"></i></div>
-                    <h4>Support through <br> call, email, and  WhatsApp</h4>
+                    <h4>Support through <br> call, email, and WhatsApp</h4>
                 </div>
-                <!-- Card 7 -->
                 <div class="why-card fade-up delay-2">
                     <div class="icon-box-glass"><i class="fa-solid fa-robot"></i></div>
                     <h4>Optional finance <br>automation and reporting support</h4>
                 </div>
-                <!-- Card 8 -->
                 <div class="why-card fade-up delay-3">
                     <div class="icon-box-glass"><i class="fa-solid fa-clock-rotate-left"></i></div>
                     <h4>Timely<br>reconciliations</h4>
@@ -1943,27 +1001,18 @@ your books yourself.</p>
             <div class="review-content fade-up">
                 <span class="badge-text">START WITH A FREE REVIEW</span>
                 <h2 class="section-title">Get a Free <br> Bookkeeping <br>Review</h2>
-                <p class="section-desc">Tell us about your bookkeeping situation and we’ll review<br> what needs to be cleaned, organized, or updated.</p>
-                
+                <p class="section-desc">Tell us about your bookkeeping situation and we'll review<br> what needs to be cleaned, organized, or updated.</p>
+
                 <div class="pill-cards">
-                    <div class="pill-card">
-                    
-                        <span>Book cleanup from $200</span>
-                    </div>
-                    <div class="pill-card">
-                 
-                        <span>Remote USA support</span>
-                    </div>
-                    <div class="pill-card">
-                      
-                        <span>QuickBooks cleanup</span>
-                    </div>
+                    <div class="pill-card"><span>Book cleanup from $200</span></div>
+                    <div class="pill-card"><span>Remote USA support</span></div>
+                    <div class="pill-card"><span>QuickBooks cleanup</span></div>
                 </div>
             </div>
-            
+
             <div class="review-form-wrapper fade-up delay-1">
                 <div class="review-form-card">
-                    <form  id="advancedForm" class="advanced-form">
+                    <form id="advancedForm" class="advanced-form">
                         <div class="form-row">
                             <div class="form-group">
                                 <label>Full Name*</label>
@@ -1974,7 +1023,7 @@ your books yourself.</p>
                                 <input type="text" name="businessName" required>
                             </div>
                         </div>
-                        
+
                         <div class="form-row">
                             <div class="form-group">
                                 <label>Email Address*</label>
@@ -1983,13 +1032,11 @@ your books yourself.</p>
                             <div class="form-group">
                                 <label>Phone Number*</label>
                                 <input type="tel" name="phone" required
-                                  pattern="^\+1\d{10}$"
-                                    title="Enter a valid US number like +12345678901"
-
-                                >
+                                    pattern="^\+1\d{10}$"
+                                    title="Enter a valid US number like +12345678901">
                             </div>
                         </div>
-                        
+
                         <div class="form-row">
                             <div class="form-group">
                                 <label>Business State*</label>
@@ -2006,7 +1053,7 @@ your books yourself.</p>
                                 </select>
                             </div>
                         </div>
-                        
+
                         <div class="form-row">
                             <div class="form-group">
                                 <label>Service Needed*</label>
@@ -2022,12 +1069,12 @@ your books yourself.</p>
                                 <input type="text" name="monthsBehind" placeholder="e.g., 3 months, 1 year">
                             </div>
                         </div>
-                        
+
                         <div class="form-group">
                             <label>Message*</label>
-                            <textarea  name="message" rows="4" placeholder="Tell us what you are looking for and what you need help with." required></textarea>
+                            <textarea name="message" rows="4" placeholder="Tell us what you are looking for and what you need help with." required></textarea>
                         </div>
-                        
+
                         <button type="submit" class="btnss">Request My Free Review</button>
                     </form>
                 </div>
@@ -2042,9 +1089,8 @@ your books yourself.</p>
                 <span class="badge-text">COMMON QUESTIONS</span>
                 <h2 class="section-title">Bookkeeping <br> FAQs</h2>
             </div>
-            
+
             <div class="faq-accordion fade-up delay-1">
-                <!-- FAQ Item 1 -->
                 <div class="accordion-item active">
                     <div class="accordion-header">
                         <h4>What is included in the $200 bookkeeping service?</h4>
@@ -2054,8 +1100,7 @@ your books yourself.</p>
                         <p>Our $200 bookkeeping package includes basic transaction categorization, bank and credit card reconciliation for up to 2 accounts, and a standard monthly Profit and Loss statement.</p>
                     </div>
                 </div>
-                
-                <!-- FAQ Item 2 -->
+
                 <div class="accordion-item">
                     <div class="accordion-header">
                         <h4>Is this service for businesses across the USA?</h4>
@@ -2065,8 +1110,7 @@ your books yourself.</p>
                         <p>Yes, we provide completely remote bookkeeping services for businesses located anywhere within the United States.</p>
                     </div>
                 </div>
-                
-                <!-- FAQ Item 3 -->
+
                 <div class="accordion-item">
                     <div class="accordion-header">
                         <h4>Do you work with QuickBooks?</h4>
@@ -2076,8 +1120,7 @@ your books yourself.</p>
                         <p>Absolutely. We specialize in QuickBooks Online and can help you set up, clean up, or maintain your QuickBooks account.</p>
                     </div>
                 </div>
-                
-                <!-- FAQ Item 4 -->
+
                 <div class="accordion-item">
                     <div class="accordion-header">
                         <h4>Will my books be ready for tax filing?</h4>
@@ -2087,8 +1130,7 @@ your books yourself.</p>
                         <p>Yes, our goal is to keep your financial records clean and accurate so that your CPA can easily file your taxes without any hassle.</p>
                     </div>
                 </div>
-                
-                <!-- FAQ Item 5 -->
+
                 <div class="accordion-item">
                     <div class="accordion-header">
                         <h4>Is $200 a monthly price?</h4>
@@ -2108,10 +1150,10 @@ your books yourself.</p>
         <div class="container text-center position-relative fade-up">
             <h2 class="section-title text-white">Ready to Organize Your Business Finances?</h2>
             <p class="cta-desc" style="color: white;">Let AI Finora handle your bookkeeping so you can focus on running your <br> business with confidence.</p>
-            
+
             <div class="cta-buttons">
                 <a href="#contact" class="btnsss">Get Free Bookkeeping Review</a>
-                <a href="#" class="btn btn-outline-light"> Chat With AI Finora WhatsApp</a>
+                <a href="#" class="btn btn-outline-light">Chat With AI Finora WhatsApp</a>
             </div>
         </div>
     </section>
@@ -2125,236 +1167,209 @@ your books yourself.</p>
     </footer>
 
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-    
-    // 1. FAQ Accordion
-    const accordionHeaders = document.querySelectorAll('.accordion-header');
-    
-    accordionHeaders.forEach(header => {
-        header.addEventListener('click', () => {
-            const accordionItem = header.parentElement;
-            const accordionBody = accordionItem.querySelector('.accordion-body');
-            const toggleIcon = header.querySelector('.toggle-icon i');
-            
-            // Check if current item is active
-            const isActive = accordionItem.classList.contains('active');
-            
-            // Close all items
-            document.querySelectorAll('.accordion-item').forEach(item => {
-                item.classList.remove('active');
-                item.querySelector('.accordion-body').style.maxHeight = null;
-                item.querySelector('.toggle-icon i').classList.remove('fa-minus');
-                item.querySelector('.toggle-icon i').classList.add('fa-plus');
+    document.addEventListener('DOMContentLoaded', () => {
+
+        // ── MODAL LOGIC ──────────────────────────────────────────────
+        const modal        = document.getElementById('heroFormModal');
+        const modalCloseBtn = document.getElementById('modalCloseBtn');
+        const bannerBtn    = document.getElementById('bannerOpenModal');
+
+        function openModal() {
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden'; // prevent background scroll
+        }
+
+        function closeModal() {
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Banner click / keyboard triggers modal
+        if (bannerBtn) {
+            bannerBtn.addEventListener('click', openModal);
+            bannerBtn.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openModal(); }
             });
-            
-            // If it wasn't active, open it
-            if (!isActive) {
-                accordionItem.classList.add('active');
-                accordionBody.style.maxHeight = accordionBody.scrollHeight + "px";
-                toggleIcon.classList.remove('fa-plus');
-                toggleIcon.classList.add('fa-minus');
-            }
+        }
+
+        // Close button
+        if (modalCloseBtn) {
+            modalCloseBtn.addEventListener('click', closeModal);
+        }
+
+        // Click on overlay backdrop closes modal
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) closeModal();
         });
-    });
 
-    // Initialize the first accordion body max-height
-    const firstAccordionItem = document.querySelector('.accordion-item.active');
-    if (firstAccordionItem) {
-        const firstAccordionBody = firstAccordionItem.querySelector('.accordion-body');
-        firstAccordionBody.style.maxHeight = firstAccordionBody.scrollHeight + "px";
-    }
-
-    // 2. Fade-in on scroll using Intersection Observer
-    const fadeElements = document.querySelectorAll('.fade-up');
-    
-    const fadeObserverOptions = {
-        root: null,
-        threshold: 0.1,
-        rootMargin: "0px 0px -50px 0px"
-    };
-
-    const fadeObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-                observer.unobserve(entry.target); // Stop observing once it's visible
-            }
+        // Escape key closes modal
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal.classList.contains('active')) closeModal();
         });
-    }, fadeObserverOptions);
 
-    fadeElements.forEach(element => {
-        fadeObserver.observe(element);
-    });
+        // ── FAQ ACCORDION ────────────────────────────────────────────
+        const accordionHeaders = document.querySelectorAll('.accordion-header');
 
-    // 3. Smooth Scrolling for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            
-            const targetId = this.getAttribute('href');
-            if (targetId === '#') return;
-            
-            const targetElement = document.querySelector(targetId);
-            if (targetElement) {
-                targetElement.scrollIntoView({
-                    behavior: 'smooth'
+        accordionHeaders.forEach(header => {
+            header.addEventListener('click', () => {
+                const accordionItem = header.parentElement;
+                const accordionBody = accordionItem.querySelector('.accordion-body');
+                const toggleIcon    = header.querySelector('.toggle-icon i');
+                const isActive      = accordionItem.classList.contains('active');
+
+                document.querySelectorAll('.accordion-item').forEach(item => {
+                    item.classList.remove('active');
+                    item.querySelector('.accordion-body').style.maxHeight = null;
+                    item.querySelector('.toggle-icon i').classList.remove('fa-minus');
+                    item.querySelector('.toggle-icon i').classList.add('fa-plus');
                 });
-            }
-        });
-    });
 
-    // 4. Back to Top Button logic
-    const backToTopBtn = document.getElementById('backToTop');
-    
-    if (backToTopBtn) {
-        backToTopBtn.addEventListener('click', (e) => {
-            e.preventDefault();
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
+                if (!isActive) {
+                    accordionItem.classList.add('active');
+                    accordionBody.style.maxHeight = accordionBody.scrollHeight + "px";
+                    toggleIcon.classList.remove('fa-plus');
+                    toggleIcon.classList.add('fa-minus');
+                }
             });
         });
-    }
 
-    // 5. Button Ripple Effect (optional enhancement)
-    const buttons = document.querySelectorAll('.btn');
-    buttons.forEach(btn => {
-        btn.addEventListener('click', function(e) {
-            let x = e.clientX - e.target.getBoundingClientRect().left;
-            let y = e.clientY - e.target.getBoundingClientRect().top;
-            
-            let ripples = document.createElement('span');
-            ripples.style.left = x + 'px';
-            ripples.style.top = y + 'px';
-            ripples.style.position = 'absolute';
-            ripples.style.background = 'rgba(255, 255, 255, 0.3)';
-            ripples.style.borderRadius = '50%';
-            ripples.style.pointerEvents = 'none';
-            ripples.style.transform = 'translate(-50%, -50%)';
-            ripples.style.animation = 'ripple 0.6s linear';
-            ripples.style.width = '100px';
-            ripples.style.height = '100px';
-            
-            // Add style for ripple animation dynamically if not in css
-            if (!document.getElementById('ripple-style')) {
-                const style = document.createElement('style');
-                style.id = 'ripple-style';
-                style.innerHTML = `
-                    @keyframes ripple {
-                        0% { width: 0; height: 0; opacity: 0.5; }
-                        100% { width: 400px; height: 400px; opacity: 0; }
-                    }
-                `;
-                document.head.appendChild(style);
+        const firstAccordionItem = document.querySelector('.accordion-item.active');
+        if (firstAccordionItem) {
+            firstAccordionItem.querySelector('.accordion-body').style.maxHeight =
+                firstAccordionItem.querySelector('.accordion-body').scrollHeight + "px";
+        }
+
+        // ── FADE-UP SCROLL ANIMATION ─────────────────────────────────
+        const fadeElements = document.querySelectorAll('.fade-up');
+        const fadeObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { root: null, threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
+
+        fadeElements.forEach(el => fadeObserver.observe(el));
+
+        // ── SMOOTH SCROLL ────────────────────────────────────────────
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                const target = document.querySelector(targetId);
+                if (target) target.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+        // ── BACK TO TOP ──────────────────────────────────────────────
+        const backToTopBtn = document.getElementById('backToTop');
+        if (backToTopBtn) {
+            backToTopBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+
+        // ── RIPPLE EFFECT ────────────────────────────────────────────
+        document.querySelectorAll('.btn').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                const x = e.clientX - e.target.getBoundingClientRect().left;
+                const y = e.clientY - e.target.getBoundingClientRect().top;
+                const ripple = document.createElement('span');
+                Object.assign(ripple.style, {
+                    left: x + 'px', top: y + 'px',
+                    position: 'absolute', background: 'rgba(255,255,255,0.3)',
+                    borderRadius: '50%', pointerEvents: 'none',
+                    transform: 'translate(-50%,-50%)',
+                    animation: 'ripple 0.6s linear',
+                    width: '100px', height: '100px'
+                });
+                if (!document.getElementById('ripple-style')) {
+                    const s = document.createElement('style');
+                    s.id = 'ripple-style';
+                    s.innerHTML = `@keyframes ripple { 0%{width:0;height:0;opacity:.5} 100%{width:400px;height:400px;opacity:0} }`;
+                    document.head.appendChild(s);
+                }
+                this.style.position = 'relative';
+                this.style.overflow = 'hidden';
+                this.appendChild(ripple);
+                setTimeout(() => ripple.remove(), 600);
+            });
+        });
+
+        // ── GOOGLE SHEET SUBMISSION ──────────────────────────────────
+        const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwRVFFKzxGEg9Xab283vEs6ndC505xp6EktlnJGlHqi7VeUlwlV2FlPtGv5vYVvDBkh/exec";
+
+        async function submitToGoogleSheet(form, formType) {
+            const fd = new FormData(form);
+            const data = {
+                formType,
+                fullName:           fd.get("fullName")           || "",
+                email:              fd.get("email")              || "",
+                phone:              fd.get("phone")              || "",
+                businessName:       fd.get("businessName")       || "",
+                businessState:      fd.get("businessState")      || "",
+                accountingSoftware: fd.get("accountingSoftware") || "",
+                serviceNeeded:      fd.get("serviceNeeded")      || "",
+                monthsBehind:       fd.get("monthsBehind")       || "",
+                message:            fd.get("message")            || ""
+            };
+            await fetch(GOOGLE_SCRIPT_URL, {
+                method: "POST", mode: "no-cors",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(data)
+            });
+        }
+
+        async function handleFormSubmit(form, formType) {
+            const button = form.querySelector("button[type='submit']");
+            const originalText = button.textContent;
+            button.textContent = "Submitting...";
+            button.disabled = true;
+            try {
+                await submitToGoogleSheet(form, formType);
+                alert("Thank you! Your request has been submitted.");
+                form.reset();
+                // If it's the modal form, close modal after submit
+                if (formType === "Hero Form - $200 Offer (Modal)") closeModal();
+            } catch (error) {
+                alert("Something went wrong. Please try again.");
+                console.error(error);
+            } finally {
+                button.textContent = originalText;
+                button.disabled = false;
             }
-            
-            this.style.position = 'relative';
-            this.style.overflow = 'hidden';
-            this.appendChild(ripples);
-            
-            setTimeout(() => {
-                ripples.remove();
-            }, 600);
-        });
+        }
+
+        // Modal form (popup)
+        const heroForm = document.getElementById("heroForm");
+        if (heroForm) {
+            heroForm.addEventListener("submit", (e) => {
+                e.preventDefault();
+                handleFormSubmit(heroForm, "Hero Form - $200 Offer (Modal)");
+            });
+        }
+
+        // Desktop hero form (in-page)
+        const heroFormDesktop = document.getElementById("heroFormDesktop");
+        if (heroFormDesktop) {
+            heroFormDesktop.addEventListener("submit", (e) => {
+                e.preventDefault();
+                handleFormSubmit(heroFormDesktop, "Hero Form - $200 Offer (Desktop)");
+            });
+        }
+
+        // Advanced / free review form
+        const advancedForm = document.getElementById("advancedForm");
+        if (advancedForm) {
+            advancedForm.addEventListener("submit", (e) => {
+                e.preventDefault();
+                handleFormSubmit(advancedForm, "Advanced Form - Free Review");
+            });
+        }
     });
-
-    // 6. Form Submit Handlers (Prevent default for demo)
-    const forms = document.querySelectorAll('form');
-    forms.forEach(form => {
-        form.addEventListener('submit', (e) => {
-            e.preventDefault();
-            alert('Form submitted! (This is a demo, no data was sent)');
-            form.reset();
-        });
-    });
-
-});
-
-const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwRVFFKzxGEg9Xab283vEs6ndC505xp6EktlnJGlHqi7VeUlwlV2FlPtGv5vYVvDBkh/exec";
-
-  async function submitToGoogleSheet(form, formType) {
-    const formData = new FormData(form);
-
-    const data = {
-      formType: formType,
-      fullName: formData.get("fullName") || "",
-      email: formData.get("email") || "",
-      phone: formData.get("phone") || "",
-      businessName: formData.get("businessName") || "",
-      businessState: formData.get("businessState") || "",
-      accountingSoftware: formData.get("accountingSoftware") || "",
-      serviceNeeded: formData.get("serviceNeeded") || "",
-      monthsBehind: formData.get("monthsBehind") || "",
-      message: formData.get("message") || ""
-    };
-
-    await fetch(GOOGLE_SCRIPT_URL, {
-      method: "POST",
-      mode: "no-cors",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(data)
-    });
-  }
-
-  const heroForm = document.getElementById("heroForm");
-  const advancedForm = document.getElementById("advancedForm");
-
-  if (heroForm) {
-    heroForm.addEventListener("submit", async function(event) {
-      event.preventDefault();
-
-      const button = heroForm.querySelector("button[type='submit']");
-      const originalText = button.textContent;
-
-      button.textContent = "Submitting...";
-      button.disabled = true;
-
-      try {
-        await submitToGoogleSheet(heroForm, "Hero Form - $200 Offer");
-
-        alert("Thank you! Your request has been submitted.");
-        heroForm.reset();
-
-      } catch (error) {
-        alert("Something went wrong. Please try again.");
-        console.error(error);
-
-      } finally {
-        button.textContent = originalText;
-        button.disabled = false;
-      }
-    });
-  }
-
-  if (advancedForm) {
-    advancedForm.addEventListener("submit", async function(event) {
-      event.preventDefault();
-
-      const button = advancedForm.querySelector("button[type='submit']");
-      const originalText = button.textContent;
-
-      button.textContent = "Submitting...";
-      button.disabled = true;
-
-      try {
-        await submitToGoogleSheet(advancedForm, "Advanced Form - Free Review");
-
-        alert("Thank you! Your request has been submitted.");
-        advancedForm.reset();
-
-      } catch (error) {
-        alert("Something went wrong. Please try again.");
-        console.error(error);
-
-      } finally {
-        button.textContent = originalText;
-        button.disabled = false;
-      }
-    });
-  }
-
     </script>
 </body>
 </html>
