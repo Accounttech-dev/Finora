@@ -172,6 +172,13 @@ img { max-width: 100%; height: auto; display: block; }
 
     }
 }
+
+ @media(min-width:1400px){
+    .hero{
+        padding: 1rem 0;
+    }
+} 
+
 .btns {
     display: inline-flex;
     align-items: center;
@@ -740,7 +747,7 @@ img { max-width: 100%; height: auto; display: block; }
                 </div>
                 <div class="input-group">
                     <i class="fa-solid fa-phone input-icon"></i>
-                    <input type="tel" name="phone" placeholder="Phone Number*" required
+                    <input type="tel" name="phone" placeholder="Phone (+12345678901)*" required
                         pattern="^\+1\d{10}$"
                         title="Enter a valid US number like +12345678901">
                 </div>
@@ -802,7 +809,7 @@ img { max-width: 100%; height: auto; display: block; }
                         </div>
                         <div class="input-group">
                             <i class="fa-solid fa-phone input-icon"></i>
-                            <input type="tel" name="phone" placeholder="Phone Number*" required
+                            <input type="tel" name="phone" placeholder="Phone (+12345678901)*" required
                                 pattern="^\+1\d{10}$"
                                 title="Enter a valid US number like +12345678901">
                         </div>
@@ -1016,22 +1023,22 @@ img { max-width: 100%; height: auto; display: block; }
                         <div class="form-row">
                             <div class="form-group">
                                 <label>Full Name*</label>
-                                <input type="text" name="fullName" required>
+                                <input type="text" name="fullName" placeholder="Full Name" required>
                             </div>
                             <div class="form-group">
                                 <label>Business Name*</label>
-                                <input type="text" name="businessName" required>
+                                <input type="text" name="businessName" placeholder="Business Name"required>
                             </div>
                         </div>
 
                         <div class="form-row">
                             <div class="form-group">
                                 <label>Email Address*</label>
-                                <input type="email" name="email" required>
+                                <input type="email" name="email" placeholder="Email Address" required>
                             </div>
                             <div class="form-group">
                                 <label>Phone Number*</label>
-                                <input type="tel" name="phone" required
+                                <input type="tel" name="phone" placeholder="Phone (+12345678901)*" required
                                     pattern="^\+1\d{10}$"
                                     title="Enter a valid US number like +12345678901">
                             </div>
@@ -1040,11 +1047,11 @@ img { max-width: 100%; height: auto; display: block; }
                         <div class="form-row">
                             <div class="form-group">
                                 <label>Business State*</label>
-                                <input type="text" name="businessState" required>
+                                <input type="text" name="businessState" placeholder="Business State" required>
                             </div>
                             <div class="form-group">
                                 <label>Accounting Software*</label>
-                                <select name="accountingSoftware" required>
+                                <select name="accountingSoftware" placeholder="Accounting Software" required>
                                     <option>Select Software</option>
                                     <option>QuickBooks Online</option>
                                     <option>Xero</option>
@@ -1057,7 +1064,7 @@ img { max-width: 100%; height: auto; display: block; }
                         <div class="form-row">
                             <div class="form-group">
                                 <label>Service Needed*</label>
-                                <select name="serviceNeeded" required>
+                                <select name="serviceNeeded" placeholder="Service Needed" required>
                                     <option>Select Service</option>
                                     <option>Monthly Bookkeeping</option>
                                     <option>Catch-up / Cleanup</option>

@@ -1569,24 +1569,30 @@
           <p>Book your bookkeeping cleanup consultation</p>
           <form class="quick-form" data-lead-form>
             <label>
-              <span class="sr-only">Full Name</span>
-              <input type="text" name="fullName" placeholder="Full Name" autocomplete="name" required>
+              <span class="sr-only">Full Name*</span>
+              <input type="text" name="fullName" placeholder="Full Name" autocomplete="name" required
+                 oninvalid="this.setCustomValidity('Please enter your full name')"
+                        oninput="this.setCustomValidity('')"
+              >
             </label>
             <label>
-              <span class="sr-only">Email Address</span>
+              <span class="sr-only">Email Address*</span>
               <input type="email" name="email" placeholder="Email Address" autocomplete="email" required>
             </label>
             <label>
-              <span class="sr-only">Phone Number</span>
-              <input type="tel" name="phone" placeholder="Phone Number" autocomplete="tel" required>
+              <span class="sr-only">Phone Number*</span>
+              <input type="tel" name="phone" placeholder="Phone Number (+12345678901)" autocomplete="tel" required
+               pattern="^\+1\d{10}$"
+                        title="Enter a valid US number like +12345678901"
+              >
             </label>
             <label>
-              <span class="sr-only">Business Name</span>
-              <input type="text" name="businessName" placeholder="Business Name" autocomplete="organization">
+              <span class="sr-only">Business Name*</span>
+              <input type="text" name="businessName" placeholder="Business Name" autocomplete="organization" required>
             </label>
             <label>
-              <span class="sr-only">Bookkeeping problem</span>
-              <textarea name="message" rows="4" placeholder="Tell us about your books right now"></textarea>
+              <span class="sr-only">Bookkeeping problem*</span>
+              <textarea name="message" rows="4" placeholder="Tell us about your books right now" ></textarea>
             </label>
             <button class="btn btn-primary form-button" type="submit">Claim Your $199 Offer <span
                 aria-hidden="true">&rarr;</span></button>
@@ -1841,28 +1847,31 @@
         <form class="lead-form" data-lead-form>
           <div class="form-grid">
             <label>
-              <span>Full Name</span>
-              <input type="text" name="fullName" autocomplete="name" required>
+              <span>Full Name*</span>
+              <input type="text" name="fullName" placeholder="Name*" autocomplete="name" required>
             </label>
             <label>
-              <span>Business Name</span>
-              <input type="text" name="businessName" autocomplete="organization" required>
+              <span>Business Name*</span>
+              <input type="text" name="businessName" placeholder="Business Name*" autocomplete="organization" required>
             </label>
             <label>
-              <span>Email Address</span>
-              <input type="email" name="email" autocomplete="email" required>
+              <span>Email Address*</span>
+              <input type="email" name="email" placeholder="Email Address*" autocomplete="email" required>
             </label>
             <label>
-              <span>Phone Number</span>
-              <input type="tel" name="phone" autocomplete="tel" required>
+              <span>Phone Number*</span>
+              <input type="tel" name="phone" placeholder="Phone Number (+12345678901)*"  autocomplete="tel" required
+                pattern="^\+1\d{10}$"
+                        title="Enter a valid US number like +12345678901"
+              >
             </label>
             <label>
-              <span>Business State</span>
-              <input type="text" name="state" autocomplete="address-level1" required>
+              <span>Business State*</span>
+              <input type="text" name="state"placeholder="Business State*"  autocomplete="address-level1" required>
             </label>
             <label>
-              <span>Accounting Software</span>
-              <select name="software" required>
+              <span>Accounting Software*</span>
+              <select name="software" required placeholder="Accounting Software*">
                 <option value="">Select software</option>
                 <option>QuickBooks</option>
                 <option>Xero</option>
@@ -1873,8 +1882,8 @@
               </select>
             </label>
             <label>
-              <span>Service Needed</span>
-              <select name="service" required>
+              <span>Service Needed*</span>
+              <select name="service" required placeholder="Service Needed*">
                 <option value="">Select service</option>
                 <option>Books cleanup</option>
                 <option>Monthly bookkeeping</option>
@@ -1890,7 +1899,7 @@
             <label class="full-span">
               <span>Message</span>
               <textarea name="message" rows="5"
-                placeholder="Tell us what is messy, behind, or not matching."></textarea>
+                placeholder="Tell us what is messy, behind, or not matching." ></textarea>
             </label>
           </div>
           <button class="btn btn-primary form-submit" type="submit">Request My Free Review</button>
