@@ -809,6 +809,38 @@
       border-radius: 10px;
       transition: all 0.7s ease;
     }
+    .process-grid article::before,
+.benefit-grid article::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0));
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+.process-grid article:hover,
+.benefit-grid article:hover {
+  transform: translateY(-10px);
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.18);
+}
+/* ACTIVATE GLOW */
+.process-grid article:hover::before,
+.benefit-grid article:hover::before {
+  opacity: 1;
+}
+
+/* ICON ANIMATION */
+.process-grid article span img,
+.benefit-grid article span img {
+  transition: transform 0.4s ease;
+}
+
+.process-grid article:hover span img,
+.benefit-grid article:hover span img {
+  transform: scale(1.08) rotate(-3deg);
+}
 
     .process-grid span {
       width: 26px;
@@ -864,7 +896,7 @@
     }
 
     .compare-grid li {
-      padding: 11px 16px;
+      padding: 11px 7px;
       color: var(--white);
       background: var(--blue-700);
       border-radius: 6px;
@@ -1138,13 +1170,23 @@
       }
     }
 
-    
+    .compare-grid br {
+  display: none;
+}
+
+/* MOBILE ONLY: show line breaks */
+@media (max-width: 768px) {
+  .compare-grid br {
+    display: inline;
+  }
+}
     
 
     @media (max-width: 991px) {
       :root {
         --container: 720px;
       }
+    
 
       .header-inner {
         min-height: 34px;
@@ -1244,6 +1286,7 @@
 
       .site-header {
         position: static;
+        display: none;
       }
 
       .header-inner,
@@ -1257,6 +1300,21 @@
       .section,
       .final-cta {
         padding: 35px 0;
+      }
+      .problem-section{
+        margin-top: -138px;
+      }
+      .section-soft{
+        margin-bottom: -35px;
+      }
+      .monthly-section{
+        margin-bottom: -35px;
+      }
+      .lead-grid{
+        margin-bottom: -40px;
+      }
+      .simple-list li{
+        text-align: center;
       }
 
       .hero-grid {
@@ -1343,13 +1401,13 @@
         padding: 20px;
         /* margin-top: -45px; */
         position: relative;
-        top: -40px;
+        top: -121px;
         left: 10px;
     }
         .hero {
-        min-height: auto;
-        background: linear-gradient(90deg, rgba(2, 7, 25, 0), rgba(2, 7, 25, 0)), url(/mainbanner2.jpg) right center / cover no-repeat, var(--navy-950);
-        background-size: 100% 75%;
+          min-height: auto;
+        background: linear-gradient(90deg, rgba(2, 7, 25, 0), rgba(2, 7, 25, 0)), url(/mainbanner2.jpg) right center / cover no-repeat, #ffffff;
+         background-size: 100% 70%;
         background-position: right center;
         background-position-y: 0px;
     }
@@ -1507,7 +1565,13 @@
 .section {
     padding: 51px 0;
 }
+
     }
+
+article:hover {
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+  transition: box-shadow 0.3s ease;
+}
         .eyebrow {
       margin: 0 0 8px;
       color: var(--blue-700);
@@ -1763,8 +1827,8 @@
               <li>Transactions reviewed and organized</li>
               <li>Accounts checked and reconciled</li>
               <li>Cleaner profit and loss reporting</li>
-              <li>Tax-ready records</li>
-              <li>Clearer financial visibility</li>
+              <li>Tax-ready <br> records</li>
+              <li>Clearer financial <br> visibility</li>
             </ul>
           </div>
         </div>
