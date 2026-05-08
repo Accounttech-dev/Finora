@@ -1552,7 +1552,7 @@ img {
    .top-strip-left span {
     color: #374151;
     font-weight: 600;
-    font-size: 0.6rem;
+    font-size: 1.0rem;
 }
 
 .check-list li {
@@ -1691,23 +1691,30 @@ img {
                     <form id="heroForm" class="contact-form">
                         <div class="input-group">
                             <i class="fa-regular fa-user input-icon"></i>
-                            <input type="text" placeholder="Full Name" required>
+                            <input type="text" name="fullName" placeholder="Full Name*" required
+                             oninvalid="this.setCustomValidity('Please enter your full name')"
+  oninput="this.setCustomValidity('')"
+                            >
                         </div>
                         <div class="input-group">
                             <i class="fa-regular fa-envelope input-icon"></i>
-                            <input type="email" placeholder="Email Address" required>
+                            <input type="email" name="email" placeholder="Email Address*" required>
                         </div>
                         <div class="input-group">
                             <i class="fa-solid fa-phone input-icon"></i>
-                            <input type="tel" placeholder="Phone Number" required>
+                            <input type="tel" name="phone" placeholder="Phone Number*" required
+                             pattern="^\+1\d{10}$"
+                               title="Enter a valid US number like +12345678901"
+
+                            >
                         </div>
                         <div class="input-group">
                             <i class="fa-regular fa-building input-icon"></i>
-                            <input type="text" placeholder="Business Name" required>
+                            <input type="text" name="businessName" placeholder="Business Name*" required>
                         </div>
                         <div class="input-group">
                             <i class="fa-regular fa-comment-dots input-icon"></i>
-                            <textarea placeholder="Message (Optional)" rows="2"></textarea>
+                            <textarea name="message" placeholder="Message (Optional)" rows="2"></textarea>
                         </div>
                         
                         <button type="submit" class="btns btn-full">Claim Your $200 Offer</button>
@@ -1953,34 +1960,38 @@ your books yourself.</p>
                     <form  id="advancedForm" class="advanced-form">
                         <div class="form-row">
                             <div class="form-group">
-                                <label>Full Name</label>
-                                <input type="text" required>
+                                <label>Full Name*</label>
+                                <input type="text" name="fullName" required>
                             </div>
                             <div class="form-group">
-                                <label>Business Name</label>
-                                <input type="text" required>
-                            </div>
-                        </div>
-                        
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label>Email Address</label>
-                                <input type="email" required>
-                            </div>
-                            <div class="form-group">
-                                <label>Phone Number</label>
-                                <input type="tel" required>
+                                <label>Business Name*</label>
+                                <input type="text" name="businessName" required>
                             </div>
                         </div>
                         
                         <div class="form-row">
                             <div class="form-group">
-                                <label>Business State</label>
-                                <input type="text" required>
+                                <label>Email Address*</label>
+                                <input type="email" name="email" required>
                             </div>
                             <div class="form-group">
-                                <label>Accounting Software</label>
-                                <select>
+                                <label>Phone Number*</label>
+                                <input type="tel" name="phone" required
+                                  pattern="^\+1\d{10}$"
+                                    title="Enter a valid US number like +12345678901"
+
+                                >
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Business State*</label>
+                                <input type="text" name="businessState" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Accounting Software*</label>
+                                <select name="accountingSoftware" required>
                                     <option>Select Software</option>
                                     <option>QuickBooks Online</option>
                                     <option>Xero</option>
@@ -1992,8 +2003,8 @@ your books yourself.</p>
                         
                         <div class="form-row">
                             <div class="form-group">
-                                <label>Service Needed</label>
-                                <select>
+                                <label>Service Needed*</label>
+                                <select name="serviceNeeded" required>
                                     <option>Select Service</option>
                                     <option>Monthly Bookkeeping</option>
                                     <option>Catch-up / Cleanup</option>
@@ -2002,13 +2013,13 @@ your books yourself.</p>
                             </div>
                             <div class="form-group">
                                 <label>How many months are behind?</label>
-                                <input type="text" placeholder="e.g., 3 months, 1 year">
+                                <input type="text" name="monthsBehind" placeholder="e.g., 3 months, 1 year">
                             </div>
                         </div>
                         
                         <div class="form-group">
-                            <label>Message</label>
-                            <textarea rows="4" placeholder="Tell us what you are looking for and what you need help with."></textarea>
+                            <label>Message*</label>
+                            <textarea  name="message" rows="4" placeholder="Tell us what you are looking for and what you need help with." required></textarea>
                         </div>
                         
                         <button type="submit" class="btnss">Request My Free Review</button>
