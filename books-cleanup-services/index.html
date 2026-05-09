@@ -118,7 +118,7 @@
 
 .popup-close {
   position: absolute;
-  top: 18px;
+  top: 0px;
   right: 18px;
   width: 42px;
   height: 42px;
@@ -1423,7 +1423,8 @@
         padding-left: 14px;
         border-radius: 12px;
         margin: 3px 0px;
-        top: -25px;
+        top: -114px;
+        z-index: 10000;
     }
 
       .check-panel {
@@ -1643,7 +1644,42 @@ article:hover {
   }
 }
 
+/* Mobile popup center fix */
+@media (max-width: 767px) {
+  .popup-overlay {
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+  }
 
+  .popup-form-container {
+    width: 100%;
+    max-width: calc(100vw - 32px);
+    max-height: 90vh;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .popup-form-container .hero-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    position: static !important;
+    top: auto !important;
+    left: auto !important;
+    margin-top: 0 !important;
+    padding: 20px 16px;
+    box-sizing: border-box;
+  }
+
+  .popup-close {
+    position: fixed;
+    top: 12px;
+    right: 12px;
+    z-index: 10000;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+  }
+}
   </style>
 </head>
 
