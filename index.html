@@ -353,6 +353,7 @@
       --main-font: StabilGrotesk-029909808665ec7b, "StabilGrotesk-029909808665ec7b fallback: Arial", Helvetica, Arial, sans-serif;
     }
   </style>
+   <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
   <link rel="stylesheet" href="../ram.aifinoracpu.com/_astro-assets/booked.0_EVPCIz.css">
   <link rel="stylesheet" href="../ram.aifinoracpu.com/_astro-assets/index.BW-MCg4d.css">
   <link rel="stylesheet" href="../ram.aifinoracpu.com/_astro-assets/index.CGhjID6V.css">
@@ -2936,14 +2937,10 @@ function toggleMobileInd(btn) {
       </select>
 
       <textarea name="message" placeholder="Message"></textarea>
-      <input type="hidden" name="g-recaptcha-response" id="g-recaptcha-response">
+                    <div class="cf-turnstile"
+         data-sitekey="0x4AAAAAADNW2MtpWjhewR0e">
+    </div>
 
-      <div class="recaptcha-wrap">
-        <!-- Widget renders here after api.js loads -->
-        <div id="recaptcha-container" class="g-recaptcha"></div>
-        <div class="error-message" id="recaptchaError" role="alert">
-        </div>
-      </div>
 
 
       <button type="submit" id="contact-submit-btn">Submit</button>
