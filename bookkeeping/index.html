@@ -474,8 +474,8 @@ img { max-width: 100%; height: auto; display: block; }
 .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem; }
 .form-group { margin-bottom: 1.5rem; }
 .form-row .form-group { margin-bottom: 0; }
-.form-group label { display: block; font-size: 0.83rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--text-main); }
-.form-group input, .form-group select, .form-group textarea { width: 100%; padding: 0.75rem 1rem; border: 1px solid var(--border-light); border-radius: var(--br-md); font-family: inherit; font-size: 0.9375rem; font-weight: 700; background-color: var(--white); transition: var(--transition); }
+.form-group label { display: block; font-size: 0.83rem; font-weight: 600; margin-bottom: 0.5rem; color: var(--text-main); }
+.form-group input, .form-group select, .form-group textarea { width: 100%; padding: 0.75rem 1rem; border: 1px solid var(--border-light); border-radius: var(--br-md); font-family: inherit; font-size: 0.8rem; font-weight: 500; background-color: var(--white); transition: var(--transition); }
 .form-group textarea { resize: vertical; }
 .form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: var(--primary-blue); box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1); }
 
@@ -667,7 +667,7 @@ img { max-width: 100%; height: auto; display: block; }
     .why-grid { grid-template-columns: 1fr; }
     .section-title { font-size: 23px; }
     .pill-card { font-size: 1.0rem; justify-content: center;}
-    .form-group label { font-size: 1.0rem; }
+    .form-group label { font-size: 0.8rem; }
     .section-title br { display: none; }
     .full-width-banner h2 { font-size: 1.1rem; }
     .form-title { font-size: 1.6rem; }
@@ -798,7 +798,7 @@ img { max-width: 100%; height: auto; display: block; }
                 </div>
                 <div class="input-group">
                     <i class="fa-solid fa-phone input-icon"></i>
-                    <input type="tel" name="phone" placeholder="Phone (+12345678901)*" required
+                    <input type="tel" name="phone" placeholder="(+12345678901)*" required
                         pattern="^\+1\d{10}$"
                         title="Enter a valid US number like +12345678901">
                 </div>
@@ -860,7 +860,7 @@ img { max-width: 100%; height: auto; display: block; }
                         </div>
                         <div class="input-group">
                             <i class="fa-solid fa-phone input-icon"></i>
-                            <input type="tel" name="phone" placeholder="Phone (+12345678901)*" required
+                            <input type="tel" name="phone" placeholder="(+12345678901)*" required
                                 pattern="^\+1\d{10}$"
                                 title="Enter a valid US number like +12345678901">
                         </div>
@@ -1074,22 +1074,22 @@ img { max-width: 100%; height: auto; display: block; }
                         <div class="form-row">
                             <div class="form-group">
                                 <label>Full Name*</label>
-                                <input type="text" name="fullName" placeholder="Full Name" required>
+                                <input type="text" name="fullName"  required>
                             </div>
                             <div class="form-group">
                                 <label>Business Name*</label>
-                                <input type="text" name="businessName" placeholder="Business Name"required>
+                                <input type="text" name="businessName" required>
                             </div>
                         </div>
 
                         <div class="form-row">
                             <div class="form-group">
                                 <label>Email Address*</label>
-                                <input type="email" name="email" placeholder="Email Address" required>
+                                <input type="email" name="email"  required>
                             </div>
                             <div class="form-group">
                                 <label>Phone Number*</label>
-                                <input type="tel" name="phone" placeholder="Phone (+12345678901)*" required
+                                <input type="tel" name="phone" placeholder="(+12345678901)" required
                                     pattern="^\+1\d{10}$"
                                     title="Enter a valid US number like +12345678901">
                             </div>
@@ -1098,11 +1098,11 @@ img { max-width: 100%; height: auto; display: block; }
                         <div class="form-row">
                             <div class="form-group">
                                 <label>Business State*</label>
-                                <input type="text" name="businessState" placeholder="Business State" required>
+                                <input type="text" name="businessState"  required>
                             </div>
                             <div class="form-group">
                                 <label>Accounting Software*</label>
-                                <select name="accountingSoftware" placeholder="Accounting Software" required>
+                                <select name="accountingSoftware"  required>
                                     <option>Select Software</option>
                                     <option>QuickBooks Online</option>
                                     <option>Xero</option>
@@ -1115,7 +1115,7 @@ img { max-width: 100%; height: auto; display: block; }
                         <div class="form-row">
                             <div class="form-group">
                                 <label>Service Needed*</label>
-                                <select name="serviceNeeded" placeholder="Service Needed" required>
+                                <select name="serviceNeeded"  required>
                                     <option>Select Service</option>
                                     <option>Monthly Bookkeeping</option>
                                     <option>Catch-up / Cleanup</option>
@@ -1124,13 +1124,13 @@ img { max-width: 100%; height: auto; display: block; }
                             </div>
                             <div class="form-group">
                                 <label>How many months are behind?</label>
-                                <input type="text" name="monthsBehind" placeholder="e.g., 3 months, 1 year">
+                                <input type="text" name="monthsBehind" >
                             </div>
                         </div>
 
                         <div class="form-group">
                             <label>Message*</label>
-                            <textarea name="message" rows="4" placeholder="Tell us what you are looking for and what you need help with." required></textarea>
+                            <textarea name="message" rows="4"  required></textarea>
                         </div>
 
                         <button type="submit" class="btnss">Request My Free Review</button>

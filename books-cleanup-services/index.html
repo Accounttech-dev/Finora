@@ -89,63 +89,64 @@
       width: min(calc(100% - 44px), var(--container));
       margin: 0 auto;
     }
-  
-.popup-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(2, 7, 25, 0.78);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.35s ease;
-  z-index: 9999;
-}
 
-.popup-overlay.active {
-  opacity: 1;
-  visibility: visible;
-}
+    .popup-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(2, 7, 25, 0.78);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.35s ease;
+      z-index: 9999;
+    }
 
-.popup-form-container {
-  position: relative;
-  width: 100%;
-  max-width: 540px;
-  animation: popupFadeUp 0.35s ease;
-}
+    .popup-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
 
-.popup-close {
-  position: absolute;
-  top: 0px;
-  right: 18px;
-  width: 42px;
-  height: 42px;
-  border: none;
-  border-radius: 50%;
-  background: rgba(255,255,255,0.12);
-  backdrop-filter: blur(10px);
-  color: black;
-  font-size: 28px;
-  cursor: pointer;
-  z-index: 2;
-}
+    .popup-form-container {
+      position: relative;
+      width: 100%;
+      max-width: 540px;
+      animation: popupFadeUp 0.35s ease;
+    }
 
-.popup-close:hover {
-  transform: scale(1.08);
-}
+    .popup-close {
+      position: absolute;
+      top: 0px;
+      right: 18px;
+      width: 42px;
+      height: 42px;
+      border: none;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(10px);
+      color: black;
+      font-size: 28px;
+      cursor: pointer;
+      z-index: 2;
+    }
 
-@keyframes popupFadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(25px) scale(0.96);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
-}
+    .popup-close:hover {
+      transform: scale(1.08);
+    }
+
+    @keyframes popupFadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(25px) scale(0.96);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
 
     .site-header {
       position: sticky;
@@ -240,7 +241,7 @@
       padding: 76px 0;
     }
 
-    
+
 
     .hero-grid {
       display: grid;
@@ -510,8 +511,13 @@
       color: var(--ink);
       background: #fbfdff;
       border: 1px solid #d8e0ec;
-      border-radius: 3px;
+      border-radius: 10px;
       box-shadow: none;
+    }
+
+    input::placeholder{
+      font-size: 13px;
+      font-family: "Montserrat", Arial, sans-serif;
     }
 
     textarea {
@@ -810,38 +816,41 @@
       border-radius: 10px;
       transition: all 0.7s ease;
     }
+
     .process-grid article::before,
-.benefit-grid article::before{
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0));
-  opacity: 0;
-  transition: opacity 0.4s ease;
-}
-.process-grid article:hover,
-.benefit-grid article:hover {
-  transform: translateY(-10px);
-  background: rgba(255, 255, 255, 0.12);
-  border-color: rgba(255, 255, 255, 0.25);
-  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.18);
-}
-/* ACTIVATE GLOW */
-.process-grid article:hover::before,
-.benefit-grid article:hover::before {
-  opacity: 1;
-}
+    .benefit-grid article::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0));
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
 
-/* ICON ANIMATION */
-.process-grid article span img,
-.benefit-grid article span img {
-  transition: transform 0.4s ease;
-}
+    .process-grid article:hover,
+    .benefit-grid article:hover {
+      transform: translateY(-10px);
+      background: rgba(255, 255, 255, 0.12);
+      border-color: rgba(255, 255, 255, 0.25);
+      box-shadow: 0 18px 35px rgba(0, 0, 0, 0.18);
+    }
 
-.process-grid article:hover span img,
-.benefit-grid article:hover span img {
-  transform: scale(1.08) rotate(-3deg);
-}
+    /* ACTIVATE GLOW */
+    .process-grid article:hover::before,
+    .benefit-grid article:hover::before {
+      opacity: 1;
+    }
+
+    /* ICON ANIMATION */
+    .process-grid article span img,
+    .benefit-grid article span img {
+      transition: transform 0.4s ease;
+    }
+
+    .process-grid article:hover span img,
+    .benefit-grid article:hover span img {
+      transform: scale(1.08) rotate(-3deg);
+    }
 
     .process-grid span {
       width: 26px;
@@ -1054,12 +1063,12 @@
     }
 
     .faq-answer p {
-    min-height: 0;
-    margin: 0;
-    /* padding: 0 30px 16px 0; */
-    overflow: hidden;
-    font-size: 0.9rem;
-}
+      min-height: 0;
+      margin: 0;
+      /* padding: 0 30px 16px 0; */
+      overflow: hidden;
+      font-size: 0.9rem;
+    }
 
     .final-cta {
       padding: 76px 0;
@@ -1172,22 +1181,22 @@
     }
 
     .compare-grid br {
-  display: none;
-}
+      display: none;
+    }
 
-/* MOBILE ONLY: show line breaks */
-@media (max-width: 768px) {
-  .compare-grid br {
-    display: inline;
-  }
-}
-    
+    /* MOBILE ONLY: show line breaks */
+    @media (max-width: 768px) {
+      .compare-grid br {
+        display: inline;
+      }
+    }
+
 
     @media (max-width: 991px) {
       :root {
         --container: 720px;
       }
-    
+
 
       .header-inner {
         min-height: 34px;
@@ -1318,19 +1327,21 @@
         background-position-y: 0px;
         top: -24px;
       }
+
       .hero-card {
-    align-self: center;
-    min-width: 0;
-    padding: 28px 24px;
-    color: var(--ink);
-    background: rgba(255, 255, 255, 0.96);
-    border: 1px solid rgba(255, 255, 255, 0.76);
-    border-radius: 10px;
-    box-shadow: 0 22px 60px rgba(0, 0, 0, 0.32);
-    position: relative;
-    top: -51px;
-}
-.btn-glow {
+        align-self: center;
+        min-width: 0;
+        padding: 28px 24px;
+        color: var(--ink);
+        background: rgba(255, 255, 255, 0.96);
+        border: 1px solid rgba(255, 255, 255, 0.76);
+        border-radius: 10px;
+        box-shadow: 0 22px 60px rgba(0, 0, 0, 0.32);
+        position: relative;
+        top: -51px;
+      }
+
+      .btn-glow {
         width: 76%;
         position: relative;
         top: -150px;
@@ -1341,21 +1352,22 @@
         border-radius: 16px;
         font-size: clamp(1.1rem, 2.35vw, 2rem);
         left: -62px;
+      }
     }
-}
 
-@media screen and (min-width: 1024px) {
-    .problem-section {
-    background: var(--white);
-    margin-top: -170px;
-}
-}
-.section {
-    padding: 51px 0;
-}
+    @media screen and (min-width: 1024px) {
+      .problem-section {
+        background: var(--white);
+        margin-top: -170px;
+      }
+    }
 
-    
-        @media(max-width:360px){
+    .section {
+      padding: 51px 0;
+    }
+
+
+    @media(max-width:360px) {
       .hero {
         min-height: auto;
         background: linear-gradient(90deg, rgba(2, 7, 25, 0), rgba(2, 7, 25, 0)), url(/mainbanner2.jpg) right center / cover no-repeat, #ffffff;
@@ -1363,6 +1375,7 @@
         background-position: right center;
         background-position-y: 0px;
       }
+
       .btn-glow {
         width: calc(100vw - 48px);
         max-width: 100%;
@@ -1376,109 +1389,112 @@
       }
     }
 
-article:hover {
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-  transition: box-shadow 0.3s ease;
-}
-        .eyebrow {
+    article:hover {
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+      transition: box-shadow 0.3s ease;
+    }
+
+    .eyebrow {
       margin: 0 0 8px;
       color: var(--blue-700);
       font-size: 1rem;
       font-weight: 600;
       text-transform: uppercase;
-      
+
     }
-    
+
     #scrollTopBtn {
-  position: fixed;
-  bottom: 28px;
-  right: 22px;
-  z-index: 999;
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #17eff2, #2368ff);
-  border: none;
-  cursor: pointer;
-  box-shadow: 0 6px 20px rgba(35, 104, 255, 0.38);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(12px);
-  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
-}
+      position: fixed;
+      bottom: 28px;
+      right: 22px;
+      z-index: 999;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #17eff2, #2368ff);
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 6px 20px rgba(35, 104, 255, 0.38);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(12px);
+      transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+    }
 
-#scrollTopBtn.visible {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-}
+    #scrollTopBtn.visible {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
 
-#scrollTopBtn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 28px rgba(35, 104, 255, 0.5);
-}
+    #scrollTopBtn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 28px rgba(35, 104, 255, 0.5);
+    }
 
-#scrollTopBtn svg {
-  width: 22px;
-  height: 22px;
-  fill: #031026;
-}
+    #scrollTopBtn svg {
+      width: 22px;
+      height: 22px;
+      fill: #031026;
+    }
 
-@media (max-width: 767px) {
-  #scrollTopBtn {
-    bottom: 18px;
-    right: 14px;
-    width: 44px;
-    height: 44px;
-  }
-}
+    @media (max-width: 767px) {
+      #scrollTopBtn {
+        bottom: 18px;
+        right: 14px;
+        width: 44px;
+        height: 44px;
+      }
+    }
 
-/* Mobile popup center fix */
-@media (max-width: 767px) {
-  .popup-overlay {
-    align-items: center;
-    justify-content: center;
-    padding: 16px;
-  }
+    /* Mobile popup center fix */
+    @media (max-width: 767px) {
+      .popup-overlay {
+        align-items: center;
+        justify-content: center;
+        padding: 16px;
+      }
 
-  .popup-form-container {
-    width: 100%;
-    max-width: calc(100vw - 32px);
-    max-height: 90vh;
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
-  }
+      .popup-form-container {
+        width: 100%;
+        max-width: calc(100vw - 32px);
+        max-height: 90vh;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+      }
 
-  .popup-form-container .hero-card {
-    width: 100% !important;
-    max-width: 100% !important;
-    position: static !important;
-    top: auto !important;
-    left: auto !important;
-    margin-top: 0 !important;
-    padding: 20px 16px;
-    box-sizing: border-box;
-  }
+      .popup-form-container .hero-card {
+        width: 100% !important;
+        max-width: 100% !important;
+        position: static !important;
+        top: auto !important;
+        left: auto !important;
+        margin-top: 0 !important;
+        padding: 20px 16px;
+        box-sizing: border-box;
+      }
 
-  .popup-close {
-    position: fixed;
-    top: 12px;
-    right: 12px;
-    z-index: 10000;
-    color: white;
-    background: rgba(0, 0, 0, 0.5);
-  }
-}
+      .popup-close {
+        position: fixed;
+        top: 12px;
+        right: 12px;
+        z-index: 10000;
+        color: white;
+        background: rgba(0, 0, 0, 0.5);
+      }
+    }
+
     @media (max-width: 767px) {
       :root {
         --gutter: 16px;
       }
-     .compare-grid li{
-       font-size: 0.7rem;
-     }
+
+      .compare-grid li {
+        font-size: 0.7rem;
+      }
 
       .center {
         text-align: center;
@@ -1518,19 +1534,24 @@ article:hover {
       .final-cta {
         padding: 35px 0;
       }
-      .problem-section{
-        margin-top: -248px ;
+
+      .problem-section {
+        margin-top: -248px;
       }
-      .section-soft{
+
+      .section-soft {
         margin-bottom: -35px;
       }
-      .monthly-section{
+
+      .monthly-section {
         margin-bottom: -35px;
       }
-      .lead-grid{
+
+      .lead-grid {
         margin-bottom: -40px;
       }
-      .simple-list li{
+
+      .simple-list li {
         text-align: center;
       }
 
@@ -1612,7 +1633,7 @@ article:hover {
         left: 10px;
       }
 
-          .hero-card{
+      .hero-card {
         width: 100%;
         max-width: calc(100vw - 48px);
         padding: 20px;
@@ -1620,15 +1641,17 @@ article:hover {
         position: relative;
         top: -209px;
         left: 10px;
-    }
-        .hero {
-          min-height: auto;
+      }
+
+      .hero {
+        min-height: auto;
         background: linear-gradient(90deg, rgba(2, 7, 25, 0), rgba(2, 7, 25, 0)), url(/mainbanner2.jpg) right center / cover no-repeat, #ffffff;
-         background-size: 100% 59%;
+        background-size: 100% 59%;
         background-position: right center;
         background-position-y: 0px;
-    }
-        .btn-glow {
+      }
+
+      .btn-glow {
         width: calc(100vw - 48px);
         max-width: 100%;
         min-height: 75px;
@@ -1638,7 +1661,7 @@ article:hover {
         margin: 3px 0px;
         top: -114px;
         z-index: 10000;
-    }
+      }
 
       .check-panel {
         margin-top: 0px
@@ -1664,7 +1687,7 @@ article:hover {
       .benefit-grid,
       .compare-grid,
       .form-grid {
-       grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
       }
 
       .mini-card,
@@ -1701,7 +1724,8 @@ article:hover {
 <body>
   <header class="site-header" id="top">
     <div class="container header-inner">
-      <a class="prehead-link" href="https://www.aifinora.com/book-a-meeting.html">Need Professional Bookkeeping? <strong>Book Schedule Now</strong></a>
+      <a class="prehead-link" href="https://www.aifinora.com/book-a-meeting.html">Need Professional Bookkeeping?
+        <strong>Book Schedule Now</strong></a>
       <div class="header-actions" aria-label="Contact AI Finora">
         <a href="tel:+1(828) 367-0905">(828) 367-0905</a>
         <a href="mailto:sales@aifinora.com">sales@aifinora.com</a>
@@ -1750,9 +1774,7 @@ article:hover {
             <label>
               <span class="sr-only">Full Name*</span>
               <input type="text" name="fullName" placeholder="Full Name" autocomplete="name" required
-                 oninvalid="this.setCustomValidity('Please enter your full name')"
-                        oninput="this.setCustomValidity('')"
-              >
+                oninvalid="this.setCustomValidity('Please enter your full name')" oninput="this.setCustomValidity('')">
             </label>
             <label>
               <span class="sr-only">Email Address*</span>
@@ -1761,9 +1783,7 @@ article:hover {
             <label>
               <span class="sr-only">Phone Number*</span>
               <input type="tel" name="phone" placeholder="Phone Number (+12345678901)" autocomplete="tel" required
-               pattern="^\+1\d{10}$"
-                        title="Enter a valid US number like +12345678901"
-              >
+                pattern="^\+1\d{10}$" title="Enter a valid US number like +12345678901">
             </label>
             <label>
               <span class="sr-only">Business Name*</span>
@@ -1771,7 +1791,7 @@ article:hover {
             </label>
             <label>
               <span class="sr-only">Bookkeeping problem*</span>
-              <textarea name="message" rows="4" placeholder="Tell us about your books right now" ></textarea>
+              <textarea name="message" rows="4" placeholder="Tell us about your books right now"></textarea>
             </label>
             <button class="btn btn-primary form-button" type="submit">Claim Your $199 Offer <span
                 aria-hidden="true">&rarr;</span></button>
@@ -1852,7 +1872,7 @@ article:hover {
 
     <section class="offer-banner" id="pricing" aria-label="Books cleanup offer">
       <div class="container">
-        <a  target="_blank">
+        <a target="_blank">
           <div class="banner-card">
             <p>Claim Your Complete Books Cleanup Today</p>
             <strong>Only $199</strong>
@@ -2027,30 +2047,28 @@ article:hover {
           <div class="form-grid">
             <label>
               <span>Full Name*</span>
-              <input type="text" name="fullName" placeholder="Name*" autocomplete="name" required>
+              <input type="text" name="fullName" autocomplete="name" required>
             </label>
             <label>
               <span>Business Name*</span>
-              <input type="text" name="businessName" placeholder="Business Name*" autocomplete="organization" required>
+              <input type="text" name="businessName" autocomplete="organization" required>
             </label>
             <label>
               <span>Email Address*</span>
-              <input type="email" name="email" placeholder="Email Address*" autocomplete="email" required>
+              <input type="email" name="email" autocomplete="email" required>
             </label>
             <label>
               <span>Phone Number*</span>
-              <input type="tel" name="phone" placeholder="Phone Number (+12345678901)*"  autocomplete="tel" required
-                pattern="^\+1\d{10}$"
-                        title="Enter a valid US number like +12345678901"
-              >
+              <input type="tel" name="phone" placeholder="(+12345678901)" autocomplete="tel" required
+                pattern="^\+1\d{10}$" title="Enter a valid US number like +12345678901">
             </label>
             <label>
               <span>Business State*</span>
-              <input type="text" name="state"placeholder="Business State*"  autocomplete="address-level1" required>
+              <input type="text" name="state" autocomplete="address-level1" required>
             </label>
             <label>
               <span>Accounting Software*</span>
-              <select name="software" required placeholder="Accounting Software*">
+              <select name="software" required>
                 <option value="">Select software</option>
                 <option>QuickBooks</option>
                 <option>Xero</option>
@@ -2062,7 +2080,7 @@ article:hover {
             </label>
             <label>
               <span>Service Needed*</span>
-              <select name="service" required placeholder="Service Needed*">
+              <select name="service" required>
                 <option value="">Select service</option>
                 <option>Books cleanup</option>
                 <option>Monthly bookkeeping</option>
@@ -2073,12 +2091,11 @@ article:hover {
             </label>
             <label>
               <span>How many months are behind?</span>
-              <input type="text" name="monthsBehind" placeholder="Example: 3 months">
+              <input type="text" name="monthsBehind">
             </label>
             <label class="full-span">
               <span>Message</span>
-              <textarea name="message" rows="5"
-                placeholder="Tell us what is messy, behind, or not matching." ></textarea>
+              <textarea name="message" rows="5"></textarea>
             </label>
           </div>
           <button class="btn btn-primary form-submit" type="submit">Request My Free Review</button>
@@ -2144,17 +2161,16 @@ article:hover {
         <p>Get your business records organized, reconciled, and ready for better financial decisions with AI Finora.</p>
         <div class="cta-row">
           <a class="btn btn-primary" href="#lead-form">Get Free Bookkeeping Review</a>
-          <a class="btn btn-secondary"
-            href="https://wa.me/16262751535"
-            target="_blank" rel="noopener">Chat With AI Finora on WhatsApp</a>
+          <a class="btn btn-secondary" href="https://wa.me/16262751535" target="_blank" rel="noopener">Chat With AI
+            Finora on WhatsApp</a>
         </div>
       </div>
 
       <button id="scrollTopBtn" aria-label="Back to top" title="Scroll to top">
-  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-    <path d="M12 4l-8 8h5v8h6v-8h5z"/>
-  </svg>
-</button>
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 4l-8 8h5v8h6v-8h5z" />
+        </svg>
+      </button>
     </section>
   </main>
 
@@ -2169,48 +2185,48 @@ article:hover {
     </div>
   </footer>
   <div class="popup-overlay" id="popupOverlay">
-  <div class="popup-form-container">
-    <button class="popup-close" id="closePopup" aria-label="Close popup">&times;</button>
+    <div class="popup-form-container">
+      <button class="popup-close" id="closePopup" aria-label="Close popup">&times;</button>
 
-    <aside class="hero-card" aria-labelledby="hero-form-title">
-      <h2 id="hero-form-title">Get Started Today</h2>
-      <p>Book your bookkeeping cleanup consultation</p>
+      <aside class="hero-card" aria-labelledby="hero-form-title">
+        <h2 id="hero-form-title">Get Started Today</h2>
+        <p>Book your bookkeeping cleanup consultation</p>
 
-      <form class="quick-form" data-lead-form="">
-        <label>
-          <span class="sr-only">Full Name</span>
-          <input type="text" name="fullName" placeholder="Full Name" autocomplete="name" required>
-        </label>
+        <form class="quick-form" data-lead-form="">
+          <label>
+            <span class="sr-only">Full Name</span>
+            <input type="text" name="fullName" placeholder="Full Name" autocomplete="name" required>
+          </label>
 
-        <label>
-          <span class="sr-only">Email Address</span>
-          <input type="email" name="email" placeholder="Email Address" autocomplete="email" required>
-        </label>
+          <label>
+            <span class="sr-only">Email Address</span>
+            <input type="email" name="email" placeholder="Email Address" autocomplete="email" required>
+          </label>
 
-        <label>
-          <span class="sr-only">Phone Number</span>
-          <input type="tel" name="phone" placeholder="Phone Number" autocomplete="tel" required>
-        </label>
+          <label>
+            <span class="sr-only">Phone Number</span>
+            <input type="tel" name="phone" placeholder="Phone Number" autocomplete="tel" required>
+          </label>
 
-        <label>
-          <span class="sr-only">Business Name</span>
-          <input type="text" name="businessName" placeholder="Business Name" autocomplete="organization">
-        </label>
+          <label>
+            <span class="sr-only">Business Name</span>
+            <input type="text" name="businessName" placeholder="Business Name" autocomplete="organization">
+          </label>
 
-        <label>
-          <span class="sr-only">Bookkeeping problem</span>
-          <textarea name="message" rows="4" placeholder="Tell us about your books right now"></textarea>
-        </label>
+          <label>
+            <span class="sr-only">Bookkeeping problem</span>
+            <textarea name="message" rows="4" placeholder="Tell us about your books right now"></textarea>
+          </label>
 
-        <button class="btn btn-primary form-button" type="submit">
-          Claim Your $199 Offer <span aria-hidden="true">→</span>
-        </button>
+          <button class="btn btn-primary form-button" type="submit">
+            Claim Your $199 Offer <span aria-hidden="true">→</span>
+          </button>
 
-        <p class="secure-note">Secure & confidential</p>
-      </form>
-    </aside>
+          <p class="secure-note">Secure & confidential</p>
+        </form>
+      </aside>
+    </div>
   </div>
-</div>
 
   <script>
     const year = document.querySelector("[data-year]");
@@ -2270,136 +2286,136 @@ article:hover {
           `Message: ${formData.get("message") || defaultWhatsappText}`
         ].join("\n");
 
-       
+
       });
     });
     // TARGET YOUR EXISTING BUTTON
-const popupTrigger = document.querySelector(".banner-card");
-const popupOverlay = document.getElementById("popupOverlay");
-const closePopup = document.getElementById("closePopup");
+    const popupTrigger = document.querySelector(".banner-card");
+    const popupOverlay = document.getElementById("popupOverlay");
+    const closePopup = document.getElementById("closePopup");
 
-// OPEN
-popupTrigger.addEventListener("click", function () {
-  popupOverlay.classList.add("active");
-  document.body.style.overflow = "hidden";
-});
+    // OPEN
+    popupTrigger.addEventListener("click", function () {
+      popupOverlay.classList.add("active");
+      document.body.style.overflow = "hidden";
+    });
 
-// CLOSE BUTTON
-closePopup.addEventListener("click", function () {
-  popupOverlay.classList.remove("active");
-  document.body.style.overflow = "";
-});
+    // CLOSE BUTTON
+    closePopup.addEventListener("click", function () {
+      popupOverlay.classList.remove("active");
+      document.body.style.overflow = "";
+    });
 
-// CLOSE OUTSIDE CLICK
-popupOverlay.addEventListener("click", function (e) {
-  if (e.target === popupOverlay) {
-    popupOverlay.classList.remove("active");
-    document.body.style.overflow = "";
-  }
-});
+    // CLOSE OUTSIDE CLICK
+    popupOverlay.addEventListener("click", function (e) {
+      if (e.target === popupOverlay) {
+        popupOverlay.classList.remove("active");
+        document.body.style.overflow = "";
+      }
+    });
 
-// ESC KEY
-document.addEventListener("keydown", function (e) {
-  if (e.key === "Escape") {
-    popupOverlay.classList.remove("active");
-    document.body.style.overflow = "";
-  }
-});
+    // ESC KEY
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") {
+        popupOverlay.classList.remove("active");
+        document.body.style.overflow = "";
+      }
+    });
 
 
-const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwkEdS0eCCiIUTQrpPaQSbtrK-SKCbx2aBJawsR_XfeP43b68cZluSbIYKnSLR0zqQ/exec";
+    const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwkEdS0eCCiIUTQrpPaQSbtrK-SKCbx2aBJawsR_XfeP43b68cZluSbIYKnSLR0zqQ/exec";
 
-  function getFormValue(formData, fieldName) {
-    return formData.get(fieldName) ? formData.get(fieldName).toString().trim() : "";
-  }
+    function getFormValue(formData, fieldName) {
+      return formData.get(fieldName) ? formData.get(fieldName).toString().trim() : "";
+    }
 
-  async function submitLeadForm(form) {
-    const formData = new FormData(form);
+    async function submitLeadForm(form) {
+      const formData = new FormData(form);
 
-    const data = {
-      formType: getFormValue(formData, "formType"),
-      fullName: getFormValue(formData, "fullName"),
-      email: getFormValue(formData, "email"),
-      phone: getFormValue(formData, "phone"),
-      businessName: getFormValue(formData, "businessName"),
-      state: getFormValue(formData, "state"),
-      software: getFormValue(formData, "software"),
-      service: getFormValue(formData, "service"),
-      monthsBehind: getFormValue(formData, "monthsBehind"),
-      message: getFormValue(formData, "message")
-    };
+      const data = {
+        formType: getFormValue(formData, "formType"),
+        fullName: getFormValue(formData, "fullName"),
+        email: getFormValue(formData, "email"),
+        phone: getFormValue(formData, "phone"),
+        businessName: getFormValue(formData, "businessName"),
+        state: getFormValue(formData, "state"),
+        software: getFormValue(formData, "software"),
+        service: getFormValue(formData, "service"),
+        monthsBehind: getFormValue(formData, "monthsBehind"),
+        message: getFormValue(formData, "message")
+      };
 
-    console.log("Submitting lead data:", data);
+      console.log("Submitting lead data:", data);
 
-    await fetch(GOOGLE_SCRIPT_URL, {
-      method: "POST",
-      mode: "no-cors",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(data)
-    });
-  }
+      await fetch(GOOGLE_SCRIPT_URL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(data)
+      });
+    }
 
-  document.querySelectorAll("[data-lead-form]").forEach(function(form) {
-    form.addEventListener("submit", async function(event) {
-      event.preventDefault();
+    document.querySelectorAll("[data-lead-form]").forEach(function (form) {
+      form.addEventListener("submit", async function (event) {
+        event.preventDefault();
 
-      const button = form.querySelector("button[type='submit']");
-      const status = form.querySelector("[data-form-status]");
-      const originalText = button ? button.textContent : "";
+        const button = form.querySelector("button[type='submit']");
+        const status = form.querySelector("[data-form-status]");
+        const originalText = button ? button.textContent : "";
 
-      if (button) {
-        button.textContent = "Submitting...";
-        button.disabled = true;
-      }
+        if (button) {
+          button.textContent = "Submitting...";
+          button.disabled = true;
+        }
 
-      if (status) {
-        status.textContent = "Submitting your request...";
-      }
+        if (status) {
+          status.textContent = "Submitting your request...";
+        }
 
-      try {
-        await submitLeadForm(form);
+        try {
+          await submitLeadForm(form);
 
-        if (status) {
-          status.textContent = "Thank you! Your request has been submitted.";
-        } else {
-          alert("Thank you! Your request has been submitted.");
-        }
+          if (status) {
+            status.textContent = "Thank you! Your request has been submitted.";
+          } else {
+            alert("Thank you! Your request has been submitted.");
+          }
 
-        form.reset();
+          form.reset();
 
-      } catch (error) {
-        console.error(error);
+        } catch (error) {
+          console.error(error);
 
-        if (status) {
-          status.textContent = "Something went wrong. Please try again.";
-        } else {
-          alert("Something went wrong. Please try again.");
-        }
+          if (status) {
+            status.textContent = "Something went wrong. Please try again.";
+          } else {
+            alert("Something went wrong. Please try again.");
+          }
 
-      } finally {
-        if (button) {
-          button.textContent = originalText;
-          button.disabled = false;
-        }
-      }
-    });
-  });
+        } finally {
+          if (button) {
+            button.textContent = originalText;
+            button.disabled = false;
+          }
+        }
+      });
+    });
 
-const scrollBtn = document.getElementById("scrollTopBtn");
+    const scrollBtn = document.getElementById("scrollTopBtn");
 
-window.addEventListener("scroll", function () {
-  if (window.scrollY > 300) {
-    scrollBtn.classList.add("visible");
-  } else {
-    scrollBtn.classList.remove("visible");
-  }
-});
+    window.addEventListener("scroll", function () {
+      if (window.scrollY > 300) {
+        scrollBtn.classList.add("visible");
+      } else {
+        scrollBtn.classList.remove("visible");
+      }
+    });
 
-scrollBtn.addEventListener("click", function () {
-  window.scrollTo({ top: 0, behavior: "smooth" });
-});
+    scrollBtn.addEventListener("click", function () {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
 
   </script>
 </body>
