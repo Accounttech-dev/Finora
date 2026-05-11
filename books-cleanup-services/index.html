@@ -1259,12 +1259,225 @@
       }
     }
 
+
+
+    @media (max-width: 420px) {
+      h1 {
+        font-size: 2.25rem;
+      }
+
+      .check-list li {
+        position: relative;
+        min-height: 22px;
+        padding-left: 31px;
+        color: var(--ink);
+        font-size: 0.77rem;
+        font-weight: 700;
+      }
+
+      h2 {
+        font-size: 1.14rem;
+      }
+
+      .hero-price {
+        font-size: 4.5rem;
+      }
+
+      .hero-subtitle {
+        font-size: 1.08rem;
+        margin-top: 29px;
+      }
+
+      .hero-card h2 {
+        font-size: 1.35rem;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .hero {
+        position: relative;
+        min-height: 620px;
+        display: flex;
+        align-items: stretch;
+        color: var(--white);
+        overflow: hidden;
+        background: url(/hero-banner.jpg) right center / cover no-repeat;
+        background-size: 100% 85%;
+        background-position-y: 0px;
+        top: -24px;
+      }
+      .hero-card {
+    align-self: center;
+    min-width: 0;
+    padding: 28px 24px;
+    color: var(--ink);
+    background: rgba(255, 255, 255, 0.96);
+    border: 1px solid rgba(255, 255, 255, 0.76);
+    border-radius: 10px;
+    box-shadow: 0 22px 60px rgba(0, 0, 0, 0.32);
+    position: relative;
+    top: -51px;
+}
+.btn-glow {
+        width: 76%;
+        position: relative;
+        top: -150px;
+        min-height: 82px;
+        color: #031026;
+        background: transparent;
+        border: none;
+        border-radius: 16px;
+        font-size: clamp(1.1rem, 2.35vw, 2rem);
+        left: -62px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .problem-section {
+    background: var(--white);
+    margin-top: -170px;
+}
+}
+.section {
+    padding: 51px 0;
+}
+
+    
+        @media(max-width:360px){
+      .hero {
+        min-height: auto;
+        background: linear-gradient(90deg, rgba(2, 7, 25, 0), rgba(2, 7, 25, 0)), url(/mainbanner2.jpg) right center / cover no-repeat, #ffffff;
+        background-size: 100% 51%;
+        background-position: right center;
+        background-position-y: 0px;
+      }
+      .btn-glow {
+        width: calc(100vw - 48px);
+        max-width: 100%;
+        min-height: 75px;
+        padding-right: 14px;
+        padding-left: 14px;
+        border-radius: 12px;
+        margin: 3px 0px;
+        top: -153px;
+        z-index: 10000;
+      }
+    }
+
+article:hover {
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+  transition: box-shadow 0.3s ease;
+}
+        .eyebrow {
+      margin: 0 0 8px;
+      color: var(--blue-700);
+      font-size: 1rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      
+    }
+    
+    #scrollTopBtn {
+  position: fixed;
+  bottom: 28px;
+  right: 22px;
+  z-index: 999;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #17eff2, #2368ff);
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(35, 104, 255, 0.38);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(12px);
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+}
+
+#scrollTopBtn.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+#scrollTopBtn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(35, 104, 255, 0.5);
+}
+
+#scrollTopBtn svg {
+  width: 22px;
+  height: 22px;
+  fill: #031026;
+}
+
+@media (max-width: 767px) {
+  #scrollTopBtn {
+    bottom: 18px;
+    right: 14px;
+    width: 44px;
+    height: 44px;
+  }
+}
+
+/* Mobile popup center fix */
+@media (max-width: 767px) {
+  .popup-overlay {
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+  }
+
+  .popup-form-container {
+    width: 100%;
+    max-width: calc(100vw - 32px);
+    max-height: 90vh;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .popup-form-container .hero-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    position: static !important;
+    top: auto !important;
+    left: auto !important;
+    margin-top: 0 !important;
+    padding: 20px 16px;
+    box-sizing: border-box;
+  }
+
+  .popup-close {
+    position: fixed;
+    top: 12px;
+    right: 12px;
+    z-index: 10000;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+  }
+}
     @media (max-width: 767px) {
       :root {
         --gutter: 16px;
       }
      .compare-grid li{
-      font-size: 0.8rem;
+       font-size: 0.7rem;
      }
 
       .center {
@@ -1482,204 +1695,6 @@
         width: 100%;
       }
     }
-
-    @media (max-width: 420px) {
-      h1 {
-        font-size: 2.25rem;
-      }
-
-      .check-list li {
-        position: relative;
-        min-height: 22px;
-        padding-left: 31px;
-        color: var(--ink);
-        font-size: 0.77rem;
-        font-weight: 700;
-      }
-
-      h2 {
-        font-size: 1.14rem;
-      }
-
-      .hero-price {
-        font-size: 4.5rem;
-      }
-
-      .hero-subtitle {
-        font-size: 1.08rem;
-        margin-top: 29px;
-      }
-
-      .hero-card h2 {
-        font-size: 1.35rem;
-      }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-
-      *,
-      *::before,
-      *::after {
-        scroll-behavior: auto !important;
-        transition-duration: 0.01ms !important;
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-      }
-    }
-
-    @media (min-width: 1024px) {
-      .hero {
-        position: relative;
-        min-height: 620px;
-        display: flex;
-        align-items: stretch;
-        color: var(--white);
-        overflow: hidden;
-        background: url(/hero-banner.jpg) right center / cover no-repeat;
-        background-size: 100% 85%;
-        background-position-y: 0px;
-        top: -24px;
-      }
-      .hero-card {
-    align-self: center;
-    min-width: 0;
-    padding: 28px 24px;
-    color: var(--ink);
-    background: rgba(255, 255, 255, 0.96);
-    border: 1px solid rgba(255, 255, 255, 0.76);
-    border-radius: 10px;
-    box-shadow: 0 22px 60px rgba(0, 0, 0, 0.32);
-    position: relative;
-    top: -51px;
-}
-.btn-glow {
-        width: 76%;
-        position: relative;
-        top: -150px;
-        min-height: 82px;
-        color: #031026;
-        background: transparent;
-        border: none;
-        border-radius: 16px;
-        font-size: clamp(1.1rem, 2.35vw, 2rem);
-        left: -62px;
-    }
-}
-.problem-section {
-    background: var(--white);
-    margin-top: -170px;
-}
-.section {
-    padding: 51px 0;
-}
-
-    
-        @media(max-width:360px){
-      .hero {
-        min-height: auto;
-        background: linear-gradient(90deg, rgba(2, 7, 25, 0), rgba(2, 7, 25, 0)), url(/mainbanner2.jpg) right center / cover no-repeat, #ffffff;
-        background-size: 100% 51%;
-        background-position: right center;
-        background-position-y: 0px;
-      }
-    }
-
-article:hover {
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-  transition: box-shadow 0.3s ease;
-}
-        .eyebrow {
-      margin: 0 0 8px;
-      color: var(--blue-700);
-      font-size: 1rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      
-    }
-    
-    #scrollTopBtn {
-  position: fixed;
-  bottom: 28px;
-  right: 22px;
-  z-index: 999;
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #17eff2, #2368ff);
-  border: none;
-  cursor: pointer;
-  box-shadow: 0 6px 20px rgba(35, 104, 255, 0.38);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(12px);
-  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
-}
-
-#scrollTopBtn.visible {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-}
-
-#scrollTopBtn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 28px rgba(35, 104, 255, 0.5);
-}
-
-#scrollTopBtn svg {
-  width: 22px;
-  height: 22px;
-  fill: #031026;
-}
-
-@media (max-width: 767px) {
-  #scrollTopBtn {
-    bottom: 18px;
-    right: 14px;
-    width: 44px;
-    height: 44px;
-  }
-}
-
-/* Mobile popup center fix */
-@media (max-width: 767px) {
-  .popup-overlay {
-    align-items: center;
-    justify-content: center;
-    padding: 16px;
-  }
-
-  .popup-form-container {
-    width: 100%;
-    max-width: calc(100vw - 32px);
-    max-height: 90vh;
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  .popup-form-container .hero-card {
-    width: 100% !important;
-    max-width: 100% !important;
-    position: static !important;
-    top: auto !important;
-    left: auto !important;
-    margin-top: 0 !important;
-    padding: 20px 16px;
-    box-sizing: border-box;
-  }
-
-  .popup-close {
-    position: fixed;
-    top: 12px;
-    right: 12px;
-    z-index: 10000;
-    color: white;
-    background: rgba(0, 0, 0, 0.5);
-  }
-}
   </style>
 </head>
 
