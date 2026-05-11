@@ -2362,7 +2362,8 @@
         software: getFormValue(formData, "software"),
         service: getFormValue(formData, "service"),
         monthsBehind: getFormValue(formData, "monthsBehind"),
-        message: getFormValue(formData, "message")
+        message: getFormValue(formData, "message"),
+        cfTurnstile: getFormValue(formData, "cf-turnstile-response")
       };
 
       console.log("Submitting lead data:", data);
@@ -2381,8 +2382,20 @@
       form.addEventListener("submit", async function (event) {
         event.preventDefault();
 
-        const button = form.querySelector("button[type='submit']");
+        // Ensure Turnstile token is present
+        const tokenInput = form.querySelector('input[name="cf-turnstile-response"]');
+        const token = tokenInput ? (tokenInput.value || '').trim() : '';
         const status = form.querySelector("[data-form-status]");
+        if (!token) {
+          if (status) {
+            status.textContent = "Please complete the verification before submitting.";
+          } else {
+            alert("Please complete the verification before submitting the form.");
+          }
+          return;
+        }
+
+        const button = form.querySelector("button[type='submit']");
         const originalText = button ? button.textContent : "";
 
         if (button) {

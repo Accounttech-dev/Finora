@@ -143,6 +143,14 @@ img { max-width: 100%; height: auto; display: block; }
     transition: var(--transition);
     gap: 0.5rem;
 }
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(255, 255, 255, 0.96);
+      border-bottom: 1px solid rgba(219, 227, 239, 0.86);
+      backdrop-filter: blur(12px);
+    }
 
 @media (min-width: 1024px) {
     .btnddd {
@@ -596,6 +604,25 @@ img { max-width: 100%; height: auto; display: block; }
     background: #E5E7EB;
     color: #111827;
 }
+    .header-inner {
+      min-height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      color: #11253d;
+      font-size: 0.68rem;
+      font-weight: 600;
+    }
+    strong{
+        color: #244DAF;
+    }
+    .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    color: #536072;
+}
 
 /* Scrollbar styling for modal */
 .modal-box::-webkit-scrollbar { width: 5px; }
@@ -644,6 +671,18 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 @media (max-width: 768px) {
+    .site-header {
+        position: static;
+        
+      }
+.header-actions {
+    display: none;
+}
+.header-inner a{
+        position: relative;
+    left: 34px;
+
+}
     .top-strip-left span { color: #374151; font-weight: 600; font-size: 0.7rem; }
     .section-padding { padding: 4rem 0; }
     .section-title { font-size: 2rem; }
@@ -844,19 +883,16 @@ img { max-width: 100%; height: auto; display: block; }
     </div>
 
     <!-- HEADER -->
-    <header class="top-strip">
-        <div class="container top-strip-container">
-            <div class="top-strip-left">
-                <i class="fa-solid fa-phone" aria-hidden="true" style="color:var(--primary-blue); margin-right:0.5rem"></i>
-                <span style="color: #929ba3;">Need Professional Bookkeeper? <a href="https://www.aifinora.com/book-a-meeting.html" class="top-strip-cta">Book Schedule Now</a></span>
-            </div>
-            <div class="top-strip-right">
-                <div class="address"><i class="fa-solid fa-map-pin" aria-hidden="true"></i>
-                    <span style="color: black;">45 Grant Mercer Drive, Youngsville,<br> NC 27596, United States</span>
-                </div>
-            </div>
-        </div>
-    </header>
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="prehead-link" href="https://www.aifinora.com/book-a-meeting.html">Need Professional Bookkeeping?
+        <strong>Book Schedule Now</strong></a>
+      <div class="header-actions" aria-label="Contact AI Finora">
+        <a href="tel:+1(828) 367-0905">(828) 367-0905</a>
+        <a href="mailto:sales@aifinora.com">sales@aifinora.com</a>
+      </div>
+    </div>
+  </header>
 
     <!-- HERO SECTION -->
     <section class="hero" id="hero">
@@ -1426,6 +1462,15 @@ img { max-width: 100%; height: auto; display: block; }
             button.textContent = "Submitting...";
             button.disabled = true;
             try {
+                const tokenInput = form.querySelector('input[name="cf-turnstile-response"]');
+                const token = tokenInput ? tokenInput.value : '';
+                if (!token) {
+                    alert("Please complete the verification before submitting the form.");
+                    button.textContent = originalText;
+                    button.disabled = false;
+                    return;
+                }
+
                 await submitToGoogleSheet(form, formType);
                 alert("Thank you! Your request has been submitted.");
                 form.reset();
