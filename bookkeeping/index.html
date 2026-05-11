@@ -9,6 +9,7 @@
     <link rel="canonical" href="/bookkeeping">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </head>
 <style>
     /* ==========================================================================
@@ -167,7 +168,7 @@ img { max-width: 100%; height: auto; display: block; }
         /* position: relative; */
         transform: translateY(740px);
         z-index: 999;
-        top: 714px;
+        top: 799px;
         padding: 10px 159px;
     }
 }
@@ -294,7 +295,7 @@ img { max-width: 100%; height: auto; display: block; }
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
-    padding: 7rem 0;
+    padding: 5rem 0;
     overflow: hidden;
 }
 
@@ -629,7 +630,7 @@ img { max-width: 100%; height: auto; display: block; }
     .hero-form-wrapper { order: 2; max-width: 520px; margin: 1.25rem auto 0; width: calc(100% - 2rem); }
     .benefits-grid { width: 100%; margin-left: 0; grid-template-columns: repeat(2, 1fr); padding: 0; }
     .why-grid { grid-template-columns: repeat(2, 1fr); }
-    .hero-form-wrapper { max-width: 100%; margin: 0 auto; width: 100%; margin-top: 524px; }
+    .hero-form-wrapper { max-width: 100%; margin: 0 auto; width: 100%; margin-top: 560px; }
     .problem-grid { grid-template-columns: repeat(2, 1fr); }
     .two-col-layout { grid-template-columns: 1fr; gap: 2rem; }
     .section-title { font-size: 2.2rem; }
@@ -654,7 +655,7 @@ img { max-width: 100%; height: auto; display: block; }
     .faq-content { text-align: center; }
     .cta-buttons { flex-direction: column; }
     .btn { width: 100%; }
-    .hero { padding: 20rem 0; margin-top: -605px; margin-bottom: -338px; }
+    .hero { padding: 20rem 0; margin-top: -645px; margin-bottom: -338px; }
     .hero-form-card { padding: 1.75rem 1.25rem; }
     .benefits-grid { grid-template-columns: 1fr; }
     .why-grid { grid-template-columns: repeat(2, 1fr); max-width: 100%; }
@@ -829,6 +830,10 @@ img { max-width: 100%; height: auto; display: block; }
                     <textarea name="message" placeholder="Message (Optional)" rows="2"></textarea>
                 </div>
 
+                  <div class="cf-turnstile"
+         data-sitekey="0x4AAAAAADNW2MtpWjhewR0e">
+    </div>
+
                 <button type="submit" class="btns btn-full">Claim Your $200 Offer</button>
                 <div class="form-security">
                     <i class="fa-solid fa-lock"></i> Secure & Confidential
@@ -890,6 +895,9 @@ img { max-width: 100%; height: auto; display: block; }
                             <i class="fa-regular fa-comment-dots input-icon"></i>
                             <textarea name="message" placeholder="Message (Optional)" rows="2"></textarea>
                         </div>
+                         <div class="cf-turnstile"
+         data-sitekey="0x4AAAAAADNW2MtpWjhewR0e">
+    </div>
 
                         <button type="submit" class="btns btn-full">Claim Your $200 Offer</button>
                         <div class="form-security">
@@ -1150,7 +1158,9 @@ img { max-width: 100%; height: auto; display: block; }
                             <label>Message*</label>
                             <textarea name="message" rows="4"  required></textarea>
                         </div>
-
+ <div class="cf-turnstile"
+         data-sitekey="0x4AAAAAADNW2MtpWjhewR0e">
+    </div>
                         <button type="submit" class="btnss">Request My Free Review</button>
                     </form>
                 </div>
