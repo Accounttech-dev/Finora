@@ -363,7 +363,7 @@ img { max-width: 100%; height: auto; display: block; }
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
-    padding: 4rem 0;
+    padding: 5rem 0;
     overflow: hidden;
 }
 
@@ -892,7 +892,46 @@ img { max-width: 100%; height: auto; display: block; }
     height: 44px;
   }
 }
+@media (min-width: 1200px) and (max-width: 1600px) {
 
+    .hero {
+
+        /* Background image smaller from all sides */
+        background-size: 100% auto;
+
+        /* Keep centered */
+        background-position: center center;
+
+        /* Extra breathing space */
+        padding: 45px 40px;
+    }
+
+    .hero-container {
+
+        grid-template-columns: 1fr 500px;
+
+        gap: 3rem;
+
+        padding: 0 2rem;
+
+        align-items: center;
+    }
+
+    .hero-form-wrapper {
+
+        max-width: 500px;
+    }
+
+    .hero-form-card {
+
+        max-width: 480px;
+    }
+
+    .hero-title {
+
+        font-size: 3.5rem;
+    }
+}
 </style>
 <body>
 
