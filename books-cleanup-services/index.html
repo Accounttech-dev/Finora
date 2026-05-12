@@ -13,10 +13,68 @@
   <link rel="preload" as="image" href="/hero-bg.webp">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet">
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+    let turnstileLoaded = false;
+
+    // =========================================
+    // LOAD TURNSTILE ONLY WHEN NEEDED
+    // =========================================
+    function loadTurnstile() {
+
+        if (turnstileLoaded) return;
+
+        turnstileLoaded = true;
+
+        const script = document.createElement("script");
+
+        script.src =
+            "https://challenges.cloudflare.com/turnstile/v0/api.js";
+
+        script.async = true;
+        script.defer = true;
+
+        document.body.appendChild(script);
+    }
+
+    // =========================================
+    // LOAD WHEN USER INTERACTS WITH FORM
+    // =========================================
+    const forms = document.querySelectorAll("form");
+
+    forms.forEach(form => {
+
+        form.addEventListener("focusin", loadTurnstile, {
+            once: true
+        });
+
+        form.addEventListener("touchstart", loadTurnstile, {
+            once: true
+        });
+
+        form.addEventListener("mouseenter", loadTurnstile, {
+            once: true
+        });
+    });
+
+    // =========================================
+    // ALSO LOAD WHEN MODAL OPENS
+    // =========================================
+    const bannerBtn =
+        document.getElementById("bannerOpenModal");
+
+    if (bannerBtn) {
+
+        bannerBtn.addEventListener("click", () => {
+
+            loadTurnstile();
+
+        }, { once: true });
+    }
+
+});
+</script>
   <style>
     :root {
       --navy-950: #020719;
@@ -2251,209 +2309,465 @@
     </div>
   </div>
 
-  <script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+    // =========================================================
+    // CACHE ELEMENTS
+    // =========================================================
+    const body = document.body;
+
     const year = document.querySelector("[data-year]");
     const forms = document.querySelectorAll("[data-lead-form]");
-    const formStatus = document.querySelector("[data-form-status]");
-    const whatsappBase = "https://wa.me/16262751535";
-    const defaultWhatsappText = "Hi AI Finora, I need help with bookkeeping or book cleanup services.";
 
+    const popupTrigger =
+        document.querySelector(".banner-card");
+
+    const popupOverlay =
+        document.getElementById("popupOverlay");
+
+    const closePopup =
+        document.getElementById("closePopup");
+
+    const scrollBtn =
+        document.getElementById("scrollTopBtn");
+
+    const GOOGLE_SCRIPT_URL =
+        "https://script.google.com/macros/s/AKfycbwkEdS0eCCiIUTQrpPaQSbtrK-SKCbx2aBJawsR_XfeP43b68cZluSbIYKnSLR0zqQ/exec";
+
+    // =========================================================
+    // YEAR
+    // =========================================================
     if (year) {
-      year.textContent = new Date().getFullYear();
+        year.textContent = new Date().getFullYear();
     }
 
-    document.querySelectorAll('a[href^="#"]').forEach((link) => {
-      link.addEventListener("click", (event) => {
-        const targetId = link.getAttribute("href");
+    // =========================================================
+    // LAZY LOAD CLOUDFLARE TURNSTILE
+    // =========================================================
+    let turnstileLoaded = false;
+
+    function loadTurnstile() {
+
+        if (turnstileLoaded) return;
+
+        turnstileLoaded = true;
+
+        const script = document.createElement("script");
+
+        script.src =
+            "https://challenges.cloudflare.com/turnstile/v0/api.js";
+
+        script.async = true;
+        script.defer = true;
+
+        document.body.appendChild(script);
+    }
+
+    // Load Turnstile only when needed
+    forms.forEach(form => {
+
+        form.addEventListener(
+            "focusin",
+            loadTurnstile,
+            { once: true }
+        );
+
+        form.addEventListener(
+            "touchstart",
+            loadTurnstile,
+            { once: true }
+        );
+
+        form.addEventListener(
+            "mouseenter",
+            loadTurnstile,
+            { once: true }
+        );
+    });
+
+    // =========================================================
+    // SMOOTH SCROLL (OPTIMIZED)
+    // =========================================================
+    document.addEventListener("click", (event) => {
+
+        const link =
+            event.target.closest('a[href^="#"]');
+
+        if (!link) return;
+
+        const targetId =
+            link.getAttribute("href");
+
         if (!targetId || targetId === "#") return;
 
-        const target = document.querySelector(targetId);
+        const target =
+            document.querySelector(targetId);
+
         if (!target) return;
 
         event.preventDefault();
-        target.scrollIntoView({ behavior: "smooth", block: "start" });
-      });
+
+        target.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
     });
 
-    document.querySelectorAll(".faq-item button").forEach((button) => {
-      button.addEventListener("click", () => {
-        const item = button.closest(".faq-item");
-        if (!item) return;
+    // =========================================================
+    // FAQ ACCORDION
+    // =========================================================
+    document.querySelectorAll(".faq-item button")
+        .forEach(button => {
 
-        const isOpen = item.classList.toggle("is-open");
-        button.setAttribute("aria-expanded", String(isOpen));
-      });
-    });
+            button.addEventListener("click", () => {
 
-    forms.forEach((form) => {
-      form.addEventListener("submit", (event) => {
-        event.preventDefault();
+                const item =
+                    button.closest(".faq-item");
 
-        if (!form.checkValidity()) {
-          form.reportValidity();
-          return;
+                if (!item) return;
+
+                const isOpen =
+                    item.classList.toggle("is-open");
+
+                button.setAttribute(
+                    "aria-expanded",
+                    String(isOpen)
+                );
+            });
+        });
+
+    // =========================================================
+    // POPUP MODAL
+    // =========================================================
+    function openPopup() {
+
+        if (!popupOverlay) return;
+
+        popupOverlay.classList.add("active");
+
+        body.classList.add("modal-open");
+
+        loadTurnstile();
+    }
+
+    function closePopupModal() {
+
+        if (!popupOverlay) return;
+
+        popupOverlay.classList.remove("active");
+
+        body.classList.remove("modal-open");
+    }
+
+    // Open popup
+    if (popupTrigger) {
+
+        popupTrigger.addEventListener(
+            "click",
+            openPopup
+        );
+    }
+
+    // Close button
+    if (closePopup) {
+
+        closePopup.addEventListener(
+            "click",
+            closePopupModal
+        );
+    }
+
+    // Outside click
+    if (popupOverlay) {
+
+        popupOverlay.addEventListener(
+            "click",
+            (e) => {
+
+                if (e.target === popupOverlay) {
+                    closePopupModal();
+                }
+            }
+        );
+    }
+
+    // ESC close
+    document.addEventListener(
+        "keydown",
+        (e) => {
+
+            if (e.key === "Escape") {
+                closePopupModal();
+            }
         }
+    );
+
+    // =========================================================
+    // HELPERS
+    // =========================================================
+    function getFormValue(formData, fieldName) {
+
+        return formData.get(fieldName)
+            ? formData.get(fieldName)
+                .toString()
+                .trim()
+            : "";
+    }
+
+    // =========================================================
+    // SUBMIT TO GOOGLE SHEET
+    // =========================================================
+    async function submitLeadForm(form) {
 
         const formData = new FormData(form);
-        const name = formData.get("fullName") || "Not specified";
-        const message = [
-          "Hi AI Finora, I need a free bookkeeping review.",
-          `Name: ${name}`,
-          `Business: ${formData.get("businessName") || "Not specified"}`,
-          `Email: ${formData.get("email") || "Not specified"}`,
-          `Phone: ${formData.get("phone") || "Not specified"}`,
-          `State: ${formData.get("state") || "Not specified"}`,
-          `Accounting software: ${formData.get("software") || "Not specified"}`,
-          `Service needed: ${formData.get("service") || "Books cleanup"}`,
-          `Months behind: ${formData.get("monthsBehind") || "Not specified"}`,
-          `Message: ${formData.get("message") || defaultWhatsappText}`
-        ].join("\n");
 
+        const data = {
+            formType:
+                getFormValue(formData, "formType"),
 
-      });
-    });
-    // TARGET YOUR EXISTING BUTTON
-    const popupTrigger = document.querySelector(".banner-card");
-    const popupOverlay = document.getElementById("popupOverlay");
-    const closePopup = document.getElementById("closePopup");
+            fullName:
+                getFormValue(formData, "fullName"),
 
-    // OPEN
-    popupTrigger.addEventListener("click", function () {
-      popupOverlay.classList.add("active");
-      document.body.style.overflow = "hidden";
-    });
+            email:
+                getFormValue(formData, "email"),
 
-    // CLOSE BUTTON
-    closePopup.addEventListener("click", function () {
-      popupOverlay.classList.remove("active");
-      document.body.style.overflow = "";
-    });
+            phone:
+                getFormValue(formData, "phone"),
 
-    // CLOSE OUTSIDE CLICK
-    popupOverlay.addEventListener("click", function (e) {
-      if (e.target === popupOverlay) {
-        popupOverlay.classList.remove("active");
-        document.body.style.overflow = "";
-      }
-    });
+            businessName:
+                getFormValue(formData, "businessName"),
 
-    // ESC KEY
-    document.addEventListener("keydown", function (e) {
-      if (e.key === "Escape") {
-        popupOverlay.classList.remove("active");
-        document.body.style.overflow = "";
-      }
-    });
+            state:
+                getFormValue(formData, "state"),
 
+            software:
+                getFormValue(formData, "software"),
 
-    const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwkEdS0eCCiIUTQrpPaQSbtrK-SKCbx2aBJawsR_XfeP43b68cZluSbIYKnSLR0zqQ/exec";
+            service:
+                getFormValue(formData, "service"),
 
-    function getFormValue(formData, fieldName) {
-      return formData.get(fieldName) ? formData.get(fieldName).toString().trim() : "";
+            monthsBehind:
+                getFormValue(formData, "monthsBehind"),
+
+            message:
+                getFormValue(formData, "message"),
+
+            cfTurnstile:
+                getFormValue(
+                    formData,
+                    "cf-turnstile-response"
+                )
+        };
+
+        await fetch(GOOGLE_SCRIPT_URL, {
+            method: "POST",
+            mode: "no-cors",
+            keepalive: true,
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(data)
+        });
     }
 
-    async function submitLeadForm(form) {
-      const formData = new FormData(form);
+    // =========================================================
+    // FORM SUBMIT
+    // =========================================================
+    forms.forEach(form => {
 
-      const data = {
-        formType: getFormValue(formData, "formType"),
-        fullName: getFormValue(formData, "fullName"),
-        email: getFormValue(formData, "email"),
-        phone: getFormValue(formData, "phone"),
-        businessName: getFormValue(formData, "businessName"),
-        state: getFormValue(formData, "state"),
-        software: getFormValue(formData, "software"),
-        service: getFormValue(formData, "service"),
-        monthsBehind: getFormValue(formData, "monthsBehind"),
-        message: getFormValue(formData, "message"),
-        cfTurnstile: getFormValue(formData, "cf-turnstile-response")
-      };
+        form.addEventListener(
+            "submit",
+            async (event) => {
 
-      console.log("Submitting lead data:", data);
+                event.preventDefault();
 
-      await fetch(GOOGLE_SCRIPT_URL, {
-        method: "POST",
-        mode: "no-cors",
-        headers: {
-          "Content-Type": "application/json"
+                // Native validation
+                if (!form.checkValidity()) {
+
+                    form.reportValidity();
+
+                    return;
+                }
+
+                // Turnstile validation
+                const tokenInput =
+                    form.querySelector(
+                        'input[name="cf-turnstile-response"]'
+                    );
+
+                const token =
+                    tokenInput?.value?.trim() || '';
+
+                const status =
+                    form.querySelector(
+                        "[data-form-status]"
+                    );
+
+                if (!token) {
+
+                    const msg =
+                        "Please complete verification before submitting.";
+
+                    if (status) {
+                        status.textContent = msg;
+                    } else {
+                        alert(msg);
+                    }
+
+                    return;
+                }
+
+                const button =
+                    form.querySelector(
+                        "button[type='submit']"
+                    );
+
+                const originalText =
+                    button?.textContent || "";
+
+                // Loading state
+                if (button) {
+
+                    button.disabled = true;
+
+                    button.textContent =
+                        "Submitting...";
+                }
+
+                if (status) {
+
+                    status.textContent =
+                        "Submitting your request...";
+                }
+
+                try {
+
+                    await submitLeadForm(form);
+
+                    const successMsg =
+                        "Thank you! Your request has been submitted.";
+
+                    if (status) {
+
+                        status.textContent =
+                            successMsg;
+
+                    } else {
+
+                        alert(successMsg);
+                    }
+
+                    form.reset();
+
+                    // Reset Turnstile
+                    if (window.turnstile) {
+
+                        const widget =
+                            form.querySelector(
+                                ".cf-turnstile"
+                            );
+
+                        if (widget) {
+
+                            const widgetId =
+                                widget.getAttribute(
+                                    "data-widget-id"
+                                );
+
+                            if (widgetId) {
+                                turnstile.reset(widgetId);
+                            }
+                        }
+                    }
+
+                } catch (error) {
+
+                    console.error(error);
+
+                    const errorMsg =
+                        "Something went wrong. Please try again.";
+
+                    if (status) {
+
+                        status.textContent =
+                            errorMsg;
+
+                    } else {
+
+                        alert(errorMsg);
+                    }
+
+                } finally {
+
+                    if (button) {
+
+                        button.disabled = false;
+
+                        button.textContent =
+                            originalText;
+                    }
+                }
+            }
+        );
+    });
+
+    // =========================================================
+    // SCROLL BUTTON (OPTIMIZED)
+    // =========================================================
+    let ticking = false;
+
+    function updateScrollButton() {
+
+        if (!scrollBtn) {
+
+            ticking = false;
+
+            return;
+        }
+
+        scrollBtn.classList.toggle(
+            "visible",
+            window.scrollY > 300
+        );
+
+        ticking = false;
+    }
+
+    window.addEventListener(
+        "scroll",
+        () => {
+
+            if (!ticking) {
+
+                requestAnimationFrame(
+                    updateScrollButton
+                );
+
+                ticking = true;
+            }
+
         },
-        body: JSON.stringify(data)
-      });
+        { passive: true }
+    );
+
+    // Scroll to top
+    if (scrollBtn) {
+
+        scrollBtn.addEventListener(
+            "click",
+            () => {
+
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                });
+            }
+        );
     }
 
-    document.querySelectorAll("[data-lead-form]").forEach(function (form) {
-      form.addEventListener("submit", async function (event) {
-        event.preventDefault();
-
-        // Ensure Turnstile token is present
-        const tokenInput = form.querySelector('input[name="cf-turnstile-response"]');
-        const token = tokenInput ? (tokenInput.value || '').trim() : '';
-        const status = form.querySelector("[data-form-status]");
-        if (!token) {
-          if (status) {
-            status.textContent = "Please complete the verification before submitting.";
-          } else {
-            alert("Please complete the verification before submitting the form.");
-          }
-          return;
-        }
-
-        const button = form.querySelector("button[type='submit']");
-        const originalText = button ? button.textContent : "";
-
-        if (button) {
-          button.textContent = "Submitting...";
-          button.disabled = true;
-        }
-
-        if (status) {
-          status.textContent = "Submitting your request...";
-        }
-
-        try {
-          await submitLeadForm(form);
-
-          if (status) {
-            status.textContent = "Thank you! Your request has been submitted.";
-          } else {
-            alert("Thank you! Your request has been submitted.");
-          }
-
-          form.reset();
-
-        } catch (error) {
-          console.error(error);
-
-          if (status) {
-            status.textContent = "Something went wrong. Please try again.";
-          } else {
-            alert("Something went wrong. Please try again.");
-          }
-
-        } finally {
-          if (button) {
-            button.textContent = originalText;
-            button.disabled = false;
-          }
-        }
-      });
-    });
-
-    const scrollBtn = document.getElementById("scrollTopBtn");
-
-    window.addEventListener("scroll", function () {
-      if (window.scrollY > 300) {
-        scrollBtn.classList.add("visible");
-      } else {
-        scrollBtn.classList.remove("visible");
-      }
-    });
-
-    scrollBtn.addEventListener("click", function () {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    });
-
-  </script>
+});
+</script>
 </body>
 
 </html>
