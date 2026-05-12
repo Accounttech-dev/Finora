@@ -8,8 +8,7 @@
   <title>USA-Based Bookkeeping &amp; Book Cleanup Services | AI Finora</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&amp;display=swap"
-    rel="stylesheet">
+
   <link rel="preload" as="image" href="/hero-bg.webp">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1427,27 +1426,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
-    @media(max-width:360px) {
-      .hero {
-        min-height: auto;
-        background: linear-gradient(90deg, rgba(2, 7, 25, 0), rgba(2, 7, 25, 0)), url(/mainbanner2.webp) right center / cover no-repeat, #ffffff;
-        background-size: 100% 51%;
-        background-position: right center;
-        background-position-y: 0px;
-      }
 
-      .btn-glow {
-        width: calc(100vw - 48px);
-        max-width: 100%;
-        min-height: 75px;
-        padding-right: 14px;
-        padding-left: 14px;
-        border-radius: 12px;
-        margin: 3px 0px;
-        top: -153px;
-        z-index: 10000;
-      }
-    }
 
     article:hover {
       box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
@@ -1462,6 +1441,11 @@ document.addEventListener("DOMContentLoaded", () => {
       text-transform: uppercase;
 
     }
+    .pop-up {
+        position: relative;
+        left: 0px;
+        top: 0px;
+      }
 
     #scrollTopBtn {
       position: fixed;
@@ -1778,6 +1762,36 @@ document.addEventListener("DOMContentLoaded", () => {
         width: 100%;
       }
     }
+        @media(max-width:380px) {
+      .hero {
+        min-height: auto;
+        background: linear-gradient(90deg, rgba(2, 7, 25, 0), rgba(2, 7, 25, 0)), url(/mainbanner2.webp) right center / cover no-repeat, #ffffff;
+        background-size: 100% 51%;
+        background-position: right center;
+        background-position-y: 0px;
+      }
+
+      .btn-glow {
+        width: calc(100vw - 48px);
+        max-width: 100%;
+        min-height: 75px;
+        padding-right: 14px;
+        padding-left: 14px;
+        border-radius: 12px;
+        margin: 3px 0px;
+        top: -153px;
+        z-index: 10000;
+      }
+          .hero-card {
+        width: 100%;
+        max-width: calc(100vw - 48px);
+        padding: 20px;
+        /* margin-top: -45px; */
+        position: relative;
+        top: -220px;
+        left: 10px;
+    }
+    }
   </style>
 </head>
 
@@ -1821,7 +1835,7 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
           </div>
 
-          <a class="btn btn-glow hero-cta" href="https://www.aifinora.com/book-a-meeting.html">
+          <a class="btn btn-glow hero-cta" target="_blank" href="https://www.aifinora.com/book-a-meeting.html">
 
 
           </a>
