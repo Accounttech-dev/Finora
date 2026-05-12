@@ -4324,7 +4324,7 @@
     <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer>
     </script>
 
-<script>
+    <script>
       document.addEventListener('DOMContentLoaded', () => {
 
         // =========================================================
@@ -4623,6 +4623,13 @@
           });
         }
 
+        // Helper function to redirect to thank you page
+        function redirectToThankYou() {
+          // Use window.location.href for full navigation
+          // Assumes /thank-you is a relative path on the same domain
+          window.location.href = '/thank-you';
+        }
+
         // =========================================================
         // FORM SUBMIT
         // =========================================================
@@ -4657,14 +4664,14 @@
           button.disabled = true;
           button.textContent = "Submitting...";
 
-          try {
+          // try {
 
-            await submitToGoogleSheet(form, formType);
+          //   await submitToGoogleSheet(form, formType);
 
-            // Show success message briefly before reset
-            alert(
-              "Thank you! Your request has been submitted."
-            );
+          //   // Show success message briefly before redirect
+          //   alert(
+          //     "Thank you! Your request has been submitted."
+          //   );
 
             // Reset form fields
             form.reset();
@@ -4688,13 +4695,16 @@
               }
             }
 
-            // Close modal if modal form
+            // Close modal if modal form (BEFORE redirect to keep UI clean)
             if (
               formType ===
               "Hero Form - $200 Offer (Modal)"
             ) {
               closeModal();
             }
+
+            // Redirect to thank you page after successful submission
+            redirectToThankYou();
 
           } catch (error) {
 
@@ -4704,8 +4714,7 @@
               "Something went wrong. Please try again."
             );
 
-          } finally {
-            // Re-enable button regardless of success or error
+            // Re-enable button on error (redirect won't happen)
             button.disabled = false;
             button.textContent = originalText;
           }
@@ -4742,7 +4751,7 @@
             handleFormSubmit(form, type);
           });
         });
- 
+
       });
     </script>
 </body>
