@@ -4704,18 +4704,6 @@
 
               await submitLeadForm(form);
 
-              const successMsg =
-                "Thank you! Your request has been submitted.";
-
-              if (status) {
-
-                status.textContent =
-                  successMsg;
-
-              } else {
-
-                alert(successMsg);
-              }
 
               form.reset();
 
