@@ -932,6 +932,42 @@ img { max-width: 100%; height: auto; display: block; }
         font-size: 3.5rem;
     }
 }
+
+
+/* Footer Centering Fix for Desktop Screens (≥ 1200px) */
+@media (min-width: 1200px) {
+    .footer .footer-container {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        gap: 2rem;
+        flex-wrap: wrap;
+    }
+    
+    .footer .copyright {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+}
+
+/* Alternative: If you want everything in a single centered row on desktop */
+/* Footer - all items in one line and centered on desktop */
+@media (min-width: 992px) {
+    .footer .footer-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        flex-wrap: nowrap;
+        text-align: center;
+    }
+    
+    .footer .copyright,
+    .footer .back-to-top {
+        white-space: nowrap;
+    }
+}
 </style>
 <body>
 
