@@ -1308,233 +1308,353 @@ img { max-width: 100%; height: auto; display: block; }
         </div>
     </footer>
 
-    <script>
-    document.addEventListener('DOMContentLoaded', () => {
+<script>
+document.addEventListener('DOMContentLoaded', () => {
 
-        // ── MODAL LOGIC ──────────────────────────────────────────────
-        const modal        = document.getElementById('heroFormModal');
-        const modalCloseBtn = document.getElementById('modalCloseBtn');
-        const bannerBtn    = document.getElementById('bannerOpenModal');
+    // =========================================================
+    // ELEMENTS CACHE
+    // =========================================================
+    const body = document.body;
 
-        function openModal() {
-            modal.classList.add('active');
-            document.body.style.overflow = 'hidden'; // prevent background scroll
-        }
+    const modal = document.getElementById('heroFormModal');
+    const modalCloseBtn = document.getElementById('modalCloseBtn');
+    const bannerBtn = document.getElementById('bannerOpenModal');
 
-        function closeModal() {
-            modal.classList.remove('active');
-            document.body.style.overflow = '';
-        }
+    const backToTopBtn = document.getElementById('backToTop');
+    const scrollBtn = document.getElementById('scrollTopBtn');
 
-        // Banner click / keyboard triggers modal
-        if (bannerBtn) {
-            bannerBtn.addEventListener('click', openModal);
-            bannerBtn.addEventListener('keydown', (e) => {
-                if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openModal(); }
-            });
-        }
+    // =========================================================
+    // MODAL LOGIC (OPTIMIZED)
+    // =========================================================
+    function openModal() {
+        if (!modal) return;
 
-        // Close button
-        if (modalCloseBtn) {
-            modalCloseBtn.addEventListener('click', closeModal);
-        }
+        modal.classList.add('active');
+        body.classList.add('modal-open');
+    }
 
-        // Click on overlay backdrop closes modal
-        modal.addEventListener('click', (e) => {
-            if (e.target === modal) closeModal();
-        });
+    function closeModal() {
+        if (!modal) return;
 
-        // Escape key closes modal
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && modal.classList.contains('active')) closeModal();
-        });
+        modal.classList.remove('active');
+        body.classList.remove('modal-open');
+    }
 
-        // ── FAQ ACCORDION ────────────────────────────────────────────
-        const accordionHeaders = document.querySelectorAll('.accordion-header');
+    // Open Modal
+    if (bannerBtn) {
 
-        accordionHeaders.forEach(header => {
-            header.addEventListener('click', () => {
-                const accordionItem = header.parentElement;
-                const accordionBody = accordionItem.querySelector('.accordion-body');
-                const toggleIcon    = header.querySelector('.toggle-icon i');
-                const isActive      = accordionItem.classList.contains('active');
+        bannerBtn.addEventListener('click', openModal);
 
-                document.querySelectorAll('.accordion-item').forEach(item => {
-                    item.classList.remove('active');
-                    item.querySelector('.accordion-body').style.maxHeight = null;
-                    item.querySelector('.toggle-icon i').classList.remove('fa-minus');
-                    item.querySelector('.toggle-icon i').classList.add('fa-plus');
-                });
-
-                if (!isActive) {
-                    accordionItem.classList.add('active');
-                    accordionBody.style.maxHeight = accordionBody.scrollHeight + "px";
-                    toggleIcon.classList.remove('fa-plus');
-                    toggleIcon.classList.add('fa-minus');
-                }
-            });
-        });
-
-        const firstAccordionItem = document.querySelector('.accordion-item.active');
-        if (firstAccordionItem) {
-            firstAccordionItem.querySelector('.accordion-body').style.maxHeight =
-                firstAccordionItem.querySelector('.accordion-body').scrollHeight + "px";
-        }
-
-        // ── FADE-UP SCROLL ANIMATION ─────────────────────────────────
-        const fadeElements = document.querySelectorAll('.fade-up');
-        const fadeObserver = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, { root: null, threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
-
-        fadeElements.forEach(el => fadeObserver.observe(el));
-
-        // ── SMOOTH SCROLL ────────────────────────────────────────────
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
+        bannerBtn.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
                 e.preventDefault();
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
-                const target = document.querySelector(targetId);
-                if (target) target.scrollIntoView({ behavior: 'smooth' });
-            });
-        });
-
-        // ── BACK TO TOP ──────────────────────────────────────────────
-        const backToTopBtn = document.getElementById('backToTop');
-        if (backToTopBtn) {
-            backToTopBtn.addEventListener('click', (e) => {
-                e.preventDefault();
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            });
-        }
-
-        // ── RIPPLE EFFECT ────────────────────────────────────────────
-        document.querySelectorAll('.btn').forEach(btn => {
-            btn.addEventListener('click', function(e) {
-                const x = e.clientX - e.target.getBoundingClientRect().left;
-                const y = e.clientY - e.target.getBoundingClientRect().top;
-                const ripple = document.createElement('span');
-                Object.assign(ripple.style, {
-                    left: x + 'px', top: y + 'px',
-                    position: 'absolute', background: 'rgba(255,255,255,0.3)',
-                    borderRadius: '50%', pointerEvents: 'none',
-                    transform: 'translate(-50%,-50%)',
-                    animation: 'ripple 0.6s linear',
-                    width: '100px', height: '100px'
-                });
-                if (!document.getElementById('ripple-style')) {
-                    const s = document.createElement('style');
-                    s.id = 'ripple-style';
-                    s.innerHTML = `@keyframes ripple { 0%{width:0;height:0;opacity:.5} 100%{width:400px;height:400px;opacity:0} }`;
-                    document.head.appendChild(s);
-                }
-                this.style.position = 'relative';
-                this.style.overflow = 'hidden';
-                this.appendChild(ripple);
-                setTimeout(() => ripple.remove(), 600);
-            });
-        });
-
-        // ── GOOGLE SHEET SUBMISSION ──────────────────────────────────
-        const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwRVFFKzxGEg9Xab283vEs6ndC505xp6EktlnJGlHqi7VeUlwlV2FlPtGv5vYVvDBkh/exec";
-
-        async function submitToGoogleSheet(form, formType) {
-            const fd = new FormData(form);
-            const data = {
-                formType,
-                fullName:           fd.get("fullName")           || "",
-                email:              fd.get("email")              || "",
-                phone:              fd.get("phone")              || "",
-                businessName:       fd.get("businessName")       || "",
-                businessState:      fd.get("businessState")      || "",
-                accountingSoftware: fd.get("accountingSoftware") || "",
-                serviceNeeded:      fd.get("serviceNeeded")      || "",
-                monthsBehind:       fd.get("monthsBehind")       || "",
-                message:            fd.get("message")            || ""
-            };
-            await fetch(GOOGLE_SCRIPT_URL, {
-                method: "POST", mode: "no-cors",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(data)
-            });
-        }
-
-        async function handleFormSubmit(form, formType) {
-            const button = form.querySelector("button[type='submit']");
-            const originalText = button.textContent;
-            button.textContent = "Submitting...";
-            button.disabled = true;
-            try {
-                const tokenInput = form.querySelector('input[name="cf-turnstile-response"]');
-                const token = tokenInput ? tokenInput.value : '';
-                if (!token) {
-                    alert("Please complete the verification before submitting the form.");
-                    button.textContent = originalText;
-                    button.disabled = false;
-                    return;
-                }
-
-                await submitToGoogleSheet(form, formType);
-                alert("Thank you! Your request has been submitted.");
-                form.reset();
-                // If it's the modal form, close modal after submit
-                if (formType === "Hero Form - $200 Offer (Modal)") closeModal();
-            } catch (error) {
-                alert("Something went wrong. Please try again.");
-                console.error(error);
-            } finally {
-                button.textContent = originalText;
-                button.disabled = false;
+                openModal();
             }
-        }
+        });
+    }
 
-        // Modal form (popup)
-        const heroForm = document.getElementById("heroForm");
-        if (heroForm) {
-            heroForm.addEventListener("submit", (e) => {
-                e.preventDefault();
-                handleFormSubmit(heroForm, "Hero Form - $200 Offer (Modal)");
-            });
-        }
+    // Close Modal Button
+    if (modalCloseBtn) {
+        modalCloseBtn.addEventListener('click', closeModal);
+    }
 
-        // Desktop hero form (in-page)
-        const heroFormDesktop = document.getElementById("heroFormDesktop");
-        if (heroFormDesktop) {
-            heroFormDesktop.addEventListener("submit", (e) => {
-                e.preventDefault();
-                handleFormSubmit(heroFormDesktop, "Hero Form - $200 Offer (Desktop)");
-            });
-        }
+    // Overlay Click Close
+    if (modal) {
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+    }
 
-        // Advanced / free review form
-        const advancedForm = document.getElementById("advancedForm");
-        if (advancedForm) {
-            advancedForm.addEventListener("submit", (e) => {
-                e.preventDefault();
-                handleFormSubmit(advancedForm, "Advanced Form - Free Review");
-            });
+    // ESC Close
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal?.classList.contains('active')) {
+            closeModal();
         }
     });
 
-    const scrollBtn = document.getElementById("scrollTopBtn");
+    // =========================================================
+    // FAQ ACCORDION (OPTIMIZED)
+    // =========================================================
+    const accordionItems = document.querySelectorAll('.accordion-item');
 
-window.addEventListener("scroll", function () {
-  if (window.scrollY > 300) {
-    scrollBtn.classList.add("visible");
-  } else {
-    scrollBtn.classList.remove("visible");
-  }
-});
+    accordionItems.forEach(item => {
 
-scrollBtn.addEventListener("click", function () {
-  window.scrollTo({ top: 0, behavior: "smooth" });
+        const header = item.querySelector('.accordion-header');
+
+        if (!header) return;
+
+        header.addEventListener('click', () => {
+
+            const isActive = item.classList.contains('active');
+
+            // Close all
+            accordionItems.forEach(i => {
+
+                i.classList.remove('active');
+
+                const body = i.querySelector('.accordion-body');
+                const icon = i.querySelector('.toggle-icon i');
+
+                if (body) body.style.maxHeight = null;
+
+                if (icon) {
+                    icon.classList.remove('fa-minus');
+                    icon.classList.add('fa-plus');
+                }
+            });
+
+            // Open current
+            if (!isActive) {
+
+                item.classList.add('active');
+
+                const body = item.querySelector('.accordion-body');
+                const icon = item.querySelector('.toggle-icon i');
+
+                if (body) {
+                    body.style.maxHeight = body.scrollHeight + 'px';
+                }
+
+                if (icon) {
+                    icon.classList.remove('fa-plus');
+                    icon.classList.add('fa-minus');
+                }
+            }
+        });
+    });
+
+    // First Active Accordion
+    const firstActive = document.querySelector('.accordion-item.active');
+
+    if (firstActive) {
+
+        const body = firstActive.querySelector('.accordion-body');
+
+        if (body) {
+            body.style.maxHeight = body.scrollHeight + 'px';
+        }
+    }
+
+    // =========================================================
+    // FADE-UP ANIMATION (MOBILE OPTIMIZED)
+    // =========================================================
+    const fadeElements = document.querySelectorAll('.fade-up');
+
+    if ('IntersectionObserver' in window) {
+
+        const fadeObserver = new IntersectionObserver((entries, observer) => {
+
+            entries.forEach(entry => {
+
+                if (entry.isIntersecting) {
+
+                    entry.target.classList.add('visible');
+
+                    observer.unobserve(entry.target);
+                }
+            });
+
+        }, {
+            threshold: 0.08,
+            rootMargin: '0px 0px -30px 0px'
+        });
+
+        fadeElements.forEach(el => fadeObserver.observe(el));
+    } else {
+
+        // Fallback
+        fadeElements.forEach(el => el.classList.add('visible'));
+    }
+
+    // =========================================================
+    // SMOOTH SCROLL (LIGHTWEIGHT)
+    // =========================================================
+    document.addEventListener('click', (e) => {
+
+        const anchor = e.target.closest('a[href^="#"]');
+
+        if (!anchor) return;
+
+        const targetId = anchor.getAttribute('href');
+
+        if (!targetId || targetId === '#') return;
+
+        const target = document.querySelector(targetId);
+
+        if (!target) return;
+
+        e.preventDefault();
+
+        target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+    });
+
+    // =========================================================
+    // BACK TO TOP BUTTON (THROTTLED)
+    // =========================================================
+    let ticking = false;
+
+    function handleScroll() {
+
+        const show = window.scrollY > 300;
+
+        if (scrollBtn) {
+            scrollBtn.classList.toggle('visible', show);
+        }
+
+        ticking = false;
+    }
+
+    window.addEventListener('scroll', () => {
+
+        if (!ticking) {
+
+            window.requestAnimationFrame(handleScroll);
+
+            ticking = true;
+        }
+
+    }, { passive: true });
+
+    // Scroll To Top
+    function scrollToTop(e) {
+
+        e.preventDefault();
+
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
+
+    if (backToTopBtn) {
+        backToTopBtn.addEventListener('click', scrollToTop);
+    }
+
+    if (scrollBtn) {
+        scrollBtn.addEventListener('click', scrollToTop);
+    }
+
+    // =========================================================
+    // GOOGLE SHEET SUBMISSION
+    // =========================================================
+    const GOOGLE_SCRIPT_URL =
+        "https://script.google.com/macros/s/AKfycbwRVFFKzxGEg9Xab283vEs6ndC505xp6EktlnJGlHqi7VeUlwlV2FlPtGv5vYVvDBkh/exec";
+
+    async function submitToGoogleSheet(form, formType) {
+
+        const fd = new FormData(form);
+
+        const data = {
+            formType,
+            fullName: fd.get("fullName") || "",
+            email: fd.get("email") || "",
+            phone: fd.get("phone") || "",
+            businessName: fd.get("businessName") || "",
+            businessState: fd.get("businessState") || "",
+            accountingSoftware: fd.get("accountingSoftware") || "",
+            serviceNeeded: fd.get("serviceNeeded") || "",
+            monthsBehind: fd.get("monthsBehind") || "",
+            message: fd.get("message") || ""
+        };
+
+        await fetch(GOOGLE_SCRIPT_URL, {
+            method: "POST",
+            mode: "no-cors",
+            keepalive: true,
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(data)
+        });
+    }
+
+    async function handleFormSubmit(form, formType) {
+
+        const button = form.querySelector("button[type='submit']");
+
+        if (!button) return;
+
+        const originalText = button.textContent;
+
+        button.textContent = "Submitting...";
+        button.disabled = true;
+
+        try {
+
+            const tokenInput = form.querySelector(
+                'input[name="cf-turnstile-response"]'
+            );
+
+            const token = tokenInput?.value || '';
+
+            if (!token) {
+
+                alert("Please complete verification.");
+
+                return;
+            }
+
+            await submitToGoogleSheet(form, formType);
+
+            alert("Thank you! Your request has been submitted.");
+
+            form.reset();
+
+            if (formType === "Hero Form - $200 Offer (Modal)") {
+                closeModal();
+            }
+
+        } catch (error) {
+
+            console.error(error);
+
+            alert("Something went wrong. Please try again.");
+
+        } finally {
+
+            button.textContent = originalText;
+            button.disabled = false;
+        }
+    }
+
+    // =========================================================
+    // FORMS
+    // =========================================================
+    const forms = [
+        {
+            id: "heroForm",
+            type: "Hero Form - $200 Offer (Modal)"
+        },
+        {
+            id: "heroFormDesktop",
+            type: "Hero Form - $200 Offer (Desktop)"
+        },
+        {
+            id: "advancedForm",
+            type: "Advanced Form - Free Review"
+        }
+    ];
+
+    forms.forEach(({ id, type }) => {
+
+        const form = document.getElementById(id);
+
+        if (!form) return;
+
+        form.addEventListener('submit', (e) => {
+
+            e.preventDefault();
+
+            handleFormSubmit(form, type);
+        });
+    });
+
 });
-    </script>
+</script>
 </body>
 </html>
