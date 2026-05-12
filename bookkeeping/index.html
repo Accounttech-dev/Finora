@@ -1308,18 +1308,11 @@ img { max-width: 100%; height: auto; display: block; }
         </div>
     </footer>
 
-<!-- CLOUDFLARE TURNSTILE -->
-<script
-    src="https://challenges.cloudflare.com/turnstile/v0/api.js"
-    async
-    defer>
-</script>
-
 <script>
 document.addEventListener('DOMContentLoaded', () => {
 
     // =========================================================
-    // CACHE ELEMENTS
+    // ELEMENTS CACHE
     // =========================================================
     const body = document.body;
 
@@ -1331,7 +1324,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const scrollBtn = document.getElementById('scrollTopBtn');
 
     // =========================================================
-    // MODAL
+    // MODAL LOGIC (OPTIMIZED)
     // =========================================================
     function openModal() {
         if (!modal) return;
@@ -1347,50 +1340,42 @@ document.addEventListener('DOMContentLoaded', () => {
         body.classList.remove('modal-open');
     }
 
-    // Open modal
+    // Open Modal
     if (bannerBtn) {
 
         bannerBtn.addEventListener('click', openModal);
 
         bannerBtn.addEventListener('keydown', (e) => {
-
             if (e.key === 'Enter' || e.key === ' ') {
-
                 e.preventDefault();
                 openModal();
             }
         });
     }
 
-    // Close button
+    // Close Modal Button
     if (modalCloseBtn) {
         modalCloseBtn.addEventListener('click', closeModal);
     }
 
-    // Overlay close
+    // Overlay Click Close
     if (modal) {
-
         modal.addEventListener('click', (e) => {
-
             if (e.target === modal) {
                 closeModal();
             }
         });
     }
 
-    // ESC close
+    // ESC Close
     document.addEventListener('keydown', (e) => {
-
-        if (
-            e.key === 'Escape' &&
-            modal?.classList.contains('active')
-        ) {
+        if (e.key === 'Escape' && modal?.classList.contains('active')) {
             closeModal();
         }
     });
 
     // =========================================================
-    // FAQ ACCORDION
+    // FAQ ACCORDION (OPTIMIZED)
     // =========================================================
     const accordionItems = document.querySelectorAll('.accordion-item');
 
@@ -1429,8 +1414,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const icon = item.querySelector('.toggle-icon i');
 
                 if (body) {
-                    body.style.maxHeight =
-                        body.scrollHeight + 'px';
+                    body.style.maxHeight = body.scrollHeight + 'px';
                 }
 
                 if (icon) {
@@ -1441,75 +1425,63 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // First active accordion
-    const firstActive =
-        document.querySelector('.accordion-item.active');
+    // First Active Accordion
+    const firstActive = document.querySelector('.accordion-item.active');
 
     if (firstActive) {
 
-        const body =
-            firstActive.querySelector('.accordion-body');
+        const body = firstActive.querySelector('.accordion-body');
 
         if (body) {
-            body.style.maxHeight =
-                body.scrollHeight + 'px';
+            body.style.maxHeight = body.scrollHeight + 'px';
         }
     }
 
     // =========================================================
-    // FADE-UP ANIMATION
+    // FADE-UP ANIMATION (MOBILE OPTIMIZED)
     // =========================================================
-    const fadeElements =
-        document.querySelectorAll('.fade-up');
+    const fadeElements = document.querySelectorAll('.fade-up');
 
     if ('IntersectionObserver' in window) {
 
-        const fadeObserver =
-            new IntersectionObserver((entries, observer) => {
+        const fadeObserver = new IntersectionObserver((entries, observer) => {
 
-                entries.forEach(entry => {
+            entries.forEach(entry => {
 
-                    if (entry.isIntersecting) {
+                if (entry.isIntersecting) {
 
-                        entry.target.classList.add('visible');
+                    entry.target.classList.add('visible');
 
-                        observer.unobserve(entry.target);
-                    }
-                });
-
-            }, {
-                threshold: 0.08,
-                rootMargin: '0px 0px -30px 0px'
+                    observer.unobserve(entry.target);
+                }
             });
 
-        fadeElements.forEach(el =>
-            fadeObserver.observe(el)
-        );
+        }, {
+            threshold: 0.08,
+            rootMargin: '0px 0px -30px 0px'
+        });
 
+        fadeElements.forEach(el => fadeObserver.observe(el));
     } else {
 
-        fadeElements.forEach(el =>
-            el.classList.add('visible')
-        );
+        // Fallback
+        fadeElements.forEach(el => el.classList.add('visible'));
     }
 
     // =========================================================
-    // SMOOTH SCROLL
+    // SMOOTH SCROLL (LIGHTWEIGHT)
     // =========================================================
     document.addEventListener('click', (e) => {
 
-        const anchor =
-            e.target.closest('a[href^="#"]');
+        const anchor = e.target.closest('a[href^="#"]');
 
         if (!anchor) return;
 
-        const targetId =
-            anchor.getAttribute('href');
+        const targetId = anchor.getAttribute('href');
 
         if (!targetId || targetId === '#') return;
 
-        const target =
-            document.querySelector(targetId);
+        const target = document.querySelector(targetId);
 
         if (!target) return;
 
@@ -1522,7 +1494,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // =========================================================
-    // SCROLL BUTTON OPTIMIZED
+    // BACK TO TOP BUTTON (THROTTLED)
     // =========================================================
     let ticking = false;
 
@@ -1531,10 +1503,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const show = window.scrollY > 300;
 
         if (scrollBtn) {
-            scrollBtn.classList.toggle(
-                'visible',
-                show
-            );
+            scrollBtn.classList.toggle('visible', show);
         }
 
         ticking = false;
@@ -1544,14 +1513,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (!ticking) {
 
-            requestAnimationFrame(handleScroll);
+            window.requestAnimationFrame(handleScroll);
 
             ticking = true;
         }
 
     }, { passive: true });
 
-    // Scroll top
+    // Scroll To Top
     function scrollToTop(e) {
 
         e.preventDefault();
@@ -1563,17 +1532,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     if (backToTopBtn) {
-        backToTopBtn.addEventListener(
-            'click',
-            scrollToTop
-        );
+        backToTopBtn.addEventListener('click', scrollToTop);
     }
 
     if (scrollBtn) {
-        scrollBtn.addEventListener(
-            'click',
-            scrollToTop
-        );
+        scrollBtn.addEventListener('click', scrollToTop);
     }
 
     // =========================================================
@@ -1593,14 +1556,10 @@ document.addEventListener('DOMContentLoaded', () => {
             phone: fd.get("phone") || "",
             businessName: fd.get("businessName") || "",
             businessState: fd.get("businessState") || "",
-            accountingSoftware:
-                fd.get("accountingSoftware") || "",
-            serviceNeeded:
-                fd.get("serviceNeeded") || "",
-            monthsBehind:
-                fd.get("monthsBehind") || "",
-            message:
-                fd.get("message") || ""
+            accountingSoftware: fd.get("accountingSoftware") || "",
+            serviceNeeded: fd.get("serviceNeeded") || "",
+            monthsBehind: fd.get("monthsBehind") || "",
+            message: fd.get("message") || ""
         };
 
         await fetch(GOOGLE_SCRIPT_URL, {
@@ -1614,74 +1573,39 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // =========================================================
-    // FORM SUBMIT
-    // =========================================================
     async function handleFormSubmit(form, formType) {
 
-        const button =
-            form.querySelector("button[type='submit']");
+        const button = form.querySelector("button[type='submit']");
 
         if (!button) return;
 
-        // CLOUDFLARE TURNSTILE CHECK
-        const tokenInput =
-            form.querySelector(
-                'input[name="cf-turnstile-response"]'
-            );
-
-        const token =
-            tokenInput?.value?.trim() || '';
-
-        // BLOCK SUBMIT UNTIL VERIFIED
-        if (!token) {
-
-            alert(
-                "Please verify that you are human before submitting."
-            );
-
-            return;
-        }
-
         const originalText = button.textContent;
 
-        button.disabled = true;
         button.textContent = "Submitting...";
+        button.disabled = true;
 
         try {
 
+            const tokenInput = form.querySelector(
+                'input[name="cf-turnstile-response"]'
+            );
+
+            const token = tokenInput?.value || '';
+
+            if (!token) {
+
+                alert("Please complete verification.");
+
+                return;
+            }
+
             await submitToGoogleSheet(form, formType);
 
-            alert(
-                "Thank you! Your request has been submitted."
-            );
+            alert("Thank you! Your request has been submitted.");
 
             form.reset();
 
-            // RESET TURNSTILE
-            if (window.turnstile) {
-
-                const widget =
-                    form.querySelector('.cf-turnstile');
-
-                if (widget) {
-
-                    const widgetId =
-                        widget.getAttribute(
-                            'data-widget-id'
-                        );
-
-                    if (widgetId) {
-                        turnstile.reset(widgetId);
-                    }
-                }
-            }
-
-            // Close modal if modal form
-            if (
-                formType ===
-                "Hero Form - $200 Offer (Modal)"
-            ) {
+            if (formType === "Hero Form - $200 Offer (Modal)") {
                 closeModal();
             }
 
@@ -1689,14 +1613,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
             console.error(error);
 
-            alert(
-                "Something went wrong. Please try again."
-            );
+            alert("Something went wrong. Please try again.");
 
         } finally {
 
-            button.disabled = false;
             button.textContent = originalText;
+            button.disabled = false;
         }
     }
 
