@@ -4664,14 +4664,14 @@
           button.disabled = true;
           button.textContent = "Submitting...";
 
-          // try {
+          try {
 
-          //   await submitToGoogleSheet(form, formType);
+            await submitToGoogleSheet(form, formType);
 
-          //   // Show success message briefly before redirect
-          //   alert(
-          //     "Thank you! Your request has been submitted."
-          //   );
+            // Show success message briefly before redirect
+            alert(
+              "Thank you! Your request has been submitted."
+            );
 
             // Reset form fields
             form.reset();
