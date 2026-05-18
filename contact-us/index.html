@@ -341,7 +341,6 @@
   document.head.appendChild(canonical);
 })();
 </script>
- <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
     <link rel="stylesheet" href="../ram.aifinoracpu.com/_astro-assets/booked.0_EVPCIz.css">
     <link rel="preconnect" href="https://challenges.cloudflare.com" />
     <link rel="stylesheet" href="../ram.aifinoracpu.com/_astro-assets/index.BW-MCg4d.css">
@@ -2386,68 +2385,124 @@ s0.parentNode.insertBefore(s1,s0);
 })();
 </script>
 
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+
 <script>
 document.addEventListener('DOMContentLoaded', function () {
+
+    // Initialize EmailJS
     emailjs.init('U0wQ29ZcTtGzRZd_M');
+
     const form = document.getElementById('contactForm');
     const successMessage = document.getElementById('successMessage');
     const recaptchaError = document.getElementById('recaptchaError');
 
+    // Email validation
     function isValidEmail(email) {
         const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return re.test(String(email).toLowerCase());
     }
 
+    // Form submit
     form.addEventListener('submit', function (e) {
         e.preventDefault();
 
-        document.querySelectorAll('.form-input, .form-textarea').forEach(function (el) { el.classList.remove('error'); });
-        document.querySelectorAll('.error-message').forEach(function (el) { el.classList.remove('show'); });
-        if (recaptchaError) recaptchaError.classList.remove('show');
+        // Remove old errors
+        document.querySelectorAll('.form-input, .form-textarea').forEach(function (el) {
+            el.classList.remove('error');
+        });
 
+        document.querySelectorAll('.error-message').forEach(function (el) {
+            el.classList.remove('show');
+        });
+
+        if (recaptchaError) {
+            recaptchaError.classList.remove('show');
+        }
+
+        // Inputs
         const name = document.getElementById('name');
         const email = document.getElementById('email');
         const message = document.getElementById('message');
+
         let isValid = true;
 
+        // Name validation
         if (!name.value.trim()) {
             name.classList.add('error');
             document.getElementById('nameError').classList.add('show');
             isValid = false;
         }
+
+        // Email validation
         if (!email.value.trim() || !isValidEmail(email.value)) {
             email.classList.add('error');
             document.getElementById('emailError').classList.add('show');
             isValid = false;
         }
+
+        // Message validation
         if (!message.value.trim()) {
             message.classList.add('error');
             document.getElementById('messageError').classList.add('show');
             isValid = false;
         }
 
-        var recaptchaResponse = typeof grecaptcha !== 'undefined' ? grecaptcha.getResponse() : '';
-        if (!recaptchaResponse) {
-            if (recaptchaError) recaptchaError.classList.add('show');
+        // Cloudflare Turnstile validation
+        const turnstileResponse = document.querySelector('[name="cf-turnstile-response"]')?.value;
+
+        if (!turnstileResponse) {
+            if (recaptchaError) {
+                recaptchaError.classList.add('show');
+            }
             isValid = false;
         }
 
+        // Stop if invalid
         if (!isValid) return;
 
-        emailjs.sendForm('service_7jp2j04', 'template_htqqbkl', this)
-            .then(function () {
-                form.style.display = 'none';
+        // Send form using EmailJS
+        emailjs.sendForm(
+            'service_7jp2j04',
+            'template_htqqbkl',
+            form
+        )
+        .then(function () {
+
+            // Hide form
+            form.style.display = 'none';
+
+            // Show success message
+            if (successMessage) {
                 successMessage.classList.add('show');
                 successMessage.style.display = 'block';
-                form.reset();
-                if (typeof grecaptcha !== 'undefined') grecaptcha.reset();
-            })
-            .catch(function (error) {
-                console.error('FAILED...', error);
-                alert('Failed to send message. Please try again.');
-                if (typeof grecaptcha !== 'undefined') grecaptcha.reset();
-            });
+            }
+
+            // Reset form
+            form.reset();
+
+            // Reset Turnstile
+            if (typeof turnstile !== 'undefined') {
+                turnstile.reset();
+            }
+
+        })
+        .catch(function (error) {
+
+            console.error('FAILED...', error);
+
+            alert('Failed to send message. Please try again.');
+
+            // Reset Turnstile after error
+            if (typeof turnstile !== 'undefined') {
+                turnstile.reset();
+            }
+
+        });
+
     });
+
 });
 </script>
 <!--End of Tawk.to Script-->
