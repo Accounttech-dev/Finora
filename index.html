@@ -2958,121 +2958,91 @@ function toggleMobileInd(btn) {
   </div>
 </section>
 
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<!-- Cloudflare Turnstile -->
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 
-<!-- reCAPTCHA v2 — explicit render so the widget always binds after API is ready -->
-<script src="https://www.google.com/recaptcha/api.js?onload=aiFinoraRecaptchaOnLoad&render=explicit" async defer></script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
 <script>
 (function () {
   'use strict';
 
-  var SITE_KEY = '6LdnA9ksAAAAAKfGrBB7uzl3bRWENxLU0AQ2zynT';
   var EMAILJS_PUBLIC_KEY = 'zOEb9EpODCU2EQ02o';
   var EMAILJS_SERVICE_ID = 'service_9i4mi43';
   var EMAILJS_TEMPLATE_ID = 'template_c3wc9b7';
 
-  var recaptchaWidgetId = null;
   var form = null;
   var submitBtn = null;
-  var recaptchaError = null;
-
-  window.aiFinoraRecaptchaOnLoad = function () {
-    var el = document.getElementById('recaptcha-container');
-    if (!el || typeof grecaptcha === 'undefined') return;
-    recaptchaWidgetId = grecaptcha.render(el, {
-      sitekey: SITE_KEY,
-      theme: 'dark'
-    });
-  };
-
-  function getRecaptchaToken() {
-    if (recaptchaWidgetId === null || typeof grecaptcha === 'undefined') return '';
-    return grecaptcha.getResponse(recaptchaWidgetId) || '';
-  }
-
-  function resetRecaptcha() {
-    if (recaptchaWidgetId !== null && typeof grecaptcha !== 'undefined') {
-      grecaptcha.reset(recaptchaWidgetId);
-    }
-  }
-
-  function showRecaptchaError(show) {
-    if (!recaptchaError) return;
-    recaptchaError.classList.toggle('visible', !!show);
-  }
 
   document.addEventListener('DOMContentLoaded', function () {
+
     form = document.getElementById('contact-form');
     submitBtn = document.getElementById('contact-submit-btn');
-    recaptchaError = document.getElementById('recaptchaError');
 
     if (typeof emailjs !== 'undefined') {
-      emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+      emailjs.init({
+        publicKey: EMAILJS_PUBLIC_KEY
+      });
     }
 
     if (!form) return;
 
     form.addEventListener('submit', function (e) {
       e.preventDefault();
-      showRecaptchaError(false);
 
-      if (typeof emailjs === 'undefined') {
-        alert('Email service is still loading. Please wait a moment and try again.');
-        return;
-      }
+      // Get Turnstile token
+      var tokenInput = form.querySelector('input[name="cf-turnstile-response"]');
 
-      if (typeof grecaptcha === 'undefined' || recaptchaWidgetId === null) {
-        alert('Security check is still loading. Please wait a few seconds and try again.');
-        return;
-      }
-
-      var token = getRecaptchaToken();
-      if (!token) {
-        showRecaptchaError(true);
+      if (!tokenInput || !tokenInput.value) {
+        alert('Please complete the security check.');
         return;
       }
 
       if (submitBtn) {
         submitBtn.disabled = true;
-        submitBtn.textContent = 'Sending…';
+        submitBtn.textContent = 'Sending...';
       }
 
-      // Keep token in form payload in case template references it.
-      var recaptchaInput = document.getElementById('g-recaptcha-response');
-      if (recaptchaInput) recaptchaInput.value = token;
+      emailjs.sendForm(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        form,
+        {
+          publicKey: EMAILJS_PUBLIC_KEY
+        }
+      )
+      .then(function () {
 
-      emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, form, {
-        publicKey: EMAILJS_PUBLIC_KEY
+        alert('Message sent successfully!');
+
+        form.reset();
+
+        // Reset Turnstile
+        if (window.turnstile) {
+          turnstile.reset();
+        }
+
       })
-        .then(function () {
-          alert('Message sent successfully!');
-          form.reset();
-          resetRecaptcha();
-        })
-        .catch(function (err) {
-          console.error('EmailJS error:', err);
-          // EmailJS returns useful text for 400s (invalid service/template/public key, etc.).
-          var details = '';
-          if (err) {
-            if (typeof err.text === 'string' && err.text.trim()) details = err.text;
-            else if (typeof err.message === 'string' && err.message.trim()) details = err.message;
-            else if (typeof err.status !== 'undefined') details = 'status=' + err.status;
-          }
-          if (details) {
-            console.error('EmailJS reject reason:', details);
-          }
-          alert('Failed to send message. ' + (details ? ('Reason: ' + details) : 'Please try again or email us directly.'));
-          resetRecaptcha();
-        })
-        .finally(function () {
-          if (submitBtn) {
-            submitBtn.disabled = false;
-            submitBtn.textContent = 'Submit';
-          }
-        });
+      .catch(function (err) {
+
+        console.error('EmailJS error:', err);
+
+        alert('Failed to send message. Please try again.');
+
+      })
+      .finally(function () {
+
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Submit';
+        }
+
+      });
+
     });
+
   });
+
 })();
 </script>
 
