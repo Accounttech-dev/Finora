@@ -2186,79 +2186,55 @@ function toggleMobileInd(btn) {
 
 <script>
   (function () {
-
+    // Replace with your EmailJS public key
     emailjs.init({
       publicKey: "XyDKso7_UkpzxUOE-"
     });
-
     const form = document.getElementById("consultationForm");
     const recaptchaError = document.getElementById("recaptchaError");
     const submitBtn = document.getElementById("submitBtn");
-
     form.addEventListener("submit", async function (e) {
-
       e.preventDefault();
-
-      // HTML5 validation
+      // Basic HTML validation
       if (!form.checkValidity()) {
         form.reportValidity();
         return;
       }
-
-      // Check reCAPTCHA loaded
+      // reCAPTCHA validation
       if (typeof grecaptcha === "undefined") {
-        alert("reCAPTCHA failed to load. Refresh and try again.");
+        alert("reCAPTCHA failed to load. Please refresh and try again.");
         return;
       }
-
-      // Check reCAPTCHA completed
       const recaptchaToken = grecaptcha.getResponse();
-
       if (!recaptchaToken) {
         recaptchaError.style.display = "block";
         return;
+      } else {
+        recaptchaError.style.display = "none";
       }
-
-      recaptchaError.style.display = "none";
-
-      // Disable button
       submitBtn.disabled = true;
       submitBtn.textContent = "Sending...";
-
       const params = {
-        name: form.elements["name"].value.trim(),
-        email: form.elements["email"].value.trim(),
-        phone: form.elements["phone"].value.trim(),
-        message: form.elements["message"].value.trim()
+        name: form.name.value.trim(),
+        email: form.email.value.trim(),
+        phone: form.phone.value.trim(),
+        message: form.message.value.trim(),
+        "g-recaptcha-response": recaptchaToken
       };
-
       try {
-
-        await emailjs.send(
-          "service_d6d6duh",
-          "template_ibeq6sh",
-          params
-        );
-
+        // Replace with your EmailJS service/template IDs
+        await emailjs.send("service_d6d6duh", "template_ibeq6sh", params);
         alert("Message sent successfully!");
-
         form.reset();
         grecaptcha.reset();
-
       } catch (error) {
-
         console.error("EmailJS error:", error);
         alert("Failed to send message. Please try again.");
-
       } finally {
-
         submitBtn.disabled = false;
         submitBtn.textContent = "Submit";
-
       }
-
     });
-
   })();
 </script>
   <div class="cases-section">
