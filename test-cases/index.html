@@ -2161,7 +2161,7 @@ function toggleMobileInd(btn) {
     <p style="color: white; font-size: 15px;">Schedule Your Free Consultation</p>
   </div>
   <!-- IMPORTANT: Use real form -->
-  <form id="consultationForm" class="cta-form-wrap" novalidate>
+<form id="consultationForm" class="cta-form-wrap" novalidate>
     <div class="cta-row">
       <input type="text" name="name" placeholder="Name*" required />
       <input type="email" name="email" placeholder="Email*" required />
@@ -2170,63 +2170,69 @@ function toggleMobileInd(btn) {
     <div class="cta-row">
       <textarea name="message" placeholder="Requirements*" required></textarea>
       <div style="display:flex;flex-direction:column;justify-content:center;gap:8px;">
-                    <div class="cf-turnstile"
-         data-sitekey="0x4AAAAAADNW2MtpWjhewR0e">
-    </div>
-        <small id="recaptchaError" style="color:red;display:none;">
-        </small>
+        <div class="cf-turnstile" data-sitekey="0x4AAAAAADNW2MtpWjhewR0e"></div>
+        <small id="turnstileError" style="color:red;display:none;">Please complete the verification</small>
       </div>
     </div>
     <div class="cta-submit-wrap">
       <button class="btn-submit" id="submitBtn" type="submit">Submit</button>
     </div>
-  </form>
+</form>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
 <script>
   (function () {
-    // Replace with your EmailJS public key
+    // Initialize EmailJS
     emailjs.init({
       publicKey: "XyDKso7_UkpzxUOE-"
     });
+    
     const form = document.getElementById("consultationForm");
-    const recaptchaError = document.getElementById("recaptchaError");
+    const turnstileError = document.getElementById("turnstileError");
     const submitBtn = document.getElementById("submitBtn");
+    
     form.addEventListener("submit", async function (e) {
       e.preventDefault();
+      
       // Basic HTML validation
       if (!form.checkValidity()) {
         form.reportValidity();
         return;
       }
-      // reCAPTCHA validation
-      if (typeof grecaptcha === "undefined") {
-        alert("reCAPTCHA failed to load. Please refresh and try again.");
+      
+      // Turnstile validation
+      if (typeof turnstile === "undefined") {
+        alert("Verification failed to load. Please refresh and try again.");
         return;
       }
-      const recaptchaToken = grecaptcha.getResponse();
-      if (!recaptchaToken) {
-        recaptchaError.style.display = "block";
+      
+      const turnstileToken = turnstile.getResponse();
+      
+      if (!turnstileToken) {
+        turnstileError.style.display = "block";
         return;
       } else {
-        recaptchaError.style.display = "none";
+        turnstileError.style.display = "none";
       }
+      
       submitBtn.disabled = true;
       submitBtn.textContent = "Sending...";
+      
       const params = {
         name: form.name.value.trim(),
         email: form.email.value.trim(),
         phone: form.phone.value.trim(),
         message: form.message.value.trim(),
-        "g-recaptcha-response": recaptchaToken
+        "cf-turnstile-response": turnstileToken
       };
+      
       try {
         // Replace with your EmailJS service/template IDs
         await emailjs.send("service_d6d6duh", "template_ibeq6sh", params);
         alert("Message sent successfully!");
         form.reset();
-        grecaptcha.reset();
+        turnstile.reset();
       } catch (error) {
         console.error("EmailJS error:", error);
         alert("Failed to send message. Please try again.");
