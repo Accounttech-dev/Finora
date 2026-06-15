@@ -1157,66 +1157,8 @@
   </div>
 </header>
 
-<!-- ═══════════════════════════════════════════
-     JS: Industries panel switching + mobile accordion
-═══════════════════════════════════════════ -->
-<script>
-(function () {
-  // ── Desktop: industry panel switching ──
-  document.querySelectorAll('.industry-btn').forEach(function (btn) {
-    function activate() {
-      document.querySelectorAll('.industry-btn').forEach(function (b) { b.classList.remove('active'); });
-      document.querySelectorAll('.industry-panel').forEach(function (p) { p.classList.remove('active'); });
-      btn.classList.add('active');
-      var panel = document.getElementById(btn.getAttribute('data-target'));
-      if (panel) panel.classList.add('active');
-    }
-    btn.addEventListener('mouseenter', activate);
-    btn.addEventListener('click', activate);
-  });
 
-  // ── Desktop: robust hover with delay so mouse can travel to mega menu ──
-  var indDropdowns = document.querySelectorAll('.top-nav-dropdown:has(.industries-mega)');
-  indDropdowns.forEach(function (dropdown) {
-    var mega = dropdown.querySelector('.industries-mega');
-    var hideTimer = null;
 
-    function showMega() {
-      clearTimeout(hideTimer);
-      mega.style.opacity = '1';
-      mega.style.visibility = 'visible';
-      mega.style.pointerEvents = 'auto';
-      mega.style.transform = 'translateX(-50%) translateY(0)';
-    }
-
-    function hideMega() {
-      hideTimer = setTimeout(function () {
-        mega.style.opacity = '';
-        mega.style.visibility = '';
-        mega.style.pointerEvents = '';
-        mega.style.transform = '';
-      }, 120); // 120ms grace period — enough to move mouse to mega
-    }
-
-    dropdown.addEventListener('mouseenter', showMega);
-    dropdown.addEventListener('mouseleave', hideMega);
-    mega.addEventListener('mouseenter', showMega);
-    mega.addEventListener('mouseleave', hideMega);
-  });
-})();
-
-// ── Mobile: accordion toggle ──
-function toggleMobileInd(btn) {
-  var links = btn.nextElementSibling;
-  var wasOpen = links.classList.contains('open');
-  document.querySelectorAll('.mobile-ind-links').forEach(function (el) { el.classList.remove('open'); });
-  document.querySelectorAll('.mobile-ind-toggle').forEach(function (el) { el.classList.remove('open'); });
-  if (!wasOpen) {
-    links.classList.add('open');
-    btn.classList.add('open');
-  }
-}
-</script>
         <script type="module">
             const e = document.querySelector("#alert-banner"), t = document.querySelector("#header"), n = document.querySelectorAll("#header .top-nav-dropdown"), o = document.querySelector("#hamburger-button"), r = document.querySelectorAll("#header .top-nav-mobile-link-dropdown"), a = document.querySelectorAll("header .top-nav-mobile-back-btn"), c = "scrolled", d = "blur-active"; let u = null, s = !1, l = !1; function i() { t?.classList.add(d) } function f() { t?.classList.remove(d) } function v(e) { e.setAttribute("data-dd-open", "false") } u = function (t) { const n = e ? e.offsetHeight : 0; return t ? t + n : n }(u), n.forEach((e => { e.addEventListener("mouseenter", (() => { i() })), e.addEventListener("mouseleave", (e => { !function (e) { if (e.hasFocus) return; f() }(e) })), e.addEventListener("focusin", (e => { !function (e) { e.hasFocus = !0, i() }(e) })), e.addEventListener("focusout", (e => { !function (e) { e.hasFocus = !1, f() }(e) })) })), document.addEventListener("scroll", (() => { !function () { const e = window.scrollY; e > u && !s ? (s = !0, t?.classList.add(c)) : e <= u && s && (s = !1, t?.classList.remove(c)) }() })), o?.addEventListener("click", (e => { !function (e) { e.preventDefault(), l ? (l = !1, t?.setAttribute("data-nav-open", "false"), r.forEach((e => { v(e.closest(".top-nav-mobile-dropdown")) }))) : (l = !0, t?.setAttribute("data-nav-open", "true")) }(e) })), r.forEach((e => { e.addEventListener("click", (e => { !function (e) { e.preventDefault(); const t = e.target.closest(".top-nav-mobile-dropdown"), n = "true" === t.getAttribute("data-dd-open"); n ? v(t) : function (e) { e.setAttribute("data-dd-open", "true") }(t) }(e) })) })), a.forEach((e => { e.addEventListener("click", (e => { !function (e) { e.preventDefault(); const t = e.target.closest(".top-nav-mobile-dropdown"); "true" === t.getAttribute("data-dd-open") && v(t) }(e) })) }));
         </script>
