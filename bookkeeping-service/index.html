@@ -1,0 +1,2516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Finora – Bookkeeping Services</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap" rel="stylesheet">
+<style>
+
+
+  
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@import url('https://fonts.cdnfonts.com/css/georgia');
+
+:root {
+    --navy: #031d47;
+    --teal: #10968d;
+    --teal-dark: #0d7d75;
+    --white: #ffffff;
+    --light: #f5f7fa;
+    --border: #cacaca42;
+    --text-muted: rgba(255, 255, 255, 0.8);
+    --font: 'Inter', sans-serif;
+    --navy: #031d47;
+    --teal: #10968d;
+    --teal-light: rgba(16, 150, 141, 0.10);
+    --teal-check: #10968d;
+  
+    --bg: #f7f9fc;
+    --text: rgba(0, 0, 0, 0.8);
+    --font: 'Inter', sans-serif;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    color: var(--navy);
+    background: var(--white);
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: "Playfair Display", serif;
+}
+
+/* ── NAVBAR ─────────────────────────────────────────── */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    height: 75px;
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 200px;
+    height: 40px;
+    text-decoration: none;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+
+}
+
+.logo-icon {
+    width: 32px;
+    height: 32px;
+    background: var(--navy);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    color: var(--teal);
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.logo span {
+    color: var(--teal);
+}
+
+.btn-nav {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 21px;
+    background: var(--navy);
+    color: var(--white);
+    border: none;
+    border-radius: 8px;
+    font-family: var(--font);
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn-nav:hover {
+    background: #052660;
+}
+
+.btn-nav .icon {
+    width: 18px;
+    height: 18px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}
+
+/* ── HERO ────────────────────────────────────────────── */
+.hero {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+
+    /* CSS background — swap the image URL here for mobile override */
+    background-image: url(/assets/753b5ed9-d0dc-47e3-b36f-6331a1528cf1.png);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+/* Dark overlay for readability */
+.hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(100deg,
+            rgba(255, 255, 255, 0.147) 0%,
+            rgba(255, 255, 255, 0.14) 45%,
+            rgba(173, 173, 173, 0.3) 100%);
+    z-index: 1;
+}
+
+.hero-inner {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    display: grid;
+    grid-template-columns: .9fr 450px;
+    gap: 60px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* ── LEFT COPY ───────────────────────────────────────── */
+.hero-copy {
+    color: #031e48;
+}
+
+.hero-copy h1 {
+    font-family: "Playfair", serif;
+    font-size: clamp(35px, 5vw, 65px);
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -0.5px;
+    margin-bottom: 20px;
+}
+
+.hero-copy p {
+    font-size: 17px;
+    line-height: 1.7;
+    color: rgba(0, 0, 0, 0.8);
+    max-width: 472px;
+    margin-bottom: 36px;
+}
+
+.hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 32px;
+}
+
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 28px;
+    background: var(--navy);
+    color: var(--white);
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    font-family: var(--font);
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+
+.btn-primary:hover {
+    background: #052660;
+}
+
+.btn-outline {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 32px;
+    background: transparent;
+    color: var(--navy);
+    border: 2px solid var(--navy);
+    border-radius: 8px;
+    font-family: var(--font);
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    transition: border-color 0.2s, background 0.2s;
+}
+
+.btn-outline:hover {
+
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.trust-badges {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.badge {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.badge-dot {
+    width: 6px;
+    height: 6px;
+    background: black;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.badge-sep {
+    color: rgba(255, 255, 255, 0.30);
+}
+
+/* Mobile-only hero illustration (hidden on desktop; the desktop hero
+   image is shown as a CSS background on .hero instead) */
+.hero-mobile-image {
+    display: none;
+}
+
+
+/* ── FORM CARD ───────────────────────────────────────── */
+.form-card {
+    background: var(--white);
+    border-radius: 16px;
+    padding: 36px 32px;
+    box-shadow: 0 20px 60px rgba(3, 29, 71, 0.20);
+    min-height: 520px;
+}
+
+.form-card h2 {
+    font-size: 19px;
+    font-weight: 700;
+    color: var(--navy);
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group.full {
+    grid-column: 1 / -1;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 14px 14px;
+    border: 1.5px solid var(--border);
+    border-radius: 8px;
+    font-family: var(--font);
+    font-size: 13.5px;
+    color: var(--navy);
+    background: var(--white);
+    outline: none;
+    transition: border-color 0.2s;
+    appearance: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #a0aab8;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: var(--teal);
+}
+
+select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%236b7a90' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    padding-right: 36px;
+    color: #a0aab8;
+}
+
+textarea {
+    resize: none;
+    height: 88px;
+}
+
+.btn-submit {
+    width: 100%;
+    margin-top: 16px;
+    padding: 15px;
+    background: #10978f;
+    color: var(--white);
+    border: none;
+    border-radius: 8px;
+    font-family: var(--font);
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: background 0.2s;
+}
+
+.btn-submit:hover {
+    background: var(--teal-dark);
+}
+
+.btn-submit .arrow {
+    font-size: 18px;
+    line-height: 1;
+}
+
+.form-footer {
+    text-align: center;
+    margin-top: 12px;
+    font-size: 12px;
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.btn-logo,
+.outline-btn-logo,
+.badge-dot-icon,
+.lock-icon {
+    width: 15px;
+    height: 15px;
+}
+
+.outline-btn-logo img,
+.badge-dot-icon img,
+.lock-icon img {
+    width: 100%;
+    height: 100%;
+}
+
+.btn-logo img {
+    width: 100%;
+    height: 100%;
+    filter: invert(100%);
+}
+
+
+
+
+
+.features-bar {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    margin: 40px auto;
+    max-width: 1400px;
+    padding: 0 10px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 28px 24px;
+    position: relative;
+    transition: all .25s ease;
+}
+.feature-item:hover{
+
+
+transform: translateY(-10px);
+}
+
+/* Dividers between items */
+.feature-item:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1.5px;
+    height: 100%;
+    background: linear-gradient(to bottom,
+            transparent 0%,
+            var(--border) 15%,
+            var(--border) 85%,
+            transparent 100%);
+}
+
+.feature-icon {
+    width: 52px;
+    height: 52px;
+    flex-shrink: 0;
+    display: block;
+    object-fit: contain;
+    filter: brightness(0) saturate(100%) invert(43%) sepia(74%) saturate(781%) hue-rotate(134deg) brightness(94%) contrast(94%);
+}
+
+.feature-text h3 {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 6px;
+    white-space: nowrap;
+}
+
+.feature-text p {
+    font-size: 13.5px;
+    line-height: 1.6;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+
+
+
+
+.pain-section {
+    background: white;
+    padding: 40px 20px;
+    padding-top: 0;
+}
+
+.pain-section h2 {
+    text-align: center;
+    font-size: clamp(22px, 3vw, 30px);
+    font-weight: 800;
+    color: var(--navy);
+    margin-bottom: 40px;
+    letter-spacing: -0.3px;
+}
+
+.pain-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.pain-card {
+    background: #fbfbfb;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 28px 22px;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: all .25s ease;
+}
+.pain-card:hover{
+
+  transform: translateY(-10px);
+}
+
+.pain-icon-wrap {
+    width: 60px;
+    height: 60px;
+    min-width: 60px;
+    border-radius: 50%;
+    background: #d0e7e7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.pain-icon-wrap img {
+    width: 32px;
+    height: 32px;
+    display: block;
+    object-fit: contain;
+    filter: brightness(0) saturate(100%) invert(33%) sepia(74%) saturate(781%) hue-rotate(134deg) brightness(94%) contrast(94%);
+}
+
+.pain-text h3 {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 6px;
+}
+
+.pain-text p {
+    font-size: 13.5px;
+    line-height: 1.6;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+/* ── RESPONSIVE ─────────────────────── */
+
+
+@media(min-width:901px){
+    .benifits-strip{
+        display: none;
+    }
+    .hero-img{
+        display: none;
+    }
+}
+
+/* ── MOBILE ──────────────────────────────────────────── */
+@media (max-width: 900px) {
+    nav {
+        padding: 0 20px;
+    }
+
+    .hero {
+        /* On mobile the illustration is shown as an in-flow image
+           (see .hero-mobile-image) instead of a full-section
+           background, so it never sits behind the form card below it. */
+        background-image: none;
+        background: var(--white);
+        min-height: auto;
+        overflow: visible;
+    }
+
+    /* Turn off the desktop readability overlay since there's no
+       background photo behind the text on mobile anymore */
+    .hero::before {
+        display: none;
+    }
+
+    .hero-inner {
+        grid-template-columns: 1fr;
+        padding: 40px 20px 48px;
+        gap: 28px;
+        /* Text on top, form below */
+        grid-template-areas:
+            "copy"
+            "image"
+            "strip"
+            "form";
+    }
+
+    .hero-copy {
+        grid-area: copy;
+    }
+
+    .form-card {
+        grid-area: form;
+    }
+.hero-img{
+    grid-area: image;
+    width: 100%;
+    height: 300px;
+    background: url(/assets/mobile-img.jpg) no-repeat center center/cover;
+}
+.benifit-icon{
+    width: 30px;
+    height: 30px;
+    margin: 0 auto;
+}
+
+.benifit-icon img{
+    width: 100%;
+    height: 100%;
+}
+.benifit-content h3{
+    font-size: 12px;
+    text-align: center;
+}
+.benifits-strip{
+    grid-area: strip;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.trust-badges{
+    display: none;
+}
+
+    .hero-copy p {
+        max-width: 100%;
+    }
+
+    .hero-actions {
+        margin-bottom: 24px;
+    }
+
+    /* The illustration: a normal, bounded image sitting between the
+       hero buttons and the trust badges, matching the reference design */
+    .hero-mobile-image {
+        display: block;
+        width: 100%;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 16px 40px rgba(3, 29, 71, 0.18);
+        margin-bottom: 28px;
+    }
+
+    .hero-mobile-image img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: 16px;
+    }
+
+    .trust-badges {
+        display: none;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px 12px;
+        justify-items: center;
+        text-align: center;
+    }
+
+    .badge {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .badge-dot-icon {
+        width: 22px;
+        height: 22px;
+    }
+
+    .badge-dot {
+        width: 10px;
+        height: 10px;
+        background: var(--teal);
+    }
+
+    .badge-sep {
+        display: none;
+    }
+
+    .form-card {
+        padding: 28px 20px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-actions {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .pain-card{
+        padding: 10px;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    .btn-primary,
+    .btn-outline {
+        width: 100%;
+        justify-content: center;
+    }
+    .logo{
+        width: 150px;
+        height: 30px;
+    }
+    .btn-nav{
+        padding: 10px 17px;
+        font-size: 12px;
+    }
+}
+
+
+
+
+@media (max-width: 900px) {
+    .features-bar {
+        grid-template-columns: repeat(2, 1fr);
+        margin: 20px 12px;
+    }
+
+    .feature-item:nth-child(2)::after {
+        display: none;
+    }
+
+    .feature-item:nth-child(3) {
+        border-top: 1px solid var(--border);
+    }
+
+    .feature-item:nth-child(4) {
+        border-top: 1px solid var(--border);
+    }
+
+    .pain-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .pain-text h3{
+        font-size: 12px;
+    }
+    .pain-text p{
+        font-size: 10px;
+    }
+
+}
+
+@media (max-width: 560px) {
+    .features-bar {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .feature-item::after {
+        display: none !important;
+    }
+
+    .feature-item {
+        border-top: 1px solid var(--border);
+        padding: 10px;
+    }
+    .feature-icon{
+        width: 35px;
+        height: 35px;
+    }
+    .feature-text h3{
+        font-size: 12px;
+    }
+    .feature-text p{
+        font-size: 10px;
+    }
+
+    .feature-item:first-child {
+        border-top: none;
+    }
+     .feature-item{
+        border: none;
+     }
+
+    .pain-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.services-section {
+    padding: 40px 20px;
+    background: #fff;
+    padding-top: 0;
+}
+
+.services-section h2 {
+   text-align: center;
+    font-size: clamp(22px, 3vw, 30px);
+    font-weight: 800;
+    color: var(--navy);
+    margin-bottom: 40px;
+    letter-spacing: -0.3px;
+}
+
+.services-layout {
+    display: grid;
+    grid-template-columns: 1fr 500px;
+    gap: 28px;
+    max-width: 1400px;
+    margin: 0 auto;
+    align-items: flex-end;
+}
+
+/* Services Grid */
+.services-grid {
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.service-item {
+    padding: 26px 22px;
+    border-right: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    gap: 16px;
+    transition: all .25s ease;
+}
+.service-item:hover{
+  transform: translateY(-10px);
+
+}
+
+.service-item:nth-child(3) {
+    border-right: none;
+}
+
+.service-item:nth-child(4) {
+    border-bottom: none;
+}
+
+.service-item:nth-child(5) {
+    border-bottom: none;
+}
+
+.service-item:nth-child(6) {
+    border-right: none;
+    border-bottom: none;
+}
+
+.service-icon {
+    width: 44px;
+    height: 44px;
+    display: block;
+    margin-bottom: 12px;
+    object-fit: contain;
+}
+
+.invert {
+
+    filter: brightness(0) saturate(100%) invert(33%) sepia(74%) saturate(781%) hue-rotate(134deg) brightness(94%) contrast(94%);
+
+}
+
+.service-item h3 {
+    font-size: 14.5px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 6px;
+    line-height: 1.3;
+}
+
+.service-item p {
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--text);
+}
+
+/* Pricing Card */
+.pricing-card {
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+.pricing-top {
+    background: var(--navy);
+    padding: 30px 26px 30px;
+    text-align: center;
+}
+
+.pricing-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 10px;
+}
+
+.pricing-amount {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 2px;
+    line-height: 1;
+}
+
+
+
+.pricing-num {
+    font-size: 72px;
+    font-weight: 800;
+    color: rgba(255, 255, 255);
+    line-height: 1;
+}
+
+.pricing-mo {
+    font-size: 18px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.8);
+    align-self: flex-end;
+    margin-bottom: 6px;
+}
+
+.pricing-tagline {
+    font-size: 13.5px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.8);
+    margin-top: 10px;
+    letter-spacing: 0.3px;
+}
+
+.pricing-bottom {
+    border: 1px solid var(--border);
+    border-top: none;
+    border-radius: 0 0 14px 14px;
+    padding: 22px 35px;
+    background: #fff;
+}
+
+.pricing-check-list {
+    list-style: none;
+    margin-bottom: 18px;
+}
+
+.pricing-check-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 13.5px;
+    color: rgba(0, 0, 0, 0.8);
+    font-weight: 500;
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.chk {
+    width: 18px;
+    height: 18px;
+    min-width: 18px;
+    color: var(--teal);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1px;
+}
+
+
+
+.pricing-note {
+    background: #f0f7f8;
+    border: 1px solid #d0e4f7;
+    border-radius: 8px;
+    padding: 15px 24px;
+    font-size: 14.5px;
+    color: rgba(0, 0, 0, 0.8);
+    line-height: 1.65;
+    display: flex;
+    gap: 9px;
+    align-items: flex-start;
+}
+
+.note-i {
+    min-width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 1.5px solid var(--navy);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-top: 4px;
+
+}
+
+/* ══════════════════════════════════════════════════════
+       SECTION 2 — How It Works
+    ══════════════════════════════════════════════════════ */
+.how-section {
+    background: white;
+    padding: 40px 20px;
+    padding-top: 0px;
+}
+
+.how-section h2 {
+ text-align: center;
+    font-size: clamp(22px, 3vw, 30px);
+    font-weight: 800;
+    color: var(--navy);
+    margin-bottom: 40px;
+    letter-spacing: -0.3px;
+}
+
+.how-steps {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr auto 1fr;
+    align-items: center;
+    gap: 0;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.how-step {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+    transition: all .25s ease;
+}
+.how-step:hover{
+  transform: translateY(-10px);
+}
+
+.step-icon-wrap {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: #ebf4f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+
+}
+
+.step-icon-wrap img {
+    width: 52px;
+    height: 52px;
+    object-fit: contain;
+    filter: brightness(0) saturate(100%) invert(33%) sepia(74%) saturate(781%) hue-rotate(134deg) brightness(94%) contrast(94%);
+
+}
+
+.step-num {
+    width: 20px;
+    height: 20px;
+    background: var(--teal);
+    border-radius: 50%;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 8px;
+}
+
+.how-step h3 {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 8px;
+    text-align: left;
+
+}
+
+.how-step p {
+    font-size: 13px;
+    color: var(--text);
+    line-height: 1.6;
+    max-width: 200px;
+    text-align: left;
+}
+
+.flex {
+    display: flex;
+    gap: 10px;
+}
+
+.how-arrow {
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    margin-bottom: 20px;
+    margin-right: 13px;
+    /* align with icon center */
+}
+
+.arrow-line {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.arrow-line span {
+    display: block;
+    width: 6px;
+    height: 2px;
+    background: var(--teal);
+    border-radius: 2px;
+}
+
+.arrow-line .arr-head {
+    width: 0;
+    height: 0;
+    background: none;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 7px solid var(--teal);
+    border-radius: 0;
+}
+/* Mobile Layout - Match Reference */
+@media (max-width: 768px) {
+
+    .how-section {
+        padding: 40px 20px;
+    }
+        .service-item h3{
+        font-size: 12px;
+    }
+    .service-item p{
+        font-size: 10px;
+    }
+    .service-icon{
+        width: 35px;
+        height: 35px;
+    }
+    .how-step h3{
+        font-size: 14px;
+    }
+    .how-step p{
+        font-size: 11px;
+    }
+
+    .how-steps {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        position: relative;
+        max-width: 420px;
+        margin: 0 auto;
+    }
+
+    .how-arrow {
+        display: none;
+    }
+
+    .how-step {
+        position: relative;
+        display: grid;
+        grid-template-columns: 80px 1fr;
+        align-items: center;
+        gap: 20px;
+        width: 100%;
+        text-align: left;
+        padding-bottom: 40px;
+    }
+
+    /* vertical dotted connector */
+    .how-step:not(:last-child)::after {
+        content: "";
+        position: absolute;
+        left: 39px;
+        top: 85px;
+        height: calc(100% - 20px);
+        border-left: 2px dotted #8fd0cb;
+    }
+
+    .step-icon-wrap {
+        width: 78px;
+        height: 78px;
+        margin: 0;
+        position: relative;
+        z-index: 2;
+    }
+
+    .step-icon-wrap img {
+        width: 42px;
+        height: 42px;
+    }
+
+    .flex {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .step-num {
+        flex-shrink: 0;
+        width: 28px;
+        height: 28px;
+        font-size: 14px;
+        margin-top: 2px;
+    }
+
+    .content-wrapper {
+        flex: 1;
+    }
+
+    .how-step h3 {
+        font-size: 20px;
+        line-height: 1.3;
+        margin-bottom: 8px;
+        text-align: left;
+    }
+
+    .how-step p {
+        font-size: 16px;
+        line-height: 1.6;
+        max-width: none;
+        text-align: left;
+    }
+    .wrap{
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        padding: 10px;
+
+    }
+}
+
+/* ══════════════════════════════════════════════════════
+       SECTION 3 — Why Choose + Testimonials
+    ══════════════════════════════════════════════════════ */
+.social-section {
+    padding: 40px 20px;
+    background: #fff;
+    padding-top:0px;
+
+}
+.wrap{
+                display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.social-layout {
+    display: grid;
+    grid-template-columns: 420px 1fr;
+    gap: 48px;
+    max-width: 1400px;
+    margin: 0 auto;
+    align-items: start;
+}
+
+/* Why Choose */
+.why-col h2 {
+    text-align: left;
+    font-size: clamp(19px, 2.8vw, 25px);
+    font-weight: 800;
+    color: var(--navy);
+    margin-bottom: 40px;
+    letter-spacing: -0.3px;
+}
+
+.why-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.why-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 14.5px;
+    font-weight: 500;
+    color: var(--navy);
+    line-height: 1.4;
+}
+
+.why-icon {
+    width: 24px;
+    height: 24px;
+    min-width: 24px;
+    border-radius: 50%;
+    background: var(--teal);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1px;
+}
+
+.why-icon::after {
+    content: '';
+    display: block;
+    width: 6px;
+    height: 10px;
+    border: 2px solid #000;
+    border-top: none;
+    border-left: none;
+    transform: rotate(45deg) translateY(-1px);
+}
+
+
+.testimonials-col{
+position: relative;
+}
+.testimonials-col::before{
+content: '';
+    position: absolute;
+    top: 0;
+    left: -40px;
+    width: 1.5px;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent 0%, var(--border) 15%, var(--border) 85%, transparent 100%);
+}
+/* Testimonials */
+.testimonials-col h2 {
+    text-align: left;
+    font-size: clamp(22px, 3vw, 30px);
+    font-weight: 800;
+    color: var(--navy);
+    margin-bottom: 40px;
+    letter-spacing: -0.3px;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.testimonial-card {
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 22px 18px;
+}
+
+.quote-mark {
+   width: 35px;
+   height: 35px;
+   display: block;
+    
+}
+.quote-mark img{
+    width: 100%;
+    height: 100%;
+}
+.white{
+font-size:6px ;
+    color: white;
+}
+
+.testimonial-card p {
+    font-size: 13.5px;
+    line-height: 1.65;
+    color: var(--text);
+    margin-bottom: 14px;
+}
+
+.stars {
+    display: flex;
+    gap: 3px;
+    margin-bottom: 12px;
+}
+
+.star {
+    width: 16px;
+    height: 16px;
+    background: #f5a623;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+.reviewer-name {
+    font-size: 13.5px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 2px;
+}
+
+.reviewer-role {
+    font-size: 12px;
+    color: var(--text);
+}
+
+/* ══════════════════════════════════════════════════════
+       SECTION 4 — FAQ
+    ══════════════════════════════════════════════════════ */
+.faq-section {
+    background: white;
+    padding: 40px 20px;
+    padding-top: 0;
+}
+
+.faq-section h2 {
+    text-align: center;
+    font-size: clamp(22px, 3vw, 30px);
+    font-weight: 800;
+    color: var(--navy);
+    margin-bottom: 40px;
+    letter-spacing: -0.3px;
+}
+
+.faq-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.faq-grp {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.faq-item {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--white);
+    overflow: hidden;
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 24px;
+    font-weight: 600;
+    font-size: 15px;
+    color: var(--navy);
+    cursor: pointer;
+    user-select: none;
+    transition: all .25s ease;
+}
+
+.faq-question:hover{
+  padding-left: 30px;
+}
+
+.faq-toggle {
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: var(--teal);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    transition: transform 0.2s;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 24px;
+    font-size: 14.5px;
+    line-height: 1.6;
+    color: var(--text);
+    transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.faq-answer.open {
+    max-height: 200px;
+    padding: 0 24px 20px;
+}
+
+/* ══ CTA BANNER ══ */
+.cta-banner {
+    background: var(--navy);
+    
+    padding: 50px 60px;
+    
+    position: relative;
+    overflow: hidden;
+    color: var(--white);
+}
+
+.cta-dots {
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    display: grid;
+    grid-template-columns: repeat(8, 8px);
+    gap: 8px;
+    opacity: 0.15;
+}
+
+.cta-dots span {
+    display: block;
+    width: 4px;
+    height: 4px;
+    background: var(--white);
+    border-radius: 50%;
+}
+
+.cta-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    position: relative;
+    z-index: 2;
+}
+
+.cta-icon {
+    width: 64px;
+    height: 64px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.cta-icon img {
+    width: 32px;
+    height: 32px;
+    filter: brightness(0) saturate(100%) invert(33%) sepia(74%) saturate(781%) hue-rotate(134deg) brightness(94%) contrast(94%);
+}
+
+.cta-text {
+    flex-grow: 1;
+}
+
+.cta-text h2 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--white);
+}
+
+.cta-text p {
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 28px;
+    background: #10978f;
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 8px;
+    font-family: var(--font);
+    font-size: 15px;
+    font-weight: 600;
+    transition: background 0.2s;
+    flex-shrink: 0;
+}
+
+.cta-btn:hover {
+    background: var(--teal-dark);
+}
+
+.cta-btn img {
+    width: 18px;
+    height: 18px;
+    filter: invert(100%);
+}
+
+/* ══ FOOTER ══ */
+footer {
+    background: #00173d;
+  
+}
+
+.footer-main {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.footer-brand {
+    max-width: 300px;
+}
+
+.footer-logo {
+    display: block;
+    margin-bottom: 20px;
+    text-decoration: none;
+}
+
+.footer-logo-icon img {
+    height: 36px;
+    object-fit: contain;
+}
+
+.footer-tagline {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--text-muted);
+    margin-bottom: 24px;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 12px;
+}
+
+.social-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #f0f3f6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+
+.social-btn:hover {
+    background: var(--teal-light);
+}
+
+.social-btn img {
+    width: 16px;
+    height: 16px;
+    opacity: 0.8;
+}
+
+.footer-divider {
+    width: 1px;
+    background-color: var(--border);
+    align-self: stretch;
+}
+
+.footer-col h4 {
+    font-family: var(--font);
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 20px;
+}
+
+.footer-col ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-col ul li a {
+    font-family: var(--font);
+    font-size: 14px;
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer-col ul li a:hover {
+    color: var(--teal);
+}
+
+.footer-contact li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--font);
+    font-size: 14px;
+    color: var(--text-muted);
+}
+
+.contact-icon {
+    width: 16px;
+    height: 16px;
+    filter: invert(100);
+}
+
+.footer-contact li a {
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer-contact li a:hover {
+    color: var(--teal);
+}
+
+.footer-bottom {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 24px 20px;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-copyright {
+    font-family: var(--font);
+    font-size: 13px;
+    color: var(--text-muted);
+}
+
+.footer-legal {
+    display: flex;
+    gap: 24px;
+}
+
+.footer-legal a {
+    font-family: var(--font);
+    font-size: 13px;
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer-legal a:hover {
+    color: var(--teal);
+}
+
+/* ── ADDITIONAL MOBILE RESPONSIVE OVERRIDES ─────────── */
+@media (max-width: 900px) {
+    /* Services Section stacks to 1 column */
+    .services-layout {
+        grid-template-columns: 1fr;
+        align-items: stretch; /* Resets flex-end stretching desktop behavior */
+    }
+    .wrap{
+        grid-template-columns: 1fr;
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .service-item {
+        border-right: none !important;
+        border-bottom: 1px solid var(--border) !important;
+        position: relative;
+        padding-right: 48px;
+    }
+    
+    .service-item:nth-child(4),
+    .service-item:nth-child(5) {
+        border-bottom: 1px solid var(--border) !important; /* Forces bottom border on mobile stack */
+    }
+    
+    .service-item:last-child {
+        border-bottom: none !important;
+    }
+    
+    /* Adds chevron indicator on the right of items exactly like reference mockup */
+    .service-item::after {
+        content: "\203A";
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 26px;
+        color: var(--teal);
+        font-weight: bold;
+    }
+
+    /* How Steps vertical stack */
+    .how-steps {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+    
+    .how-arrow {
+        display: none;
+    }
+    
+    .how-step {
+        flex-direction: row;
+        text-align: left;
+        align-items: flex-start;
+        gap: 16px;
+    }
+    
+    .step-icon-wrap {
+        margin-bottom: 0;
+        width: 80px;
+        height: 80px;
+        flex-shrink: 0;
+    }
+    
+    .step-icon-wrap img {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .how-step p {
+        max-width: 100%;
+    }
+
+    /* Social Layout stacking */
+    .social-layout {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .why-col h2,
+    .testimonials-col h2 {
+        text-align: center;
+    }
+    
+    .testimonials-col::before {
+        display: none;
+    }
+    
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    /* FAQ stacking */
+    .faq-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    /* CTA Banner stacking */
+    .cta-banner {
+               border-radius: 0px;
+        margin: 0px 0px;
+        padding: 40px 24px;
+        border: none;
+        border-top-left-radius: 25px;
+        border-top-right-radius: 25px;
+    }
+    footer{
+        border:none;
+    }
+    .cta-icon{
+        display: none;
+    }
+    
+    .cta-inner {
+        flex-direction: column;
+        gap: 24px;
+        text-align: center;
+    }
+    
+    .cta-text h2 {
+        font-size: 22px;
+    }
+    
+    .cta-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* Footer stacking */
+    .footer-main {
+        flex-direction: column;
+        padding: 40px 16px;
+        gap: 25px;
+    }
+    
+    .footer-divider {
+        display: none;
+    }
+    
+    .footer-brand {
+        max-width: 100%;
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        gap: 16px;
+        text-align: center;
+        padding: 24px 16px;
+    }
+}
+
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <a href="#">
+    <div class="logo">
+    <img src="/assets/finora logo.png" alt="">
+    </div>
+  </a>
+  <a class="btn-nav" href="#">
+    <span class="btn-logo"><img src="/assets/time-and-date.png" alt=""></span> 
+    Book Free Review
+  </a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+
+    <!-- LEFT: Copy -->
+    <div class="hero-copy">
+      <h1>Bookkeeping Services <br> for Small Businesses <br> in the USA</h1>
+      <p>Starting at $200/month. Clean books, reconciled accounts, and clear monthly reports without the stress.</p>
+
+      <div class="hero-actions">
+        <a class="btn-primary" href="#">
+          <span class="btn-logo"><img src="/assets/time-and-date.png" alt=""></span> Book Free Review
+        </a>
+        <a class="btn-outline" href="#">
+          <span class="outline-btn-logo"><img src="/assets/telephone.png" alt=""></span>  Call Now
+        </a>
+      </div>
+
+      <div class="trust-badges">
+        <span class="badge"><span class="badge-dot-icon"><img src="/assets/secure-shield.png" alt=""></span> Secure &amp; Confidential</span>
+        <span class="badge-sep">•</span>
+        <span class="badge"><span class="badge-dot"></span> QuickBooks Support</span>
+        <span class="badge-sep">•</span>
+        <span class="badge"><span class="badge-dot"></span> USA-Focused Service</span>
+      </div>
+    </div>
+    <div class="hero-img">
+    </div>
+    <div class="benifits-strip">
+      <div class="benifit">
+        <div class="benifit-icon">
+          <img src="" alt="">
+        </div>
+        <div class="benifit-content">
+          <h3>Secure & confidential</h3>
+        </div>
+      </div>
+      <div class="benifit">
+        <div class="benifit-icon">
+          <img src="" alt="">
+        </div>
+        <div class="benifit-content">
+          <h3>Secure & confidential</h3>
+        </div>
+      </div>
+      <div class="benifit">
+        <div class="benifit-icon">
+          <img src="" alt="">
+        </div>
+        <div class="benifit-content">
+          <h3>Secure & confidential</h3>
+        </div>
+      </div>
+      <div class="benifit">
+        <div class="benifit-icon">
+          <img src="" alt="">
+        </div>
+        <div class="benifit-content">
+          <h3>Secure & confidential</h3>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT: Form Card -->
+    <div class="form-card">
+      <h2>Get Your Free Bookkeeping Review</h2>
+
+      <div class="form-row">
+        <div class="form-group">
+          <input type="text" placeholder="Full Name" />
+        </div>
+        <div class="form-group">
+          <input type="email" placeholder="Email Address" />
+        </div>
+      </div>
+
+      <div class="form-row" style="margin-bottom:12px;">
+        <div class="form-group full">
+          <input type="tel" placeholder="Phone Number" />
+        </div>
+      </div>
+
+      <div class="form-row" style="margin-bottom:12px;">
+        <div class="form-group full">
+          <select>
+            <option value="" disabled selected>Business Type</option>
+            <option>Sole Proprietor</option>
+            <option>LLC</option>
+            <option>S-Corp</option>
+            <option>C-Corp</option>
+            <option>Partnership</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-row" style="margin-bottom:0;">
+        <div class="form-group full">
+          <textarea placeholder="Tell us about your business or bookkeeping needs"></textarea>
+        </div>
+      </div>
+
+      <button class="btn-submit">
+        Get My Free Review <span class="arrow">&#8594;</span>
+      </button>
+
+      <p class="form-footer"><span class="lock-icon"><img src="/assets/padlock.png" alt=""></span> Your information is secure and confidential.</p>
+    </div>
+
+  </div>
+</section>
+
+  <div class="features-bar">
+
+    <div class="feature-item">
+      <img class="feature-icon" src="/assets/feature-icon-1.png" alt="USA-Based Support icon"/>
+      <div class="feature-text">
+        <h3>USA-Based Support</h3>
+        <p>Work with a U.S.-based team that understands your business.</p>
+      </div>
+    </div>
+
+    <div class="feature-item">
+      <img class="feature-icon" src="/assets/feature-icon-2.png" alt="Monthly Reporting icon"/>
+      <div class="feature-text">
+        <h3>Monthly Reporting</h3>
+        <p>Clear, accurate reports delivered on time, every month.</p>
+      </div>
+    </div>
+
+    <div class="feature-item">
+      <img class="feature-icon" src="/assets/feature-icon-3.png" alt="Cleanup & Catch-Up icon"/>
+      <div class="feature-text">
+        <h3>Cleanup &amp; Catch-Up</h3>
+        <p>We clean up messy books and get you back on track.</p>
+      </div>
+    </div>
+
+    <div class="feature-item">
+      <img class="feature-icon" src="/assets/feature-icon-4.png" alt="Secure Financial Data icon"/>
+      <div class="feature-text">
+        <h3>Secure Financial Data</h3>
+        <p>Bank-level security to keep your data safe and private.</p>
+      </div>
+    </div>
+
+  </div>
+
+
+  <section class="pain-section">
+    <h2>Stop Guessing Where Your Business Money Is Going</h2>
+
+    <div class="pain-grid">
+
+      <div class="pain-card">
+        <div class="pain-icon-wrap">
+          <img src="/assets/pain-icon-1.png" alt="Messy Books icon"/>
+        </div>
+        <div class="pain-text">
+          <h3>Messy Books</h3>
+          <p>Disorganized records make it hard to see the real picture.</p>
+        </div>
+      </div>
+
+      <div class="pain-card">
+        <div class="pain-icon-wrap">
+          <img src="/assets/pain-icon-2.png" alt="Missed Reconciliations icon"/>
+        </div>
+        <div class="pain-text">
+          <h3>Missed Reconciliations</h3>
+          <p>Unreconciled accounts can lead to errors and costly surprises.</p>
+        </div>
+      </div>
+
+      <div class="pain-card">
+        <div class="pain-icon-wrap">
+          <img src="/assets/pain-icon-3.png" alt="Tax-Time Stress icon"/>
+        </div>
+        <div class="pain-text">
+          <h3>Tax-Time Stress</h3>
+          <p>Disorganized books create stress and higher tax bills.</p>
+        </div>
+      </div>
+
+      <div class="pain-card">
+        <div class="pain-icon-wrap">
+          <img src="/assets/pain-icon-4.png" alt="Unclear Cash Flow icon"/>
+        </div>
+        <div class="pain-text">
+          <h3>Unclear Cash Flow</h3>
+          <p>Without clear numbers, it's hard to make confident decisions.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+    <section class="services-section">
+    
+
+    <div class="services-layout">
+
+      <!-- 3×2 Services Grid -->
+       <div class="service-wrapper">
+        <h2>Bookkeeping Services Included</h2>
+      <div class="services-grid">
+
+        <div class="service-item">
+          <div class="service-icon-cont">
+          <img class="service-icon invert" src="/assets/service-icon-1.png" alt="Bank & Credit Card icon"/>
+          </div>
+
+          <div class="service-content-cont">
+          <h3>Bank &amp; Credit Card Reconciliations</h3>
+          <p>We reconcile all accounts to ensure accuracy and clarity.</p>
+            </div>
+        </div>
+        <div class="service-item">
+          <div class="service-icon-cont">
+          <img class="service-icon invert" src="/assets/service-icon-2.png" alt="Bank & Credit Card icon"/>
+          </div>
+
+          <div class="service-content-cont">
+          <h3>Bank &amp; Credit Card Reconciliations</h3>
+          <p>We reconcile all accounts to ensure accuracy and clarity.</p>
+            </div>
+        </div>
+        <div class="service-item">
+          <div class="service-icon-cont">
+          <img class="service-icon" src="/assets/service-icon-3.png" alt="Bank & Credit Card icon"/>
+          </div>
+
+          <div class="service-content-cont">
+          <h3>Bank &amp; Credit Card Reconciliations</h3>
+          <p>We reconcile all accounts to ensure accuracy and clarity.</p>
+            </div>
+        </div>
+        <div class="service-item">
+          <div class="service-icon-cont">
+          <img class="service-icon invert" src="/assets/service-icon-4.png" alt="Bank & Credit Card icon"/>
+          </div>
+
+          <div class="service-content-cont">
+          <h3>Bank &amp; Credit Card Reconciliations</h3>
+          <p>We reconcile all accounts to ensure accuracy and clarity.</p>
+            </div>
+        </div>
+        <div class="service-item">
+          <div class="service-icon-cont">
+          <img class="service-icon invert" src="/assets/service-icon-1.png" alt="Bank & Credit Card icon"/>
+          </div>
+
+          <div class="service-content-cont">
+          <h3>Bank &amp; Credit Card Reconciliations</h3>
+          <p>We reconcile all accounts to ensure accuracy and clarity.</p>
+            </div>
+        </div>
+        <div class="service-item">
+          <div class="service-icon-cont">
+          <img class="service-icon invert" src="/assets/service-icon-6.png" alt="Bank & Credit Card icon"/>
+          </div>
+
+          <div class="service-content-cont">
+          <h3>Bank &amp; Credit Card Reconciliations</h3>
+          <p>We reconcile all accounts to ensure accuracy and clarity.</p>
+            </div>
+        </div>
+
+
+      </div>
+      </div>
+
+      <!-- Pricing Card -->
+      <div class="pricing-card">
+        <div class="pricing-top">
+          <p class="pricing-label">Starting At</p>
+          <div class="pricing-amount">
+            <span class="pricing-num">$200</span>
+            <span class="pricing-mo">/month</span>
+          </div>
+          <p class="pricing-tagline">Affordable. Transparent. Scalable.</p>
+        </div>
+
+        <div class="pricing-bottom">
+          <ul class="pricing-check-list">
+            <li><span class="chk">✔</span> Perfect for small businesses</li>
+            <li><span class="chk">✔</span> No long-term contracts</li>
+            <li><span class="chk">✔</span> Cancel or upgrade anytime</li>
+            <li><span class="chk">✔</span> Custom pricing for high volume <br>or advanced needs</li>
+          </ul>
+
+          <div class="pricing-note">
+            <span class="note-i">i</span>
+            <span>Final pricing depends on your monthly <br> transaction volume and the complexity br of your books.</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+    <section class="how-section">
+      <h2>How It Works</h2>
+    <div class="wrap">
+      
+
+      <div class="how-step">
+    <div class="step-icon-wrap">
+        <img src="/assets/work-step-icon-1.png" alt="">
+    </div>
+
+    <div class="flex">
+        <span class="step-num">1</span>
+        <div class="content-wrapper">
+            <h3>Book a Review</h3>
+            <p>Schedule your free review and share a few details.</p>
+        </div>
+    </div>
+</div>
+
+<div class="how-step">
+    <div class="step-icon-wrap">
+        <img src="/assets/work-step-icon-2.png" alt="">
+    </div>
+
+    <div class="flex">
+        <span class="step-num">2</span>
+        <div class="content-wrapper">
+            <h3>We Assess Your Books</h3>
+            <p>We review your books, identify gaps, and recommend the best plan for you.</p>
+        </div>
+    </div>
+</div>
+
+<div class="how-step">
+    <div class="step-icon-wrap">
+        <img src="/assets/work-step-icon-3.png" alt="">
+    </div>
+
+    <div class="flex">
+        <span class="step-num">3</span>
+        <div class="content-wrapper">
+            <h3>Receive Ongoing Bookkeeping Support</h3>
+            <p>We keep your books accurate and deliver clear insights every month.</p>
+        </div>
+    </div>
+</div>
+    </div>
+  </section>
+
+
+
+    <section class="social-section">
+    <div class="social-layout">
+
+      <!-- Why Choose -->
+      <div class="why-col">
+        <h2>Why Businesses Choose AI Finora</h2>
+        <ul class="why-list">
+          <li><span class="why-icon"></span> Experienced &amp; U.S.-Based Bookkeepers</li>
+          <li><span class="why-icon"></span> Accurate Books &amp; Timely Reports</li>
+          <li><span class="why-icon"></span> Secure Processes &amp; Data Protection</li>
+          <li><span class="why-icon"></span> Responsive Communication</li>
+          <li><span class="why-icon"></span> Simple Onboarding &amp; Easy Handoff</li>
+        </ul>
+      </div>
+
+      <!-- Testimonials -->
+      <div class="testimonials-col">
+        <h2>What Our Clients Say</h2>
+        <div class="testimonials-grid">
+
+          <div class="testimonial-card">
+            <span class="quote-mark"><img src="/assets/quote.png" alt=""></span>
+            <p><span class="white">Professional</span>AI Finora cleaned up our books and now I finally understand my numbers. The monthly reports are a game changer!</p>
+            <div class="stars">
+              <div class="star"></div><div class="star"></div><div class="star"></div>
+              <div class="star"></div><div class="star"></div>
+            </div>
+            <p class="reviewer-name">Jessica M.</p>
+            <p class="reviewer-role">E-commerce Business Owner</p>
+          </div>
+
+          <div class="testimonial-card">
+            <span class="quote-mark"><img src="/assets/quote.png" alt=""></span>
+            <p> <span class="white">Professional</span>Professional, responsive, and knowledgeable. They make bookkeeping stress-free so I can focus on growing my business.</p>
+            <div class="stars">
+              <div class="star"></div><div class="star"></div><div class="star"></div>
+              <div class="star"></div><div class="star"></div>
+            </div>
+            <p class="reviewer-name">David R.</p>
+            <p class="reviewer-role">Digital Marketing Agency</p>
+          </div>
+
+          <div class="testimonial-card">
+            <span class="quote-mark"><img src="/assets/quote.png" alt=""></span>
+            <p><span class="white">Professional</span>Finally, a bookkeeping partner who cares about our business as much as we do. Highly recommend AI Finora!</p>
+            <div class="stars">
+              <div class="star"></div><div class="star"></div><div class="star"></div>
+              <div class="star"></div><div class="star"></div>
+            </div>
+            <p class="reviewer-name">Amanda T.</p>
+            <p class="reviewer-role">Boutique Retail Owner</p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+    <section class="faq-section">
+
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="faq-grid">
+
+        <!-- Left Column -->
+        <div class="faq-grp">
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+              <span>What does the $200/month pricing include?</span>
+              <button class="faq-toggle open">−</button>
+            </div>
+            <div class="faq-answer open">
+              The $200/month starting price includes standard monthly bookkeeping, bank and credit card reconciliations, transaction categorization, and basic financial reports. Final pricing depends on your transaction volume and the complexity of your books.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+              <span>Do you work with QuickBooks?</span>
+              <button class="faq-toggle">+</button>
+            </div>
+            <div class="faq-answer">
+              Yes! We specialize in QuickBooks Online. We handle setup, cleanup, and ongoing management so your books stay accurate and up to date.
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column -->
+        <div class="faq-grp"> 
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+              <span>How do I get started?</span>
+              <button class="faq-toggle">+</button>
+            </div>
+            <div class="faq-answer">
+              Simply book a free review using the form on our site. We'll schedule a quick call to understand your business and bookkeeping needs, then get you set up right away.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+              <span>Can you help clean up my past books?</span>
+              <button class="faq-toggle">+</button>
+            </div>
+            <div class="faq-answer">
+              Absolutely. Our catch-up bookkeeping service covers past months or years of disorganized records. We'll bring everything current before starting your ongoing monthly service.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+              <span>Is my financial data secure?</span>
+              <button class="faq-toggle">+</button>
+            </div>
+            <div class="faq-answer">
+              Yes. We follow bank-level security protocols and use encrypted, access-controlled tools to ensure your financial data is always safe and confidential.
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+  </section>
+
+    <!-- ══ CTA BANNER ══ -->
+  <div class="cta-banner">
+    <!-- decorative dots -->
+    <div class="cta-dots">
+      <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+    </div>
+
+    <div class="cta-inner">
+
+      <div class="cta-icon">
+        <img src="/assets/signal-status.png" alt="Chart icon"/>
+      </div>
+
+      <div class="cta-text">
+        <h2>Ready to Get Your Books Under Control?</h2>
+        <p>Let's take bookkeeping off your plate so you can focus on what matters most.</p>
+      </div>
+
+      <a class="cta-btn" href="#">
+        <img src="/assets/time-and-date.png" alt="Calendar icon"/>
+        Book Free Bookkeeping Review
+      </a>
+
+    </div>
+  </div>
+
+
+  <!-- ══ FOOTER ══ -->
+  <footer>
+
+    <div class="footer-main">
+
+      <!-- Brand -->
+      <div class="footer-brand">
+        <a class="footer-logo" href="#">
+          <div class="footer-logo-icon">
+            <img src="/assets/finora logo.png" alt="AI Finora logo icon"/>
+          </div>
+          
+        </a>
+        <p class="footer-tagline">Bookkeeping services for small businesses across the USA.</p>
+        <div class="footer-socials">
+          <a class="social-btn" href="#" aria-label="LinkedIn">
+            <img src="/assets/linkedin (1).png" alt="LinkedIn"/>
+          </a>
+          <a class="social-btn" href="#" aria-label="Facebook">
+            <img src="/assets/facebook-app-symbol.png" alt="Facebook"/>
+          </a>
+          <a class="social-btn" href="#" aria-label="X / Twitter">
+            <img src="/assets/twitter.png" alt="X"/>
+          </a>
+          <a class="social-btn" href="#" aria-label="Email">
+            <img src="/assets/email.png" alt="Email"/>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-divider"></div>
+
+      <!-- Services -->
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#">Bookkeeping Services</a></li>
+          <li><a href="#">Cleanup &amp; Catch-Up</a></li>
+          <li><a href="#">QuickBooks Support</a></li>
+          <li><a href="#">Financial Reporting</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-divider"></div>
+
+      <!-- Company -->
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">How It Works</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">FAQ</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-divider"></div>
+
+      <!-- Contact -->
+      <div class="footer-col footer-contact">
+        <h4>Contact Us</h4>
+        <ul>
+          <li>
+            <img class="contact-icon" src="/assets/telephone.png" alt="Phone icon"/>
+            <a href="tel:8682503200">(868) 250-3200</a>
+          </li>
+          <li>
+            <img class="contact-icon" src="/assets/mail.png" alt="Email icon"/>
+            <a href="mailto:hello@aifinora.com">hello@aifinora.com</a>
+          </li>
+          <li>
+            <img class="contact-icon" src="/assets/location (1).png" alt="Location icon"/>
+            <a href="#">USA-Based Support</a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="footer-bottom">
+      <span class="footer-copyright">© 2024 AI Finora LLC. All rights reserved.</span>
+      <div class="footer-legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+    </div>
+
+  </footer>
+
+  <script>
+    function toggleFaq(el) {
+      const answer = el.nextElementSibling;
+      const btn    = el.querySelector('.faq-toggle');
+      const isOpen = answer.classList.contains('open');
+      answer.classList.toggle('open', !isOpen);
+      btn.classList.toggle('open', !isOpen);
+      btn.textContent = isOpen ? '+' : '−';
+    }
+  </script>
+</body>
+</html>
