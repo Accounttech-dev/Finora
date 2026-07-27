@@ -173,6 +173,7 @@
    HERO
 ============================================================ */
     .hero {
+      background: linear-gradient(160deg, #0f172a, #1e293b);
       position: relative;
       padding: var(--sp-10) 0 var(--sp-8);
       overflow: hidden;
@@ -215,6 +216,7 @@
     .hero__title {
       font-size: var(--fs-hero);
       font-weight: 700;
+      color:white;
       letter-spacing: -0.03em;
       line-height: 1.05;
       margin: 0 0 var(--sp-3);
@@ -225,7 +227,7 @@
       max-width: 620px;
       margin: 0 auto;
       font-size: var(--fs-body);
-      color: var(--text-secondary);
+      color:white;
       line-height: 1.6;
       position: relative;
     }
@@ -2356,7 +2358,21 @@
             </a>
           </article>
 
+      <article class="card" tabindex="0">
+            <a href="/blogs/bookkeeping-services-for-restaurants-nyc/" target="_blank">
+              <div class="card__media">
+                <img src="/Designer.png" alt="Cover image for What is Real-Time Financial Reporting?" loading="lazy"
+                  width="640" height="360" />
 
+              </div>
+              <div class="card__body">
+                <h3 class="card__title">Bookkeeping Services for Restaurants in NYC: Costs, Roles, KPIs</h3>
+                <p class="card__excerpt">Restaurant bookkeeping in NYC is complex. Learn costs, roles, and KPIs for outsourced bookkeeping services that keep your restaurant profitable.</p>
+                <a href="/blogs/bookkeeping-services-for-restaurants-nyc/" target="_blank"
+                  class="read-more">Read More ↗ </a>
+              </div>
+            </a>
+          </article>
 
         </div>
       </div>
@@ -2613,6 +2629,11 @@
         btn.classList.add('open');
       }
     }
+
+    const container = document.querySelector(".grid");
+[...container.children]
+  .reverse()
+  .forEach(child => container.appendChild(child));
   </script>
 
   <script

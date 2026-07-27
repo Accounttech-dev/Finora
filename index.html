@@ -375,6 +375,44 @@
 
     :root {
       --main-font: StabilGrotesk-029909808665ec7b, "StabilGrotesk-029909808665ec7b fallback: Arial", Helvetica, Arial, sans-serif;
+  
+  /* Color */
+  --bg: #FAFAFA;
+  --card: #FFFFFF;
+  --text-primary: #111111;
+  --text-secondary: #6B6B6B;
+  --border: #E8E8E8;
+  --accent: #000000;
+  --success: #2E7D32;
+  --shadow-color: 17, 17, 17;
+
+  /* Type */
+  --font: 'StabilGrotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;
+  --fs-hero: 64px;
+  --fs-section: 40px;
+  --fs-card: 17px;
+  --fs-body: 14px;
+  --fs-small: 12px;
+
+  /* Spacing (8px system) */
+  --sp-1: 8px;
+  --sp-2: 16px;
+  --sp-3: 24px;
+  --sp-4: 32px;
+  --sp-5: 40px;
+  --sp-6: 48px;
+  --sp-8: 64px;
+  --sp-10: 80px;
+
+  /* Layout */
+  --container-max: 1160px;
+  --container-pad: 40px;
+  --radius-lg: 16px;
+  --radius-md: 12px;
+  --radius-sm: 8px;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --dur: 300ms;
+
     }
   </style>
    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
@@ -2683,7 +2721,7 @@ function toggleMobileInd(btn) {
     width: 77% !important;
     border-radius: 7px;
     height: auto !important;
-    object-fit: contain;
+    object-fit: contain;}}
   
             </style>
                         <style>
@@ -2979,6 +3017,68 @@ function toggleMobileInd(btn) {
     </form>
   </div>
 </section>
+    <div class="container">
+      <div class="grid-head">
+        <h2 class="section__title">Explore Our Latest Articles</h2>
+
+      </div>
+
+      <div class="grid">
+
+        
+
+             <article class="card" tabindex="0">
+            <a href="/blogs/bookkeeping-services-for-restaurants-nyc/" target="_blank">
+              <div class="card__media">
+                <img src="/Designer.png" alt="Cover image for What is Real-Time Financial Reporting?" loading="lazy"
+                  width="640" height="360" />
+
+              </div>
+              <div class="card__body">
+                <h3 class="card__title">Bookkeeping Services for Restaurants in NYC: Costs, Roles, KPIs</h3>
+                <p class="card__excerpt">Restaurant bookkeeping in NYC is complex. Learn costs, roles, and KPIs for outsourced bookkeeping services that keep your restaurant profitable.</p>
+                <a href="/blogs/bookkeeping-services-for-restaurants-nyc/" target="_blank"
+                  class="read-more">Read More ↗ </a>
+              </div>
+            </a>
+          </article>
+           <article class="card" tabindex="0">
+            <a href="/blogs/free-financial-consultant-for-businesses-new-york/" target="_blank">
+              <div class="card__media">
+                <img src="/blog6-1.png" alt="Cover image for What is Real-Time Financial Reporting?" loading="lazy"
+                  width="640" height="360" />
+
+              </div>
+              <div class="card__body">
+                <h3 class="card__title">Free Financial Consultant for Businesses in New York - AI Finora</h3>
+                <p class="card__excerpt">Get free financial consultant in New York, Call Now (828) 367-0905. AI Finora
+                  offers financial advisory, reporting and close automation for all businesses.</p>
+                <a href="/blogs/free-financial-consultant-for-businesses-new-york/" target="_blank"
+                  class="read-more">Read More ↗ </a>
+              </div>
+            </a>
+          </article>
+        <article class="card" tabindex="0">
+            <a href="/blogs/what-Is-real-Time-financial-reporting" target="_blank">
+              <div class="card__media">
+                <img src="/blog5-1.png" alt="Cover image for What is Real-Time Financial Reporting?" loading="lazy"
+                  width="640" height="360" />
+
+              </div>
+              <div class="card__body">
+                <h3 class="card__title">What is Real-Time Financial Reporting?</h3>
+                <p class="card__excerpt">Discover the benefits and implementation strategies for real-time financial
+                  reporting in modern businesses.</p>
+                <a href="/blogs/what-Is-real-Time-financial-reporting/" target="_blank" class="read-more">Read More ↗
+                </a>
+              </div>
+            </a>
+          </article>
+
+
+
+      </div>
+    </div>
 
 <!-- Cloudflare Turnstile -->
 <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
@@ -3976,12 +4076,217 @@ img.two-up-video-text-image {
 }
 
 
+.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--container-pad);
+}
+.grid-head {
+  display: flex;
+  align-items: baseline;
+  justify-content:center;
+  margin-bottom: var(--sp-5);
+  gap: var(--sp-2);
+  text-align: center;
+}
+
+.section__title {
+  font-size: var(--fs-section);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+.grid-head__count {
+  font-size: var(--fs-small);
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* ============================================================
+   BLOG GRID
+============================================================ */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--sp-4);
+  margin-bottom: 115px;
+}
+
+@media (max-width: 1024px) {
+  .grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 640px) {
+  .grid { grid-template-columns: 1fr; }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease),
+    border-color var(--dur) var(--ease);
+  opacity: 0;
+  transform: translateY(16px);
+  animation: cardIn 520ms var(--ease) forwards;
+}
+
+@keyframes cardIn {
+  to { opacity: 1; transform: translateY(0); }
+}
+.read-more{
+  font-size: 14px;
+  font-weight: 600;
+  width: 100px;
+  transition: all .25s ease;
+}
+.read-more:hover{
+
+  text-decoration: underline;
+}
+
+.card:hover .read-more{
+
+  transform: translateY(-3px);
+  font-size: 15px;
+  font-weight: 700;
+  color: #242633;
+}
+
+.card:hover,
+.card:focus-visible {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px -14px rgba(var(--shadow-color), 0.13);
+  border-color: #D4D4D4;
+}
+
+.card__media {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: var(--border);
+}
+
+.card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 500ms var(--ease);
+}
+
+.card:hover .card__media img {
+  transform: scale(1.08);
+}
+
+.card__badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(6px);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.card__body {
+  padding: var(--sp-3);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+
+.card__title {
+  font-size: var(--fs-card);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.card__excerpt {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  flex: 1;
+}
+
+.card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+  padding-top: 6px;
+}
+
+.card__author {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+
+.card__avatar {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex: none;
+}
+
+.card__author-text {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.card__author-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card__author-sub {
+  font-size: 12px;
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+.card__arrow {
+  flex: none;
+  color: var(--text-primary);
+  transition: transform var(--dur) var(--ease);
+}
+
+.card:hover .card__arrow {
+  transform: translateX(4px);
+}
+
 
   </style>
-</body>
 
-</html>
-<script>
+  <script>
   document.addEventListener('DOMContentLoaded', function () {
 
     const firstImg = {
@@ -4332,3 +4637,6 @@ s0.parentNode.insertBefore(s1,s0);
 <!--End of Tawk.to Script-->
 <script type="module"
   src="../ram.aifinoracpu.com/_astro-assets/index.astro_astro_type_script_index_0_lang.CcHFg9Em.js"></script>
+</body>
+
+</html>
