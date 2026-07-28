@@ -2689,7 +2689,7 @@
       <!-- LOGO -->
       <div class="header-logo" data-astro-cid-yfxihdp7>
         <a class="header-logo-link" href="/" aria-label="Finora about" data-astro-cid-yfxihdp7>
-          <img src="/a-images/ai-finora-logo.png" alt="AI Finora" height="32" style="height:30px;width:138px;">
+          <img loading="lazy" decoding="async" src="/a-images/ai-finora-logo.png" alt="AI Finora" height="32" style="height:30px;width:138px;">
         </a>
       </div>
 
@@ -3812,7 +3812,7 @@
       <div class="container hero-grid">
         <div class="hero-content">
           <a class="brand brand-large" href="#top" aria-label="AI Finora home" style="visibility: hidden;">
-            <img src="/image-removebg-preview.png" alt="" style="visibility: hidden;">
+            <img loading="lazy" decoding="async" src="/image-removebg-preview.png" alt="" style="visibility: hidden;">
           </a>
           <p style="visibility: hidden;" class="hero-kicker">Catchup Bookkeeping</p>
           <h1 style="visibility: hidden;" id="hero-title">Books Cleanup Services</h1>
@@ -3995,23 +3995,23 @@
         </div>
 
         <div class="process-grid">
-          <article><span><img src="/financial-statement.png" alt="" style="padding: 3px;"></span>
+          <article><span><img loading="lazy" decoding="async" src="/financial-statement.png" alt="" style="padding: 3px;"></span>
             <h3>Cleaner Financial Reports</h3>
             <p>Your profit and loss, balance sheet, and accounts become easier to understand.</p>
           </article>
-          <article><span><img src="/dollar.png" alt="" style="padding: 5px;"></span>
+          <article><span><img loading="lazy" decoding="async" src="/dollar.png" alt="" style="padding: 5px;"></span>
             <h3>Better Tax Preparation</h3>
             <p>Organized books make tax filing smoother and reduce last-minute stress.</p>
           </article>
-          <article><span><img src="/calculator.png" alt="" style="padding: 3px;"></span>
+          <article><span><img loading="lazy" decoding="async" src="/calculator.png" alt="" style="padding: 3px;"></span>
             <h3>More Accurate Business Decisions</h3>
             <p>Know your real income,expenses,and financial position before making decision</p>
           </article>
-          <article><span><img src="/exclamation.png" alt="" style="padding: 3px;"></span>
+          <article><span><img loading="lazy" decoding="async" src="/exclamation.png" alt="" style="padding: 3px;"></span>
             <h3>Fewer Bookkeeping Errors</h3>
             <p>Duplicate entries, wrong categories, and reconciliation issues are reviewed and corrected.</p>
           </article>
-          <article><span><img src="/step.png" alt="" style="padding: 3px;"></span>
+          <article><span><img loading="lazy" decoding="async" src="/step.png" alt="" style="padding: 3px;"></span>
             <h3>Clear Next Steps</h3>
             <p>We explain what needs to be fixed and how to keep your books updated going forward.</p>
           </article>
@@ -4269,7 +4269,7 @@
         <!-- Column 1: Logo & Socials -->
         <div class="custom-footer-col custom-footer-col-logo">
           <a href="#">
-            <img src="/Finora-log.png" alt="AI Finora" class="custom-footer-logo"
+            <img loading="lazy" decoding="async" src="/Finora-log.png" alt="AI Finora" class="custom-footer-logo"
               onerror="this.onerror=null; this.src='https://via.placeholder.com/180x60/242633/48ceeb?text=AI+Finora';">
           </a>
 
@@ -4870,6 +4870,43 @@
 
     });
   </script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    let lazyVideos = [].slice.call(document.querySelectorAll("video.lazy-video"));
+    if ("IntersectionObserver" in window) {
+        let videoObserver = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(function(video) {
+                if (video.isIntersecting) {
+                    for (let source in video.target.children) {
+                        let videoSource = video.target.children[source];
+                        if (typeof videoSource.tagName === "string" && videoSource.tagName === "SOURCE") {
+                            if (videoSource.dataset.src) {
+                                videoSource.src = videoSource.dataset.src;
+                            }
+                        }
+                    }
+                    if (video.target.dataset.src) {
+                        video.target.src = video.target.dataset.src;
+                    }
+                    video.target.preload = "metadata";
+                    video.target.play().catch(e => {});
+                    videoObserver.unobserve(video.target);
+                }
+            });
+        });
+        lazyVideos.forEach(function(video) {
+            videoObserver.observe(video);
+        });
+    } else {
+        // Fallback for older browsers
+        lazyVideos.forEach(function(video) {
+            video.preload = "metadata";
+            video.play().catch(e => {});
+        });
+    }
+});
+</script>
 </body>
 
 </html>

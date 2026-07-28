@@ -865,7 +865,7 @@
     <!-- LOGO -->
     <div class="header-logo" data-astro-cid-yfxihdp7>
       <a class="header-logo-link" href="/" aria-label="Finora about" data-astro-cid-yfxihdp7>
-        <img src="/a-images/ai-finora-logo.png" alt="AI Finora" height="30" style="height:30px;width:auto;">
+        <img loading="lazy" decoding="async" src="/a-images/ai-finora-logo.png" alt="AI Finora" height="30" style="height:30px;width:auto;">
       </a>
     </div>
 
@@ -2033,7 +2033,7 @@ Service  <span class="toggle-arrow"></span>
                         <div></div>
                       </div>
 
-                      <img src="/bookkeep.jpg" alt="Bookkeeping" class="hero-image" loading="eager" />
+                      <img loading="lazy" decoding="async" src="/bookkeep.jpg" alt="Bookkeeping" class="hero-image" loading="eager" />
                       <script type="module"
                         src="../../../ram.aifinoracpu.com/_astro-assets/DotLottie.astro_astro_type_script_index_0_lang.CBFY1vH8.js"></script>
                     </div>
@@ -2358,57 +2358,57 @@ Service  <span class="toggle-arrow"></span>
 
 <a class="city-card" href="/b2c/bookkeeping/new-york/" target="_blank">
     <div class="icon">
-        <img src="/skyline.png" alt="New York Skyline">
+        <img loading="lazy" decoding="async" src="/skyline.png" alt="New York Skyline">
     </div>
     <h4>New York</h4>
 </a>
 <a class="city-card" href="/b2c/bookkeeping/losangeles-california/" target="_blank">
     <div class="icon">
-        <img src="/entertainment.png" alt="Los Angeles Skyline">
+        <img loading="lazy" decoding="async" src="/entertainment.png" alt="Los Angeles Skyline">
     </div>
     <h4>Los Angeles California</h4>
 </a>
 <a class="city-card" href="/b2c/bookkeeping/chicago-illinois/" target="_blank">
     <div class="icon">
-        <img src="/chicago.png" alt="Chicago Skyline">
+        <img loading="lazy" decoding="async" src="/chicago.png" alt="Chicago Skyline">
     </div>
     <h4>Chicago Illinois</h4>
 </a>
 <a class="city-card" href="/b2c/bookkeeping/dallas-texas/" target="_blank">
     <div class="icon">
-        <img src="/church.png" alt="Atlanta Skyline">
+        <img loading="lazy" decoding="async" src="/church.png" alt="Atlanta Skyline">
     </div>
     <h4>Dallas</h4>
 </a>
 <a class="city-card" href="/b2c/bookkeeping/houston-texas/" target="_blank">
     <div class="icon">
-        <img src="/golden.png" alt="San Francisco Skyline">
+        <img loading="lazy" decoding="async" src="/golden.png" alt="San Francisco Skyline">
     </div>
     <h4>Houston</h4>
 </a>
 <a class="city-card" href="/b2c/bookkeeping/miami-florida/" target="_blank">
     <div class="icon">
-        <img src="/beach.png" alt="Miami Skyline">
+        <img loading="lazy" decoding="async" src="/beach.png" alt="Miami Skyline">
     </div>
     <h4>Miami Florida</h4>
 </a>
 <a class="city-card" href="/b2c/bookkeeping/washington/" target="_blank">
    <div class="icon">
-       <img src="/capitol.png" alt="Washington DC Skyline">
+       <img loading="lazy" decoding="async" src="/capitol.png" alt="Washington DC Skyline">
    </div>
    <h4>Washington</h4>
 </a>
 
 <a class="city-card" href="/b2c/bookkeeping/philadelphia-pennsylvania/" target="_blank">
     <div class="icon">
-        <img src="/monument.png" alt="Seattle Skyline">
+        <img loading="lazy" decoding="async" src="/monument.png" alt="Seattle Skyline">
     </div>
     <h4>Philadelphia</h4>
 </a>
 
 <a class="city-card" href="/b2c/bookkeeping/new-jersey/" target="_blank">
    <div class="icon">
-       <img src="/building.png" alt="Dallas Skyline">
+       <img loading="lazy" decoding="async" src="/building.png" alt="Dallas Skyline">
    </div>
    <h4>New Jersey</h4>
 </a>
@@ -2416,20 +2416,20 @@ Service  <span class="toggle-arrow"></span>
 
 <a class="city-card" href="/b2c/bookkeeping/north-carolina/" target="_blank">
    <div class="icon">
-       <img src="/zakim.png" alt="Boston Skyline">
+       <img loading="lazy" decoding="async" src="/zakim.png" alt="Boston Skyline">
    </div>
    <h4>North Carolina</h4>
 </a>
 
 <a class="city-card" href="/b2c/bookkeeping/phoenix-arizona/" target="_blank">
     <div class="icon">
-        <img src="/buildings.png" alt="Philadelphia Skyline">
+        <img loading="lazy" decoding="async" src="/buildings.png" alt="Philadelphia Skyline">
     </div>
     <h4>Phoenix</h4>
 </a>
 <a class="city-card" href="/b2c/bookkeeping/georgia/" target="_blank">
     <div class="icon">
-        <img src="/buildings.png" alt="Philadelphia Skyline">
+        <img loading="lazy" decoding="async" src="/buildings.png" alt="Philadelphia Skyline">
     </div>
     <h4>georgia</h4>
 </a>
@@ -3687,7 +3687,44 @@ body{font-family:Arial,Helvetica,sans-serif;background:#ffffff;}
                 help individuals achieve financial stability through organized bookkeeping and financial tracking.
               </p>
 
-            </body>
+            
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    let lazyVideos = [].slice.call(document.querySelectorAll("video.lazy-video"));
+    if ("IntersectionObserver" in window) {
+        let videoObserver = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(function(video) {
+                if (video.isIntersecting) {
+                    for (let source in video.target.children) {
+                        let videoSource = video.target.children[source];
+                        if (typeof videoSource.tagName === "string" && videoSource.tagName === "SOURCE") {
+                            if (videoSource.dataset.src) {
+                                videoSource.src = videoSource.dataset.src;
+                            }
+                        }
+                    }
+                    if (video.target.dataset.src) {
+                        video.target.src = video.target.dataset.src;
+                    }
+                    video.target.preload = "metadata";
+                    video.target.play().catch(e => {});
+                    videoObserver.unobserve(video.target);
+                }
+            });
+        });
+        lazyVideos.forEach(function(video) {
+            videoObserver.observe(video);
+        });
+    } else {
+        // Fallback for older browsers
+        lazyVideos.forEach(function(video) {
+            video.preload = "metadata";
+            video.play().catch(e => {});
+        });
+    }
+});
+</script>
+</body>
 
             <script
               type="module">const e = ["var(--color-pink-accent)", "var(--color-blue-accent)", "var(--color-red-accent)"]; document.addEventListener("DOMContentLoaded", (() => { document.querySelectorAll(".quote-carousel").forEach((t => { (t => { const l = t.querySelectorAll(".quote-item"), o = t.querySelector(".quote-overlay"), c = t.querySelectorAll(".progress-dot"), a = parseInt(t.style.getPropertyValue("--interval")) || 5e3, r = "false" !== t.dataset.autoPlay, s = t.dataset.quoteTheme; let n = 0, u = null; const i = t => s ? `var(--color-${s})` : e[t % e.length]; if (0 === l.length) return; const v = i(0); if (o.style.setProperty("--accent-color", v), l.length > 1) { const e = () => { l.forEach(((e, t) => { e.classList.toggle("active", t === n) })); const e = i(n); o.style.setProperty("--accent-color", e) }, t = () => { c.forEach(((e, t) => { e.classList.toggle("active", t === n), e.classList.remove("manual") })) }, s = t => { n = t, e(), c.forEach(((e, t) => { e.classList.toggle("active", t === n), t === n ? e.classList.add("manual") : e.classList.remove("manual") })), g() }, v = () => { n = (n + 1) % l.length, e(), t() }, d = () => { u = setInterval((() => { v() }), a) }, g = () => { u && (clearInterval(u), u = null) }; c.forEach(((e, t) => { const l = i(t); e.style.setProperty("--accent-color", l), e.classList.toggle("active", 0 === t), e.addEventListener("click", (() => { s(t) })) })), r && d() } })(t) })) }));</script>
@@ -4002,7 +4039,7 @@ body{font-family:Arial,Helvetica,sans-serif;background:#ffffff;}
         <!-- Column 1: Logo & Socials -->
         <div class="custom-footer-col custom-footer-col-logo">
           <a href="#">
-            <img src="/Finora-log.png" alt="AI Finora" class="custom-footer-logo"
+            <img loading="lazy" decoding="async" src="/Finora-log.png" alt="AI Finora" class="custom-footer-logo"
               onerror="this.onerror=null; this.src='https://via.placeholder.com/180x60/242633/48ceeb?text=AI+Finora';">
           </a>
 
@@ -4027,7 +4064,7 @@ body{font-family:Arial,Helvetica,sans-serif;background:#ffffff;}
           </a>
 
           <a href="https://www.youtube.com/channel/UC7nFGokscrK77KSSGpaNSjA" target="_blank" aria-label="YouTube">
-            <img src="/youtube.png" alt="" style="width: 24px; height: 24px; filter: invert(100);">
+            <img loading="lazy" decoding="async" src="/youtube.png" alt="" style="width: 24px; height: 24px; filter: invert(100);">
           </a>
           </div>
         </div>

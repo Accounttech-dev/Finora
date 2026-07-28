@@ -927,7 +927,7 @@
     <!-- LOGO -->
     <div class="header-logo" data-astro-cid-yfxihdp7>
       <a class="header-logo-link" href="/" aria-label="Finora about" data-astro-cid-yfxihdp7>
-        <img src="/a-images/ai-finora-logo.png" alt="AI Finora" height="30" style="height:30px;width:auto;">
+        <img loading="lazy" decoding="async" src="/a-images/ai-finora-logo.png" alt="AI Finora" height="30" style="height:30px;width:auto;">
       </a>
     </div>
 
@@ -2260,7 +2260,7 @@ United States</p>
       <!-- Column 1: Logo & Socials -->
       <div class="custom-footer-col custom-footer-col-logo">
        <a href="#">
-  <img src="/Finora-log.png" 
+  <img loading="lazy" decoding="async" src="/Finora-log.png" 
        alt="AI Finora" 
        class="custom-footer-logo"
        onerror="this.onerror=null; this.src='https://via.placeholder.com/180x60/242633/48ceeb?text=AI+Finora';">
@@ -2528,6 +2528,43 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 </script>
 <!--End of Tawk.to Script-->
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    let lazyVideos = [].slice.call(document.querySelectorAll("video.lazy-video"));
+    if ("IntersectionObserver" in window) {
+        let videoObserver = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(function(video) {
+                if (video.isIntersecting) {
+                    for (let source in video.target.children) {
+                        let videoSource = video.target.children[source];
+                        if (typeof videoSource.tagName === "string" && videoSource.tagName === "SOURCE") {
+                            if (videoSource.dataset.src) {
+                                videoSource.src = videoSource.dataset.src;
+                            }
+                        }
+                    }
+                    if (video.target.dataset.src) {
+                        video.target.src = video.target.dataset.src;
+                    }
+                    video.target.preload = "metadata";
+                    video.target.play().catch(e => {});
+                    videoObserver.unobserve(video.target);
+                }
+            });
+        });
+        lazyVideos.forEach(function(video) {
+            videoObserver.observe(video);
+        });
+    } else {
+        // Fallback for older browsers
+        lazyVideos.forEach(function(video) {
+            video.preload = "metadata";
+            video.play().catch(e => {});
+        });
+    }
+});
+</script>
 </body>
 
 </html>

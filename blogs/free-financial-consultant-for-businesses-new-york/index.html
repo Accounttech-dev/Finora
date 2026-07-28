@@ -1737,7 +1737,7 @@
       <!-- LOGO -->
       <div class="header-logo" data-astro-cid-yfxihdp7>
         <a class="header-logo-link" href="/" aria-label="Finora about" data-astro-cid-yfxihdp7>
-          <img src="/a-images/ai-finora-logo.png" alt="AI Finora" height="30" style="height:30px;width:auto;">
+          <img loading="lazy" decoding="async" src="/a-images/ai-finora-logo.png" alt="AI Finora" height="30" style="height:30px;width:auto;">
         </a>
       </div>
 
@@ -3168,7 +3168,7 @@
           <!-- Column 1: Logo & Socials -->
           <div class="custom-footer-col custom-footer-col-logo">
             <a href="#">
-              <img src="/Finora-log.png" alt="AI Finora" class="custom-footer-logo"
+              <img loading="lazy" decoding="async" src="/Finora-log.png" alt="AI Finora" class="custom-footer-logo"
                 onerror="this.onerror=null; this.src='https://via.placeholder.com/180x60/242633/48ceeb?text=AI+Finora';">
             </a>
 
@@ -3197,7 +3197,7 @@
                 </svg>
               </a>
               <a href="https://www.youtube.com/channel/UC7nFGokscrK77KSSGpaNSjA" target="_blank" aria-label="Instagram">
-                <img src="/youtube.png" alt="" style="width: 25px; height: 25px; filter: invert(100);">
+                <img loading="lazy" decoding="async" src="/youtube.png" alt="" style="width: 25px; height: 25px; filter: invert(100);">
               </a>
             </div>
           </div>
@@ -3517,6 +3517,43 @@
 
   <script
     type="module">const e = document.querySelector("#alert-banner"), t = document.querySelector("#header"), n = document.querySelectorAll("#header .top-nav-dropdown"), o = document.querySelector("#hamburger-button"), r = document.querySelectorAll("#header .top-nav-mobile-link-dropdown"), a = document.querySelectorAll("header .top-nav-mobile-back-btn"), c = "scrolled", d = "blur-active"; let u = null, s = !1, l = !1; function i() { t?.classList.add(d) } function f() { t?.classList.remove(d) } function v(e) { e.setAttribute("data-dd-open", "false") } u = function (t) { const n = e ? e.offsetHeight : 0; return t ? t + n : n }(u), n.forEach((e => { e.addEventListener("mouseenter", (() => { i() })), e.addEventListener("mouseleave", (e => { !function (e) { if (e.hasFocus) return; f() }(e) })), e.addEventListener("focusin", (e => { !function (e) { e.hasFocus = !0, i() }(e) })), e.addEventListener("focusout", (e => { !function (e) { e.hasFocus = !1, f() }(e) })) })), document.addEventListener("scroll", (() => { !function () { const e = window.scrollY; e > u && !s ? (s = !0, t?.classList.add(c)) : e <= u && s && (s = !1, t?.classList.remove(c)) }() })), o?.addEventListener("click", (e => { !function (e) { e.preventDefault(), l ? (l = !1, t?.setAttribute("data-nav-open", "false"), r.forEach((e => { v(e.closest(".top-nav-mobile-dropdown")) }))) : (l = !0, t?.setAttribute("data-nav-open", "true")) }(e) })), r.forEach((e => { e.addEventListener("click", (e => { !function (e) { e.preventDefault(); const t = e.target.closest(".top-nav-mobile-dropdown"), n = "true" === t.getAttribute("data-dd-open"); n ? v(t) : function (e) { e.setAttribute("data-dd-open", "true") }(t) }(e) })) })), a.forEach((e => { e.addEventListener("click", (e => { !function (e) { e.preventDefault(); const t = e.target.closest(".top-nav-mobile-dropdown"); "true" === t.getAttribute("data-dd-open") && v(t) }(e) })) }));</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    let lazyVideos = [].slice.call(document.querySelectorAll("video.lazy-video"));
+    if ("IntersectionObserver" in window) {
+        let videoObserver = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(function(video) {
+                if (video.isIntersecting) {
+                    for (let source in video.target.children) {
+                        let videoSource = video.target.children[source];
+                        if (typeof videoSource.tagName === "string" && videoSource.tagName === "SOURCE") {
+                            if (videoSource.dataset.src) {
+                                videoSource.src = videoSource.dataset.src;
+                            }
+                        }
+                    }
+                    if (video.target.dataset.src) {
+                        video.target.src = video.target.dataset.src;
+                    }
+                    video.target.preload = "metadata";
+                    video.target.play().catch(e => {});
+                    videoObserver.unobserve(video.target);
+                }
+            });
+        });
+        lazyVideos.forEach(function(video) {
+            videoObserver.observe(video);
+        });
+    } else {
+        // Fallback for older browsers
+        lazyVideos.forEach(function(video) {
+            video.preload = "metadata";
+            video.play().catch(e => {});
+        });
+    }
+});
+</script>
 </body>
 
 </html>

@@ -632,7 +632,7 @@
     <source src="https://ram.aifinoracpu.com/_astro-assets/gradient-video-compressed.CUsoUHDQ.mp4" type="video/mp4"
       data-astro-cid-x5wg3ds5>
   </video>
-  <div class="video-cover" data-uuid="860c5be0-4744-4d3d-a2ad-0e3f111a88f9" data-astro-cid-x5wg3ds5> <img
+  <div class="video-cover" data-uuid="860c5be0-4744-4d3d-a2ad-0e3f111a88f9" data-astro-cid-x5wg3ds5> <img loading="lazy" decoding="async"
       src="/gradient-bg-video-poster.XFvtBSrN.webp" alt="background"
       aria-hidden="true" data-astro-cid-x5wg3ds5> </div>
   <script>(function () {
@@ -886,7 +886,7 @@
     <!-- LOGO -->
     <div class="header-logo" data-astro-cid-yfxihdp7>
       <a class="header-logo-link" href="/" aria-label="AI Finora home" data-astro-cid-yfxihdp7>
-        <img src="a-images/ai-finora-logo.png" alt="AI Finora" height="30" style="height:30px;width:auto;">
+        <img loading="lazy" decoding="async" src="a-images/ai-finora-logo.png" alt="AI Finora" height="30" style="height:30px;width:auto;">
       </a>
     </div>
 
@@ -1958,13 +1958,11 @@ function toggleMobileInd(btn) {
                         <picture data-astro-cid-4yqstrs4="true">
                           <div class="screenshot-0 aifinora-screenshot">
 
-                          <video 
-  autoplay 
-  muted 
+                          <video muted 
   loop 
   playsinline 
   style="width:101%; height:100%; object-fit:cover;"
->
+ preload="none" class="lazy-video">
   <source src="/Main-Banner.mp4" type="video/mp4">
 </video>
 </div> <div>
@@ -2704,7 +2702,7 @@ function toggleMobileInd(btn) {
                       <div class="link-tiles-tile-image" data-astro-cid-d4e2ptyq>
                         <div class="link-tiles-tile-image" data-astro-cid-d4e2ptyq>
                           <!-- Replaced canvas with static image -->
-                          <img src="/Smart-General-Ledger.jpg" alt="Smart General Ledger"
+                          <img loading="lazy" decoding="async" src="/Smart-General-Ledger.jpg" alt="Smart General Ledger"
                             style="width:100%; height:auto;" />
                         </div>
                                <style>
@@ -2750,7 +2748,7 @@ function toggleMobileInd(btn) {
                     <div class="link-tiles-tile" data-astro-cid-d4e2ptyq>
                       <div class="link-tiles-tile-image" data-astro-cid-d4e2ptyq>
                         <!-- Replaced canvas with static image -->
-                        <img src="/Automated-Bill-Management.jpg" alt="Automated Bill Management"
+                        <img loading="lazy" decoding="async" src="/Automated-Bill-Management.jpg" alt="Automated Bill Management"
                           style="width:100%; height:auto;" />
                       </div>
                       <h3 class="link-tiles-tile-heading" data-astro-cid-d4e2ptyq>
@@ -2773,7 +2771,7 @@ function toggleMobileInd(btn) {
                     <div class="link-tiles-tile" data-astro-cid-d4e2ptyq>
                       <div class="link-tiles-tile-image" data-astro-cid-d4e2ptyq>
                         <!-- Replaced canvas with static image -->
-                        <img src="/Real-Time-Financial-Insights.jpg" alt="Real-Time Financial Insights"
+                        <img loading="lazy" decoding="async" src="/Real-Time-Financial-Insights.jpg" alt="Real-Time Financial Insights"
                           style="width:100%; height:auto;" />
                       </div>
                       <h3 class="link-tiles-tile-heading" data-astro-cid-d4e2ptyq>
@@ -2793,7 +2791,7 @@ function toggleMobileInd(btn) {
                     <div class="link-tiles-tile" data-astro-cid-d4e2ptyq>
                       <div class="link-tiles-tile-image" data-astro-cid-d4e2ptyq>
                         <!-- Replaced canvas with static image -->
-                        <img src="/Secure-&-Compliant.jpg" alt="Secure & Compliant" style="width:100%; height:auto;" />
+                        <img loading="lazy" decoding="async" src="/Secure-&-Compliant.jpg" alt="Secure & Compliant" style="width:100%; height:auto;" />
                       </div>
                       <h3 class="link-tiles-tile-heading" data-astro-cid-d4e2ptyq>
                         Secure & Compliant
@@ -3743,7 +3741,7 @@ function toggleMobileInd(btn) {
       <!-- Column 1: Logo & Socials -->
       <div class="custom-footer-col custom-footer-col-logo">
        <a href="#">
-  <img src="/Finora-log.png" 
+  <img loading="lazy" decoding="async" src="/Finora-log.png" 
        alt="AI Finora" 
        class="custom-footer-logo"
        onerror="this.onerror=null; this.src='/finora logo.png';">
@@ -3764,7 +3762,7 @@ function toggleMobileInd(btn) {
           </a>
 
           <a href="https://www.youtube.com/channel/UC7nFGokscrK77KSSGpaNSjA" target="_blank" aria-label="YouTube">
-            <img src="/youtube.png" alt="" style="width: 24px; height: 24px; filter: invert(100);">
+            <img loading="lazy" decoding="async" src="/youtube.png" alt="" style="width: 24px; height: 24px; filter: invert(100);">
           </a>
         </div>
       </div>
@@ -4635,6 +4633,43 @@ s0.parentNode.insertBefore(s1,s0);
 <!--End of Tawk.to Script-->
 <script type="module"
   src="../ram.aifinoracpu.com/_astro-assets/index.astro_astro_type_script_index_0_lang.CcHFg9Em.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    let lazyVideos = [].slice.call(document.querySelectorAll("video.lazy-video"));
+    if ("IntersectionObserver" in window) {
+        let videoObserver = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(function(video) {
+                if (video.isIntersecting) {
+                    for (let source in video.target.children) {
+                        let videoSource = video.target.children[source];
+                        if (typeof videoSource.tagName === "string" && videoSource.tagName === "SOURCE") {
+                            if (videoSource.dataset.src) {
+                                videoSource.src = videoSource.dataset.src;
+                            }
+                        }
+                    }
+                    if (video.target.dataset.src) {
+                        video.target.src = video.target.dataset.src;
+                    }
+                    video.target.preload = "metadata";
+                    video.target.play().catch(e => {});
+                    videoObserver.unobserve(video.target);
+                }
+            });
+        });
+        lazyVideos.forEach(function(video) {
+            videoObserver.observe(video);
+        });
+    } else {
+        // Fallback for older browsers
+        lazyVideos.forEach(function(video) {
+            video.preload = "metadata";
+            video.play().catch(e => {});
+        });
+    }
+});
+</script>
 </body>
 
 </html>
