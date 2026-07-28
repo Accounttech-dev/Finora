@@ -1530,7 +1530,7 @@
 
 <div class="custom-footer">
   <!-- Place your background image src URL below inside the url('') -->
-  <div class="custom-footer-bg" style="background-image: url('/Footer Background.jpg');"></div>
+  <div class="custom-footer-bg" style="background-image: url('/assets/images/Footer Background.jpg');"></div>
 
   <div class="custom-footer-container">
     <div class="custom-footer-top">
@@ -1541,7 +1541,7 @@
   <img loading="lazy" decoding="async" src="/Finora-Log.png" 
        alt="AI Finora" 
        class="custom-footer-logo"
-       onerror="this.onerror=null; this.src='/Finora-log.png';">
+       onerror="this.onerror=null; this.src='/assets/images/Finora-log.png';">
 </a>
         
         <div class="custom-footer-socials">
@@ -1559,19 +1559,19 @@
           </a>
 
           <a href="https://www.youtube.com/channel/UC7nFGokscrK77KSSGpaNSjA" target="_blank" aria-label="YouTube">
-            <img loading="lazy" decoding="async" src="/youtube.png" alt="" style="width: 24px; height: 24px; filter: invert(100);">
+            <img loading="lazy" decoding="async" src="/assets/images/youtube.png" alt="" style="width: 24px; height: 24px; filter: invert(100);">
           </a>
 
           <a href="https://www.youtube.com/channel/UC7nFGokscrK77KSSGpaNSjA" target="_blank" aria-label="YouTube">
-            <img loading="lazy" decoding="async" src="/youtube.png" alt="" style="width: 24px; height: 24px; filter: invert(100);">
+            <img loading="lazy" decoding="async" src="/assets/images/youtube.png" alt="" style="width: 24px; height: 24px; filter: invert(100);">
           </a>
 
           <a href="https://www.youtube.com/channel/UC7nFGokscrK77KSSGpaNSjA" target="_blank" aria-label="YouTube">
-            <img loading="lazy" decoding="async" src="/youtube.png" alt="" style="width: 24px; height: 24px; filter: invert(100);">
+            <img loading="lazy" decoding="async" src="/assets/images/youtube.png" alt="" style="width: 24px; height: 24px; filter: invert(100);">
           </a>
 
           <a href="https://www.youtube.com/channel/UC7nFGokscrK77KSSGpaNSjA" target="_blank" aria-label="YouTube">
-            <img loading="lazy" decoding="async" src="/youtube.png" alt="" style="width: 24px; height: 24px; filter: invert(100);">
+            <img loading="lazy" decoding="async" src="/assets/images/youtube.png" alt="" style="width: 24px; height: 24px; filter: invert(100);">
           </a>
         </div>
       </div>
@@ -1859,27 +1859,40 @@ s0.parentNode.insertBefore(s1,s0);
 }
       </style>
 
+
+
 <script>
 document.addEventListener("DOMContentLoaded", function() {
-    let lazyVideos = [].slice.call(document.querySelectorAll("video.lazy-video"));
+    var lazyVideos = [].slice.call(document.querySelectorAll("video.lazy-video"));
+    
+    function loadVideo(video) {
+        var sources = video.querySelectorAll("source");
+        for (var i = 0; i < sources.length; i++) {
+            var src = sources[i].getAttribute("data-src");
+            if (src) {
+                sources[i].setAttribute("src", src);
+            }
+        }
+        var vSrc = video.getAttribute("data-src");
+        if (vSrc) {
+            video.setAttribute("src", vSrc);
+        }
+        video.load();
+        
+        var playPromise = video.play();
+        if (playPromise !== undefined) {
+            playPromise.catch(function(error) {
+                console.log("Autoplay prevented:", error);
+            });
+        }
+    }
+
     if ("IntersectionObserver" in window) {
-        let videoObserver = new IntersectionObserver(function(entries, observer) {
-            entries.forEach(function(video) {
-                if (video.isIntersecting) {
-                    for (let source in video.target.children) {
-                        let videoSource = video.target.children[source];
-                        if (typeof videoSource.tagName === "string" && videoSource.tagName === "SOURCE") {
-                            if (videoSource.dataset.src) {
-                                videoSource.src = videoSource.dataset.src;
-                            }
-                        }
-                    }
-                    if (video.target.dataset.src) {
-                        video.target.src = video.target.dataset.src;
-                    }
-                    video.target.preload = "metadata";
-                    video.target.play().catch(e => {});
-                    videoObserver.unobserve(video.target);
+        var videoObserver = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(function(videoEntry) {
+                if (videoEntry.isIntersecting) {
+                    loadVideo(videoEntry.target);
+                    videoObserver.unobserve(videoEntry.target);
                 }
             });
         });
@@ -1887,10 +1900,8 @@ document.addEventListener("DOMContentLoaded", function() {
             videoObserver.observe(video);
         });
     } else {
-        // Fallback for older browsers
         lazyVideos.forEach(function(video) {
-            video.preload = "metadata";
-            video.play().catch(e => {});
+            loadVideo(video);
         });
     }
 });

@@ -2761,7 +2761,7 @@ body {
         <header class="blog-hero">
             <!-- Featured Image -->
             <figure class="featured-image-container">
-                <img src="/featured.png" alt="Best bookkeeping and tax services workspace in Houston" class="featured-image" loading="lazy">
+                <img src="/assets/images/featured.png" alt="Best bookkeeping and tax services workspace in Houston" class="featured-image" loading="lazy">
             </figure>
         </header>
 
@@ -2796,7 +2796,7 @@ body {
                     
                     <!-- Image 2: After Introduction -->
                     <figure class="article-image-container">
-                        <img src="/dashboard.png" alt="Real-time bookkeeping dashboard displaying cash flow charts" class="article-image" loading="lazy">
+                        <img src="/assets/images/dashboard.png" alt="Real-time bookkeeping dashboard displaying cash flow charts" class="article-image" loading="lazy">
                     </figure>
 
                     <!-- Information Box -->
@@ -2836,7 +2836,7 @@ body {
 
                     <!-- Image 3: Between Major Sections -->
                     <figure class="article-image-container">
-                        <img src="/consultation.png" alt="Accounting consultation in a professional Houston office workspace" class="article-image" loading="lazy">
+                        <img src="/assets/images/consultation.png" alt="Accounting consultation in a professional Houston office workspace" class="article-image" loading="lazy">
                         
                     </figure>
                 </section>
@@ -3054,7 +3054,7 @@ body {
     </button>
         <div class="custom-footer">
       <!-- Place your background image src URL below inside the url('') -->
-      <div class="custom-footer-bg" style="background-image: url('/Footer Background.jpg');"></div>
+      <div class="custom-footer-bg" style="background-image: url('/assets/images/Footer Background.jpg');"></div>
 
       <div class="custom-footer-container">
         <div class="custom-footer-top">
@@ -3062,7 +3062,7 @@ body {
           <!-- Column 1: Logo & Socials -->
           <div class="custom-footer-col custom-footer-col-logo">
             <a href="#">
-              <img loading="lazy" decoding="async" src="/Finora-log.png" alt="AI Finora" class="custom-footer-logo"
+              <img loading="lazy" decoding="async" src="/assets/images/Finora-log.png" alt="AI Finora" class="custom-footer-logo"
                 onerror="this.onerror=null; this.src='https://via.placeholder.com/180x60/242633/48ceeb?text=AI+Finora';">
             </a>
 
@@ -3091,7 +3091,7 @@ body {
                 </svg>
               </a>
               <a href="https://www.youtube.com/channel/UC7nFGokscrK77KSSGpaNSjA" target="_blank" aria-label="Instagram">
-                <img loading="lazy" decoding="async" src="/youtube.png" alt="" style="width: 25px; height: 25px; filter: invert(100);">
+                <img loading="lazy" decoding="async" src="/assets/images/youtube.png" alt="" style="width: 25px; height: 25px; filter: invert(100);">
               </a>
             </div>
           </div>
@@ -3416,27 +3416,40 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+
+
 <script>
 document.addEventListener("DOMContentLoaded", function() {
-    let lazyVideos = [].slice.call(document.querySelectorAll("video.lazy-video"));
+    var lazyVideos = [].slice.call(document.querySelectorAll("video.lazy-video"));
+    
+    function loadVideo(video) {
+        var sources = video.querySelectorAll("source");
+        for (var i = 0; i < sources.length; i++) {
+            var src = sources[i].getAttribute("data-src");
+            if (src) {
+                sources[i].setAttribute("src", src);
+            }
+        }
+        var vSrc = video.getAttribute("data-src");
+        if (vSrc) {
+            video.setAttribute("src", vSrc);
+        }
+        video.load();
+        
+        var playPromise = video.play();
+        if (playPromise !== undefined) {
+            playPromise.catch(function(error) {
+                console.log("Autoplay prevented:", error);
+            });
+        }
+    }
+
     if ("IntersectionObserver" in window) {
-        let videoObserver = new IntersectionObserver(function(entries, observer) {
-            entries.forEach(function(video) {
-                if (video.isIntersecting) {
-                    for (let source in video.target.children) {
-                        let videoSource = video.target.children[source];
-                        if (typeof videoSource.tagName === "string" && videoSource.tagName === "SOURCE") {
-                            if (videoSource.dataset.src) {
-                                videoSource.src = videoSource.dataset.src;
-                            }
-                        }
-                    }
-                    if (video.target.dataset.src) {
-                        video.target.src = video.target.dataset.src;
-                    }
-                    video.target.preload = "metadata";
-                    video.target.play().catch(e => {});
-                    videoObserver.unobserve(video.target);
+        var videoObserver = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(function(videoEntry) {
+                if (videoEntry.isIntersecting) {
+                    loadVideo(videoEntry.target);
+                    videoObserver.unobserve(videoEntry.target);
                 }
             });
         });
@@ -3444,10 +3457,8 @@ document.addEventListener("DOMContentLoaded", function() {
             videoObserver.observe(video);
         });
     } else {
-        // Fallback for older browsers
         lazyVideos.forEach(function(video) {
-            video.preload = "metadata";
-            video.play().catch(e => {});
+            loadVideo(video);
         });
     }
 });

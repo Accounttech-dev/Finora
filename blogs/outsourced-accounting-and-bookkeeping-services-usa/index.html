@@ -2762,7 +2762,7 @@ body {
     <!-- Top Section -->
     <header class="blog-hero">
         <figure class="featured-image-container">
-            <img src="/img3-1.png" alt="Professional accounting and bookkeeping services workspace" class="featured-image" loading="lazy">
+            <img src="/assets/images/img3-1.png" alt="Professional accounting and bookkeeping services workspace" class="featured-image" loading="lazy">
         </figure>
     </header>
 
@@ -2802,7 +2802,7 @@ body {
                 <p>Whether you're a solo entrepreneur searching for "accounting and bookkeeping near me," a growing company evaluating "outsourced accounting services near me," or a business owner trying to understand the difference between accounting and bookkeeping altogether, We cover everything you need to know. We'll also explore how AI Finora delivers reliable, technology-driven accounting and bookkeeping support to businesses across the country, including specialized services for companies based in New York City.</p>
                 
                 <figure class="article-image-container">
-                    <img src="/img3-2.jpg" alt="Business financial dashboard showing accounting metrics" class="article-image" loading="lazy">
+                    <img src="/assets/images/img3-2.jpg" alt="Business financial dashboard showing accounting metrics" class="article-image" loading="lazy">
                 </figure>
             </section>
 
@@ -2860,7 +2860,7 @@ body {
                 <p>Quality small business bookkeeping goes beyond simply logging transactions. It involves accurately categorizing income and expenses, reconciling bank and credit card accounts, tracking accounts receivable and payable, and ensuring records are organized well ahead of tax season. Outsourced bookkeeping eliminates this scramble entirely by maintaining clean, accurate, and audit-ready records throughout the year.</p>
                 
                 <figure class="article-image-container">
-                    <img src="/img3-3.jpg" alt="Small business owner reviewing bookkeeping records" class="article-image" loading="lazy">
+                    <img src="/assets/images/img3-3.jpg" alt="Small business owner reviewing bookkeeping records" class="article-image" loading="lazy">
                 </figure>
             </section>
 
@@ -2918,7 +2918,7 @@ body {
                 <p>For businesses specifically operating in New York City, AI Finora also offers real-time bookkeeping services tailored to the NYC market, ensuring continuous financial visibility that accounts for the city's unique cost structures and business dynamics.</p>
                 
                 <figure class="article-image-container">
-                    <img src="/img4-1.jpg" alt="Real-time bookkeeping dashboard with live financial data" class="article-image" loading="lazy">
+                    <img src="/assets/images/img4-1.jpg" alt="Real-time bookkeeping dashboard with live financial data" class="article-image" loading="lazy">
                 </figure>
             </section>
 
@@ -3073,7 +3073,7 @@ body {
 
         <div class="custom-footer">
       <!-- Place your background image src URL below inside the url('') -->
-      <div class="custom-footer-bg" style="background-image: url('/Footer Background.jpg');"></div>
+      <div class="custom-footer-bg" style="background-image: url('/assets/images/Footer Background.jpg');"></div>
 
       <div class="custom-footer-container">
         <div class="custom-footer-top">
@@ -3081,7 +3081,7 @@ body {
           <!-- Column 1: Logo & Socials -->
           <div class="custom-footer-col custom-footer-col-logo">
             <a href="#">
-              <img loading="lazy" decoding="async" src="/Finora-log.png" alt="AI Finora" class="custom-footer-logo"
+              <img loading="lazy" decoding="async" src="/assets/images/Finora-log.png" alt="AI Finora" class="custom-footer-logo"
                 onerror="this.onerror=null; this.src='https://via.placeholder.com/180x60/242633/48ceeb?text=AI+Finora';">
             </a>
 
@@ -3110,7 +3110,7 @@ body {
                 </svg>
               </a>
               <a href="https://www.youtube.com/channel/UC7nFGokscrK77KSSGpaNSjA" target="_blank" aria-label="Instagram">
-                <img loading="lazy" decoding="async" src="/youtube.png" alt="" style="width: 25px; height: 25px; filter: invert(100);">
+                <img loading="lazy" decoding="async" src="/assets/images/youtube.png" alt="" style="width: 25px; height: 25px; filter: invert(100);">
               </a>
             </div>
           </div>
@@ -3432,27 +3432,40 @@ document.addEventListener('DOMContentLoaded', () => {
   <script
     type="module">const e = document.querySelector("#alert-banner"), t = document.querySelector("#header"), n = document.querySelectorAll("#header .top-nav-dropdown"), o = document.querySelector("#hamburger-button"), r = document.querySelectorAll("#header .top-nav-mobile-link-dropdown"), a = document.querySelectorAll("header .top-nav-mobile-back-btn"), c = "scrolled", d = "blur-active"; let u = null, s = !1, l = !1; function i() { t?.classList.add(d) } function f() { t?.classList.remove(d) } function v(e) { e.setAttribute("data-dd-open", "false") } u = function (t) { const n = e ? e.offsetHeight : 0; return t ? t + n : n }(u), n.forEach((e => { e.addEventListener("mouseenter", (() => { i() })), e.addEventListener("mouseleave", (e => { !function (e) { if (e.hasFocus) return; f() }(e) })), e.addEventListener("focusin", (e => { !function (e) { e.hasFocus = !0, i() }(e) })), e.addEventListener("focusout", (e => { !function (e) { e.hasFocus = !1, f() }(e) })) })), document.addEventListener("scroll", (() => { !function () { const e = window.scrollY; e > u && !s ? (s = !0, t?.classList.add(c)) : e <= u && s && (s = !1, t?.classList.remove(c)) }() })), o?.addEventListener("click", (e => { !function (e) { e.preventDefault(), l ? (l = !1, t?.setAttribute("data-nav-open", "false"), r.forEach((e => { v(e.closest(".top-nav-mobile-dropdown")) }))) : (l = !0, t?.setAttribute("data-nav-open", "true")) }(e) })), r.forEach((e => { e.addEventListener("click", (e => { !function (e) { e.preventDefault(); const t = e.target.closest(".top-nav-mobile-dropdown"), n = "true" === t.getAttribute("data-dd-open"); n ? v(t) : function (e) { e.setAttribute("data-dd-open", "true") }(t) }(e) })) })), a.forEach((e => { e.addEventListener("click", (e => { !function (e) { e.preventDefault(); const t = e.target.closest(".top-nav-mobile-dropdown"); "true" === t.getAttribute("data-dd-open") && v(t) }(e) })) }));</script>
 
+
+
 <script>
 document.addEventListener("DOMContentLoaded", function() {
-    let lazyVideos = [].slice.call(document.querySelectorAll("video.lazy-video"));
+    var lazyVideos = [].slice.call(document.querySelectorAll("video.lazy-video"));
+    
+    function loadVideo(video) {
+        var sources = video.querySelectorAll("source");
+        for (var i = 0; i < sources.length; i++) {
+            var src = sources[i].getAttribute("data-src");
+            if (src) {
+                sources[i].setAttribute("src", src);
+            }
+        }
+        var vSrc = video.getAttribute("data-src");
+        if (vSrc) {
+            video.setAttribute("src", vSrc);
+        }
+        video.load();
+        
+        var playPromise = video.play();
+        if (playPromise !== undefined) {
+            playPromise.catch(function(error) {
+                console.log("Autoplay prevented:", error);
+            });
+        }
+    }
+
     if ("IntersectionObserver" in window) {
-        let videoObserver = new IntersectionObserver(function(entries, observer) {
-            entries.forEach(function(video) {
-                if (video.isIntersecting) {
-                    for (let source in video.target.children) {
-                        let videoSource = video.target.children[source];
-                        if (typeof videoSource.tagName === "string" && videoSource.tagName === "SOURCE") {
-                            if (videoSource.dataset.src) {
-                                videoSource.src = videoSource.dataset.src;
-                            }
-                        }
-                    }
-                    if (video.target.dataset.src) {
-                        video.target.src = video.target.dataset.src;
-                    }
-                    video.target.preload = "metadata";
-                    video.target.play().catch(e => {});
-                    videoObserver.unobserve(video.target);
+        var videoObserver = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(function(videoEntry) {
+                if (videoEntry.isIntersecting) {
+                    loadVideo(videoEntry.target);
+                    videoObserver.unobserve(videoEntry.target);
                 }
             });
         });
@@ -3460,10 +3473,8 @@ document.addEventListener("DOMContentLoaded", function() {
             videoObserver.observe(video);
         });
     } else {
-        // Fallback for older browsers
         lazyVideos.forEach(function(video) {
-            video.preload = "metadata";
-            video.play().catch(e => {});
+            loadVideo(video);
         });
     }
 });

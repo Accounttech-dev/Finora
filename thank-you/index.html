@@ -557,15 +557,15 @@
 <script type="module"
   src="../ram.aifinoracpu.com/_astro-assets/HeadTags.astro_astro_type_script_index_0_lang.BrVAIR5Q.js"></script>
 
-<body data-astro-cid-turtx5w7> <video autoplay loop muted playsinline id="page-background-video"
-    class="page-background-video" preload="auto"
+<body data-astro-cid-turtx5w7> <video  loop muted playsinline id="page-background-video"
+    class="lazy-video page-background-video" preload="none"
     poster="https://ram.aifinoracpu.com/_astro-assets/gradient-bg-video-poster.XFvtBSrN.webp"
     data-uuid="561b0cca-46dc-44f9-a6c4-d48e362d513e" data-astro-cid-x5wg3ds5>
-    <source src="https://ram.aifinoracpu.com/_astro-assets/gradient-video-compressed.CUsoUHDQ.mp4" type="video/mp4"
+    <source data-src="https://ram.aifinoracpu.com/_astro-assets/gradient-video-compressed.CUsoUHDQ.mp4" type="video/mp4"
       data-astro-cid-x5wg3ds5>
   </video>
   <div class="video-cover" data-uuid="860c5be0-4744-4d3d-a2ad-0e3f111a88f9" data-astro-cid-x5wg3ds5> <img loading="lazy" decoding="async"
-      src="/gradient-bg-video-poster.XFvtBSrN.webp" alt="background"
+      src="/assets/images/gradient-bg-video-poster.XFvtBSrN.webp" alt="background"
       aria-hidden="true" data-astro-cid-x5wg3ds5> </div>
   <script>(function () {
       const videoPoster = "https://ram.aifinoracpu.com/_astro-assets/gradient-bg-video-poster.XFvtBSrN.webp";
@@ -2532,7 +2532,7 @@ function toggleMobileInd(btn) {
 
 <div class="custom-footer">
   <!-- Place your background image src URL below inside the url('') -->
-  <div class="custom-footer-bg" style="background-image: url('/Footer Background.jpg');"></div>
+  <div class="custom-footer-bg" style="background-image: url('/assets/images/Footer Background.jpg');"></div>
 
   <div class="custom-footer-container">
     <div class="custom-footer-top">
@@ -2540,7 +2540,7 @@ function toggleMobileInd(btn) {
       <!-- Column 1: Logo & Socials -->
       <div class="custom-footer-col custom-footer-col-logo">
        <a href="#">
-  <img loading="lazy" decoding="async" src="/Finora-log.png" 
+  <img loading="lazy" decoding="async" src="/assets/images/Finora-log.png" 
        alt="AI Finora" 
        class="custom-footer-logo"
        onerror="this.onerror=null; this.src='/finora logo.png';">
@@ -2561,7 +2561,7 @@ function toggleMobileInd(btn) {
           </a>
 
           <a href="https://www.youtube.com/channel/UC7nFGokscrK77KSSGpaNSjA" target="_blank" aria-label="YouTube">
-            <img loading="lazy" decoding="async" src="/youtube.png" alt="" style="width: 24px; height: 24px; filter: invert(100);">
+            <img loading="lazy" decoding="async" src="/assets/images/youtube.png" alt="" style="width: 24px; height: 24px; filter: invert(100);">
           </a>
 
          
@@ -2670,37 +2670,37 @@ const caseData = [
   {
     title: "From Revenue Leakage to Financial Control",
     desc: "A multi-specialty Texas-based hospital was expanding its patient base but facing major inefficiencies in financial management, threatening profitability and cash flow.",
-    thumb: "th-rose", icon: "🏥", img: "/Strategic Discounted Cash Flow Planning.jpg",
+    thumb: "th-rose", icon: "🏥", img: "/assets/images/Strategic Discounted Cash Flow Planning.jpg",
     tags: ["Hospital", "Healthcare", "Revenue Cycle"]
   },
   {
     title: "Turning High Sales into Real Profits",
     desc: "A multi-location Texas-based restaurant chain with strong daily sales but shrinking net profits due to uncontrolled food costs and operational inefficiencies.",
-    thumb: "th-amber", icon: "🍽️", img: "/Smart-General-Ledger.jpg",
+    thumb: "th-amber", icon: "🍽️", img: "/assets/images/Smart-General-Ledger.jpg",
     tags: ["Restaurant", "Food & Beverage", "Multi-Location"]
   },
   {
     title: "From Confusion to Complete Financial Clarity",
     desc: "A growing e-commerce business owner from Raleigh selling across Amazon, Shopify, and Walmart, struggling to identify real profitability and stay tax compliant.",
-    thumb: "th-indigo", icon: "🛒", img: "/Scalable Financial Reporting Infrastructure for Growing Businesses.jpg",
+    thumb: "th-indigo", icon: "🛒", img: "/assets/images/Scalable Financial Reporting Infrastructure for Growing Businesses.jpg",
     tags: ["E-Commerce", "Multi-Platform", "Tax Compliance"]
   },
   {
     title: "Fixing Cash Flow & Unlocking Growth",
     desc: "A consulting services firm in Canada with steady client demand but inconsistent billing, untracked billable hours, and persistent cash flow problems.",
-    thumb: "th-teal", icon: "💼", img: "/Technology-Driven Accuracy.jpg",
+    thumb: "th-teal", icon: "💼", img: "/assets/images/Technology-Driven Accuracy.jpg",
     tags: ["Service Business", "Consulting", "Cash Flow"]
   },
   {
     title: "Reducing Losses & Improving Margins",
     desc: "A multi-location USA-based gas station business operating on thin margins, struggling with inventory shrinkage, manual reconciliation errors, and no location-level visibility.",
-    thumb: "th-green", icon: "⛽", img: "/wealth-11.jpg",
+    thumb: "th-green", icon: "⛽", img: "/assets/images/wealth-11.jpg",
     tags: ["Gas Station", "Multi-Location", "Inventory Control"]
   },
   {
     title: "Scaling Without Hiring More Staff",
     desc: "A growing North Carolina-based CPA firm struggling to manage operational efficiency during peak tax season with manual processes and no scalable workflows.",
-    thumb: "th-purple", icon: "🏢", img: "/wealth-12.jpg",
+    thumb: "th-purple", icon: "🏢", img: "/assets/images/wealth-12.jpg",
     tags: ["CPA Firm", "Tax Season", "Automation"]
   },
   /* {
@@ -2767,27 +2767,40 @@ s0.parentNode.insertBefore(s1,s0);
 })();
 </script>
 
+
+
 <script>
 document.addEventListener("DOMContentLoaded", function() {
-    let lazyVideos = [].slice.call(document.querySelectorAll("video.lazy-video"));
+    var lazyVideos = [].slice.call(document.querySelectorAll("video.lazy-video"));
+    
+    function loadVideo(video) {
+        var sources = video.querySelectorAll("source");
+        for (var i = 0; i < sources.length; i++) {
+            var src = sources[i].getAttribute("data-src");
+            if (src) {
+                sources[i].setAttribute("src", src);
+            }
+        }
+        var vSrc = video.getAttribute("data-src");
+        if (vSrc) {
+            video.setAttribute("src", vSrc);
+        }
+        video.load();
+        
+        var playPromise = video.play();
+        if (playPromise !== undefined) {
+            playPromise.catch(function(error) {
+                console.log("Autoplay prevented:", error);
+            });
+        }
+    }
+
     if ("IntersectionObserver" in window) {
-        let videoObserver = new IntersectionObserver(function(entries, observer) {
-            entries.forEach(function(video) {
-                if (video.isIntersecting) {
-                    for (let source in video.target.children) {
-                        let videoSource = video.target.children[source];
-                        if (typeof videoSource.tagName === "string" && videoSource.tagName === "SOURCE") {
-                            if (videoSource.dataset.src) {
-                                videoSource.src = videoSource.dataset.src;
-                            }
-                        }
-                    }
-                    if (video.target.dataset.src) {
-                        video.target.src = video.target.dataset.src;
-                    }
-                    video.target.preload = "metadata";
-                    video.target.play().catch(e => {});
-                    videoObserver.unobserve(video.target);
+        var videoObserver = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(function(videoEntry) {
+                if (videoEntry.isIntersecting) {
+                    loadVideo(videoEntry.target);
+                    videoObserver.unobserve(videoEntry.target);
                 }
             });
         });
@@ -2795,10 +2808,8 @@ document.addEventListener("DOMContentLoaded", function() {
             videoObserver.observe(video);
         });
     } else {
-        // Fallback for older browsers
         lazyVideos.forEach(function(video) {
-            video.preload = "metadata";
-            video.play().catch(e => {});
+            loadVideo(video);
         });
     }
 });

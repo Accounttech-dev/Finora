@@ -2762,7 +2762,7 @@ body {
     <!-- Top Section -->
     <header class="blog-hero">
         <figure class="featured-image-container">
-            <img src="/Designer (5).png" alt="Business cash flow analysis workspace in New York City" class="featured-image" loading="lazy">
+            <img src="/assets/images/Designer (5).png" alt="Business cash flow analysis workspace in New York City" class="featured-image" loading="lazy">
         </figure>
     </header>
 
@@ -2864,7 +2864,7 @@ body {
             </section>
 
             <hr class="section-divider">
-            <img src="/Designer (6).png" alt="Business cash flow analysis workspace in New York City" class="featured-image" loading="lazy">
+            <img src="/assets/images/Designer (6).png" alt="Business cash flow analysis workspace in New York City" class="featured-image" loading="lazy">
 
             <section id="how-aifinora-improves-reporting" class="scroll-section">
                 <h2>How AI Finora Helps Businesses Improve Financial Reporting</h2>
@@ -2962,7 +2962,7 @@ body {
             </section>
 
             <hr class="section-divider">
-            <img src="/Designer (7).png" alt="Business cash flow analysis workspace in New York City" class="featured-image" loading="lazy">
+            <img src="/assets/images/Designer (7).png" alt="Business cash flow analysis workspace in New York City" class="featured-image" loading="lazy">
 
             <section id="reporting-services-nyc" class="scroll-section">
                 <h2>Financial Reporting Services in NYC: Supporting Growing Businesses with Better Insights</h2>
@@ -3038,7 +3038,7 @@ body {
             </section>
 
             <hr class="section-divider">
-            <img src="/Designer (8).png" alt="Business cash flow analysis workspace in New York City" class="featured-image" loading="lazy">
+            <img src="/assets/images/Designer (8).png" alt="Business cash flow analysis workspace in New York City" class="featured-image" loading="lazy">
 
             <section id="future-reporting-automation" class="scroll-section">
                 <h2>The Future of Financial Reporting: Moving Toward Intelligent Automation</h2>
@@ -3293,7 +3293,7 @@ body {
 
         <div class="custom-footer">
       <!-- Place your background image src URL below inside the url('') -->
-      <div class="custom-footer-bg" style="background-image: url('/Footer Background.jpg');"></div>
+      <div class="custom-footer-bg" style="background-image: url('/assets/images/Footer Background.jpg');"></div>
 
       <div class="custom-footer-container">
         <div class="custom-footer-top">
@@ -3301,7 +3301,7 @@ body {
           <!-- Column 1: Logo & Socials -->
           <div class="custom-footer-col custom-footer-col-logo">
             <a href="#">
-              <img loading="lazy" decoding="async" src="/Finora-log.png" alt="AI Finora" class="custom-footer-logo"
+              <img loading="lazy" decoding="async" src="/assets/images/Finora-log.png" alt="AI Finora" class="custom-footer-logo"
                 onerror="this.onerror=null; this.src='https://via.placeholder.com/180x60/242633/48ceeb?text=AI+Finora';">
             </a>
 
@@ -3330,7 +3330,7 @@ body {
                 </svg>
               </a>
               <a href="https://www.youtube.com/channel/UC7nFGokscrK77KSSGpaNSjA" target="_blank" aria-label="Instagram">
-                <img loading="lazy" decoding="async" src="/youtube.png" alt="" style="width: 25px; height: 25px; filter: invert(100);">
+                <img loading="lazy" decoding="async" src="/assets/images/youtube.png" alt="" style="width: 25px; height: 25px; filter: invert(100);">
               </a>
             </div>
           </div>
@@ -3652,27 +3652,40 @@ document.addEventListener('DOMContentLoaded', () => {
   <script
     type="module">const e = document.querySelector("#alert-banner"), t = document.querySelector("#header"), n = document.querySelectorAll("#header .top-nav-dropdown"), o = document.querySelector("#hamburger-button"), r = document.querySelectorAll("#header .top-nav-mobile-link-dropdown"), a = document.querySelectorAll("header .top-nav-mobile-back-btn"), c = "scrolled", d = "blur-active"; let u = null, s = !1, l = !1; function i() { t?.classList.add(d) } function f() { t?.classList.remove(d) } function v(e) { e.setAttribute("data-dd-open", "false") } u = function (t) { const n = e ? e.offsetHeight : 0; return t ? t + n : n }(u), n.forEach((e => { e.addEventListener("mouseenter", (() => { i() })), e.addEventListener("mouseleave", (e => { !function (e) { if (e.hasFocus) return; f() }(e) })), e.addEventListener("focusin", (e => { !function (e) { e.hasFocus = !0, i() }(e) })), e.addEventListener("focusout", (e => { !function (e) { e.hasFocus = !1, f() }(e) })) })), document.addEventListener("scroll", (() => { !function () { const e = window.scrollY; e > u && !s ? (s = !0, t?.classList.add(c)) : e <= u && s && (s = !1, t?.classList.remove(c)) }() })), o?.addEventListener("click", (e => { !function (e) { e.preventDefault(), l ? (l = !1, t?.setAttribute("data-nav-open", "false"), r.forEach((e => { v(e.closest(".top-nav-mobile-dropdown")) }))) : (l = !0, t?.setAttribute("data-nav-open", "true")) }(e) })), r.forEach((e => { e.addEventListener("click", (e => { !function (e) { e.preventDefault(); const t = e.target.closest(".top-nav-mobile-dropdown"), n = "true" === t.getAttribute("data-dd-open"); n ? v(t) : function (e) { e.setAttribute("data-dd-open", "true") }(t) }(e) })) })), a.forEach((e => { e.addEventListener("click", (e => { !function (e) { e.preventDefault(); const t = e.target.closest(".top-nav-mobile-dropdown"); "true" === t.getAttribute("data-dd-open") && v(t) }(e) })) }));</script>
 
+
+
 <script>
 document.addEventListener("DOMContentLoaded", function() {
-    let lazyVideos = [].slice.call(document.querySelectorAll("video.lazy-video"));
+    var lazyVideos = [].slice.call(document.querySelectorAll("video.lazy-video"));
+    
+    function loadVideo(video) {
+        var sources = video.querySelectorAll("source");
+        for (var i = 0; i < sources.length; i++) {
+            var src = sources[i].getAttribute("data-src");
+            if (src) {
+                sources[i].setAttribute("src", src);
+            }
+        }
+        var vSrc = video.getAttribute("data-src");
+        if (vSrc) {
+            video.setAttribute("src", vSrc);
+        }
+        video.load();
+        
+        var playPromise = video.play();
+        if (playPromise !== undefined) {
+            playPromise.catch(function(error) {
+                console.log("Autoplay prevented:", error);
+            });
+        }
+    }
+
     if ("IntersectionObserver" in window) {
-        let videoObserver = new IntersectionObserver(function(entries, observer) {
-            entries.forEach(function(video) {
-                if (video.isIntersecting) {
-                    for (let source in video.target.children) {
-                        let videoSource = video.target.children[source];
-                        if (typeof videoSource.tagName === "string" && videoSource.tagName === "SOURCE") {
-                            if (videoSource.dataset.src) {
-                                videoSource.src = videoSource.dataset.src;
-                            }
-                        }
-                    }
-                    if (video.target.dataset.src) {
-                        video.target.src = video.target.dataset.src;
-                    }
-                    video.target.preload = "metadata";
-                    video.target.play().catch(e => {});
-                    videoObserver.unobserve(video.target);
+        var videoObserver = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(function(videoEntry) {
+                if (videoEntry.isIntersecting) {
+                    loadVideo(videoEntry.target);
+                    videoObserver.unobserve(videoEntry.target);
                 }
             });
         });
@@ -3680,10 +3693,8 @@ document.addEventListener("DOMContentLoaded", function() {
             videoObserver.observe(video);
         });
     } else {
-        // Fallback for older browsers
         lazyVideos.forEach(function(video) {
-            video.preload = "metadata";
-            video.play().catch(e => {});
+            loadVideo(video);
         });
     }
 });
