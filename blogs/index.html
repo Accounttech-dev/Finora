@@ -480,6 +480,61 @@
       }
     }
 
+    .pagination {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-top: var(--sp-6);
+    }
+
+    .pagination[hidden] {
+      display: none;
+    }
+
+    .pagination__button {
+      min-width: 40px;
+      min-height: 40px;
+      padding: 8px 12px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      background: var(--card);
+      color: var(--text-primary);
+      cursor: pointer;
+      font: inherit;
+      font-size: var(--fs-small);
+      font-weight: 600;
+      transition: background var(--dur) ease, color var(--dur) ease, border-color var(--dur) ease;
+    }
+
+    .pagination__button:hover:not(:disabled),
+    .pagination__button[aria-current="page"] {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #fff;
+    }
+
+    .pagination__button:disabled {
+      cursor: not-allowed;
+      opacity: 0.45;
+    }
+
+    .pagination__button:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
+    }
+
+    @media (max-width: 640px) {
+      .pagination {
+        gap: 4px;
+      }
+
+      .pagination__button {
+        min-width: 36px;
+        padding: 8px;
+      }
+    }
+
     .card {
       display: flex;
       flex-direction: column;
@@ -494,6 +549,10 @@
       opacity: 0;
       transform: translateY(16px);
       animation: cardIn 520ms var(--ease) forwards;
+    }
+
+    .card[hidden] {
+      display: none;
     }
 
     @keyframes cardIn {
@@ -1161,9 +1220,9 @@
      Drop this inside your existing page shell, between your
      site header and site footer.
 
-     NOTE: search/filter toolbar and newsletter signup section
-     have been removed. Article cards are now static/hardcoded
-     HTML (no JS rendering, filtering, sorting or pagination).
+    NOTE: search/filter toolbar and newsletter signup section
+    have been removed. Article cards remain static/hardcoded HTML;
+    pagination only controls which cards are visible.
 ============================================================ -->
 
 
@@ -2580,6 +2639,12 @@ right now</p>
             </a>
           </article>
         </div>
+
+        <nav class="pagination" aria-label="Blog articles pagination" hidden>
+          <button class="pagination__button" type="button" data-pagination-action="previous" aria-label="Previous page">&larr;</button>
+          <div class="pagination__pages" aria-live="polite"></div>
+          <button class="pagination__button" type="button" data-pagination-action="next" aria-label="Next page">&rarr;</button>
+        </nav>
       </div>
     </section>
 
@@ -2839,6 +2904,61 @@ right now</p>
 [...container.children]
   .reverse()
   .forEach(child => container.appendChild(child));
+
+    function initBlogPagination() {
+      const cards = Array.from(container.children);
+      const pagination = document.querySelector('.pagination');
+      const pagesContainer = pagination.querySelector('.pagination__pages');
+      const previousButton = pagination.querySelector('[data-pagination-action="previous"]');
+      const nextButton = pagination.querySelector('[data-pagination-action="next"]');
+      const cardsPerPage = 10;
+      const pageCount = Math.ceil(cards.length / cardsPerPage);
+      let currentPage = 1;
+
+      if (pageCount <= 1) return;
+
+      pagination.hidden = false;
+
+      function renderPage(page) {
+        currentPage = page;
+        cards.forEach(function (card, index) {
+          const isVisible = index >= (currentPage - 1) * cardsPerPage && index < currentPage * cardsPerPage;
+          card.hidden = !isVisible;
+        });
+
+        pagesContainer.replaceChildren();
+        for (let pageNumber = 1; pageNumber <= pageCount; pageNumber += 1) {
+          const pageButton = document.createElement('button');
+          pageButton.type = 'button';
+          pageButton.className = 'pagination__button';
+          pageButton.textContent = pageNumber;
+          pageButton.setAttribute('aria-label', 'Go to page ' + pageNumber);
+          if (pageNumber === currentPage) {
+            pageButton.setAttribute('aria-current', 'page');
+          }
+          pageButton.addEventListener('click', function () {
+            renderPage(pageNumber);
+            pagination.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          });
+          pagesContainer.appendChild(pageButton);
+        }
+
+        previousButton.disabled = currentPage === 1;
+        nextButton.disabled = currentPage === pageCount;
+      }
+
+      previousButton.addEventListener('click', function () {
+        if (currentPage > 1) renderPage(currentPage - 1);
+      });
+
+      nextButton.addEventListener('click', function () {
+        if (currentPage < pageCount) renderPage(currentPage + 1);
+      });
+
+      renderPage(currentPage);
+    }
+
+    initBlogPagination();
   </script>
 
   <script
