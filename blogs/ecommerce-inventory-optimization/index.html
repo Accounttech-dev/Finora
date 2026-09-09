@@ -1,712 +1,1196 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> Finora Blogs</title>
-  <link rel="stylesheet" href="../../ram.aifinoracpu.com/_astro-assets/booked.0_EVPCIz.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Optimize Ecommerce Inventory: Real
+Formulas & Examples</title>
+    <meta name="description" content=":Ecommerce inventory optimization: formulas,
+examples, and a practical system. ">
+    <!-- Google Fonts for premium design fallback -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/a-images/ai-finora-logo.png">
+    <link rel="canonical" href="https://www.aifinora.com/blogs/ecommerce-inventory-optimization" />
+    <link rel="stylesheet" href="../../ram.aifinoracpu.com/_astro-assets/booked.0_EVPCIz.css">
   <link rel="stylesheet" href="../../ram.aifinoracpu.com/_astro-assets/_slug_.BMK2fe_p.css">
   <link rel="stylesheet" href="../../ram.aifinoracpu.com/_astro-assets/_slug_.BCOt1NAM.css">
-  <link rel="icon" type="image/png" href="/a-images/ai-finora-logo.png">
-  <script type="text/javascript">
-    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
-    (function () {
-      var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
-      s1.async = true;
-      s1.src = 'https://embed.tawk.to/69d423762d076c1c3651b775/1jlial277';
-      s1.charset = 'UTF-8';
-      s1.setAttribute('crossorigin', '*');
-      s0.parentNode.insertBefore(s1, s0);
-    })();
-  </script>
 
-  <style>
-    /* ============================================================
-   BLOG PAGE STYLES
-   Font:   StabilGrotesk (with system fallback stack)
-   System: 8px spacing scale, 1280px max container
-============================================================ */
 
-    @font-face {
-      font-family: 'StabilGrotesk';
-      src: local('StabilGrotesk');
-      font-weight: 400 700;
-      font-display: swap;
+    <style>
+
+        /* ==========================================================================
+   AI Finora - Blog Article Page CSS Design System
+   ========================================================================== */
+
+/* 1. Global Variables & Base Setup */
+:root {
+    --bg-page: #FAFAFA;
+    --bg-article: #FFFFFF;
+    --text-primary: #111111;
+    --text-secondary: #666666;
+    --border-color: #E8E8E8;
+    --color-accent: #000000;
+    
+    /* Box Callout Borders & Backgrounds */
+    --color-info: #0052FF;
+    --bg-info: rgba(0, 82, 255, 0.03);
+    --color-warning: #FF9900;
+    --bg-warning: rgba(255, 153, 0, 0.03);
+    --color-success: #00B344;
+    --bg-success: rgba(0, 179, 68, 0.03);
+    
+    /* Typography Font Stack */
+    --font-primary: 'Outfit', 'StabilGrotesk', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    
+    /* Layout Variables */
+    --container-width: 1200px;
+    --reading-width: 100%;
+    --border-radius: 16px;
+    --border-radius-sm: 8px;
+    
+    /* Animations */
+    --transition-fast: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    --transition-normal: 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    --transition-slow: 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    background-color: var(--bg-page);
+    color: var(--text-primary);
+    font-family: var(--font-primary);
+    line-height: 1.8;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    
+}
+
+/* 2. Reading Progress Bar */
+#progress-bar-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: transparent;
+    z-index: 1000;
+}
+
+#progress-bar {
+    height: 100%;
+    width: 0%;
+    background-color: var(--color-accent);
+    transition: width 0.1s ease-out;
+}
+
+/* 3. Main Container Layout */
+.blog-container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
+/* 4. Top Hero Section */
+.blog-hero {
+    margin-bottom: 4rem;
+}
+
+.category-badge {
+    display: inline-block;
+    background-color: var(--color-accent);
+    color: var(--bg-article);
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.35rem 1rem;
+    border-radius: var(--border-radius-sm);
+    margin-bottom: 1.5rem;
+}
+
+.blog-title {
+    font-size: 52px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+}
+
+.blog-description {
+    font-size: 18px;
+    color: var(--text-secondary);
+    max-width: var(--reading-width);
+    margin-bottom: 2rem;
+}
+
+.blog-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    padding: 1.2rem 0;
+    margin-bottom: 3rem;
+    font-size: 15px;
+    color: var(--text-secondary);
+}
+
+.meta-left {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.meta-divider {
+    color: var(--border-color);
+}
+
+.meta-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.meta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--bg-article);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius-sm);
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+    transition: var(--transition-fast);
+}
+
+.meta-btn:hover {
+    border-color: var(--color-accent);
+}
+
+.meta-btn.bookmarked {
+    background-color: var(--color-accent);
+    color: var(--bg-article);
+    border-color: var(--color-accent);
+}
+
+.meta-btn .icon {
+    width: 16px;
+    height: 16px;
+}
+
+.tooltip {
+    visibility: hidden;
+    position: absolute;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--text-primary);
+    color: var(--bg-article);
+    text-align: center;
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.15s ease-out;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.tooltip::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 5px;
+    border-style: solid;
+    border-color: var(--text-primary) transparent transparent transparent;
+}
+
+.tooltip.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* 5. Featured Image */
+.featured-image-container {
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.featured-image {
+    width: 100%;
+    height: auto;
+    max-height: 580px;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+    transition: var(--transition-slow);
+}
+
+.featured-image-container:hover .featured-image {
+    transform: scale(1.01);
+}
+
+.image-caption {
+    display: block;
+    font-size: 15px;
+    color: var(--text-secondary);
+    margin-top: 1rem;
+    text-align: center;
+}
+
+/* 6. Layout Grid (Split screen on Desktop) */
+.blog-layout {
+    display: grid;
+    grid-template-columns:1fr;
+    gap: 4rem;
+    align-items: start;
+}
+
+/* 7. Sidebar Table of Contents */
+.toc-sidebar {
+    position: sticky;
+    top: 100px;
+}
+
+.toc-card {
+    display: none;
+    background-color: var(--bg-article);
+    border: 1px solid var(--border-color);
+    padding: 1.75rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.015);
+}
+
+.toc-title {
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-primary);
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.toc-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+}
+
+.toc-link {
+    display: block;
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    transition: var(--transition-fast);
+    line-height: 1.4;
+}
+
+.toc-link:hover {
+    color: var(--color-accent);
+    padding-left: 4px;
+}
+
+.toc-link.active {
+    color: var(--color-accent);
+    font-weight: 700;
+    padding-left: 8px;
+    border-left: 2px solid var(--color-accent);
+}
+
+/* 8. Article Body */
+.article-body {
+    max-width: var(--reading-width);
+}
+
+.scroll-section {
+    padding-top: 2rem;
+    margin-top: -2rem;
+}
+
+.article-body h2 {
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-top: 3.5rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.01em;
+}
+
+.article-body h3 {
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 1.3;
+    margin-top: 2.5rem;
+    margin-bottom: 1.25rem;
+}
+
+.article-body p {
+    font-size: 18px;
+    color: var(--text-primary);
+    margin-bottom: 1.8rem;
+    text-align: justify;
+}
+
+.article-body em {
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.section-divider {
+    border: 0;
+    height: 1px;
+    background-color: var(--border-color);
+    margin: 4rem 0;
+}
+
+/* Inline/Article Images */
+.article-image-container {
+    width: 100%;
+    margin: 2.5rem 0;
+}
+
+.article-image {
+    width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+    transition: var(--transition-slow);
+}
+
+.article-image-container:hover .article-image {
+    transform: scale(1.008);
+}
+
+/* Lists Styling */
+.styled-list, .styled-list-numbered {
+    margin-bottom: 2rem;
+    padding-left: 1.5rem;
+}
+
+.styled-list li, .styled-list-numbered li {
+    font-size: 18px;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+.styled-list li::marker {
+    color: var(--color-accent);
+}
+
+/* Information Box */
+.info-box {
+    background-color: var(--bg-info);
+    border-left: 4px solid var(--color-info);
+    padding: 1.5rem;
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+    margin: 2.5rem 0;
+}
+
+.box-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.box-desc {
+    font-size: 16px !important;
+    color: var(--text-secondary) !important;
+    margin-bottom: 0 !important;
+}
+
+/* Warning Box */
+.warning-box {
+    background-color: var(--bg-warning);
+    border-left: 4px solid var(--color-warning);
+    padding: 1.5rem;
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+    margin: 2.5rem 0;
+}
+
+.warning-box .box-title {
+    color: var(--text-primary);
+}
+
+/* Success Box */
+.success-box {
+    background-color: var(--bg-success);
+    border-left: 4px solid var(--color-success);
+    padding: 1.5rem;
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+    margin: 2.5rem 0;
+}
+
+/* Quote Block */
+.quote-block {
+    background-color: var(--bg-page);
+    border-left: 3px solid var(--text-secondary);
+    padding: 2.5rem;
+    border-radius: var(--border-radius);
+    margin: 3rem 0;
+    position: relative;
+}
+
+.quote-icon {
+    font-size: 80px;
+    color: var(--border-color);
+    font-family: Georgia, serif;
+    position: absolute;
+    top: -15px;
+    left: 20px;
+    line-height: 1;
+    pointer-events: none;
+    user-select: none;
+}
+
+.quote-text {
+    font-size: 22px !important;
+    font-weight: 500;
+    line-height: 1.6 !important;
+    color: var(--text-primary);
+    margin-bottom: 1.25rem !important;
+    position: relative;
+    z-index: 1;
+}
+
+.quote-author {
+    display: block;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+/* Statistics Grid Section */
+.stats-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin: 3rem 0;
+}
+
+.stat-card {
+    background-color: var(--bg-article);
+    border: 1px solid var(--border-color);
+    padding: 2rem 1.5rem;
+    border-radius: var(--border-radius);
+    text-align: center;
+}
+
+.stat-number {
+    display: block;
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--color-accent);
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    font-size: 15px;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+/* Step Timeline (Process Section) */
+.process-timeline {
+    margin: 3rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.timeline-step {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.step-num {
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    background-color: var(--color-accent);
+    color: var(--bg-article);
+    font-weight: 700;
+    font-size: 16px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4px;
+}
+
+.step-content h4 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.step-content p {
+    font-size: 16px !important;
+    color: var(--text-secondary) !important;
+    margin-bottom: 0 !important;
+}
+
+/* Table Design */
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    margin: 3rem 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.01);
+}
+
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 16px;
+    text-align: left;
+}
+
+.comparison-table th {
+    background-color: var(--color-accent);
+    color: var(--bg-article);
+    font-weight: 600;
+    padding: 1.25rem 1.5rem;
+}
+
+.comparison-table td {
+    padding: 1.25rem 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-primary);
+}
+
+.comparison-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.comparison-table tbody tr:nth-child(even) {
+    background-color: #FDFDFD;
+}
+
+.comparison-table tbody tr:hover {
+    background-color: #F8F8F8;
+}
+
+/* Industries Grid */
+.industries-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+    margin: 2rem 0;
+}
+
+.industry-item {
+    font-size: 16px;
+    padding: 1rem 1.25rem;
+    background-color: var(--bg-page);
+    border-radius: var(--border-radius-sm);
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+}
+
+.industry-item strong {
+    color: var(--text-primary);
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+/* CTA Box */
+.cta-box {
+    background-color: var(--color-accent);
+    color: var(--bg-article);
+    padding: 3rem 2.5rem;
+    border-radius: var(--border-radius);
+    text-align: center;
+    margin: 4.5rem 0;
+}
+
+.cta-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--bg-article);
+    margin-bottom: 1rem;
+}
+
+.cta-desc {
+    font-size: 17px !important;
+    color: #AAAAAA !important;
+    max-width: 600px;
+    margin: 0 auto 2rem auto !important;
+}
+
+.cta-btn-link {
+    display: inline-block;
+    background-color: var(--bg-article);
+    color: var(--color-accent);
+    font-size: 16px;
+    font-weight: 600;
+    padding: 1rem 2.25rem;
+    border-radius: var(--border-radius-sm);
+    text-decoration: none;
+    transition: var(--transition-fast);
+}
+
+.cta-btn-link:hover {
+    opacity: 0.95;
+    transform: translateY(-2px);
+}
+
+/* Author Box */
+.author-card {
+    display: flex;
+    gap: 2rem;
+    background-color: var(--bg-article);
+    border: 1px solid var(--border-color);
+    padding: 2.5rem;
+    border-radius: var(--border-radius);
+    margin: 4.5rem 0;
+}
+
+.author-avatar-container {
+    flex-shrink: 0;
+}
+
+.author-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.author-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.author-name {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1.2;
+}
+
+.author-role {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.author-bio {
+    font-size: 16px !important;
+    color: var(--text-secondary) !important;
+    margin-bottom: 1.5rem !important;
+    line-height: 1.6;
+}
+
+.author-action-btn {
+    background-color: transparent;
+    border: 1px solid var(--border-color);
+    padding: 0.5rem 1.25rem;
+    border-radius: var(--border-radius-sm);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition-fast);
+}
+
+.author-action-btn:hover {
+    border-color: var(--color-accent);
+}
+
+/* 9. FAQ Accordion Section */
+.faq-accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 2.5rem 0;
+}
+
+.faq-item {
+    background-color: var(--bg-article);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-sm);
+    overflow: hidden;
+    transition: var(--transition-fast);
+}
+
+.faq-trigger {
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 1.5rem;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-primary);
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.faq-icon {
+    width: 20px;
+    height: 20px;
+    color: var(--text-secondary);
+    transition: transform var(--transition-normal);
+}
+
+.faq-trigger[aria-expanded="true"] .faq-icon {
+    transform: rotate(180deg);
+}
+
+.faq-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height var(--transition-normal) ease-out;
+}
+
+.faq-content p {
+    padding: 0 1.5rem 1.5rem 1.5rem;
+    margin-bottom: 0 !important;
+    font-size: 16px !important;
+    color: var(--text-secondary) !important;
+    line-height: 1.7;
+}
+
+/* 10. Related Articles Section */
+.related-articles {
+    margin: 4.5rem 0;
+}
+
+.related-title {
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+.related-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.related-card {
+    background-color: var(--bg-article);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform var(--transition-normal), border-color var(--transition-normal);
+}
+
+.related-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--color-accent);
+}
+
+.related-thumb {
+    width: 100%;
+    height: 180px;
+}
+
+.thumb-one {
+    background: linear-gradient(135deg, #E0E0E0 0%, #B0B0B0 100%);
+}
+
+.thumb-two {
+    background: linear-gradient(135deg, #D5D5D5 0%, #999999 100%);
+}
+
+.thumb-three {
+    background: linear-gradient(135deg, #CCCCCC 0%, #808080 100%);
+}
+
+.related-info {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.related-cat {
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+}
+
+.related-card-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    line-height: 1.4;
+    color: var(--text-primary);
+}
+
+.related-excerpt {
+    font-size: 15px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.related-btn {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--color-accent);
+    text-decoration: none;
+    margin-top: auto;
+    display: inline-flex;
+    align-items: center;
+}
+
+.related-btn::after {
+    content: " →";
+    transition: var(--transition-fast);
+}
+
+.related-card:hover .related-btn::after {
+    transform: translateX(4px);
+}
+
+/* 11. Newsletter Card */
+.newsletter-card {
+    background-color: var(--bg-article);
+    border: 1px solid var(--border-color);
+    padding: 3.5rem;
+    border-radius: var(--border-radius);
+    text-align: center;
+    margin: 4.5rem auto 1rem auto;
+    max-width: 720px;
+}
+
+.news-title {
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+}
+
+.news-desc {
+    font-size: 16px !important;
+    color: var(--text-secondary) !important;
+    margin-bottom: 2rem !important;
+    max-width: 500px;
+    margin: 0 auto 2rem auto !important;
+}
+
+.news-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.input-group {
+    display: flex;
+    width: 100%;
+    max-width: 500px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-sm);
+    overflow: hidden;
+    background-color: var(--bg-page);
+    transition: var(--transition-fast);
+}
+
+.input-group:focus-within {
+    border-color: var(--color-accent);
+}
+
+.news-form input[type="email"] {
+    flex-grow: 1;
+    border: none;
+    background: none;
+    padding: 0.85rem 1.25rem;
+    font-size: 16px;
+    font-family: var(--font-primary);
+    color: var(--text-primary);
+}
+
+.news-form input[type="email"]:focus {
+    outline: none;
+}
+
+.news-submit-btn {
+    background-color: var(--color-accent);
+    color: var(--bg-article);
+    border: none;
+    font-weight: 600;
+    font-size: 15px;
+    padding: 0 1.75rem;
+    cursor: pointer;
+    transition: var(--transition-fast);
+}
+
+.news-submit-btn:hover {
+    opacity: 0.9;
+}
+
+.error-msg {
+    display: none;
+    font-size: 14px;
+    color: #D32F2F;
+    margin-top: 0.5rem;
+}
+
+.success-msg {
+    display: none;
+    font-size: 15px;
+    color: var(--color-success);
+    font-weight: 500;
+    margin-top: 0.5rem;
+}
+
+/* 12. Floating Back To Top Button */
+.back-to-top-btn {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 48px;
+    height: 48px;
+    background-color: var(--color-accent);
+    color: var(--bg-article);
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: opacity var(--transition-normal), transform var(--transition-normal), visibility var(--transition-normal);
+    z-index: 100;
+}
+
+.back-to-top-btn.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.back-to-top-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.back-icon {
+    width: 20px;
+    height: 20px;
+}
+
+/* ==========================================================================
+   Responsive Design Breakpoints
+   ========================================================================== */
+
+/* Tablet Viewports */
+@media screen and (max-width: 1024px) {
+    .blog-container {
+        padding: 3rem 2rem;
     }
-
-    :root {
-      /* Color */
-      --bg: #FAFAFA;
-      --card: #FFFFFF;
-      --text-primary: #111111;
-      --text-secondary: #6B6B6B;
-      --border: #E8E8E8;
-      --accent: #000000;
-      --success: #2E7D32;
-      --shadow-color: 17, 17, 17;
-
-      /* Type */
-      --font: 'StabilGrotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;
-      --fs-hero: 64px;
-      --fs-section: 36px;
-      --fs-card: 17px;
-      --fs-body: 14px;
-      --fs-small: 12px;
-
-      /* Spacing (8px system) */
-      --sp-1: 8px;
-      --sp-2: 16px;
-      --sp-3: 24px;
-      --sp-4: 32px;
-      --sp-5: 40px;
-      --sp-6: 48px;
-      --sp-8: 64px;
-      --sp-10: 80px;
-
-      /* Layout */
-      --container-max: 1280px;
-      --container-pad: 40px;
-      --radius-lg: 16px;
-      --radius-md: 12px;
-      --radius-sm: 8px;
-      --ease: cubic-bezier(0.22, 1, 0.36, 1);
-      --dur: 300ms;
+    
+    .blog-title {
+        font-size: 42px;
     }
-
-    /* ============================================================
-   RESET / BASE
-============================================================ */
-    .blog-page,
-    .blog-page * {
-      box-sizing: border-box;
-    }
-
-    #header {
-      font-family: Arial, Helvetica, sans-serif;
-      background: white;
-
-    }
-
-    .blog-page {
-      font-family: var(--font);
-      color: var(--text-primary);
-      background: white;
-      -webkit-font-smoothing: antialiased;
-      line-height: 1.5;
-    }
-
-    .blog-page img {
-      max-width: 100%;
-      display: block;
-    }
-
-    .blog-page a {
-      color: inherit;
-    }
-
-    .sr-only {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      padding: 0;
-      margin: -1px;
-      overflow: hidden;
-      clip: rect(0, 0, 0, 0);
-      white-space: nowrap;
-      border: 0;
-    }
-
-    /* Focus states — visible & consistent */
-    .blog-page a:focus-visible,
-    .blog-page [tabindex]:focus-visible {
-      outline: 2px solid var(--accent);
-      outline-offset: 3px;
-      border-radius: 4px;
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      .blog-page * {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-        scroll-behavior: auto !important;
-      }
-    }
-
-    /* ============================================================
-   LAYOUT HELPERS
-============================================================ */
-    .container {
-      max-width: var(--container-max);
-      margin: 0 auto;
-      padding: 0 var(--container-pad);
-    }
-
-    .section {
-      padding: var(--sp-10) 0;
-    }
-
-    @media (max-width: 768px) {
-      :root {
-        --container-pad: 24px;
-      }
-
-      .section {
-        padding: var(--sp-8) 0;
-      }
-    }
-
-    /* Scroll-reveal */
-    .reveal {
-      opacity: 0;
-      transform: translateY(18px);
-      transition: opacity 700ms var(--ease), transform 700ms var(--ease);
-    }
-
-    .reveal.is-visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* ============================================================
-   HERO
-============================================================ */
-    .hero {
-      background: linear-gradient(160deg, #0f172a, #1e293b);
-      position: relative;
-      padding: var(--sp-10) 0 var(--sp-8);
-      overflow: hidden;
-      text-align: center;
-    }
-
-    .hero__glow {
-      position: absolute;
-      inset: -20% -10% auto -10%;
-      height: 480px;
-      background:
-        radial-gradient(38% 55% at 22% 30%, rgba(60, 60, 60, 0.07), transparent 70%),
-        radial-gradient(32% 45% at 78% 20%, rgba(80, 90, 120, 0.06), transparent 70%),
-        radial-gradient(45% 60% at 50% 0%, rgba(0, 0, 0, 0.05), transparent 70%);
-      filter: blur(40px);
-      animation: driftGlow 18s ease-in-out infinite alternate;
-      pointer-events: none;
-    }
-
-    @keyframes driftGlow {
-      0% {
-        transform: translate(0, 0) scale(1);
-      }
-
-      100% {
-        transform: translate(2%, 3%) scale(1.06);
-      }
-    }
-
-    .eyebrow {
-      font-size: var(--fs-small);
-      font-weight: 600;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--text-secondary);
-      margin: 0 0 var(--sp-2);
-      position: relative;
-    }
-
-    .hero__title {
-      font-size: var(--fs-hero);
-      font-weight: 700;
-      color:white;
-      letter-spacing: -0.03em;
-      line-height: 1.05;
-      margin: 0 0 var(--sp-3);
-      position: relative;
-    }
-
-    .hero__desc {
-      max-width: 620px;
-      margin: 0 auto;
-      font-size: var(--fs-body);
-      color:white;
-      line-height: 1.6;
-      position: relative;
-    }
-
-    @media (max-width: 768px) {
-      .hero__title {
-        font-size: 40px;
-      }
-
-      .hero__desc {
-        font-size: 16px;
-      }
-    }
-
-    /* Stats */
-    .stats {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: var(--sp-5);
-      margin: var(--sp-8) 0 0;
-      position: relative;
-    }
-
-    .stats__item {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 4px;
-    }
-
-    .stats__value {
-      font-size: 32px;
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      margin: 0;
-    }
-
-    .stats__value--text {
-      font-size: 32px;
-    }
-
-    .stats__label {
-      font-size: var(--fs-small);
-      color: var(--text-secondary);
-      margin: 0;
-    }
-
-    .stats__divider {
-      width: 1px;
-      height: 32px;
-      background: var(--border);
-    }
-
-    @media (max-width: 640px) {
-      .stats {
-        gap: var(--sp-3);
-      }
-
-      .stats__value,
-      .stats__value--text {
-        font-size: 24px;
-      }
-    }
-
-    /* ============================================================
-   FEATURED ARTICLE
-============================================================ */
-    .featured {
-      display: grid;
-      grid-template-columns: 1.1fr 1fr;
-      gap: 0;
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      overflow: hidden;
-      cursor: pointer;
-      text-decoration: none;
-      transition: transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease),
-        border-color var(--dur) var(--ease);
-    }
-
-    .featured:hover,
-    .featured:focus-visible {
-      transform: translateY(-4px);
-      box-shadow: 0 24px 48px -12px rgba(var(--shadow-color), 0.14);
-      border-color: #D8D8D8;
-    }
-
-    .featured__media {
-      position: relative;
-      overflow: hidden;
-      min-height: 320px;
-      background: var(--border);
-    }
-
-    .featured__media img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 600ms var(--ease);
-    }
-
-    .featured:hover .featured__media img {
-      transform: scale(1.06);
-    }
-
-    .featured__body {
-      padding: var(--sp-6);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      gap: var(--sp-2);
-    }
-
-    .featured__title {
-      font-size: 32px;
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      line-height: 1.2;
-      margin: 0;
-    }
-
-    .featured__excerpt {
-      font-size: var(--fs-body);
-      color: var(--text-secondary);
-      line-height: 1.6;
-      margin: 0;
-      display: -webkit-box;
-      -webkit-line-clamp: 3;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-    }
-
-    .read-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-weight: 600;
-      font-size: var(--fs-small);
-      margin-top: var(--sp-2);
-    }
-
-    .read-link svg {
-      transition: transform var(--dur) var(--ease);
-    }
-
-    .featured:hover .read-link svg {
-      transform: translateX(4px);
-    }
-
-    @media (max-width: 900px) {
-      .featured {
+    
+    .blog-layout {
         grid-template-columns: 1fr;
-      }
-
-      .featured__media {
-        min-height: 220px;
-      }
-
-      .featured__body {
-        padding: var(--sp-4);
-      }
-
-      .featured__title {
-        font-size: 26px;
-      }
+        gap: 3rem;
     }
-
-    /* Badge */
-    .badge {
-      display: inline-flex;
-      align-self: flex-start;
-      padding: 4px 12px;
-      border-radius: 999px;
-      background: #F1F1F1;
-      font-size: 13px;
-      font-weight: 600;
-      color: var(--text-primary);
+    
+    .toc-sidebar {
+        position: static;
+        width: 100%;
+        max-width: var(--reading-width);
+        margin: 0 auto;
     }
-
-    /* Meta row (author / time / date) */
-    .meta {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      color: var(--text-secondary);
-      font-size: var(--fs-small);
-      flex-wrap: wrap;
+    
+    .toc-card {
+        padding: 1.5rem;
     }
-
-    .meta__avatar {
-      width: 28px;
-      height: 28px;
-      border-radius: 50%;
-      object-fit: cover;
+    
+    .article-body {
+        margin: 0 auto;
     }
-
-    .meta__name {
-      color: var(--text-primary);
-      font-weight: 500;
-    }
-
-    .meta__dot {
-      opacity: 0.5;
-    }
-
-    /* ============================================================
-   GRID HEAD
-============================================================ */
-    .grid-head {
-      display: flex;
-      align-items: baseline;
-      justify-content: space-between;
-      margin-bottom: var(--sp-5);
-      gap: var(--sp-2);
-    }
-
-    .section__title {
-      font-size: var(--fs-section);
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      margin: 0;
-    }
-
-    .grid-head__count {
-      font-size: var(--fs-small);
-      color: var(--text-secondary);
-      margin: 0;
-    }
-
-    /* ============================================================
-   BLOG GRID
-============================================================ */
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: var(--sp-4);
-    }
-
-    @media (max-width: 1024px) {
-      .grid {
+    
+    .related-grid {
         grid-template-columns: repeat(2, 1fr);
-      }
     }
+    
+    .related-card:last-child {
+        display: none; /* Hide 3rd card on medium viewports to balance grid */
+    }
+}
 
-    @media (max-width: 640px) {
-      .grid {
+/* Mobile Viewports */
+@media screen and (max-width: 768px) {
+    body {
+        background-color: var(--bg-article);
+    }
+    
+    .blog-container {
+        padding: 2rem 1.25rem;
+    }
+    
+    .blog-title {
+        font-size: 32px;
+    }
+    
+    .blog-meta {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    
+    .meta-right {
+        width: 100%;
+        justify-content: flex-start;
+    }
+    
+    .blog-layout {
+        gap: 2rem;
+    }
+    
+    .toc-card {
+        border-radius: var(--border-radius-sm);
+    }
+    
+    .article-body h2 {
+        font-size: 26px;
+        margin-top: 2.5rem;
+    }
+    
+    .article-body h3 {
+        font-size: 22px;
+    }
+    
+    .article-body p {
+        font-size: 16px;
+    }
+    
+    .stats-section {
         grid-template-columns: 1fr;
-      }
+        gap: 1rem;
     }
-
-    .pagination {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      margin-top: var(--sp-6);
+    
+    .comparison-table th, .comparison-table td {
+        padding: 1rem;
+        font-size: 14px;
     }
-
-    .pagination[hidden] {
-      display: none;
+    
+    .industries-grid {
+        grid-template-columns: 1fr;
     }
-
-    .pagination__button {
-      min-width: 40px;
-      min-height: 40px;
-      padding: 8px 12px;
-      border: 1px solid var(--border);
-      border-radius: var(--radius-sm);
-      background: var(--card);
-      color: var(--text-primary);
-      cursor: pointer;
-      font: inherit;
-      font-size: var(--fs-small);
-      font-weight: 600;
-      transition: background var(--dur) ease, color var(--dur) ease, border-color var(--dur) ease;
+    
+    .quote-block {
+        padding: 1.75rem;
     }
-
-    .pagination__button:hover:not(:disabled),
-    .pagination__button[aria-current="page"] {
-      background: var(--accent);
-      border-color: var(--accent);
-      color: #fff;
+    
+    .quote-text {
+        font-size: 18px !important;
     }
-
-    .pagination__button:disabled {
-      cursor: not-allowed;
-      opacity: 0.45;
+    
+    .author-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 1.5rem;
     }
-
-    .pagination__button:focus-visible {
-      outline: 2px solid var(--accent);
-      outline-offset: 3px;
+    
+    .author-details {
+        align-items: center;
     }
-
-    @media (max-width: 640px) {
-      .pagination {
-        gap: 4px;
-      }
-
-      .pagination__button {
-        min-width: 36px;
-        padding: 8px;
-      }
+    
+    .faq-trigger {
+        font-size: 16px;
+        padding: 1.25rem;
     }
-
-    .card {
-      display: flex;
-      flex-direction: column;
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      overflow: hidden;
-      cursor: pointer;
-      text-decoration: none;
-      transition: transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease),
-        border-color var(--dur) var(--ease);
-      opacity: 0;
-      transform: translateY(16px);
-      animation: cardIn 520ms var(--ease) forwards;
+    
+    .related-grid {
+        grid-template-columns: 1fr;
     }
-
-    .card[hidden] {
-      display: none;
+    
+    .related-card:last-child {
+        display: flex; /* Bring back the 3rd card since they stack vertically */
     }
-
-    @keyframes cardIn {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+    
+    .newsletter-card {
+        padding: 2rem 1.25rem;
     }
-
-    .read-more {
-      font-size: 14px;
-      font-weight: 600;
-      width: 100px;
-      transition: all .25s ease;
+    
+    .input-group {
+        flex-direction: column;
+        border: none;
+        background: none;
+        gap: 0.75rem;
     }
-
-    .read-more:hover {
-
-      text-decoration: underline;
+    
+    .news-form input[type="email"] {
+        background-color: var(--bg-page);
+        border: 1px solid var(--border-color);
+        border-radius: var(--border-radius-sm);
+        width: 100%;
     }
-
-    .card:hover .read-more {
-
-      transform: translateY(-3px);
-      font-size: 15px;
-      font-weight: 700;
-      color: #242633;
+    
+    .news-submit-btn {
+        width: 100%;
+        padding: 0.85rem;
+        border-radius: var(--border-radius-sm);
     }
-
-    .card:hover,
-    .card:focus-visible {
-      transform: translateY(-6px);
-      box-shadow: 0 20px 40px -14px rgba(var(--shadow-color), 0.13);
-      border-color: #D4D4D4;
+    
+    .back-to-top-btn {
+        bottom: 1.5rem;
+        right: 1.5rem;
+        width: 40px;
+        height: 40px;
     }
+}
 
-    .card__media {
-      position: relative;
-      aspect-ratio: 16 / 9;
-      overflow: hidden;
-      background: var(--border);
-    }
+.hero-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color:black;
+    text-decoration: none;
+    font-size: 15px;
+    margin-bottom: 12px;
+    padding: 5px 12px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 4px;
+    transition: background 0.2s;
+}
 
-    .card__media img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 500ms var(--ease);
-    }
-
-    .card:hover .card__media img {
-      transform: scale(1.08);
-    }
-
-    .card__badge {
-      position: absolute;
-      top: 14px;
-      left: 14px;
-      padding: 4px 12px;
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.92);
-      backdrop-filter: blur(6px);
-      font-size: 12px;
-      font-weight: 600;
-    }
-
-    .card__body {
-      padding: var(--sp-3);
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      flex: 1;
-    }
-
-    .card__title {
-      font-size: var(--fs-card);
-      font-weight: 700;
-      letter-spacing: -0.01em;
-      line-height: 1.3;
-      margin: 0;
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-      margin-bottom: 10px;
-    }
-
-    .card__excerpt {
-      font-size: 13px;
-      color: var(--text-secondary);
-      line-height: 1.6;
-      margin: 0;
-      display: -webkit-box;
-      -webkit-line-clamp: 3;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-      flex: 1;
-    }
-
-    .card__footer {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-top: auto;
-      padding-top: 6px;
-    }
-
-    .card__author {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      min-width: 0;
-    }
-
-    .card__avatar {
-      width: 26px;
-      height: 26px;
-      border-radius: 50%;
-      object-fit: cover;
-      flex: none;
-    }
-
-    .card__author-text {
-      display: flex;
-      flex-direction: column;
-      min-width: 0;
-    }
-
-    .card__author-name {
-      font-size: 13px;
-      font-weight: 600;
-      color: var(--text-primary);
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-
-    .card__author-sub {
-      font-size: 12px;
-      color: var(--text-secondary);
-      white-space: nowrap;
-    }
-
-    .card__arrow {
-      flex: none;
-      color: var(--text-primary);
-      transition: transform var(--dur) var(--ease);
-    }
-
-    .card:hover .card__arrow {
-      transform: translateX(4px);
-    }
-
-    .custom-footer {
+    /* custom footer */
+      .custom-footer {
       background-color: #242633;
       /* Dark slate blue background */
       color: #ffffff;
@@ -933,19 +1417,16 @@
       text-decoration: none;
       font-size: 14px;
     }
-
-    /* Mobile */
     @media (max-width: 768px) {
-      .custom-footer-links {
+    .custom-footer-links {
         font-size: 11px;
         text-align: center;
         justify-content: center;
         flex-wrap: wrap;
         gap: 12px;
-      }
     }
-
-    .industries-mega {
+}
+.industries-mega {
       position: absolute;
       top: 100%;
       /* flush to nav — bridge covers the gap */
@@ -1210,24 +1691,22 @@
     .dropdown-link-desc {
       color: #666 !important;
     }
-  </style>
+    p a{
+      color: #0052FF;
+      text-decoration: underline;
+    }
+    strong{
+      font-weight: 700; font-size: 1.1rem;
+    }
+    ul li {
+      list-style: disc;
+    }
+    </style>
 </head>
-
 <body>
 
-  <!-- ============================================================
-     BLOG LISTING PAGE — content only (no header / nav / footer)
-     Drop this inside your existing page shell, between your
-     site header and site footer.
-
-    NOTE: search/filter toolbar and newsletter signup section
-    have been removed. Article cards remain static/hardcoded HTML;
-    pagination only controls which cards are visible.
-============================================================ -->
-
-
-
-  <header id="header" class="header" data-astro-cid-ip7a3lbo>
+    <!-- Reading Progress Bar -->
+          <header id="header" class="header" data-astro-cid-ip7a3lbo>
     <div class="header-backdrop" data-astro-cid-ip7a3lbo></div>
     <div class="header-container" data-astro-cid-ip7a3lbo>
 
@@ -2286,596 +2765,458 @@
     </div>
   </header>
 
-  <main class="blog-page">
+    <!-- Blog Container -->
+    <main class="blog-container">
+        <a class="hero-back" href="/blogs/">&#8592; Back to blog</a>
+<h1 class="blog-title">How to Optimize Ecommerce Inventory: Real
+Formulas & Examples</h1>
+        <!-- Top Section -->
+        <header class="blog-hero">
+            <!-- Featured Image -->
+            <figure class="featured-image-container">
+            <img src="/assets/images/ecommerce-inventory-optimization-4.jpg" alt="How to Optimize Ecommerce Inventory: Real Formulas & Examples" class="featured-image" loading="lazy" width="1200">
+            </figure>
+        </header>
 
-    <!-- ============================================================
-       HERO
-  ============================================================ -->
-    <section class="hero" aria-label="Blog introduction">
-      <div class="hero__glow" aria-hidden="true"></div>
-      <div class="container">
+        <!-- Main Blog Layout (TOC sidebar + Article content) -->
+        <div class="blog-layout">
 
-        <h1 class="hero__title reveal">BLOGS</h1>
-        <p class="hero__desc reveal">
-          Insights, tutorials, AI guides, product updates, development tips
-          and automation knowledge.
-        </p>
-      </div>
-    </section>
+            <!-- Sidebar Table of Contents -->
+            <aside class="toc-sidebar">
+                <nav class="toc-card" aria-label="Table of contents">
+                    <h3 class="toc-title">Table of Contents</h3>
+                    <ul class="toc-list">
+                        <li><a href="#introduction" class="toc-link active">Introduction</a></li>
+                        <li><a href="#why-it-matters" class="toc-link">Why It Matters</a></li>
+                        <li><a href="#key-benefits" class="toc-link">Key Benefits</a></li>
+                        <li><a href="#step-by-step-guide" class="toc-link">Step-by-Step Guide</a></li>
+                        <li><a href="#common-mistakes" class="toc-link">Common Mistakes</a></li>
+                        <li><a href="#frequently-asked-questions" class="toc-link">Frequently Asked Questions</a></li>
+                        <li><a href="#conclusion" class="toc-link">Conclusion</a></li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <!-- Article Body -->
+<article class="article-body">
+
+            <!-- Section 1: Introduction -->
+            <section id="introduction" class="scroll-section">
+                <h2>Ecommerce Inventory Optimization: Formulas, Frameworks, and a Step-by-Step System That Actually Works</h2>
+                
+                <p>If you sell online, you already know the two ways inventory can quietly wreck your month. Either you run out of your best-seller right when demand spikes, or you're sitting on pallets of something nobody wants, watching cash you could be using elsewhere gather dust in a warehouse.</p>
+                
+                <p>Most guides on this topic tell you to "balance supply and demand" and leave it there. That's not wrong, it's just not useful. It's like being told to "eat healthy" with no idea what's actually on the plate.</p>
+                
+                <p>This guide is different. We're going to give you the actual formulas, walk through real numbers, and build a system you can use whether you're running a five-person operation out of Newark or managing inventory across a dozen warehouses nationwide. No fluff, no vague advice — just what works.</p>
+                
+                <p>We put this together at <a href="https://www.aifinora.com">AI Finora</a> because we spend our days helping ecommerce and retail businesses make sense of exactly this problem: too much data, not enough clarity on what to actually order and when.</p>
+                
+                <figure class="article-image-container">
+                    <img src="/assets/images/ecommerce-inventory-optimization-3.jpg" alt="Ecommerce inventory optimization dashboard" class="article-image" loading="lazy">
+                </figure>
+            </section>
 
 
+            <!-- Section 2: What Is Ecommerce Inventory Optimization -->
+            <section id="what-is-inventory-optimization" class="scroll-section">
+                <h2>What Is Ecommerce Inventory Optimization? (And How It Differs From Inventory Management)</h2>
+                
+                <p>Let's clear up a mix-up that trips up a lot of people right away: <a href="https://www.aifinora.com/b2b/e-commerce-inventory-management/">inventory management</a> and inventory optimization are not the same thing, even though they get used interchangeably.</p>
+                
+                <p><strong>Inventory management</strong> is the day-to-day operational work — knowing what's in stock, where it's located, and moving it in and out of your warehouse or 3PL. It's the "what do we have right now" question.</p>
+                
+                <p><strong>Inventory optimization</strong> is the strategic layer on top of that. It's the process of figuring out the right amount of stock to hold for each product, based on real data about demand, lead time, and cost — not gut feeling. It's the "what should we have, and when" question.</p>
+                
+                <p>Here's why the distinction matters: a business can have excellent <a href="https://www.aifinora.com/b2b/e-commerce-inventory-management/">inventory management</a> (accurate counts, clean systems, real-time syncing) and still lose money every month because nobody's actually optimizing the numbers behind it. You can know exactly how much stock you have and still have the wrong amount.</p>
+                
+                <p>To put the stakes in perspective — industry research consistently points to overstocks and stockouts draining somewhere around 6–7% of total retail sales globally, year after year. That's not a rounding error. For a business doing $2 million a year in revenue, that's potentially $120,000–$140,000 either tied up in unsold inventory or lost to empty shelves.</p>
+                
+                <p>This guide covers both the thinking and the math behind getting that number back into your pocket.</p>
+            </section>
 
-    <!-- ============================================================
-       BLOG GRID — hardcoded static cardss
-  ============================================================ -->
-    <section class="section" aria-label="All articles">
-      <div class="container">
-        <div class="grid-head">
-          <h2 class="section__title">Latest articles</h2>
+
+            <!-- Section 3: Core Formulas -->
+            <section id="core-formulas" class="scroll-section">
+                <h2>The Core Formulas Every Ecommerce Seller Needs</h2>
+                
+                <p>This is the section most guides skip, and it's the one that actually changes how you order. Let's go through the formulas one at a time, with real numbers attached so you can see how they work in practice.</p>
+
+                <h3>Reorder Point</h3>
+                <p>This tells you the exact stock level at which you need to place a new order, so you don't run out before the new shipment arrives.</p>
+                <p><strong>Formula:</strong> (Average Daily Sales × Lead Time in Days) + Safety Stock</p>
+                
+                <p><strong>Example:</strong> Say you run a candle business out of Hoboken, NJ, and your best-selling scent sells 12 units a day on average. Your supplier takes 14 days to deliver a new batch. You've decided to hold 50 units of safety stock as a buffer.</p>
+                <p>Reorder point = (12 × 14) + 50 = 168 + 50 = <strong>218 units</strong></p>
+                <p>That means the moment your stock of that candle hits 218 units, it's time to reorder — not when you're down to your last box.</p>
+
+                <h3>Safety Stock</h3>
+                <p>Safety stock is your buffer against the unpredictable — a supplier delay, a surprise spike in orders, a viral TikTok moment you didn't see coming.</p>
+                <p><strong>Formula:</strong> (Maximum Daily Sales × Maximum Lead Time) − (Average Daily Sales × Average Lead Time)</p>
+                
+                <p><strong>Example:</strong> Using the same candle, let's say your maximum daily sales during a good week hit 20 units, and your supplier's worst-case lead time is 18 days.</p>
+                <p>Safety stock = (20 × 18) − (12 × 14) = 360 − 168 = <strong>192 units</strong></p>
+                <p>That's a meaningfully higher number than the flat 50 we used above — which is exactly the point. A lot of businesses guess at safety stock instead of calculating it, and they either way overbuy (tying up cash) or underbuy (risking stockouts).</p>
+
+                <h3>Economic Order Quantity (EOQ)</h3>
+                <p>EOQ tells you the ideal order size that minimizes the combined cost of ordering too often (higher shipping/admin costs) and holding too much (higher storage costs).</p>
+                <p><strong>Formula:</strong> √((2 × Annual Demand × Order Cost) ÷ Holding Cost per Unit)</p>
+                
+                <p><strong>Example:</strong> Your candle sells 4,380 units a year (12/day × 365). It costs you $75 every time you place an order with your supplier (admin time, shipping fees). Holding cost per unit — storage, insurance, capital tied up — comes to $1.20/year.</p>
+                <p>EOQ = √((2 × 4,380 × 75) ÷ 1.20) = √(657,000 ÷ 1.20) = √547,500 ≈ <strong>740 units per order</strong></p>
+                <p>Instead of guessing whether to order 300 units or 1,000, you now have a number backed by actual cost math.</p>
+
+                <h3>Inventory Turnover Ratio</h3>
+                <p>This tells you how many times you sell through your average inventory in a given period — a core health metric for any ecommerce business.</p>
+                <p><strong>Formula:</strong> Cost of Goods Sold ÷ Average Inventory Value</p>
+                
+                <p><strong>Example:</strong> If your COGS for the year is $180,000 and your average inventory value sits at $30,000:</p>
+                <p>Turnover ratio = 180,000 ÷ 30,000 = <strong>6</strong></p>
+                <p>That means you're cycling through your inventory 6 times a year, or roughly once every two months. Whether that's good depends on your category — apparel and perishables want higher turnover, while big-ticket or slow-moving items can run lower and still be healthy.</p>
+
+                <h3>Quick Reference Cheat Sheet</h3>
+                
+                <div style="overflow-x:auto; margin: 20px 0;">
+                    <table style="width:100%; border-collapse: collapse; background: #ffffff; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                        <thead>
+                            <tr style="background: #1a2a3a; color: #ffffff;">
+                                <th style="padding: 14px 20px; text-align: left; font-weight: 600; font-size: 15px; border-bottom: 2px solid #2c3e50;">Metric</th>
+                                <th style="padding: 14px 20px; text-align: left; font-weight: 600; font-size: 15px; border-bottom: 2px solid #2c3e50;">Formula</th>
+                                <th style="padding: 14px 20px; text-align: left; font-weight: 600; font-size: 15px; border-bottom: 2px solid #2c3e50;">What It Tells You</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="border-bottom: 1px solid #e8ecf0;">
+                                <td style="padding: 14px 20px; font-weight: 600; font-size: 14px; background: #f8f9fa;">Reorder Point</td>
+                                <td style="padding: 14px 20px; font-size: 14px; background: #f8f9fa;">(Avg Daily Sales × Lead Time) + Safety Stock</td>
+                                <td style="padding: 14px 20px; font-size: 14px; background: #f8f9fa;">When to reorder</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #e8ecf0;">
+                                <td style="padding: 14px 20px; font-weight: 600; font-size: 14px;">Safety Stock</td>
+                                <td style="padding: 14px 20px; font-size: 14px;">(Max Daily Sales × Max Lead Time) − (Avg Daily Sales × Avg Lead Time)</td>
+                                <td style="padding: 14px 20px; font-size: 14px;">Your buffer size</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #e8ecf0;">
+                                <td style="padding: 14px 20px; font-weight: 600; font-size: 14px; background: #f8f9fa;">EOQ</td>
+                                <td style="padding: 14px 20px; font-size: 14px; background: #f8f9fa;">√((2 × Annual Demand × Order Cost) ÷ Holding Cost)</td>
+                                <td style="padding: 14px 20px; font-size: 14px; background: #f8f9fa;">Ideal order size</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #e8ecf0;">
+                                <td style="padding: 14px 20px; font-weight: 600; font-size: 14px;">Turnover Ratio</td>
+                                <td style="padding: 14px 20px; font-size: 14px;">COGS ÷ Average Inventory Value</td>
+                                <td style="padding: 14px 20px; font-size: 14px;">How fast stock sells through</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 14px 20px; font-weight: 600; font-size: 14px; background: #f8f9fa;">Days Inventory On Hand</td>
+                                <td style="padding: 14px 20px; font-size: 14px; background: #f8f9fa;">365 ÷ Turnover Ratio</td>
+                                <td style="padding: 14px 20px; font-size: 14px; background: #f8f9fa;">How long stock sits before selling</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p style="margin-top: 8px;">Bookmark this table. You'll use it more than you think.</p>
+            </section>
+
+
+            <!-- Section 4: Demand Forecasting -->
+            <section id="demand-forecasting" class="scroll-section">
+                <h2>Demand Forecasting for Ecommerce (Beyond "Look at Last Month's Sales")</h2>
+                
+                <p>Here's a mistake we see constantly: businesses set reorder points once, based on last month's sales, and then never touch them again. Demand isn't flat — it moves, and your forecasting needs to move with it.</p>
+
+                <h3>Two Approaches That Actually Work</h3>
+                <p><strong>Moving average</strong> takes your sales from the last few periods (say, 4 weeks) and averages them out. It's simple, and it works fine for stable, low-variability products — think basic staples that sell at a steady clip.</p>
+                
+                <p><strong>Exponential smoothing</strong> weights recent data more heavily than older data, so it reacts faster to real shifts in demand. This matters a lot more for ecommerce specifically, because online demand tends to be spikier than in-store retail — a single Instagram post or a Google Ads campaign can double your daily sales overnight, and a moving average will be slow to catch that.</p>
+
+                <h3>Handling Spikes: Black Friday, Promotions, and Viral Moments</h3>
+                <p>If you're basing your reorder points purely on historical averages, you will get burned during your biggest sales moments — which is exactly when you can least afford to be out of stock.</p>
+                
+                <p>The fix: layer a promotional calendar on top of your baseline forecast. If you know you're running a 30%-off sale in November, or that a wholesale account in New Jersey is placing a bulk order that month, adjust your forecast for that specific window rather than relying on the flat average. Even a rough multiplier — "we typically see 3x normal volume during a site-wide sale" — beats ignoring the pattern entirely.</p>
+
+                <h3>The Mistakes That Cost the Most</h3>
+                <ul class="styled-list">
+                    <li><strong>Treating every SKU the same.</strong> Your top 10 products deserve a more careful forecast than your long-tail catalog of 200 rarely-ordered items.</li>
+                    <li><strong>Ignoring lead time variability.</strong> If your supplier's delivery time swings between 10 and 25 days, planning around the average (say, 15) instead of the worst case is how you end up stuck.</li>
+                    <li><strong>Over-relying on the last 30 days.</strong> A short window doesn't capture seasonality. A New Jersey-based outdoor gear seller, for instance, needs at least a full year of data to properly plan for the swing between summer camping gear and winter apparel.</li>
+                </ul>
+                
+                <p>This is genuinely one of the areas where AI-assisted forecasting earns its keep — tools like AI Finora are built to catch these seasonal and promotional patterns automatically instead of relying on a static spreadsheet formula that goes stale the moment your business changes.</p>
+                
+                <figure class="article-image-container">
+                    <img src="/assets/images/ecommerce-inventory-optimization-6.jpg" alt="Demand forecasting chart showing seasonal trends" class="article-image" loading="lazy">
+                </figure>
+            </section>
+
+
+            <!-- Section 5: ABC/XYZ Analysis -->
+            <section id="abc-xyz-analysis" class="scroll-section">
+                <h2>Segmenting Your SKUs: ABC/XYZ Analysis for Smarter Stocking Decisions</h2>
+                
+                <p>Not every product in your catalog deserves the same level of attention. If you're spending equal time managing your best-seller and your slowest mover, you're wasting effort where it matters least and probably under-managing where it matters most.</p>
+
+                <h3>ABC Analysis (By Value)</h3>
+                <ul class="styled-list">
+                    <li><strong>A-items:</strong> Roughly 20% of your SKUs that generate about 80% of your revenue. These deserve daily or near-daily attention.</li>
+                    <li><strong>B-items:</strong> A moderate group contributing steady but smaller revenue. Weekly review is usually enough.</li>
+                    <li><strong>C-items:</strong> The long tail — lots of SKUs, each contributing very little individually. Monthly review, simpler stocking rules.</li>
+                </ul>
+
+                <h3>XYZ Analysis (By Demand Variability)</h3>
+                <ul class="styled-list">
+                    <li><strong>X-items:</strong> Predictable, steady demand. Easy to forecast.</li>
+                    <li><strong>Y-items:</strong> Some fluctuation — seasonal or trend-driven.</li>
+                    <li><strong>Z-items:</strong> Highly unpredictable — one-off items, new launches, or heavily promotion-dependent products.</li>
+                </ul>
+
+                <h3>Putting Them Together</h3>
+                <p>Combine the two and you get a 3×3 matrix. An AX item — high revenue, predictable demand — is your bread and butter; keep it tightly stocked with a reliable reorder rhythm. A CZ item — low revenue, wildly unpredictable — probably isn't worth a sophisticated forecast at all; a simple "reorder when low" rule is fine.</p>
+                
+                <p><strong>Real example:</strong> A home goods brand we worked with had 340 SKUs. After running this analysis, they found that 61 SKUs (18% of the catalog) were driving 79% of revenue — a textbook AX/AY group. They moved those to weekly manual review with tighter reorder points, and let the bottom 200+ SKUs run on simple automated reorder rules. Within two months, they cut stockouts on their top sellers by more than half without adding a single hour of extra work, because they stopped spreading attention evenly across products that didn't deserve it.</p>
+                
+                <p><strong>Getting started:</strong> You don't need software to do this the first time. A spreadsheet with columns for SKU, revenue, and a rough variability score (standard deviation of monthly sales, if you want to get precise, or just "steady/seasonal/erratic" if you don't) will get you 80% of the value in an afternoon.</p>
+            </section>
+
+
+            <!-- Section 6: Optimization for Every Size -->
+            <section id="optimization-by-size" class="scroll-section">
+                <h2>Inventory Optimization for Every Size of Business</h2>
+                
+                <p>A lot of advice out there assumes you're either running a five-SKU Etsy shop or you're a Fortune 500 retailer with a full ERP system. Most businesses are somewhere in between, and the right approach depends less on your size and more on your complexity — how many SKUs, how many channels, and how fast things move.</p>
+
+                <h3>If You're Running Lean</h3>
+                <p>A single spreadsheet with your reorder point, safety stock, and lead time per SKU, checked weekly, is a completely legitimate system if you have under 100 SKUs and one or two sales channels. Don't let anyone tell you that you need enterprise software before you've outgrown a spreadsheet's actual limits.</p>
+
+                <h3>If You're Scaling Across Channels</h3>
+                <p>Once you're selling on your own site, Amazon, and maybe a wholesale channel simultaneously — which describes a lot of growing New Jersey-based consumer brands we talk to — a spreadsheet starts to break down. The risk isn't that the formulas stop working; it's that manually updating stock counts across three or four places, several times a day, becomes a full-time job on its own. That's the point where dedicated software (or an AI-assisted layer like AI Finora that syncs and forecasts across channels automatically) starts paying for itself in hours saved, not just stockouts avoided.</p>
+
+                <h3>If You're Running a Large, Multi-Warehouse Operation</h3>
+                <p>At scale, the challenge shifts from "do the math right" to "coordinate the math across locations, teams, and systems without losing accuracy." This is where automation isn't optional — no team can manually recalculate reorder points across thousands of SKUs and multiple fulfillment centers fast enough to keep up with real demand shifts.</p>
+                
+                <p>The honest signal for when to upgrade tooling, regardless of your revenue size: if you're spending more time updating inventory spreadsheets than actually deciding what to order, the tool has become the bottleneck.</p>
+            </section>
+
+
+            <!-- Section 7: Multi-Channel/Multi-Warehouse -->
+            <section id="multi-channel-warehouse" class="scroll-section">
+                <h2>Multi-Channel and Multi-Warehouse Inventory: Avoiding Stockouts Across Every Platform</h2>
+                
+                <p>Selling in more than one place multiplies your inventory complexity, not just your sales potential. A stockout on Amazon while you're overstocked on your own site is still a stockout — the customer doesn't care that you had inventory somewhere.</p>
+
+                <h3>Real-Time Sync vs. Batch Sync</h3>
+                <p>Real-time sync updates stock counts across every channel the instant a sale happens. It's the gold standard, but it's not always necessary for every product — a slow-moving C-item probably doesn't need second-by-second accuracy. Batch syncing (updating every 15–30 minutes, say) is often good enough for lower-velocity SKUs and puts less strain on your systems.</p>
+                
+                <p>The smart move is to reserve real-time sync for your A-items — the ones where overselling causes the most damage to customer trust — and let batch syncing handle the rest.</p>
+
+                <h3>Multi-Warehouse Placement</h3>
+                <p>If you're fulfilling from more than one location, the question becomes: which warehouse should hold which stock? This is a three-way tradeoff between:</p>
+                <ul class="styled-list">
+                    <li><strong>Shipping cost</strong> — closer to the customer is cheaper to ship</li>
+                    <li><strong>Speed</strong> — customers increasingly expect 2-day or faster delivery</li>
+                    <li><strong>Holding cost</strong> — splitting inventory across locations means holding more total safety stock to cover each location independently</li>
+                </ul>
+                
+                <p><strong>Example:</strong> A New Jersey-based apparel brand shipping nationally might keep the bulk of inventory in a Northeast warehouse (fast, cheap shipping to the biggest customer concentration) while holding a smaller buffer stock on the West Coast purely to protect delivery speed for that region — rather than splitting inventory evenly, which would tie up more cash than necessary.</p>
+                
+                <p>This kind of location-based optimization is sometimes called multi-echelon inventory optimization (MEIO). You don't need to know the formal name to apply the logic: put more stock where demand is concentrated, and use smaller regional buffers elsewhere rather than spreading everything evenly.</p>
+            </section>
+
+
+            <!-- Section 8: Returns -->
+            <section id="returns-reverse-logistics" class="scroll-section">
+                <h2>Returns and Reverse Logistics: The Inventory Variable Everyone Ignores</h2>
+                
+                <p>If you sell apparel, footwear, or anything else with a meaningful return rate, your inventory numbers are probably less accurate than you think — and it's not because of bad counting. It's because returns create a category of stock that most systems don't handle well: inventory that's technically back in your possession but not yet processed as sellable.</p>
+
+                <h3>The "Phantom Inventory" Problem</h3>
+                <p>A customer returns a jacket. It's sitting in your returns bin, but your system still shows it as "sold" until someone physically inspects it, restocks it, and updates the count. During that gap — which can be days or even weeks for a business without a tight returns process — your system is quietly overstating how much stock has actually moved, and understating what's really available to sell.</p>
+                
+                <p>For a brand with a 20% return rate (common in apparel), that gap can represent a meaningful chunk of "phantom" inventory that's neither sellable nor accurately tracked.</p>
+
+                <h3>Building Returns Into Your Numbers</h3>
+                <ul class="styled-list">
+                    <li><strong>Factor processing time into safety stock.</strong> If returns typically take 5 business days to process and restock, treat that as additional effective lead time for the affected SKUs.</li>
+                    <li><strong>Reconcile returns weekly, not monthly.</strong> The longer returned stock sits unprocessed, the more your live numbers drift from reality.</li>
+                    <li><strong>Track return rate by SKU, not just overall.</strong> A jacket with a 35% return rate needs a very different safety stock calculation than a phone case with a 2% return rate — lumping them together with an average return rate hides the SKUs that actually need attention.</li>
+                </ul>
+            </section>
+
+
+            <!-- Section 9: Cash Conversion Cycle -->
+            <section id="cash-conversion-cycle" class="scroll-section">
+                <h2>Turning Inventory Efficiency Into Cash Flow: The Cash Conversion Cycle</h2>
+                
+                <p>Everything above is about operational efficiency. This section is about translating that efficiency into something your accountant — or your bank — actually cares about: cash.</p>
+
+                <h3>The Formula</h3>
+                <p><strong>Cash Conversion Cycle (CCC) = Days Inventory Outstanding + Days Sales Outstanding − Days Payable Outstanding</strong></p>
+                <ul class="styled-list">
+                    <li><strong>Days Inventory Outstanding (DIO):</strong> How long stock sits before it sells (365 ÷ turnover ratio, from earlier)</li>
+                    <li><strong>Days Sales Outstanding (DSO):</strong> How long it takes to collect payment after a sale (for most ecommerce, this is close to zero since payment is upfront — but matters a lot for wholesale accounts)</li>
+                    <li><strong>Days Payable Outstanding (DPO):</strong> How long you take to pay your own suppliers</li>
+                </ul>
+                
+                <p><strong>Worked example:</strong> Let's go back to that candle business. Turnover ratio of 6 gives us a DIO of about 61 days (365 ÷ 6). Since it's a direct-to-consumer business, DSO is close to 0. Suppliers are paid on 30-day terms, so DPO is 30.</p>
+                <p>CCC = 61 + 0 − 30 = <strong>31 days</strong></p>
+                <p>That means, on average, cash is tied up for 31 days between paying a supplier and getting that money back through a sale. If this business improves its turnover ratio from 6 to 8 through better reorder discipline (DIO drops to about 46 days), the CCC shrinks to 16 days — freeing up roughly two weeks of cash cycle time across the entire business.</p>
+                
+                <p>For a business running $500,000 in annual inventory spend, cutting the cash conversion cycle by 15 days can free up tens of thousands of dollars that would otherwise be sitting on a shelf — cash that can go toward marketing, hiring, or simply not needing a line of credit to smooth out cash flow gaps.</p>
+                
+                <p>This is the number that actually gets a founder's or CFO's attention, more than "turnover ratio" ever will, because it answers a very direct question: <strong>how fast does my money come back to me?</strong></p>
+                
+                <figure class="article-image-container">
+                    <img src="/assets/images/img4.png" alt="Cash conversion cycle diagram showing cash flow" class="article-image" loading="lazy">
+                </figure>
+            </section>
+
+
+            <!-- Section 10: Common Mistakes -->
+            <section id="common-mistakes" class="scroll-section">
+                <h2>8 Common Inventory Optimization Mistakes (And How to Avoid Them)</h2>
+                
+                <p>Even businesses that understand the formulas above trip up in the same handful of ways. Here's what to watch for:</p>
+                
+                <ol class="styled-list">
+                    <li><strong>Optimizing purely for turnover.</strong> Chasing a high turnover ratio without watching stockout rates just trades one problem for another — you'll sell through stock fast because you never have enough of it.</li>
+                    <li><strong>Treating all SKUs identically.</strong> As covered above, your top sellers and your long tail need different levels of attention. One reorder rule for everything is a recipe for either overstock or stockouts somewhere in your catalog.</li>
+                    <li><strong>Ignoring lead time variability.</strong> Planning around your supplier's average delivery time instead of their worst-case time is how "usually fine" becomes "out of stock for three weeks."</li>
+                    <li><strong>Not accounting for returns.</strong> As covered above — phantom inventory quietly throws off your real numbers if you're not reconciling returns regularly.</li>
+                    <li><strong>Using one forecasting method for everything.</strong> A steady, predictable product and a viral, spiky one need different forecasting approaches. A single moving average applied to your whole catalog will underserve at least half of it.</li>
+                    <li><strong>Staying manual past the point of scale.</strong> Spreadsheets are a great starting tool, not a permanent one. If manually updating stock counts is eating hours every day, that's the system telling you it's time to automate.</li>
+                    <li><strong>No real reorder point discipline.</strong> Ordering "when it feels low" instead of at a calculated reorder point is the single most common cause of both overstock and stockouts — it replaces data with a guess.</li>
+                    <li><strong>Disconnecting inventory metrics from cash flow.</strong> Tracking turnover ratio without ever connecting it to your cash conversion cycle means you're missing the business case for why any of this matters in the first place.</li>
+                </ol>
+            </section>
+
+
+            <!-- Section 11: Choosing the Right Approach -->
+            <section id="choosing-approach" class="scroll-section">
+                <h2>How to Choose the Right Inventory Optimization Approach for Your Business</h2>
+                
+                <p>There's no universal answer here — the right approach depends on where your business actually is, not where you think it "should" be. Use this as a rough guide:</p>
+                
+                <div style="overflow-x:auto; margin: 20px 0;">
+                    <table style="width:100%; border-collapse: collapse; background: #ffffff; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                        <thead>
+                            <tr style="background: #1a2a3a; color: #ffffff;">
+                                <th style="padding: 14px 20px; text-align: left; font-weight: 600; font-size: 15px; border-bottom: 2px solid #2c3e50;">Your Situation</th>
+                                <th style="padding: 14px 20px; text-align: left; font-weight: 600; font-size: 15px; border-bottom: 2px solid #2c3e50;">Recommended Approach</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="border-bottom: 1px solid #e8ecf0;">
+                                <td style="padding: 14px 20px; font-size: 14px; background: #f8f9fa; font-weight: 500;">Under 100 SKUs, 1–2 channels</td>
+                                <td style="padding: 14px 20px; font-size: 14px; background: #f8f9fa;">Spreadsheet with reorder point/safety stock formulas, reviewed weekly</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #e8ecf0;">
+                                <td style="padding: 14px 20px; font-size: 14px; font-weight: 500;">100–500 SKUs, multiple channels</td>
+                                <td style="padding: 14px 20px; font-size: 14px;">Lightweight inventory software with basic sync, ABC/XYZ segmentation</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #e8ecf0;">
+                                <td style="padding: 14px 20px; font-size: 14px; background: #f8f9fa; font-weight: 500;">500+ SKUs, multiple warehouses or channels</td>
+                                <td style="padding: 14px 20px; font-size: 14px; background: #f8f9fa;">Dedicated platform or AI-assisted forecasting with automated multi-channel sync</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 14px 20px; font-size: 14px; font-weight: 500;">High SKU count, high return rate, or fast seasonal swings</td>
+                                <td style="padding: 14px 20px; font-size: 14px;">AI-driven forecasting that adjusts automatically, rather than static formulas recalculated by hand</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <p style="margin-top: 8px;">Wherever you land on that table, the underlying formulas don't change — what changes is how much of the calculation and monitoring gets automated for you versus done by hand.</p>
+                
+                <p>This is exactly the gap <a href="https://www.aifinora.com">AI Finora</a> is built to close: rather than replacing the thinking in this guide, it applies it automatically — recalculating reorder points as demand shifts, flagging returns before they distort your numbers, and syncing across channels so your team spends time deciding, not recalculating spreadsheets at midnight.</p>
+                
+                <p>If you're a New Jersey-based ecommerce or retail business trying to figure out where you fall on that table, that's a conversation worth having before you commit to a tool — automated or otherwise.</p>
+            </section>
+
+
+            <!-- Section 12: FAQ -->
+            <section id="frequently-asked-questions" class="scroll-section">
+                <h2>Frequently Asked Questions About Inventory Optimization</h2>
+                
+                <div class="faq-accordion">
+                    <div class="faq-item">
+                        <button class="faq-trigger" aria-expanded="false">
+                            <span>What is a good inventory turnover ratio for ecommerce?</span>
+                            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                        <div class="faq-content">
+                            <p>It depends heavily on category. Fast-moving categories like apparel or beauty often aim for 6–12 turns a year, while big-ticket or seasonal items can be healthy at 3–4. The more useful benchmark is tracking your own ratio over time and watching the trend, rather than chasing an industry number that may not fit your product type.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-trigger" aria-expanded="false">
+                            <span>How much safety stock should an ecommerce business hold?</span>
+                            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                        <div class="faq-content">
+                            <p>Enough to cover the gap between your average and worst-case lead time, multiplied by your peak daily demand — see the safety stock formula above for the exact calculation. As a rough starting point, many businesses hold 2–4 weeks of average demand as a buffer, then adjust based on actual supplier reliability.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-trigger" aria-expanded="false">
+                            <span>What's the difference between inventory management and inventory optimization?</span>
+                            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                        <div class="faq-content">
+                            <p>Management is tracking what you have. Optimization is deciding what you should have, based on demand data, lead times, and cost — it's the strategic layer built on top of accurate tracking.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-trigger" aria-expanded="false">
+                            <span>How often should I review my reorder points?</span>
+                            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                        <div class="faq-content">
+                            <p>For your top-selling (A-class) items, monthly at minimum, ideally after any major sales event or seasonal shift. For your long-tail (C-class) items, quarterly is usually sufficient.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-trigger" aria-expanded="false">
+                            <span>Can businesses of any size do inventory optimization without specialized software?</span>
+                            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                        <div class="faq-content">
+                            <p>Yes, up to a point. A well-built spreadsheet using the formulas in this guide will take most businesses a long way. The right time to bring in software isn't about revenue size — it's about whether manual tracking has started costing more time than it saves.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- Section 13: Conclusion -->
+            <section id="conclusion" class="scroll-section">
+                <h2>Ready to Turn Your Inventory Into a Competitive Advantage?</h2>
+                
+                <p>Want help figuring out where your business actually stands on inventory optimization, and what to automate first? <a href="https://www.aifinora.com">AI Finora</a> works with ecommerce and retail businesses across New Jersey and beyond to turn exactly this kind of analysis into a system that runs itself. Reach out to see how it fits your catalog.</p>
+            </section>
+
+        </article>
 
         </div>
 
-        <div class="grid">
-
-
-
-          <article class="card" tabindex="0">
-            <a href="/blogs/bookkeeping-and-tax-services-in-houston-tx/" target="_blank">
-              <div class="card__media">
-                <img src="/assets/images/featured.png" alt="Cover image for Testing strategies that actually catch production bugs"
-                  loading="lazy" width="640" height="360" />
-
-              </div>
-              <div class="card__body">
-                <h3 class="card__title">Professional Bookkeeping and Tax Services in Houston, TX </h3>
-                <p class="card__excerpt">Running a business in Houston is exciting, but it comes with a mountain of
-                  financial paperwork that can quickly spiral out of control</p>
-                <a href="/blogs/bookkeeping-and-tax-services-in-houston-tx/" target="_blank" class="read-more">Read More
-                  ↗ </a>
-              </div>
-            </a>
-          </article>
-          <article class="card" tabindex="0">
-            <a href="/blogs/cash-flow-analysis-for-businesses-in-new-york-city/" target="_blank">
-              <div class="card__media">
-                <img src="/assets/images/img1.png" alt="Cover image for Testing strategies that actually catch production bugs"
-                  loading="lazy" width="640" height="360" />
-
-              </div>
-              <div class="card__body">
-                <h3 class="card__title">Cash Flow Analysis: A Complete Guide for Businesses in New York City</h3>
-                <p class="card__excerpt">Every business owner in New York City knows the feeling: sales look good on
-                  paper, but somehow there's never quite enough cash in the bank when rent, payroll, or supplier
-                  invoices come due</p>
-                <a href="/blogs/cash-flow-analysis-for-businesses-in-new-york-city/" target="_blank"
-                  class="read-more">Read More ↗ </a>
-              </div>
-            </a>
-          </article>
-          <article class="card" tabindex="0">
-            <a href="/blogs/outsourced-accounting-and-bookkeeping-services-usa/" target="_blank">
-              <div class="card__media">
-                <img src="/assets/images/img3-3.jpg" alt="Cover image for Testing strategies that actually catch production bugs"
-                  loading="lazy" width="640" height="360" />
-
-              </div>
-              <div class="card__body">
-                <h3 class="card__title">Expert Accounting and Bookkeeping Services for Businesses</h3>
-                <p class="card__excerpt">Running a business today means wearing far too many hats, and financial
-                  management is often the one that gets pushed to the bottom of the list.</p>
-                <a href="/blogs/outsourced-accounting-and-bookkeeping-services-usa/" target="_blank"
-                  class="read-more">Read More ↗ </a>
-              </div>
-            </a>
-          </article>
-          <article class="card" tabindex="0">
-            <a href="/blogs/best-quickbooks-alternatives-for-accounting-firms/" target="_blank">
-              <div class="card__media">
-                <img src="/assets/images/blog4-1.png" alt="Cover image for Testing strategies that actually catch production bugs"
-                  loading="lazy" width="640" height="360" />
-
-              </div>
-              <div class="card__body">
-                <h3 class="card__title">Best QuickBooks Alternatives for Accounting Firms in 2026</h3>
-                <p class="card__excerpt">Compare the best QuickBooks alternatives for accounting firms in 2026. See why
-                  AI Finora is the top choice for multi-client bookkeeping.</p>
-                <a href="/blogs/best-quickbooks-alternatives-for-accounting-firms/" target="_blank"
-                  class="read-more">Read More ↗ </a>
-              </div>
-            </a>
-          </article>
-          <article class="card" tabindex="0">
-            <a href="/blogs/what-Is-real-Time-financial-reporting" target="_blank">
-              <div class="card__media">
-                <img src="/assets/images/blog5-1.png" alt="Cover image for What is Real-Time Financial Reporting?" loading="lazy"
-                  width="640" height="360" />
-
-              </div>
-              <div class="card__body">
-                <h3 class="card__title">What is Real-Time Financial Reporting?</h3>
-                <p class="card__excerpt">Discover the benefits and implementation strategies for real-time financial
-                  reporting in modern businesses.</p>
-                <a href="/blogs/what-Is-real-Time-financial-reporting/" target="_blank" class="read-more">Read More ↗
-                </a>
-              </div>
-            </a>
-          </article>
-          <article class="card" tabindex="0">
-            <a href="/blogs/free-financial-consultant-for-businesses-new-york/" target="_blank">
-              <div class="card__media">
-                <img src="/assets/images/blog6-1.png" alt="Cover image for What is Real-Time Financial Reporting?" loading="lazy"
-                  width="640" height="360" />
-
-              </div>
-              <div class="card__body">
-                <h3 class="card__title">Free Financial Consultant for Businesses in New York - AI Finora</h3>
-                <p class="card__excerpt">Get free financial consultant in New York, Call Now (828) 367-0905. AI Finora
-                  offers financial advisory, reporting and close automation for all businesses.</p>
-                <a href="/blogs/free-financial-consultant-for-businesses-new-york/" target="_blank"
-                  class="read-more">Read More ↗ </a>
-              </div>
-            </a>
-          </article>
-
-      <article class="card" tabindex="0">
-            <a href="/blogs/bookkeeping-services-for-restaurants-nyc/" target="_blank">
-              <div class="card__media">
-                <img src="/assets/images/Designer.png" alt="Cover image for What is Real-Time Financial Reporting?" loading="lazy"
-                  width="640" height="360" />
-
-              </div>
-              <div class="card__body">
-                <h3 class="card__title">Bookkeeping Services for Restaurants in NYC: Costs, Roles, KPIs</h3>
-                <p class="card__excerpt">Restaurant bookkeeping in NYC is complex. Learn costs, roles, and KPIs for outsourced bookkeeping services that keep your restaurant profitable.</p>
-                <a href="/blogs/bookkeeping-services-for-restaurants-nyc/" target="_blank"
-                  class="read-more">Read More ↗ </a>
-              </div>
-            </a>
-          </article>
-      <article class="card" tabindex="0">
-            <a href="/blogs/financial-reporting-services-in-usa-for-cpa-firms/" target="_blank">
-              <div class="card__media">
-                <img src="/assets/images/Designer (1).png" alt="Cover image for What is Real-Time Financial Reporting?" loading="lazy"
-                  width="640" height="360" />
-
-              </div>
-              <div class="card__body">
-                <h3 class="card__title">Trusted Financial Reporting Services in USA for CPA Firms</h3>
-                <p class="card__excerpt">AI Finora provides trusted financial reporting services for CPA firms in the USA with automated financial reporting solutions that improve accuracy, efficiency, and client insights.</p>
-                <a href="/blogs/financial-reporting-services-in-usa-for-cpa-firms/" target="_blank"
-                  class="read-more">Read More ↗ </a>
-              </div>
-            </a>
-          </article>
-
-           <article class="card" tabindex="0">
-            <a href="/blogs/hire-financial-reporting-services-in-usa/" target="_blank">
-              <div class="card__media">
-                <img src="/assets/images/Designer (5).png" alt="Cover image for What is Real-Time Financial Reporting?" loading="lazy"
-                  width="640" height="360" />
-
-              </div>
-              <div class="card__body">
-                <h3 class="card__title">Hire Financial Reporting Services in USA | AI Finora</h3>
-                <p class="card__excerpt">Hire trusted financial reporting services in the USA from AI Finora. Get automated financial reporting solutions to improve accuracy, insights, and business growth.</p>
-                <a href="/blogs/hire-financial-reporting-services-in-usa/" target="_blank"
-                  class="read-more">Read More ↗ </a>
-              </div>
-            </a>
-          </article>
-              <article class="card" tabindex="0">
-            <a href="/blogs/outsourced-financial-reporting-services-in-usa/" target="_blank">
-              <div class="card__media">
-                <img src="/assets/images/outsource-1.png" alt="Cover image for What is Real-Time Financial Reporting?" loading="lazy"
-                  width="640" height="360" />
-
-              </div>
-              <div class="card__body">
-                <h3 class="card__title">Outsourced Financial Reporting Services in USA | AI Finora</h3>
-                <p class="card__excerpt">AI Finora offers outsourced financial reporting services in the USA with automated financial reporting solutions to improve accuracy, efficiency, and business insights.</p>
-                <a href="/blogs/outsourced-financial-reporting-services-in-usa/" target="_blank"
-                  class="read-more">Read More ↗ </a>
-              </div>
-            </a>
-          </article>
-              <article class="card" tabindex="0">
-            <a href="/blogs/bookkeeping-costs-for-small-businesses-in-usa/" target="_blank">
-              <div class="card__media">
-                <img src="/assets/images/blog-14.png" alt="Cover image for What is Real-Time Financial Reporting?" loading="lazy"
-                  width="640" height="360" />
-
-              </div>
-              <div class="card__body">
-                <h3 class="card__title">Bookkeeping Costs For Small Businesses in USA | AI Finora</h3>
-                <p class="card__excerpt">Discover real bookkeeping prices for US small businesses in 2026. Compare in-house, virtual, and outsourced bookkeeping services costs with AI Finora</p>
-                <a href="/blogs/bookkeeping-costs-for-small-businesses-in-usa/" target="_blank"
-                  class="read-more">Read More ↗ </a>
-              </div>
-            </a>
-          </article>
-
-
-              <article class="card" tabindex="0">
-            <a href="/blogs/quickbooks-accounting-services-in-new-york/" target="_blank">
-              <div class="card__media">
-                <img src="/assets/images/quickbooks-accounting-services-in-new-york-11.png" alt="Cover image for What is Real-Time Financial Reporting?" loading="lazy"
-                  width="640" height="360" />
-
-              </div>
-              <div class="card__body">
-                <h3 class="card__title">Expert QuickBooks Accounting Services in New York | AI Finora</h3>
-                <p class="card__excerpt">AI Finora offers expert QuickBooks accounting services in New York, including outsourced bookkeeping, small business bookkeeping & online bookkeeping support.</p>
-                <a href="/blogs/quickbooks-accounting-services-in-new-york/" target="_blank"
-                  class="read-more">Read More ↗ </a>
-              </div>
-            </a>
-          </article>
-                     <article class="card" tabindex="0">
-            <a href="/blogs/affordable-bookkeeping-services-in-texas-for-small-businesses/" target="_blank">
-              <div class="card__media">
-                <img src="/assets/images/affordable-1.png" alt="Cover image for What is Real-Time Financial Reporting?" loading="lazy"
-                  width="640" height="360" />
-
-              </div>
-              <div class="card__body">
-                <h3 class="card__title">Affordable Bookkeeping Services in Texas for Small Businesses</h3>
-                <p class="card__excerpt">Looking for affordable bookkeeping services in Texas? AI Finora offers accurate,
-AI-powered bookkeeping built to help small businesses grow.</p>
-                <a href="/blogs/affordable-bookkeeping-services-in-texas-for-small-businesses/" target="_blank"
-                  class="read-more">Read More ↗ </a>
-              </div>
-            </a>
-          </article>
-                        <article class="card" tabindex="0">
-            <a href="/blogs/financial-reporting-services-in-nyc/" target="_blank">
-              <div class="card__media">
-                <img src="/assets/images/financial-reporting-services-in-nyc-1.png" alt="Cover image for What is Real-Time Financial Reporting?" loading="lazy"
-                  width="640" height="360" />
-
-              </div>
-              <div class="card__body">
-                <h3 class="card__title">Financial Reporting Services in NYC for Growing Businesses | AI Finora</h3>
-                <p class="card__excerpt">Get accurate, timely financial reporting services in NYC with AI Finora. AI-powered reporting, bookkeeping & advisory built for growing businesses.</p>
-                <a href="/blogs/financial-reporting-services-in-nyc/" target="_blank"
-                  class="read-more">Read More ↗ </a>
-              </div>
-            </a>
-          </article>
-
-                 <article class="card" tabindex="0">
-            <a href="/blogs/best-tax-preparation-services-in-new-york/" target="_blank">
-              <div class="card__media">
-                <img src="/assets/images/best-tax-preparation-services-in-newyork-1.png" alt="Cover image for What is Real-Time Financial Reporting?" loading="lazy"
-                  width="640" height="360" />
-
-              </div>
-              <div class="card__body">
-                <h3 class="card__title">Best Tax Preparation Services in New York, NY</h3>
-                <p class="card__excerpt"> Looking for reliable tax preparation services in New York, NY? AI Finora blends
-expert CPAs with smart AI automation to simplify tax filing for individuals & businesses.</p>
-                <a href="/blogs/best-tax-preparation-services-in-new-york/" target="_blank"
-                  class="read-more">Read More ↗ </a>
-              </div>
-            </a>
-          </article>
-                   <article class="card" tabindex="0">
-            <a href="/blogs/cash-flow-management-services/" target="_blank">
-              <div class="card__media">
-                <img src="/assets/images/cash-flow-management-services-1.png" alt="Cover image for What is Real-Time Financial Reporting?" loading="lazy"
-                  width="640" height="360" />
-
-              </div>
-              <div class="card__body">
-                <h3 class="card__title">Cash Flow Analysis Services in NYC for Business Decisions</h3>
-                <p class="card__excerpt">Explore cash flow analysis services in NYC with AI Finora to improve financial visibility,
-manage business cash flow, and make smarter, data-driven decisions for growth</p>
-                <a href="/blogs/cash-flow-management-services/" target="_blank"
-                  class="read-more">Read More ↗ </a>
-              </div>
-            </a>
-          </article>
-           <article class="card" tabindex="0">
-            <a href="/blogs/advanced-inventory-management/" target="_blank">
-              <div class="card__media">
-                <img src="/assets/images/Advanced Inventory-1.png" alt="Cover image for What is Real-Time Financial Reporting?" loading="lazy"
-                  width="640" height="360" />
-
-              </div>
-              <div class="card__body">
-                <h3 class="card__title">Advanced Inventory Management for Better
-Stock Management</h3>
-                <p class="card__excerpt">Discover advanced inventory management strategies to improve stock
-control, reduce costs, prevent shortages, and support smarter business growth with AI Finora.
-right now</p>
-                <a href="/blogs/advanced-inventory-management/" target="_blank"
-                  class="read-more">Read More ↗ </a>
-              </div>
-            </a>
-          </article>
-
-                  <article class="card" tabindex="0">
-            <a href="/blogs/insights-dashboards-real-time-analytics-financial-decisions/" target="_blank">
-              <div class="card__media">
-                <img src="/assets/images/insights-dashboards-real-time-analytics-financial-decisions-1.png" alt="Cover image for What is Real-Time Financial Reporting?" loading="lazy"
-                  width="640" height="360" />
-
-              </div>
-              <div class="card__body">
-                <h3 class="card__title">Insights & Dashboards: Real-Time Analytics for Smarter Financial Decision-Making</h3>
-                <p class="card__excerpt">Discover how AI Finora's Insights & Dashboards deliver real-time analytics, smarter reporting, and data-driven financial decisions for growing businesses</p>
-                <a href="/blogs/insights-dashboards-real-time-analytics-financial-decisions/" target="_blank"
-                  class="read-more">Read More ↗ </a>
-              </div>
-            </a>
-          </article>
-           <article class="card" tabindex="0">
-            <a href="/blogs/simplify-amazon-seller-accounting-automated-reconciliation/" target="_blank">
-              <div class="card__media">
-                <img src="/assets/images/simplify-amazon-seller-accounting-automated-reconciliation-1.png" alt="Cover image for What is Real-Time Financial Reporting?" loading="lazy"
-                  width="640" height="360" />
-
-              </div>
-              <div class="card__body">
-                <h3 class="card__title">How Automated Reconciliation Transforms Amazon Seller Accounting</h3>
-                <p class="card__excerpt">Struggling with Amazon seller accounting? See how AI Finora automates reconciliation for accurate payments, refunds, and fees on every transaction</p>
-                <a href="/blogs/simplify-amazon-seller-accounting-automated-reconciliation/" target="_blank"
-                  class="read-more">Read More ↗ </a>
-              </div>
-            </a>
-          </article>
-          <article class="card" tabindex="0">
-            <a href="/blogs/kpis-for-service-businesses-san-francisco-2026" target="_blank">
-              <div class="card__media">
-                <img src="/assets/images/key-kpis-service-businesses-san-francisco-2026-guide-growth-1.png" alt="Cover image for What is Real-Time Financial Reporting?" loading="lazy"
-                  width="640" height="360" />
-
-              </div>
-              <div class="card__body">
-                <h3 class="card__title">Key KPIs for Service Businesses in San Francisco: 2026 Guide to Growth</h3>
-                <p class="card__excerpt">Discover the top KPIs for service businesses in San Francisco. This 2026 guide covers growth, efficiency & customer success metrics to boost performance.</p>
-                <a href="/blogs/kpis-for-service-businesses-san-francisco-2026/" target="_blank"
-                  class="read-more">Read More ↗ </a>
-              </div>
-            </a>
-          </article>
-
-
-            <article class="card" tabindex="0">
-            <a href="/blogs/nyc-tax-filing-services-strategic-tax-solutions" target="_blank">
-              <div class="card__media">
-                <img src="/assets/images/nyc-tax-filing-services-strategic-tax-solutions-1.png" alt="Cover image for What is Real-Time Financial Reporting?" loading="lazy"
-                  width="640" height="360" />
-
-              </div>
-              <div class="card__body">
-                <h3 class="card__title">NYC Tax Filing Services | Strategic Tax Solutions for Businesses</h3>
-                <p class="card__excerpt">Expert NYC tax filing services from AI Finora. Accurate, compliant, stress-free tax prep for individuals & businesses. File smarter, save more. Book now!</p>
-                <a href="/blogs/nyc-tax-filing-services-strategic-tax-solutions/" target="_blank"
-                  class="read-more">Read More ↗ </a>
-              </div>
-            </a>
-          </article>
-
-          <article class="card" tabindex="0">
-            <a href="/blogs/month-end-close-process-chicago-financial-accuracy/" target="_blank">
-              <div class="card__media">
-                <img src="/assets/images/month-end-close-process-chicago-financial-accuracy-1.png" alt="Cover image for What is Real-Time Financial Reporting?" loading="lazy"
-                  width="640" height="360" />
-
-              </div>
-              <div class="card__body">
-                <h3 class="card__title">Month-End Close Process in Chicago: How Businesses Can Improve Financial Accuracy</h3>
-                <p class="card__excerpt">Month-end close process in Chicago: AI Finora helps businesses improve financial accuracy, reduce errors, and streamline accounting.</p>
-                <a href="/blogs/month-end-close-process-chicago-financial-accuracy/" target="_blank"
-                  class="read-more">Read More ↗ </a>
-              </div>
-            </a>
-          </article>
-
-          
-          <article class="card" tabindex="0">
-            <a href="/blogs/insurance-reconciliation-miami-financial-accuracy/" target="_blank">
-              <div class="card__media">
-                <img src="/assets/images/insurance-reconciliation-miami-financial-accuracy-4.png" alt="Cover image for What is Real-Time Financial Reporting?" loading="lazy"
-                  width="640" height="360" />
-
-              </div>
-              <div class="card__body">
-                <h3 class="card__title">Miami Insurance Reconciliation Services:
-Improve Financial Accuracy</h3>
-                <p class="card__excerpt">Discover how insurance reconciliation in Miami improves financial accuracy,
-reduces errors, streamlines accounting, and helps businesses manage insurance payments
-with confidence.</p>
-                <a href="/blogs/insurance-reconciliation-miami-financial-accuracy/" target="_blank"
-                  class="read-more">Read More ↗ </a>
-              </div>
-            </a>
-          </article>
-
-               <article class="card" tabindex="0">
-            <a href="/blogs/insurance-mortgage-loan-accounting-services-san-francisco-ca/" target="_blank">
-              <div class="card__media">
-                <img src="/assets/images/insurance-mortgage-loan-accounting-services-san-francisco-ca-1.png" alt="Cover image for What is Real-Time Financial Reporting?" loading="lazy"
-                  width="640" height="360" />
-
-              </div>
-              <div class="card__body">
-                <h3 class="card__title">Insurance & Mortgage Loan Accounting Services in San Francisco, CA</h3>
-                <p class="card__excerpt"> Expert insurance & mortgage loan accounting in San Francisco. AI Finora delivers precise bookkeeping, loan reconciliation & reporting. Get a free consult.</p>
-                <a href="/blogs/insurance-mortgage-loan-accounting-services-san-francisco-ca/" target="_blank"
-                  class="read-more">Read More ↗ </a>
-              </div>
-            </a>
-          </article>
-          <article class="card" tabindex="0">
-            <a href="/blogs/property-management-accounting-services-los-angeles/" target="_blank">
-              <div class="card__media">
-                <img src="/assets/images/property-management-accounting-services-los-angeles-1.jpg" alt="Cover image for What is Real-Time Financial Reporting?" loading="lazy"
-                  width="640" height="360" />
-
-              </div>
-              <div class="card__body">
-                <h3 class="card__title">Property Management Accounting Services in Los Angeles | Bookkeeping & Financial Reporting Expert </h3>
-                <p class="card__excerpt"> Struggling with rental finances? AI Finora offers expert property management accounting services in Los Angeles—bookkeeping, reporting & compliance made easy.</p>
-                <a href="/blogs/property-management-accounting-services-los-angeles/" target="_blank"
-                  class="read-more">Read More ↗ </a>
-              </div>
-            </a>
-          </article>
-
-             <article class="card" tabindex="0">
-            <a href="/blogs/ecommerce-inventory-software-austin-texas/" target="_blank">
-              <div class="card__media">
-                <img src="/assets/images/ecommerce-inventory-software-austin-texas-1.jpg" alt="Cover image for What is Real-Time Financial Reporting?" loading="lazy"
-                  width="640" height="360" />
-
-              </div>
-              <div class="card__body">
-                <h3 class="card__title">E-Commerce Inventory Management Solutions in Austin, Texas: Real-Time Stock & Order Tracking</h3>
-                <p class="card__excerpt">Discover AI Finora's e-commerce inventory management solutions in Austin, Texas — real-time stock tracking, order accuracy & smarter fulfillment for growth.</p>
-                <a href="/blogs/ecommerce-inventory-software-austin-texas/" target="_blank"
-                  class="read-more">Read More ↗ </a>
-              </div>
-            </a>
-          </article>
-
-
-          
-             <article class="card" tabindex="0">
-            <a href="/blogs/expert-financial-reporting-bookkeeping-business-analytics-orlando-fl/" target="_blank">
-              <div class="card__media">
-                <img src="/assets/images/expert-financial-reporting-bookkeeping-business-analytics-orlando-fl-1.jpg" alt="Cover image for What is Real-Time Financial Reporting?" loading="lazy"
-                  width="640" height="360" />
-
-              </div>
-              <div class="card__body">
-                <h3 class="card__title">Financial Reporting, Bookkeeping, and Business Analytics Services in Orlando, FL</h3>
-                <p class="card__excerpt">Expert financial reporting, bookkeeping & business analytics in Orlando, FL. AI Finora helps local businesses grow with accurate, data-driven insights.</p>
-                <a href="/blogs/expert-financial-reporting-bookkeeping-business-analytics-orlando-fl/" target="_blank"
-                  class="read-more">Read More ↗ </a>
-              </div>
-            </a>
-          </article>
-
-
-                 <article class="card" tabindex="0">
-            <a href="/blogs/best-automated-subscription-billing-software-boston-massachusetts/" target="_blank">
-              <div class="card__media">
-                <img src="/assets/images/best-automated-subscription-billing-software-boston-massachusetts-1.jpg" alt="Cover image for Best Automated Subscription Billing Software in Boston, MA" loading="lazy"
-                  width="640" height="360" />
-
-              </div>
-              <div class="card__body">
-                <h3 class="card__title">Subscription Billing & Recurring Revenue Software Boston MA</h3>
-                <p class="card__excerpt">Discover the best automated subscription billing & recurring revenue software for Boston businesses in 2026. AI Finora breaks down features, tools & tips.</p>
-                <a href="/blogs/best-automated-subscription-billing-software-boston-massachusetts/" target="_blank"
-                  class="read-more">Read More ↗ </a>
-              </div>
-            </a>
-          </article>
-
-          <article class="card" tabindex="0">
-            <a href="/blogs/item-margin-analyzer-dallas-tx/" target="_blank">
-              <div class="card__media">
-                <img src="/assets/images/item-margin-analyzer-dallas-tx-profit-margin-calculator-img-1.png" alt="Cover image for Best Automated Subscription Billing Software in Boston, MA" loading="lazy"
-                  width="640" height="360" />
-
-              </div>
-              <div class="card__body">
-                <h3 class="card__title">Item Margin Analyzer Dallas TX | Profit Margin Calculation</h3>
-                <p class="card__excerpt">Struggling with thin margins? AI Finora's Item Margin Analyzer helps Dallas TX retailers & e-commerce sellers track costs, boost profits & optimize pricing fast.</p>
-                <a href="/blogs/item-margin-analyzer-dallas-tx/" target="_blank"
-                  class="read-more">Read More ↗ </a>
-              </div>
-            </a>
-          </article>
-
-
-
-            <article class="card" tabindex="0">
-            <a href="/blogs/project-financial-management-fort-worth-texas/" target="_blank">
-              <div class="card__media">
-                <img src="/assets/images/project-financial-management-fort-worth-texas-1.jpg" alt="Cover image for Project Financial Management in Fort Worth, TX" loading="lazy"
-                  width="640" height="360" />
-
-              </div>
-              <div class="card__body">
-                <h3 class="card__title">Project Financial Management in Fort Worth, Texas:
-A Practical Guide to Profitability & Cash Flow</h3>
-                <p class="card__excerpt">Learn project financial management the way startups actually need it:
-simple budgeting, cash flow tracking, and profit visibility — no finance team or enterprise
-software required.</p>
-                <a href="/blogs/project-financial-management-fort-worth-texas/" target="_blank"
-                  class="read-more">Read More ↗ </a>
-              </div>
-            </a>
-          </article>
-
-           <article class="card" tabindex="0">
-            <a href="/blogs/sales-tax-compliance-guide" target="_blank">
-              <div class="card__media">
-                <img src="/assets/images/sales-img-1.jpg" alt="Cover image for Project Financial Management in Fort Worth, TX" loading="lazy"
-                  width="640" height="360" />
-
-              </div>
-              <div class="card__body">
-                <h3 class="card__title">Sales Tax Compliance in 2026: What Every Business Should Know</h3>
-                <p class="card__excerpt">Sales tax compliance made simple: nexus rules, deadlines, and penalties, explained by AI Finora</p>
-                <a href="/blogs/sales-tax-compliance-guide" target="_blank"
-                  class="read-more">Read More ↗ </a>
-              </div>
-            </a>
-          </article>
-
-
-
-            <article class="card" tabindex="0">
-            <a href="/blogs/cash-flow-analysis" target="_blank">
-              <div class="card__media">
-                <img src="/assets/images/demo.webp" alt="Cover image for Cash Flow Analysis" loading="lazy"
-                  width="640" height="360" />
-
-              </div>
-              <div class="card__body">
-                <h3 class="card__title">Cash Flow Analysis: Guide to Reading Your Cash Flow Statement</h3>
-                <p class="card__excerpt">Learn cash flow analysis with formulas, examples, and warning signs from AI Finora. </p>
-                <a href="/blogs/cash-flow-analysis" target="_blank"
-                  class="read-more">Read More ↗ </a>
-              </div>
-            </a>
-          </article>
-
-
-
-            <article class="card" tabindex="0">
-            <a href="/blogs/ecommerce-inventory-optimization" target="_blank">
-              <div class="card__media">
-                <img src="/assets/images/ecommerce-inventory-optimization-4.jpg" alt="Cover image for Ecommerce Inventory Optimization" loading="lazy"
-                  width="640" height="360" />
-
-              </div>
-              <div class="card__body">
-                <h3 class="card__title">How to Optimize Ecommerce Inventory: Real
-Formulas & Examples</h3>
-                <p class="card__excerpt">Ecommerce inventory optimization: formulas,
-examples, and a practical system.</p>
-                <a href="/blogs/ecommerce-inventory-optimization" target="_blank"
-                  class="read-more">Read More ↗ </a>
-              </div>
-            </a>
-          </article>
-        </div>
-
-        <nav class="pagination" aria-label="Blog articles pagination" hidden>
-          <button class="pagination__button" type="button" data-pagination-action="previous" aria-label="Previous page">&larr;</button>
-          <div class="pagination__pages" aria-live="polite"></div>
-          <button class="pagination__button" type="button" data-pagination-action="next" aria-label="Next page">&rarr;</button>
-        </nav>
-      </div>
-    </section>
-
-
-    <div class="custom-footer">
+    </main>
+
+    <!-- Floating Back to Top Button -->
+    <button id="backToTop" class="back-to-top-btn" aria-label="Back to top">
+        <svg class="back-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="12" y1="19" x2="12" y2="5"></line>
+            <polyline points="5 12 12 5 19 12"></polyline>
+        </svg>
+    </button>
+        <div class="custom-footer">
       <!-- Place your background image src URL below inside the url('') -->
       <div class="custom-footer-bg" style="background-image: url('/assets/images/Footer Background.jpg');"></div>
 
@@ -2988,90 +3329,192 @@ examples, and a practical system.</p>
       </div>
     </div>
 
-  </main>
+    <script>
 
-  <script>
-    /* ============================================================
-       BLOG PAGE — VANILLA JS
-       Cards are now static HTML. Only these behaviors remain:
-       1. Animated stats counter
-       2. Scroll reveal
-    ============================================================ */
+        /* ==========================================================================
+   AI Finora - Blog Article Page Interactive Script
+   ========================================================================== */
 
-    (function () {
-      'use strict';
-
-      /* ------------------------------------------------------------
-         ANIMATED STATS COUNTER
-      ------------------------------------------------------------ */
-      function animateCounters() {
-        const counters = document.querySelectorAll('.stats__value[data-count]');
-        counters.forEach(function (el) {
-          const target = parseInt(el.getAttribute('data-count'), 10);
-          const suffix = el.getAttribute('data-suffix') || '';
-          const duration = 1200;
-          const start = performance.now();
-
-          function tick(now) {
-            const progress = Math.min((now - start) / duration, 1);
-            const eased = 1 - Math.pow(1 - progress, 3);
-            el.textContent = Math.round(eased * target) + suffix;
-            if (progress < 1) requestAnimationFrame(tick);
-          }
-          requestAnimationFrame(tick);
+document.addEventListener('DOMContentLoaded', () => {
+    
+    // 1. Reading Progress Bar
+    const progressBar = document.getElementById('progress-bar');
+    if (progressBar) {
+        window.addEventListener('scroll', () => {
+            const winScroll = window.scrollY || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - window.innerHeight;
+            const scrolled = height > 0 ? (winScroll / height) * 100 : 0;
+            progressBar.style.width = scrolled + '%';
         });
-      }
+    }
 
-      /* ------------------------------------------------------------
-         SCROLL REVEAL
-      ------------------------------------------------------------ */
-      function initReveal() {
-        const items = document.querySelectorAll('.reveal');
-        if (!('IntersectionObserver' in window)) {
-          items.forEach(function (el) { el.classList.add('is-visible'); });
-          return;
-        }
+    // 2. Scroll-Spy: Highlight Active Table of Contents Link
+    const sections = document.querySelectorAll('.scroll-section');
+    const tocLinks = document.querySelectorAll('.toc-link');
 
-        const observer = new IntersectionObserver(function (entries) {
-          entries.forEach(function (entry) {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('is-visible');
-              observer.unobserve(entry.target);
+    if (sections.length > 0 && tocLinks.length > 0) {
+        const observerOptions = {
+            root: null,
+            // Trigger when section is 30% from the top of the viewport
+            rootMargin: '-30% 0px -70% 0px',
+            threshold: 0
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const id = entry.target.getAttribute('id');
+                    tocLinks.forEach(link => {
+                        if (link.getAttribute('href') === `#${id}`) {
+                            link.classList.add('active');
+                        } else {
+                            link.classList.remove('active');
+                        }
+                    });
+                }
+            });
+        }, observerOptions);
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    }
+
+    // 3. FAQ Accordion Toggle
+    const faqTriggers = document.querySelectorAll('.faq-trigger');
+    faqTriggers.forEach(trigger => {
+        trigger.addEventListener('click', () => {
+            const faqItem = trigger.parentElement;
+            const faqContent = trigger.nextElementSibling;
+            const isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+
+            // Collapse other items
+            faqTriggers.forEach(otherTrigger => {
+                if (otherTrigger !== trigger) {
+                    otherTrigger.setAttribute('aria-expanded', 'false');
+                    otherTrigger.nextElementSibling.style.maxHeight = null;
+                }
+            });
+
+            // Toggle active item
+            if (isExpanded) {
+                trigger.setAttribute('aria-expanded', 'false');
+                faqContent.style.maxHeight = null;
+            } else {
+                trigger.setAttribute('aria-expanded', 'true');
+                faqContent.style.maxHeight = faqContent.scrollHeight + 'px';
             }
-          });
-        }, { threshold: 0.15 });
+        });
+    });
 
-        items.forEach(function (el) { observer.observe(el); });
-      }
+    // 4. Newsletter Form Validation & Handling
+    const newsletterForm = document.getElementById('newsletterForm');
+    const newsEmailInput = document.getElementById('newsEmail');
+    const emailError = document.getElementById('emailError');
+    const emailSuccess = document.getElementById('emailSuccess');
 
-      function initStatsOnView() {
-        const statsEl = document.querySelector('.stats');
-        if (!statsEl) return;
+    if (newsletterForm) {
+        newsletterForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const emailValue = newsEmailInput.value.trim();
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-        const observer = new IntersectionObserver(function (entries) {
-          entries.forEach(function (entry) {
-            if (entry.isIntersecting) {
-              animateCounters();
-              observer.unobserve(entry.target);
+            // Reset messages
+            emailError.style.display = 'none';
+            emailSuccess.style.display = 'none';
+            newsEmailInput.style.borderColor = '';
+
+            if (!emailValue || !emailRegex.test(emailValue)) {
+                // Invalid Email
+                emailError.style.display = 'block';
+                newsEmailInput.style.borderColor = '#D32F2F';
+                newsEmailInput.focus();
+            } else {
+                // Valid Email: Simulate successful signup
+                emailSuccess.style.display = 'block';
+                newsEmailInput.value = '';
+                newsEmailInput.style.borderColor = 'var(--color-success)';
+                
+                // Reset border color after 3 seconds
+                setTimeout(() => {
+                    newsEmailInput.style.borderColor = '';
+                }, 3000);
             }
-          });
-        }, { threshold: 0.4 });
+        });
+    }
 
-        observer.observe(statsEl);
-      }
+    // 5. Copy Link to Clipboard (Share Button)
+    const shareBtn = document.getElementById('shareBtn');
+    const shareTooltip = document.getElementById('shareTooltip');
 
-      /* ------------------------------------------------------------
-         INIT
-      ------------------------------------------------------------ */
-      document.addEventListener('DOMContentLoaded', function () {
-        initReveal();
-        initStatsOnView();
-      });
-    })();
+    if (shareBtn && shareTooltip) {
+        shareBtn.addEventListener('click', () => {
+            const currentUrl = window.location.href;
+            
+            navigator.clipboard.writeText(currentUrl)
+                .then(() => {
+                    // Show Tooltip
+                    shareTooltip.classList.add('show');
+                    
+                    // Hide Tooltip after 2 seconds
+                    setTimeout(() => {
+                        shareTooltip.classList.remove('show');
+                    }, 2000);
+                })
+                .catch(err => {
+                    console.error('Failed to copy URL to clipboard: ', err);
+                });
+        });
+    }
+
+    // 6. Bookmark Button Toggle State
+    const bookmarkBtn = document.getElementById('bookmarkBtn');
+    if (bookmarkBtn) {
+        bookmarkBtn.addEventListener('click', () => {
+            const isBookmarked = bookmarkBtn.classList.toggle('bookmarked');
+            
+            if (isBookmarked) {
+                // Update SVG and Text
+                bookmarkBtn.innerHTML = `
+                    <svg class="icon" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+                    </svg>
+                    Bookmarked
+                `;
+            } else {
+                bookmarkBtn.innerHTML = `
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+                    </svg>
+                    Bookmark
+                `;
+            }
+        });
+    }
+
+    // 7. Floating Back to Top Button
+    const backToTopBtn = document.getElementById('backToTop');
+    if (backToTopBtn) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 500) {
+                backToTopBtn.classList.add('show');
+            } else {
+                backToTopBtn.classList.remove('show');
+            }
+        });
+
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
+});
 
 
-    (function () {
-      // ── Desktop: industry panel switching ──
+ // ── Desktop: industry panel switching ──
       document.querySelectorAll('.industry-btn').forEach(function (btn) {
         function activate() {
           document.querySelectorAll('.industry-btn').forEach(function (b) { b.classList.remove('active'); });
@@ -3112,7 +3555,7 @@ examples, and a practical system.</p>
         mega.addEventListener('mouseenter', showMega);
         mega.addEventListener('mouseleave', hideMega);
       });
-    })();
+   
 
     // ── Mobile: accordion toggle ──
     function toggleMobileInd(btn) {
@@ -3130,65 +3573,12 @@ examples, and a practical system.</p>
 [...container.children]
   .reverse()
   .forEach(child => container.appendChild(child));
-
-    function initBlogPagination() {
-      const cards = Array.from(container.children);
-      const pagination = document.querySelector('.pagination');
-      const pagesContainer = pagination.querySelector('.pagination__pages');
-      const previousButton = pagination.querySelector('[data-pagination-action="previous"]');
-      const nextButton = pagination.querySelector('[data-pagination-action="next"]');
-      const cardsPerPage = 10;
-      const pageCount = Math.ceil(cards.length / cardsPerPage);
-      let currentPage = 1;
-
-      if (pageCount <= 1) return;
-
-      pagination.hidden = false;
-
-      function renderPage(page) {
-        currentPage = page;
-        cards.forEach(function (card, index) {
-          const isVisible = index >= (currentPage - 1) * cardsPerPage && index < currentPage * cardsPerPage;
-          card.hidden = !isVisible;
-        });
-
-        pagesContainer.replaceChildren();
-        for (let pageNumber = 1; pageNumber <= pageCount; pageNumber += 1) {
-          const pageButton = document.createElement('button');
-          pageButton.type = 'button';
-          pageButton.className = 'pagination__button';
-          pageButton.textContent = pageNumber;
-          pageButton.setAttribute('aria-label', 'Go to page ' + pageNumber);
-          if (pageNumber === currentPage) {
-            pageButton.setAttribute('aria-current', 'page');
-          }
-          pageButton.addEventListener('click', function () {
-            renderPage(pageNumber);
-            pagination.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          });
-          pagesContainer.appendChild(pageButton);
-        }
-
-        previousButton.disabled = currentPage === 1;
-        nextButton.disabled = currentPage === pageCount;
-      }
-
-      previousButton.addEventListener('click', function () {
-        if (currentPage > 1) renderPage(currentPage - 1);
-      });
-
-      nextButton.addEventListener('click', function () {
-        if (currentPage < pageCount) renderPage(currentPage + 1);
-      });
-
-      renderPage(currentPage);
-    }
-
-    initBlogPagination();
   </script>
 
   <script
     type="module">const e = document.querySelector("#alert-banner"), t = document.querySelector("#header"), n = document.querySelectorAll("#header .top-nav-dropdown"), o = document.querySelector("#hamburger-button"), r = document.querySelectorAll("#header .top-nav-mobile-link-dropdown"), a = document.querySelectorAll("header .top-nav-mobile-back-btn"), c = "scrolled", d = "blur-active"; let u = null, s = !1, l = !1; function i() { t?.classList.add(d) } function f() { t?.classList.remove(d) } function v(e) { e.setAttribute("data-dd-open", "false") } u = function (t) { const n = e ? e.offsetHeight : 0; return t ? t + n : n }(u), n.forEach((e => { e.addEventListener("mouseenter", (() => { i() })), e.addEventListener("mouseleave", (e => { !function (e) { if (e.hasFocus) return; f() }(e) })), e.addEventListener("focusin", (e => { !function (e) { e.hasFocus = !0, i() }(e) })), e.addEventListener("focusout", (e => { !function (e) { e.hasFocus = !1, f() }(e) })) })), document.addEventListener("scroll", (() => { !function () { const e = window.scrollY; e > u && !s ? (s = !0, t?.classList.add(c)) : e <= u && s && (s = !1, t?.classList.remove(c)) }() })), o?.addEventListener("click", (e => { !function (e) { e.preventDefault(), l ? (l = !1, t?.setAttribute("data-nav-open", "false"), r.forEach((e => { v(e.closest(".top-nav-mobile-dropdown")) }))) : (l = !0, t?.setAttribute("data-nav-open", "true")) }(e) })), r.forEach((e => { e.addEventListener("click", (e => { !function (e) { e.preventDefault(); const t = e.target.closest(".top-nav-mobile-dropdown"), n = "true" === t.getAttribute("data-dd-open"); n ? v(t) : function (e) { e.setAttribute("data-dd-open", "true") }(t) }(e) })) })), a.forEach((e => { e.addEventListener("click", (e => { !function (e) { e.preventDefault(); const t = e.target.closest(".top-nav-mobile-dropdown"); "true" === t.getAttribute("data-dd-open") && v(t) }(e) })) }));</script>
+
+
 
 
 
@@ -3238,5 +3628,4 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 </script>
 </body>
-
 </html>
