@@ -2719,9 +2719,14 @@ function renderGrid() {
   const grid = document.getElementById('cases-grid');
   grid.innerHTML = '';
   caseData.forEach((c, i) => {
-    const card = document.createElement('div');
+    const card = document.createElement('a');
     card.className = 'case-card';
+    card.href = casePages[i];
+    card.target = '_blank';
+    card.rel = 'noopener noreferrer';
     card.style.cursor = 'pointer';
+    card.style.textDecoration = 'none';
+    card.style.color = 'inherit';
     card.innerHTML = `
       <div class="case-inner">
         <div class="case-thumb ${c.img ? '' : c.thumb}">${c.img ? `<img src="${c.img}" alt="${c.title}">` : c.icon}</div>
@@ -2732,9 +2737,6 @@ function renderGrid() {
       </div>
       <span class="read-link">Read the case study</span>
     `;
-    card.addEventListener('click', () => {
-      window.location.href = casePages[i];
-    });
     grid.appendChild(card);
   });
 }
