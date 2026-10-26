@@ -3755,7 +3755,7 @@ document.addEventListener("DOMContentLoaded", function() {
             <div class="cta-block" data-astro-cid-uz5nai6c>
               <div class="block-wrapper" data-astro-cid-uz5nai6c>
                 <div class="block-content bg-mode-default" data-astro-cid-uz5nai6c>
-                  <h2 class="header-h1-style title" data-astro-cid-uz5nai6c>Switch to Finora today</h2>
+                  <h2 class="header-h1-style title cta-title" data-astro-cid-uz5nai6c>Switch to Finora today</h2>
                   <h3 class="subtitle subheadline-light" data-astro-cid-uz5nai6c>Experience accounting, reimagined.</h3>
 
                   <a href="/contact-us/" class="cta cta--medium" data-astro-cid-azhwtzhc="true"
@@ -3930,7 +3930,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     .custom-footer-heading {
       font-size: 2.1rem;
-      font-weight: 900;
+      /* font-weight: 900; */
       margin-top: 0;
       margin-bottom: 25px;
       color: #ffffff;
@@ -4363,12 +4363,18 @@ body{
         font-style: normal;
         font-weight: 300;
         line-height: 95%;
-        margin-top: 125px !important;
+        margin-top: 125px;
     }
 }
 
 .bg-timeline-item{
 height:70vh !important;
+}
+.block-content .header-h1-style title{
+  margin-top: 0px;
+}
+.cta-title{
+margin-top: 0px !important;
 }
 
   </style>
