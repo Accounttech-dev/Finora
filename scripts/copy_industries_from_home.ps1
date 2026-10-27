@@ -39,7 +39,6 @@ $pages = @(
     @{Path="services\month-end-close\index.html"; Depth=2},
     @{Path="services\dashboards\index.html"; Depth=2},
     @{Path="services\financials\index.html"; Depth=2},
-    @{Path="services\bill-pay\index.html"; Depth=2},
     @{Path="services\invoicing\index.html"; Depth=2},
     @{Path="services\business-setup\index.html"; Depth=2},
     @{Path="accountants\index.html"; Depth=1},

@@ -37,9 +37,6 @@ $menuTemplate = @"
                     <a href="PATHPREFIX/services/financials/"
                       style="display: block; padding: 10px 0; color: #000; text-decoration: none; font-size: 14px; border-bottom: 1px solid rgba(255,255,255,0.05);">→
                       Financial Reporting</a>
-                    <a href="PATHPREFIX/services/bill-pay/"
-                      style="display: block; padding: 10px 0; color: #000; text-decoration: none; font-size: 14px; border-bottom: 1px solid rgba(255,255,255,0.05);">→
-                      Bill Pay</a>
                     <a href="PATHPREFIX/services/invoicing/"
                       style="display: block; padding: 10px 0; color: #000; text-decoration: none; font-size: 14px; border-bottom: 1px solid rgba(255,255,255,0.05);">→
                       Invoicing</a>
@@ -69,9 +66,6 @@ $menuTemplate = @"
                     <a href="PATHPREFIX/services/financials/"
                       style="display: block; padding: 10px 0; color: #000; text-decoration: none; font-size: 14px; border-bottom: 1px solid rgba(255,255,255,0.05);">→
                       Financial Reporting</a>
-                    <a href="PATHPREFIX/services/bill-pay/"
-                      style="display: block; padding: 10px 0; color: #000; text-decoration: none; font-size: 14px; border-bottom: 1px solid rgba(255,255,255,0.05);">→
-                      Bill Pay</a>
                     <a href="PATHPREFIX/services/invoicing/"
                       style="display: block; padding: 10px 0; color: #000; text-decoration: none; font-size: 14px; border-bottom: 1px solid rgba(255,255,255,0.05);">→
                       Invoicing</a>
@@ -101,9 +95,6 @@ $menuTemplate = @"
                     <a href="PATHPREFIX/services/financials/"
                       style="display: block; padding: 10px 0; color: #000; text-decoration: none; font-size: 14px; border-bottom: 1px solid rgba(255,255,255,0.05);">→
                       Financial Reporting</a>
-                    <a href="PATHPREFIX/services/bill-pay/"
-                      style="display: block; padding: 10px 0; color: #000; text-decoration: none; font-size: 14px; border-bottom: 1px solid rgba(255,255,255,0.05);">→
-                      Bill Pay</a>
                     <a href="PATHPREFIX/services/invoicing/"
                       style="display: block; padding: 10px 0; color: #000; text-decoration: none; font-size: 14px; border-bottom: 1px solid rgba(255,255,255,0.05);">→
                       Invoicing</a>
@@ -133,9 +124,6 @@ $menuTemplate = @"
                     <a href="PATHPREFIX/services/financials/"
                       style="display: block; padding: 10px 0; color: #000; text-decoration: none; font-size: 14px; border-bottom: 1px solid rgba(255,255,255,0.05);">→
                       Financial Reporting</a>
-                    <a href="PATHPREFIX/services/bill-pay/"
-                      style="display: block; padding: 10px 0; color: #000; text-decoration: none; font-size: 14px; border-bottom: 1px solid rgba(255,255,255,0.05);">→
-                      Bill Pay</a>
                     <a href="PATHPREFIX/services/invoicing/"
                       style="display: block; padding: 10px 0; color: #000; text-decoration: none; font-size: 14px; border-bottom: 1px solid rgba(255,255,255,0.05);">→
                       Invoicing</a>
@@ -165,9 +153,6 @@ $menuTemplate = @"
                     <a href="PATHPREFIX/services/financials/"
                       style="display: block; padding: 10px 0; color: #000; text-decoration: none; font-size: 14px; border-bottom: 1px solid rgba(255,255,255,0.05);">→
                       Financial Reporting</a>
-                    <a href="PATHPREFIX/services/bill-pay/"
-                      style="display: block; padding: 10px 0; color: #000; text-decoration: none; font-size: 14px; border-bottom: 1px solid rgba(255,255,255,0.05);">→
-                      Bill Pay</a>
                     <a href="PATHPREFIX/services/invoicing/"
                       style="display: block; padding: 10px 0; color: #000; text-decoration: none; font-size: 14px; border-bottom: 1px solid rgba(255,255,255,0.05);">→
                       Invoicing</a>
@@ -197,9 +182,6 @@ $menuTemplate = @"
                     <a href="PATHPREFIX/services/financials/"
                       style="display: block; padding: 10px 0; color: #000; text-decoration: none; font-size: 14px; border-bottom: 1px solid rgba(255,255,255,0.05);">→
                       Financial Reporting</a>
-                    <a href="PATHPREFIX/services/bill-pay/"
-                      style="display: block; padding: 10px 0; color: #000; text-decoration: none; font-size: 14px; border-bottom: 1px solid rgba(255,255,255,0.05);">→
-                      Bill Pay</a>
                     <a href="PATHPREFIX/services/invoicing/"
                       style="display: block; padding: 10px 0; color: #000; text-decoration: none; font-size: 14px; border-bottom: 1px solid rgba(255,255,255,0.05);">→
                       Invoicing</a>

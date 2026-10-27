@@ -40,7 +40,6 @@ foreach ($file in $htmlFiles) {
                   <a href="/services/month-end-close/">Month-end Close</a>
                   <a href="/services/dashboards/">Insights & Dashboards</a>
                   <a href="/services/financials/">Financial Reporting</a>
-                  <a href="/services/bill-pay/">Bill Pay</a>
                   <a href="/services/invoicing/">Invoicing</a>
                   <a href="/services/business-setup/">Business Setup</a>
                 </div>
@@ -51,7 +50,6 @@ foreach ($file in $htmlFiles) {
                   <a href="/services/month-end-close/">Month-end Close</a>
                   <a href="/services/dashboards/">Insights & Dashboards</a>
                   <a href="/services/financials/">Financial Reporting</a>
-                  <a href="/services/bill-pay/">Bill Pay</a>
                   <a href="/services/invoicing/">Invoicing</a>
                   <a href="/services/business-setup/">Business Setup</a>
                 </div>
@@ -62,7 +60,6 @@ foreach ($file in $htmlFiles) {
                   <a href="/services/month-end-close/">Month-end Close</a>
                   <a href="/services/dashboards/">Insights & Dashboards</a>
                   <a href="/services/financials/">Financial Reporting</a>
-                  <a href="/services/bill-pay/">Bill Pay</a>
                   <a href="/services/invoicing/">Invoicing</a>
                   <a href="/services/business-setup/">Business Setup</a>
                 </div>
@@ -73,7 +70,6 @@ foreach ($file in $htmlFiles) {
                   <a href="/services/month-end-close/">Month-end Close</a>
                   <a href="/services/dashboards/">Insights & Dashboards</a>
                   <a href="/services/financials/">Financial Reporting</a>
-                  <a href="/services/bill-pay/">Bill Pay</a>
                   <a href="/services/invoicing/">Invoicing</a>
                   <a href="/services/business-setup/">Business Setup</a>
                 </div>
@@ -84,7 +80,6 @@ foreach ($file in $htmlFiles) {
                   <a href="/services/month-end-close/">Month-end Close</a>
                   <a href="/services/dashboards/">Insights & Dashboards</a>
                   <a href="/services/financials/">Financial Reporting</a>
-                  <a href="/services/bill-pay/">Bill Pay</a>
                   <a href="/services/invoicing/">Invoicing</a>
                   <a href="/services/business-setup/">Business Setup</a>
                 </div>
@@ -95,7 +90,6 @@ foreach ($file in $htmlFiles) {
                   <a href="/services/month-end-close/">Month-end Close</a>
                   <a href="/services/dashboards/">Insights & Dashboards</a>
                   <a href="/services/financials/">Financial Reporting</a>
-                  <a href="/services/bill-pay/">Bill Pay</a>
                   <a href="/services/invoicing/">Invoicing</a>
                   <a href="/services/business-setup/">Business Setup</a>
                 </div>

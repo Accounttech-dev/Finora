@@ -10,7 +10,6 @@ pages = [
     {"path": "services/month-end-close/index.html", "depth": 2},
     {"path": "services/dashboards/index.html", "depth": 2},
     {"path": "services/financials/index.html", "depth": 2},
-    {"path": "services/bill-pay/index.html", "depth": 2},
     {"path": "services/invoicing/index.html", "depth": 2},
     {"path": "services/business-setup/index.html", "depth": 2},
     {"path": "accountants/index.html", "depth": 1},

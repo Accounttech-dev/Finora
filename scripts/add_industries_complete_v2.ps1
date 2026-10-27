@@ -12,7 +12,6 @@ $pagesConfig = @(
     @{Path="services\month-end-close\index.html"; Depth=2},
     @{Path="services\dashboards\index.html"; Depth=2},
     @{Path="services\financials\index.html"; Depth=2},
-    @{Path="services\bill-pay\index.html"; Depth=2},
     @{Path="services\invoicing\index.html"; Depth=2},
     @{Path="services\business-setup\index.html"; Depth=2},
     @{Path="accountants\index.html"; Depth=1},
@@ -60,7 +59,6 @@ foreach ($pageConfig in $pagesConfig) {
                   <a href="$relPath/month-end-close/">Month-end Close</a>
                   <a href="$relPath/dashboards/">Insights & Dashboards</a>
                   <a href="$relPath/financials/">Financial Reporting</a>
-                  <a href="$relPath/bill-pay/">Bill Pay</a>
                   <a href="$relPath/invoicing/">Invoicing</a>
                   <a href="$relPath/business-setup/">Business Setup</a>
                 </div>
@@ -71,7 +69,6 @@ foreach ($pageConfig in $pagesConfig) {
                   <a href="$relPath/month-end-close/">Month-end Close</a>
                   <a href="$relPath/dashboards/">Insights & Dashboards</a>
                   <a href="$relPath/financials/">Financial Reporting</a>
-                  <a href="$relPath/bill-pay/">Bill Pay</a>
                   <a href="$relPath/invoicing/">Invoicing</a>
                   <a href="$relPath/business-setup/">Business Setup</a>
                 </div>
@@ -82,7 +79,6 @@ foreach ($pageConfig in $pagesConfig) {
                   <a href="$relPath/month-end-close/">Month-end Close</a>
                   <a href="$relPath/dashboards/">Insights & Dashboards</a>
                   <a href="$relPath/financials/">Financial Reporting</a>
-                  <a href="$relPath/bill-pay/">Bill Pay</a>
                   <a href="$relPath/invoicing/">Invoicing</a>
                   <a href="$relPath/business-setup/">Business Setup</a>
                 </div>
@@ -93,7 +89,6 @@ foreach ($pageConfig in $pagesConfig) {
                   <a href="$relPath/month-end-close/">Month-end Close</a>
                   <a href="$relPath/dashboards/">Insights & Dashboards</a>
                   <a href="$relPath/financials/">Financial Reporting</a>
-                  <a href="$relPath/bill-pay/">Bill Pay</a>
                   <a href="$relPath/invoicing/">Invoicing</a>
                   <a href="$relPath/business-setup/">Business Setup</a>
                 </div>
@@ -104,7 +99,6 @@ foreach ($pageConfig in $pagesConfig) {
                   <a href="$relPath/month-end-close/">Month-end Close</a>
                   <a href="$relPath/dashboards/">Insights & Dashboards</a>
                   <a href="$relPath/financials/">Financial Reporting</a>
-                  <a href="$relPath/bill-pay/">Bill Pay</a>
                   <a href="$relPath/invoicing/">Invoicing</a>
                   <a href="$relPath/business-setup/">Business Setup</a>
                 </div>
@@ -115,7 +109,6 @@ foreach ($pageConfig in $pagesConfig) {
                   <a href="$relPath/month-end-close/">Month-end Close</a>
                   <a href="$relPath/dashboards/">Insights & Dashboards</a>
                   <a href="$relPath/financials/">Financial Reporting</a>
-                  <a href="$relPath/bill-pay/">Bill Pay</a>
                   <a href="$relPath/invoicing/">Invoicing</a>
                   <a href="$relPath/business-setup/">Business Setup</a>
                 </div>
@@ -227,7 +220,6 @@ foreach ($pageConfig in $pagesConfig) {
                 <li class="dropdown-item"> <a href="$relPath/month-end-close/" style="color: #000 !important;">Month-end Close</a> </li>
                 <li class="dropdown-item"> <a href="$relPath/dashboards/" style="color: #000 !important;">Insights & Dashboards</a> </li>
                 <li class="dropdown-item"> <a href="$relPath/financials/" style="color: #000 !important;">Financial Reporting</a> </li>
-                <li class="dropdown-item"> <a href="$relPath/bill-pay/" style="color: #000 !important;">Bill Pay</a> </li>
                 <li class="dropdown-item"> <a href="$relPath/invoicing/" style="color: #000 !important;">Invoicing</a> </li>
                 <li class="dropdown-item"> <a href="$relPath/business-setup/" style="color: #000 !important;">Business Setup</a> </li>
                 
@@ -237,7 +229,6 @@ foreach ($pageConfig in $pagesConfig) {
                 <li class="dropdown-item"> <a href="$relPath/month-end-close/" style="color: #000 !important;">Month-end Close</a> </li>
                 <li class="dropdown-item"> <a href="$relPath/dashboards/" style="color: #000 !important;">Insights & Dashboards</a> </li>
                 <li class="dropdown-item"> <a href="$relPath/financials/" style="color: #000 !important;">Financial Reporting</a> </li>
-                <li class="dropdown-item"> <a href="$relPath/bill-pay/" style="color: #000 !important;">Bill Pay</a> </li>
                 <li class="dropdown-item"> <a href="$relPath/invoicing/" style="color: #000 !important;">Invoicing</a> </li>
                 <li class="dropdown-item"> <a href="$relPath/business-setup/" style="color: #000 !important;">Business Setup</a> </li>
                 
@@ -247,7 +238,6 @@ foreach ($pageConfig in $pagesConfig) {
                 <li class="dropdown-item"> <a href="$relPath/month-end-close/" style="color: #000 !important;">Month-end Close</a> </li>
                 <li class="dropdown-item"> <a href="$relPath/dashboards/" style="color: #000 !important;">Insights & Dashboards</a> </li>
                 <li class="dropdown-item"> <a href="$relPath/financials/" style="color: #000 !important;">Financial Reporting</a> </li>
-                <li class="dropdown-item"> <a href="$relPath/bill-pay/" style="color: #000 !important;">Bill Pay</a> </li>
                 <li class="dropdown-item"> <a href="$relPath/invoicing/" style="color: #000 !important;">Invoicing</a> </li>
                 <li class="dropdown-item"> <a href="$relPath/business-setup/" style="color: #000 !important;">Business Setup</a> </li>
                 
@@ -257,7 +247,6 @@ foreach ($pageConfig in $pagesConfig) {
                 <li class="dropdown-item"> <a href="$relPath/month-end-close/" style="color: #000 !important;">Month-end Close</a> </li>
                 <li class="dropdown-item"> <a href="$relPath/dashboards/" style="color: #000 !important;">Insights & Dashboards</a> </li>
                 <li class="dropdown-item"> <a href="$relPath/financials/" style="color: #000 !important;">Financial Reporting</a> </li>
-                <li class="dropdown-item"> <a href="$relPath/bill-pay/" style="color: #000 !important;">Bill Pay</a> </li>
                 <li class="dropdown-item"> <a href="$relPath/invoicing/" style="color: #000 !important;">Invoicing</a> </li>
                 <li class="dropdown-item"> <a href="$relPath/business-setup/" style="color: #000 !important;">Business Setup</a> </li>
                 
@@ -267,7 +256,6 @@ foreach ($pageConfig in $pagesConfig) {
                 <li class="dropdown-item"> <a href="$relPath/month-end-close/" style="color: #000 !important;">Month-end Close</a> </li>
                 <li class="dropdown-item"> <a href="$relPath/dashboards/" style="color: #000 !important;">Insights & Dashboards</a> </li>
                 <li class="dropdown-item"> <a href="$relPath/financials/" style="color: #000 !important;">Financial Reporting</a> </li>
-                <li class="dropdown-item"> <a href="$relPath/bill-pay/" style="color: #000 !important;">Bill Pay</a> </li>
                 <li class="dropdown-item"> <a href="$relPath/invoicing/" style="color: #000 !important;">Invoicing</a> </li>
                 <li class="dropdown-item"> <a href="$relPath/business-setup/" style="color: #000 !important;">Business Setup</a> </li>
                 
@@ -277,7 +265,6 @@ foreach ($pageConfig in $pagesConfig) {
                 <li class="dropdown-item"> <a href="$relPath/month-end-close/" style="color: #000 !important;">Month-end Close</a> </li>
                 <li class="dropdown-item"> <a href="$relPath/dashboards/" style="color: #000 !important;">Insights & Dashboards</a> </li>
                 <li class="dropdown-item"> <a href="$relPath/financials/" style="color: #000 !important;">Financial Reporting</a> </li>
-                <li class="dropdown-item"> <a href="$relPath/bill-pay/" style="color: #000 !important;">Bill Pay</a> </li>
                 <li class="dropdown-item"> <a href="$relPath/invoicing/" style="color: #000 !important;">Invoicing</a> </li>
                 <li class="dropdown-item"> <a href="$relPath/business-setup/" style="color: #000 !important;">Business Setup</a> </li>
               </ul>
