@@ -2190,7 +2190,6 @@ function toggleMobileInd(btn) {
   </div>
 
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 <!-- ✅ CTA Banner -->
 <div class="cta-banner">
   <div class="cta-left">
@@ -2235,13 +2234,13 @@ function toggleMobileInd(btn) {
         form.reportValidity();
         return;
       }
-      // reCAPTCHA validation
-      if (typeof grecaptcha === "undefined") {
-        alert("reCAPTCHA failed to load. Please refresh and try again.");
+      // Turnstile validation
+      if (typeof turnstile === "undefined") {
+        alert("Verification failed to load. Please refresh and try again.");
         return;
       }
-      const recaptchaToken = grecaptcha.getResponse();
-      if (!recaptchaToken) {
+      const turnstileToken = form.querySelector('input[name="cf-turnstile-response"]')?.value;
+      if (!turnstileToken) {
         recaptchaError.style.display = "block";
         return;
       } else {
@@ -2254,14 +2253,14 @@ function toggleMobileInd(btn) {
         email: form.email.value.trim(),
         phone: form.phone.value.trim(),
         message: form.message.value.trim(),
-        "g-recaptcha-response": recaptchaToken
+        "cf-turnstile-response": turnstileToken
       };
       try {
         // Replace with your EmailJS service/template IDs
         await emailjs.send("service_d6d6duh", "template_ibeq6sh", params);
         alert("Message sent successfully!");
         form.reset();
-        grecaptcha.reset();
+        turnstile.reset();
       } catch (error) {
         console.error("EmailJS error:", error);
         alert("Failed to send message. Please try again.");

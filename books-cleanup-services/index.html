@@ -4373,8 +4373,8 @@
     <div class="popup-form-container">
       <button class="popup-close" id="closePopup" aria-label="Close popup">&times;</button>
 
-      <aside class="hero-card pop-up" aria-labelledby="hero-form-title">
-        <h2 id="hero-form-title">Get Started Today</h2>
+      <aside class="hero-card pop-up" aria-labelledby="hero-form-title-popup">
+        <h2 id="hero-form-title-popup">Get Started Today</h2>
         <p>Book your bookkeeping cleanup consultation</p>
 
         <form class="quick-form" data-lead-form="">
@@ -4450,50 +4450,6 @@
       if (year) {
         year.textContent = new Date().getFullYear();
       }
-
-      // =========================================================
-      // LAZY LOAD CLOUDFLARE TURNSTILE
-      // =========================================================
-      let turnstileLoaded = false;
-
-      function loadTurnstile() {
-
-        if (turnstileLoaded) return;
-
-        turnstileLoaded = true;
-
-        const script = document.createElement("script");
-
-        script.src =
-          "https://challenges.cloudflare.com/turnstile/v0/api.js";
-
-        script.async = true;
-        script.defer = true;
-
-        document.body.appendChild(script);
-      }
-
-      // Load Turnstile only when needed
-      forms.forEach(form => {
-
-        form.addEventListener(
-          "focusin",
-          loadTurnstile,
-          { once: true }
-        );
-
-        form.addEventListener(
-          "touchstart",
-          loadTurnstile,
-          { once: true }
-        );
-
-        form.addEventListener(
-          "mouseenter",
-          loadTurnstile,
-          { once: true }
-        );
-      });
 
       // =========================================================
       // SMOOTH SCROLL (OPTIMIZED)
