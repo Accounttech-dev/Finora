@@ -6922,14 +6922,14 @@ li {
     margin: 0
 }
 
-a:focus-visible,
+/* a:focus-visible,
 button:focus-visible,
 input:focus-visible,
 textarea:focus-visible {
     outline: 2px solid #6ecddd;
     outline: 2px solid var(--color-green);
     outline-offset: 2px
-}
+} */
 
 .digits-glass--black {
     background-color: #0000001a;
@@ -7172,8 +7172,8 @@ textarea:focus-visible {
 
 .rich-text a.rich-text-cta:focus-visible,
 .rich-text button.rich-text-cta:focus-visible {
-    /* outline: 2px solid #6ecddd;
-    outline: 2px solid var(--color-green) */
+    outline: 2px solid #6ecddd;
+    outline: 2px solid var(--color-green)
 }
 
 @media(min-width:768px) {
