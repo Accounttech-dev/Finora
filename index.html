@@ -2994,6 +2994,7 @@ function toggleMobileInd(btn) {
     </div>
 
     <form class="email-form" id="contact-form">
+      <input type="hidden" name="name">
       <div class="email-row">
         <input type="text" name="first_name" placeholder="First Name*" required autocomplete="given-name">
         <input type="text" name="last_name" placeholder="Last Name*" required autocomplete="family-name">
@@ -3096,9 +3097,9 @@ including services, goals, fees, investment strategies, and how to choose the ri
 (function () {
   'use strict';
 
-  var EMAILJS_PUBLIC_KEY = 'zOEb9EpODCU2EQ02o';
-  var EMAILJS_SERVICE_ID = 'service_9i4mi43';
-  var EMAILJS_TEMPLATE_ID = 'template_c3wc9b7';
+  var EMAILJS_PUBLIC_KEY = 'U0wQ29ZcTtGzRZd_M';
+  var EMAILJS_SERVICE_ID = 'service_7jp2j04';
+  var EMAILJS_TEMPLATE_ID = 'template_htqqbkl';
 
   var form = null;
   var submitBtn = null;
@@ -3137,6 +3138,10 @@ including services, goals, fees, investment strategies, and how to choose the ri
         submitBtn.textContent = 'Sending...';
       }
 
+      form.querySelector('input[name="name"]').value =
+        form.querySelector('input[name="first_name"]').value.trim() + ' ' +
+        form.querySelector('input[name="last_name"]').value.trim();
+
       emailjs.sendForm(
         EMAILJS_SERVICE_ID,
         EMAILJS_TEMPLATE_ID,
@@ -3161,7 +3166,11 @@ including services, goals, fees, investment strategies, and how to choose the ri
 
         console.error('EmailJS error:', err);
 
-        alert('Failed to send message. Please try again.');
+        alert(
+          err && err.text
+            ? 'Failed to send message: ' + err.text
+            : 'Failed to send message. Please try again.'
+        );
 
         if (window.turnstile) {
           turnstile.reset();
